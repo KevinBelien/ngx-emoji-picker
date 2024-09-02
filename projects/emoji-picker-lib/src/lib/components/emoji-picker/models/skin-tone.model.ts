@@ -67,6 +67,5 @@ export interface IndividualEmojiSkintone {
  *
  * @group Functions
  */
-export const isValidSkintone = (value: string): value is Skintone => {
-	return skintones.includes(value as Skintone);
-};
+export const isValidSkintone = (value: string): value is Skintone =>
+	skintones.includes(value as Skintone);

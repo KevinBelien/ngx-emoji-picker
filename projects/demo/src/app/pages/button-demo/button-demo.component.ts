@@ -8,7 +8,7 @@ import {
 } from '@chit-chat/ngx-emoji-picker/src/lib/components/button';
 
 @Component({
-	selector: 'app-button-demo',
+	selector: 'ch-button-demo',
 	standalone: true,
 	imports: [CommonModule, FormsModule, ButtonComponent],
 	templateUrl: './button-demo.component.html',
@@ -48,7 +48,7 @@ export class ButtonDemoComponent {
 
 	constructor() {}
 
-	handleClick = (evt: MouseEvent) => {
+	handleClick = () => {
 		alert('button clicked');
 	};
 }

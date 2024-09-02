@@ -23,7 +23,7 @@ import {
 } from 'rxjs';
 
 @Component({
-	selector: 'app-emoji-picker-demo',
+	selector: 'ch-emoji-picker-demo',
 	standalone: true,
 	imports: [
 		CommonModule,

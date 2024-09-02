@@ -214,13 +214,12 @@ export class EmojiPickerService {
 		emojiSize: number,
 		viewportSize: number,
 		itemSizeMultiplier: number
-	): number => {
-		return Math.floor(
+	): number =>
+		Math.floor(
 			viewportSize /
 				NumberHelper.toFixedAndFloor(
 					emojiSize * itemSizeMultiplier,
 					2
 				)
 		);
-	};
 }

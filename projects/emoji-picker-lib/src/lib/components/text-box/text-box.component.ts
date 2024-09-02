@@ -125,12 +125,10 @@ export class TextBoxComponent
 	 */
 	onValueChanged = output<ValueChangeEvent>();
 
-	textBoxClass = computed(() => {
-		return {
-			'ch-editor-outlined': this.variant() === 'outlined',
-			'ch-editor-filled': this.variant() === 'filled',
-		};
-	});
+	textBoxClass = computed(() => ({
+		'ch-editor-outlined': this.variant() === 'outlined',
+		'ch-editor-filled': this.variant() === 'filled',
+	}));
 
 	readonly icons = { ...icons };
 
@@ -141,7 +139,7 @@ export class TextBoxComponent
 	private onTouched: () => void = () => {};
 
 	@HostListener('blur', ['$event'])
-	onBlur(event: FocusEvent): void {
+	onBlur(): void {
 		this.onTouched();
 	}
 
@@ -175,7 +173,7 @@ export class TextBoxComponent
 	ngOnDestroy(): void {
 		this.cleanupCurrentListener();
 
-		if (!!this.elementClickListener) {
+		if (this.elementClickListener) {
 			this.elementClickListener();
 		}
 	}

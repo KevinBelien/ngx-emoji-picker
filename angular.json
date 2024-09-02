@@ -39,6 +39,16 @@
 						"tsConfig": "projects/emoji-picker-lib/tsconfig.spec.json",
 						"polyfills": ["zone.js", "zone.js/testing"]
 					}
+				},
+				"lint": {
+					"builder": "@angular-eslint/builder:lint",
+					"options": {
+						"eslintConfig": ".eslintrc.json",
+						"lintFilePatterns": [
+							"projects/**/*.ts",
+							"projects/**/*.html"
+						]
+					}
 				}
 			}
 		},
@@ -135,5 +145,8 @@
 				}
 			}
 		}
+	},
+	"cli": {
+		"analytics": false
 	}
 }

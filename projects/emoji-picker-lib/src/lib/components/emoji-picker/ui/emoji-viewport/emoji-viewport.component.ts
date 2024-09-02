@@ -225,13 +225,13 @@ export class EmojiViewportComponent implements AfterViewInit {
 		)
 	);
 
-	itemSize = computed(() => {
-		return NumberHelper.toFixedAndFloor(
+	itemSize = computed(() =>
+		NumberHelper.toFixedAndFloor(
 			this.emojiSizeInPx() *
 				this.emojiPickerService.emojiItemSizeMultiplier(),
 			2
-		);
-	});
+		)
+	);
 
 	suggestionEmojiRows = computed(() => {
 		const suggestionEmojis = this.suggestionEmojis();
@@ -268,8 +268,8 @@ export class EmojiViewportComponent implements AfterViewInit {
 		});
 	});
 
-	defaultEmojiRows = computed(() => {
-		return this.emojiPickerService.generateEmojiRows({
+	defaultEmojiRows = computed(() =>
+		this.emojiPickerService.generateEmojiRows({
 			emojiSize: this.emojiSizeInPx(),
 			viewportWidth: this.viewportWidth(),
 			itemSizeMultiplier:
@@ -277,8 +277,8 @@ export class EmojiViewportComponent implements AfterViewInit {
 			generateCategoryRows: true,
 			type: 'default',
 			emojis: this.emojis(),
-		});
-	});
+		})
+	);
 
 	emojiRows = computed((): EmojiPickerRow[] => {
 		const filteredEmojis = this.filteredEmojis();
@@ -376,9 +376,7 @@ export class EmojiViewportComponent implements AfterViewInit {
 		width: number,
 		padding: number,
 		scrollbarWidth: number
-	): number => {
-		return width - scrollbarWidth - padding * 2;
-	};
+	): number => width - scrollbarWidth - padding * 2;
 
 	private getGlobalScrollbarWidth = (): number => {
 		const root = document.querySelector(':root') as HTMLElement;
@@ -490,10 +488,7 @@ export class EmojiViewportComponent implements AfterViewInit {
 	protected trackEmojiRow = (
 		index: number,
 		row: EmojiPickerRow
-	): string => {
-		return row.id;
-	};
-
+	): string => row.id;
 	/**
 	 * Navigates to the specified emoji category.
 	 * Scrolls the emoji picker to the first emoji in the specified category if it exists.

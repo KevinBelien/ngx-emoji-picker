@@ -1,5 +1,7 @@
 import { isPlatformBrowser } from '@angular/common';
 import {
+	AfterContentChecked,
+	AfterViewChecked,
 	booleanAttribute,
 	Directive,
 	ElementRef,
@@ -18,7 +20,9 @@ import {
 	selector: '[chAutofocus]',
 	standalone: true,
 })
-export class AutofocusDirective {
+export class AutofocusDirective
+	implements AfterContentChecked, AfterViewChecked
+{
 	private platformId = inject(PLATFORM_ID);
 	private host: ElementRef = inject(ElementRef);
 
@@ -90,10 +94,8 @@ export class AutofocusDirective {
 		);
 
 		// Filter out elements that are not actually visible or cannot be focused
-		const visibleFocusableElements = focusableElements.filter(
-			(el) => {
-				return this.isVisible(el);
-			}
+		const visibleFocusableElements = focusableElements.filter((el) =>
+			this.isVisible(el)
 		);
 
 		// If there are visible focusable elements, return them

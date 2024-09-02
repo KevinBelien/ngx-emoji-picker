@@ -137,9 +137,8 @@ export class DialogComponent implements OnDestroy {
 
 	constructor() {
 		effect(() => {
-			this.visible()
-				? this.open(this.target())
-				: this.disposeDialogRef();
+			if (this.visible()) this.open(this.target());
+			else this.disposeDialogRef();
 		});
 	}
 
@@ -232,14 +231,13 @@ export class DialogComponent implements OnDestroy {
 		positionStrategy?: PositionStrategy,
 		hasBackdrop: boolean = true,
 		backdropClass: string | string[] = ''
-	) => {
-		return this.overlay.create({
+	): OverlayRef =>
+		this.overlay.create({
 			positionStrategy,
 			hasBackdrop: hasBackdrop,
 			backdropClass: backdropClass,
 			scrollStrategy: this.scrollStrategy(),
 		});
-	};
 
 	private attachComponentToDialog = () => {
 		const componentRef = this.dialogRef?.attach(this.portal());

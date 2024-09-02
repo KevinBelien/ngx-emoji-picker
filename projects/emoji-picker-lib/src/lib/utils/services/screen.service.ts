@@ -59,15 +59,13 @@ export class ScreenService {
 		};
 	};
 
-	private getBreakpoints = (): BreakpointStatus => {
-		return {
-			xs: this.breakpointObserver.isMatched(Breakpoints.XSmall),
-			sm: this.breakpointObserver.isMatched(Breakpoints.Small),
-			md: this.breakpointObserver.isMatched(Breakpoints.Medium),
-			lg: this.breakpointObserver.isMatched(Breakpoints.Large),
-			xl: this.breakpointObserver.isMatched(Breakpoints.XLarge),
-		};
-	};
+	private getBreakpoints = (): BreakpointStatus => ({
+		xs: this.breakpointObserver.isMatched(Breakpoints.XSmall),
+		sm: this.breakpointObserver.isMatched(Breakpoints.Small),
+		md: this.breakpointObserver.isMatched(Breakpoints.Medium),
+		lg: this.breakpointObserver.isMatched(Breakpoints.Large),
+		xl: this.breakpointObserver.isMatched(Breakpoints.XLarge),
+	});
 
 	/**
 	 * Determines the current active breakpoint based on the status of all breakpoints.
@@ -77,14 +75,9 @@ export class ScreenService {
 	 */
 	getCurrentBreakpoint = (
 		breakpointStatus: BreakpointStatus
-	): Breakpoint => {
-		return (
-			breakpoints.find(
-				(breakpoint) => breakpointStatus[breakpoint]
-			) || 'xs'
-		);
-	};
-
+	): Breakpoint =>
+		breakpoints.find((breakpoint) => breakpointStatus[breakpoint]) ||
+		'xs';
 	/**
 	 * Calculates a consolidated status for each breakpoint, indicating whether a breakpoint or any larger breakpoint is active.
 	 * @group Method
@@ -93,49 +86,42 @@ export class ScreenService {
 	 */
 	calculateBreakpointStatus = (
 		breakpointStatus: BreakpointStatus
-	): BreakpointStatus => {
-		return {
-			xs:
-				breakpointStatus.xs ||
-				breakpointStatus.sm ||
-				breakpointStatus.md ||
-				breakpointStatus.lg ||
-				breakpointStatus.xl,
-			sm:
-				breakpointStatus.sm ||
-				breakpointStatus.md ||
-				breakpointStatus.lg ||
-				breakpointStatus.xl,
-			md:
-				breakpointStatus.md ||
-				breakpointStatus.lg ||
-				breakpointStatus.xl,
-			lg: breakpointStatus.lg || breakpointStatus.xl,
-			xl: breakpointStatus.xl,
-		};
-	};
+	): BreakpointStatus => ({
+		xs:
+			breakpointStatus.xs ||
+			breakpointStatus.sm ||
+			breakpointStatus.md ||
+			breakpointStatus.lg ||
+			breakpointStatus.xl,
+		sm:
+			breakpointStatus.sm ||
+			breakpointStatus.md ||
+			breakpointStatus.lg ||
+			breakpointStatus.xl,
+		md:
+			breakpointStatus.md ||
+			breakpointStatus.lg ||
+			breakpointStatus.xl,
+		lg: breakpointStatus.lg || breakpointStatus.xl,
+		xl: breakpointStatus.xl,
+	});
 
 	/**
 	 * Determines whether the application is running on a mobile device based on the user agent string.
 	 * @group Method
 	 * @returns {boolean} True if the application is running on a mobile device, otherwise false.
 	 */
-	isMobile = (): boolean => {
-		return (
-			/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-				navigator.userAgent
-			) ||
-			(navigator.userAgent.includes('Mac') &&
-				'ontouchend' in document)
-		);
-	};
+	isMobile = (): boolean =>
+		/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+			navigator.userAgent
+		) ||
+		(navigator.userAgent.includes('Mac') && 'ontouchend' in document);
 
 	/**
 	 * Determines whether the application is running on an iOS device based on the user agent string.
 	 * @group Method
 	 * @returns {boolean} True if the application is running on an iOS device, otherwise false.
 	 */
-	isIos = (): boolean => {
-		return /(iPad|iPhone|iPod)/g.test(navigator.userAgent);
-	};
+	isIos = (): boolean =>
+		/(iPad|iPhone|iPod)/g.test(navigator.userAgent);
 }

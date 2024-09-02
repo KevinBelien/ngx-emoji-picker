@@ -159,19 +159,17 @@ export class ButtonComponent {
 		return 'left';
 	});
 
-	iconClass = computed(() => {
-		return {
-			'ch-button-icon': true,
-			'ch-button-icon-left':
-				this.iconPosition() === 'left' && this.label(),
-			'ch-button-icon-right':
-				this.iconPosition() === 'right' && this.label(),
-			'ch-button-icon-top':
-				this.iconPosition() === 'top' && this.label(),
-			'ch-button-icon-bottom':
-				this.iconPosition() === 'bottom' && this.label(),
-		};
-	});
+	iconClass = computed(() => ({
+		'ch-button-icon': true,
+		'ch-button-icon-left':
+			this.iconPosition() === 'left' && this.label(),
+		'ch-button-icon-right':
+			this.iconPosition() === 'right' && this.label(),
+		'ch-button-icon-top':
+			this.iconPosition() === 'top' && this.label(),
+		'ch-button-icon-bottom':
+			this.iconPosition() === 'bottom' && this.label(),
+	}));
 
 	buttonClass = computed(() => {
 		const extraClasses = this.cssClass();
@@ -192,7 +190,7 @@ export class ButtonComponent {
 			['ch-focus-state-disabled']: !this.focusStateEnabled(),
 			['ch-active-state-disabled']: !this.activeStateEnabled(),
 
-			...(!!extraClasses ? { [extraClasses]: true } : undefined),
+			...(extraClasses ? { [extraClasses]: true } : undefined),
 		};
 	});
 

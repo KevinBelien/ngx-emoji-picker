@@ -35,7 +35,7 @@ export class EmojiStorageService {
 		const response = localStorage.getItem(
 			this.STORAGE_CONFIG[storageKey].key
 		);
-		return !!response ? (JSON.parse(response) as T[]) : [];
+		return response ? (JSON.parse(response) as T[]) : [];
 	};
 
 	/**
@@ -137,8 +137,8 @@ export class EmojiStorageService {
 	sortFrequentEmojis = (
 		emojis: FrequentEmoji[],
 		sortDateDescending: boolean = false
-	): FrequentEmoji[] => {
-		return emojis.sort((a, b) => {
+	): FrequentEmoji[] =>
+		emojis.sort((a, b) => {
 			if (b.count !== a.count) {
 				return b.count - a.count;
 			}
@@ -146,18 +146,16 @@ export class EmojiStorageService {
 				? b.dateInMs - a.dateInMs
 				: a.dateInMs - b.dateInMs;
 		});
-	};
 
 	/**
 	 * Fetches the individual skintone settings for emojis from localStorage.
 	 * @group Method
 	 * @returns {IndividualEmojiSkintone[]} The list of individual skintone settings.
 	 */
-	fetchIndividualEmojisSkintones = (): IndividualEmojiSkintone[] => {
-		return this.retrieveFromStorage<IndividualEmojiSkintone>(
+	fetchIndividualEmojisSkintones = (): IndividualEmojiSkintone[] =>
+		this.retrieveFromStorage<IndividualEmojiSkintone>(
 			'emojisSkintone'
 		);
-	};
 
 	/**
 	 * Updates or adds a skintone setting for a specific emoji and stores the data in localStorage.

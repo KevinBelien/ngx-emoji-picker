@@ -63,19 +63,14 @@ export class SkintoneSwatchPickerComponent {
 	 */
 	onSelectionChanged = output<Skintone>();
 
-	selectedColor = computed(() => {
-		return this.getColorBySkintone(this.selectedSkintone());
-	});
+	selectedColor = computed(() =>
+		this.getColorBySkintone(this.selectedSkintone())
+	);
 
-	private getColorBySkintone = (
-		skintone: Skintone
-	): SkintoneColor => {
-		return (
-			this.skintoneColors.find(
-				(color) => color.skintone === skintone
-			) ?? this.skintoneColors[0]
-		);
-	};
+	private getColorBySkintone = (skintone: Skintone): SkintoneColor =>
+		this.skintoneColors.find(
+			(color) => color.skintone === skintone
+		) ?? this.skintoneColors[0];
 
 	/**
 	 * Toggles the visibility of the swatch picker.
@@ -99,7 +94,7 @@ export class SkintoneSwatchPickerComponent {
 	) => {
 		event.stopPropagation();
 
-		if (!!this.isOpen()) {
+		if (this.isOpen()) {
 			this.selectedSkintone.set(skintoneColor.skintone);
 			this.onSelectionChanged.emit(skintoneColor.skintone);
 		}

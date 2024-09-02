@@ -42,7 +42,7 @@ export class PreventContextMenuDirective implements OnInit {
 		);
 
 		this.destroyref.onDestroy(() => {
-			if (!!this.contextMenuListener) {
+			if (this.contextMenuListener) {
 				this.contextMenuListener();
 			}
 		});

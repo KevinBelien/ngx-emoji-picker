@@ -30,7 +30,7 @@ export class EmojiFilterService {
 	): Promise<string[]> => {
 		const translatedKeywords = await this.getTranslations(language);
 
-		const filteredTranslations = !!includedEmojis
+		const filteredTranslations = includedEmojis
 			? Object.keys(translatedKeywords)
 					.filter((key) => includedEmojis.includes(key))
 					.reduce((obj: ArrayMap<string>, key: string) => {
@@ -95,7 +95,7 @@ export class EmojiFilterService {
 			const defaultTranslations = module.enKeywordTranslations;
 			const localeTranslations = filename ? module[filename] : null;
 
-			return !!localeTranslations
+			return localeTranslations
 				? ObjectHelper.combineArrayMap(
 						localeTranslations,
 						defaultTranslations

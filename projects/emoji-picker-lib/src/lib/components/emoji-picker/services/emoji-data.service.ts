@@ -110,9 +110,8 @@ export class EmojiDataService {
 	 * @group Method
 	 * @returns {Skintone} The global skintone setting.
 	 */
-	fetchGlobalSkintone = (): Skintone => {
-		return this.emojiStorageService.fetchGlobalSkintone();
-	};
+	fetchGlobalSkintone = (): Skintone =>
+		this.emojiStorageService.fetchGlobalSkintone();
 
 	/**
 	 * Retrieves the skintone-specific version of an emoji based on the provided skintone.
@@ -152,20 +151,17 @@ export class EmojiDataService {
 	 * @param {string[]} emojiIds - The list of emoji IDs to retrieve.
 	 * @returns {Emoji[]} The list of emojis matching the provided IDs.
 	 */
-	fetchEmojisByIds = (emojiIds: string[]): Emoji[] => {
-		return emojiIds
+	fetchEmojisByIds = (emojiIds: string[]): Emoji[] =>
+		emojiIds
 			.map((id) => this.fetchEmojiById(id))
 			.filter((emoji): emoji is Emoji => !!emoji);
-	};
 
 	/**
 	 * Retrieves the full list of available emojis.
 	 * @group Method
 	 * @returns {Emoji[]} The list of available emojis.
 	 */
-	getEmojis = (): Emoji[] => {
-		return this.emojis();
-	};
+	getEmojis = (): Emoji[] => this.emojis();
 
 	/**
 	 * Generates a map of emojis by their ID, applying skintone settings.
@@ -181,8 +177,8 @@ export class EmojiDataService {
 		skintoneSetting: SkintoneSetting,
 		globalSkintoneSetting: Skintone,
 		individualEmojiSkintones: IndividualEmojiSkintone[]
-	): Map<string, Emoji> => {
-		return new Map(
+	): Map<string, Emoji> =>
+		new Map(
 			emojis.map((emoji) => [
 				emoji.id,
 				this.getEmojiBySkintoneSettings(
@@ -193,7 +189,6 @@ export class EmojiDataService {
 				),
 			])
 		);
-	};
 
 	/**
 	 * Retrieves an emoji by applying the appropriate skintone settings.
@@ -223,7 +218,7 @@ export class EmojiDataService {
 				(e) => e.emojiId === emoji.id
 			);
 
-			return !!individualEmoji
+			return individualEmoji
 				? Object.assign(
 						{ ...emoji },
 						{ value: individualEmoji.emojiValue }
@@ -251,9 +246,8 @@ export class EmojiDataService {
 	 * @param {Emoji} emoji - The emoji to check.
 	 * @returns {boolean} True if the emoji has skintone variations, otherwise false.
 	 */
-	hasEmojiSkintones = (emoji: Emoji): boolean => {
-		return !!emoji.skintones && emoji.skintones.length > 0;
-	};
+	hasEmojiSkintones = (emoji: Emoji): boolean =>
+		!!emoji.skintones && emoji.skintones.length > 0;
 
 	/**
 	 * Fetches the list of recent emojis from storage.

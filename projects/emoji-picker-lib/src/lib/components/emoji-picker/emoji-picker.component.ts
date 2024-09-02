@@ -317,12 +317,11 @@ export class EmojiPickerComponent implements OnInit, OnDestroy {
 		};
 	});
 
-	noDataEmoji = computed(() => {
-		return (
+	noDataEmoji = computed(
+		() =>
 			this.emojiDataService.emojiMap()?.get('person-shrugging')
 				?.value ?? '🤷'
-		);
-	});
+	);
 
 	globalSkintone = this.emojiDataService.globalSkintoneSetting;
 
@@ -341,13 +340,13 @@ export class EmojiPickerComponent implements OnInit, OnDestroy {
 	}
 
 	ngOnDestroy(): void {
-		if (!!this.pointerDownListener) {
+		if (this.pointerDownListener) {
 			this.pointerDownListener();
 		}
 	}
 
-	private createPointerDownListener = () => {
-		return this.renderer.listen(
+	private createPointerDownListener = () =>
+		this.renderer.listen(
 			this.elementRef.nativeElement,
 			'pointerdown',
 			(evt: PointerEvent) => {
@@ -360,7 +359,6 @@ export class EmojiPickerComponent implements OnInit, OnDestroy {
 				}
 			}
 		);
-	};
 
 	protected handleScroll = () => {
 		this.swatchPickerComponent()?.close();
@@ -466,16 +464,13 @@ export class EmojiPickerComponent implements OnInit, OnDestroy {
 
 	private isIndividualSkintoneSettingEnabled = (
 		skintoneSetting: SkintoneSetting
-	) => {
-		return ['both', 'individual'].includes(skintoneSetting);
-	};
+	): boolean => ['both', 'individual'].includes(skintoneSetting);
+
 	private isGlobalSkintoneSettingEnabled = (
 		skintoneSetting: SkintoneSetting
-	) => {
-		return ['both', 'global'].includes(skintoneSetting);
-	};
+	): boolean => ['both', 'global'].includes(skintoneSetting);
 
-	protected handleEmojiSkintoneSelected = (evt: ClickEvent) => {
+	protected handleEmojiSkintoneSelected = (evt: ClickEvent): void => {
 		const selectedEmoji = this.selectedEmoji();
 
 		if (!selectedEmoji) return;
@@ -491,7 +486,7 @@ export class EmojiPickerComponent implements OnInit, OnDestroy {
 		skintoneSetting: SkintoneSetting,
 		emoji: Emoji,
 		emojiValue: string
-	) => {
+	): void => {
 		if (skintoneSetting === 'individual')
 			this.emojiDataService.updateEmojiSkintone(emoji.id, emojiValue);
 

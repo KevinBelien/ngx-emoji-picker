@@ -53,9 +53,7 @@ export class TranslationService {
 	 * @group Method
 	 * @returns {Language} The current language.
 	 */
-	getLanguage = (): Language => {
-		return this.currentLanguage$.getValue();
-	};
+	getLanguage = (): Language => this.currentLanguage$.getValue();
 
 	/**
 	 * Loads translations for a specific language and merges them with any existing translations for that language.
@@ -105,9 +103,8 @@ export class TranslationService {
 	 * @group Method
 	 * @returns {LocaleTranslations} A map containing all loaded translations.
 	 */
-	getAllTranslations = (): LocaleTranslations => {
-		return this.translations$.getValue();
-	};
+	getAllTranslations = (): LocaleTranslations =>
+		this.translations$.getValue();
 
 	/**
 	 * Retrieves translations for a specific language.
@@ -117,18 +114,16 @@ export class TranslationService {
 	 */
 	getTranslationsByLanguage = (
 		language: Language
-	): Translations | undefined => {
-		return this.getAllTranslations().get(language);
-	};
+	): Translations | undefined =>
+		this.getAllTranslations().get(language);
 
 	/**
 	 * Retrieves translations for the current language.
 	 * @group Method
 	 * @returns {Translations | undefined} A map of translations for the current language, or undefined if not available.
 	 */
-	getTranslationsByCurrentLanguage = (): Translations | undefined => {
-		return this.getTranslationsByLanguage(this.getLanguage());
-	};
+	getTranslationsByCurrentLanguage = (): Translations | undefined =>
+		this.getTranslationsByLanguage(this.getLanguage());
 
 	/**
 	 * Retrieves a translation by its key for the current language.
@@ -136,7 +131,6 @@ export class TranslationService {
 	 * @param {string} key - The key for the translation to retrieve.
 	 * @returns {string | undefined} The translated string, or undefined if the key does not exist.
 	 */
-	getTranslationByKey = (key: string): string | undefined => {
-		return this.getTranslationsByCurrentLanguage()?.get(key);
-	};
+	getTranslationByKey = (key: string): string | undefined =>
+		this.getTranslationsByCurrentLanguage()?.get(key);
 }

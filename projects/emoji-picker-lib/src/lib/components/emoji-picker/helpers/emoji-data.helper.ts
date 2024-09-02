@@ -16,11 +16,10 @@ export class EmojiDataHelper {
 	public static filterEmojisByCategories = (
 		emojis: Emoji[],
 		includedCategories: EmojiCategory[]
-	): Emoji[] => {
-		return emojis.filter((emoji) =>
+	): Emoji[] =>
+		emojis.filter((emoji) =>
 			includedCategories.includes(emoji.category)
 		);
-	};
 
 	public static filterAndSortEmojis = (
 		emojis: Emoji[],
@@ -36,8 +35,8 @@ export class EmojiDataHelper {
 	public static sortEmojis = (
 		emojis: Emoji[],
 		categories: EmojiCategory[]
-	): Emoji[] => {
-		return emojis.sort((a, b) => {
+	): Emoji[] =>
+		emojis.sort((a, b) => {
 			const categoryComparison =
 				categories.indexOf(a.category) -
 				categories.indexOf(b.category);
@@ -46,5 +45,4 @@ export class EmojiDataHelper {
 			}
 			return a.order - b.order;
 		});
-	};
 }
