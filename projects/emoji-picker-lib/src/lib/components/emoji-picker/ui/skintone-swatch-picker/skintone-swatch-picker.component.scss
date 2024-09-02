@@ -1,0 +1,75 @@
+:host {
+	display: contents;
+}
+
+.ch-color-picker-container {
+	display: flex;
+	flex-basis: calc(
+		(
+				var(--ch-skincolor-swatch-size) +
+					var(--ch-skincolor-swatch-padding)
+			) * 1px
+	);
+	justify-content: flex-end;
+	position: relative;
+	transition: all 0.3s ease-in-out;
+	align-items: center;
+	margin-left: auto;
+
+	.ch-skintone-select {
+		box-sizing: border-box;
+		position: relative;
+		width: calc(var(--ch-skincolor-swatch-size) * 1px);
+		height: calc(var(--ch-skincolor-swatch-size) * 1px);
+		padding: 0;
+		margin: 0;
+
+		.ch-color-swatch {
+			border-radius: 6px;
+			cursor: pointer;
+			display: block;
+			position: absolute;
+			width: calc(var(--ch-skincolor-swatch-size) * 1px);
+			height: calc(var(--ch-skincolor-swatch-size) * 1px);
+			z-index: 0;
+			transition: transform 0.3s ease-in-out, opacity 0.4s ease-in-out;
+			outline: none;
+			box-shadow: none;
+			border: none;
+			opacity: 1;
+
+			&.selected {
+				z-index: 1;
+			}
+		}
+	}
+
+	&:not(.open) {
+		.ch-skintone-select {
+			.ch-color-swatch:not(.selected) {
+				opacity: 0;
+			}
+		}
+	}
+
+	&.open {
+		flex-basis: calc(
+			(
+					var(--ch-skincolor-swatch-size) +
+						var(--ch-skincolor-swatch-padding)
+				) * 1px * var(--ch-skincolor-swatch-count)
+		);
+
+		.ch-skintone-select {
+			.ch-color-swatch {
+				&:hover {
+					box-shadow: 0 0 0 2.5px var(--ch-hover-color);
+				}
+				&.selected {
+					box-shadow: 0 0 0 1.2px var(--ch-emoji-picker-background),
+						0 0 0 2px var(--ch-select-color);
+				}
+			}
+		}
+	}
+}

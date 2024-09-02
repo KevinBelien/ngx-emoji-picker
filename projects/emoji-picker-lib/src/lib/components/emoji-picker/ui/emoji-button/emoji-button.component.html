@@ -1,0 +1,12 @@
+@if({data: emoji()}; as emoji){
+<button
+	class="ch-emoji-btn"
+	[attr.aria-label]="emoji.data"
+	[ngClass]="{
+		'ch-emoji-variation-indicator': showSkintoneIndicator()
+	}"
+	chRipple
+>
+	<span class="ch-emoji">{{ emoji.data }}</span>
+</button>
+}

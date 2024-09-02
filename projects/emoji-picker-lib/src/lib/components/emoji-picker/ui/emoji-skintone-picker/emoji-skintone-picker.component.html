@@ -1,0 +1,15 @@
+<div
+	class="skintone-picker-container"
+	chClickTouchHold
+	chPreventContextMenu
+	dataAttribute="data-skintone"
+	(onClick)="handleEmojiClick($event)"
+>
+	@if({data: emoji()}; as emoji){ @for (alternativeSkintone of
+	emoji.data?.skintones; track alternativeSkintone.skintone) {
+	<ch-emoji-button
+		[emoji]="alternativeSkintone.value"
+		[attr.data-skintone]="alternativeSkintone.value"
+	></ch-emoji-button>
+	} }
+</div>

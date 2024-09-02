@@ -1,0 +1,50 @@
+<mat-toolbar class="nav-toolbar">
+	<ch-button
+		ariaLabel="menu"
+		cssClass="menu-btn"
+		type="contrast"
+		fill="clear"
+		[icon]="{
+			path: 'M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z'
+		}"
+		(onClick)="handleMenuBtnClick($event)"
+	></ch-button>
+	<h3 class="top-bar-content">Chit Chat</h3>
+
+	<div class="toolbar-end top-bar-content">
+		{{ isDarkTheme ? 'Dark Theme' : 'Light Theme' }}
+		<mat-slide-toggle
+			[checked]="isDarkTheme"
+			(toggleChange)="handleThemeChange()"
+		>
+		</mat-slide-toggle>
+	</div>
+</mat-toolbar>
+
+<mat-sidenav-container class="side-nav-container">
+	<mat-sidenav
+		mode="side"
+		[opened]="isMenuOpened"
+		[mode]="sideNavMode"
+		class="side-nav"
+	>
+		<mat-nav-list>
+			@for (item of navigationItems; track item.path) {
+
+			<mat-list-item
+				class="nav-item"
+				[routerLink]="item.path"
+				routerLinkActive="selected"
+				[ngClass]="{ selected: selectedNavItem.path === item.path }"
+				(click)="selectNavItem(item)"
+			>
+				{{ item.text | titlecase }}
+			</mat-list-item>
+			}
+		</mat-nav-list>
+	</mat-sidenav>
+
+	<mat-sidenav-content class="content-container">
+		<router-outlet></router-outlet>
+	</mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,0 +1,20 @@
+<div class="ch-emoji-tabs ch-scroll-viewport">
+	@for (category of emojiCategories(); track category) {
+	<ch-button
+		chHover
+		(hoverChange)="handleHoverChange($event, category)"
+		fill="clear"
+		type="contrast"
+		[cssClass]="selectedTab() === category ? 'ch-button-active' : ''"
+		[ariaLabel]="category"
+		[icon]="
+			(!isMobile && categoryHovered() === category) ||
+			selectedTab() === category
+				? { path: emojiCategoryIcons[category].solid }
+				: { path: emojiCategoryIcons[category].outline }
+		"
+		(onClick)="handleCategoryButtonClick($event, category)"
+	>
+	</ch-button>
+	}
+</div>

@@ -1,0 +1,121 @@
+<div class="button-demo-container">
+	<div class="button-collection-section">
+		<h3 class="header">Basic</h3>
+		<ng-container
+			*ngFor="let fill of buttonFills; let fillIndex = index"
+		>
+			<div class="fill-container">
+				<div class="fill-title">{{ fill | titlecase }}</div>
+
+				<div class="btn-row">
+					<ng-container
+						*ngFor="let type of buttonTypes; let typeIndex = index"
+					>
+						<ch-button
+							[autofocus]="fillIndex === 0 && typeIndex === 0"
+							[ariaLabel]="fill + '-' + type"
+							[label]="type | titlecase"
+							[type]="type"
+							[fill]="fill"
+							[raised]="form.isRaised"
+							[shape]="form.isRound ? 'round' : 'square'"
+							[disabled]="form.disabled"
+							[activeStateEnabled]="!form.activeStateDisabled"
+							[hoverStateEnabled]="!form.hoverStateDisabled"
+							[focusStateEnabled]="!form.focusStateDisabled"
+							(onClick)="handleClick($event)"
+						></ch-button>
+					</ng-container>
+				</div>
+			</div>
+		</ng-container>
+	</div>
+
+	<div class="button-collection-section">
+		<h3 class="header">Icon and Label</h3>
+		<ng-container *ngFor="let fill of buttonFills">
+			<div class="fill-container">
+				<div class="fill-title">{{ fill | titlecase }}</div>
+
+				<div class="btn-row">
+					<ng-container *ngFor="let type of buttonTypes">
+						<ch-button
+							[ariaLabel]="'icon' + fill + '-' + type"
+							[label]="type | titlecase"
+							[type]="type"
+							[fill]="fill"
+							[raised]="form.isRaised"
+							[shape]="form.isRound ? 'round' : 'square'"
+							[disabled]="form.disabled"
+							[activeStateEnabled]="!form.activeStateDisabled"
+							[hoverStateEnabled]="!form.hoverStateDisabled"
+							[focusStateEnabled]="!form.focusStateDisabled"
+							[icon]="{
+								path: icon,
+								position: form.selectedIconPosition
+							}"
+							(onClick)="handleClick($event)"
+						></ch-button>
+					</ng-container>
+				</div>
+			</div>
+		</ng-container>
+	</div>
+	<div class="button-collection-section">
+		<h3 class="header">Icon only</h3>
+
+		<ng-container *ngFor="let fill of buttonFills">
+			<div class="fill-container">
+				<div class="fill-title">{{ fill | titlecase }}</div>
+
+				<div class="btn-row">
+					<ng-container *ngFor="let type of buttonTypes">
+						<ch-button
+							[ariaLabel]="'icon-only-' + fill + '-' + type"
+							[type]="type"
+							[fill]="fill"
+							[raised]="form.isRaised"
+							[shape]="form.isRound ? 'round' : 'square'"
+							[disabled]="form.disabled"
+							[activeStateEnabled]="!form.activeStateDisabled"
+							[focusStateEnabled]="!form.focusStateDisabled"
+							[hoverStateEnabled]="!form.hoverStateDisabled"
+							[icon]="{ cssClass: '', path: icon }"
+							(onClick)="handleClick($event)"
+						></ch-button>
+					</ng-container>
+				</div>
+			</div>
+		</ng-container>
+	</div>
+
+	<div class="form">
+		<ng-container *ngFor="let item of formItems">
+			<div class="form-item">
+				<input
+					[id]="item + '-form-item'"
+					type="checkbox"
+					[(ngModel)]="form[item[0]]"
+				/>
+
+				<label [for]="item + '-form-item'">{{
+					item[1] | titlecase
+				}}</label>
+			</div>
+		</ng-container>
+
+		<div class="form-item">
+			<label for="icon-position-form-item">Icon Position</label>
+
+			<select
+				id="icon-position-form-item"
+				[(ngModel)]="form.selectedIconPosition"
+			>
+				<option value="left">Left</option>
+				<option value="right">Right</option>
+				<option value="top">Top</option>
+				<option value="bottom">Bottom</option>
+			</select>
+		</div>
+	</div>
+</div>

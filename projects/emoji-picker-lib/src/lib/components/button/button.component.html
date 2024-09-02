@@ -1,0 +1,36 @@
+<button
+	chRipple
+	[rippleEnabled]="activeStateEnabled()"
+	chAutofocus
+	[autofocus]="autofocus()"
+	[attr.aria-label]="ariaLabel()"
+	[ngStyle]="{
+		width: width() ? width() + 'px' : 'auto',
+		height: height() ? height() + 'px' : 'auto'
+	}"
+	[ngClass]="buttonClass()"
+	[disabled]="disabled()"
+	[tabIndex]="tabIndex()"
+	(click)="handleClick($event)"
+>
+	<ng-content></ng-content>
+
+	<!-- <ng-container *ngIf="icon() as ico"> -->
+	@if ({ data: icon() }; as icon) { @if(!!icon.data){
+	<div [ngClass]="iconClass()">
+		<ch-icon
+			[cssClass]="icon.data.cssClass ?? ''"
+			[iconPath]="icon.data.path ?? ''"
+			[height]="icon.data.height ?? 24"
+			[width]="icon.data.width ?? 24"
+			[viewBox]="icon.data.viewBox ?? '0 -960 960 960'"
+		></ch-icon>
+	</div>
+	} }
+	<!-- </ng-container> -->
+	<span
+		class="ch-button-label"
+		[attr.aria-hidden]="icon() && !label()"
+		>{{ label() }}</span
+	>
+</button>

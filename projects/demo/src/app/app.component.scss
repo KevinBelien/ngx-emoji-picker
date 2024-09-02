@@ -1,0 +1,66 @@
+$top-bar-height: 50px;
+
+$side-nav-width: 200px;
+$side-nav-padding: 16px;
+
+.nav-toolbar {
+	height: $top-bar-height;
+	display: flex;
+	column-gap: 0.7em;
+	background-color: var(--ch-color-primary);
+	align-items: center;
+
+	.toolbar-end {
+		margin-left: auto;
+	}
+}
+
+.top-bar-content {
+	color: #fff;
+}
+
+.side-nav-container {
+	position: relative;
+	height: calc(100vh - $top-bar-height);
+}
+
+::ng-deep
+	.nav-toolbar
+	ch-button
+	.ch-button.ch-button-clear.ch-button-contrast
+	ch-icon
+	.ch-icon {
+	fill: #fff;
+}
+
+::ng-deep .side-nav.mat-drawer {
+	width: $side-nav-width;
+	padding: $side-nav-padding;
+}
+
+.content-container {
+	padding-inline: 6px;
+	display: flex;
+	flex-direction: column;
+	height: calc(100vh - $top-bar-height);
+}
+
+::ng-deep .ch-dark-theme .side-nav.mat-drawer {
+	.mdc-list-item__primary-text {
+		color: #fff;
+	}
+
+	.mdc-list-item:focus .mdc-list-item__primary-text,
+	.mdc-list-item:hover .mdc-list-item__primary-text,
+	.mdc-list-item:active .mdc-list-item__primary-text {
+		color: #fff;
+	}
+}
+
+::ng-deep mat-list-item.nav-item.selected {
+	background-color: var(--ch-color-primary);
+
+	.mdc-list-item__primary-text {
+		color: white;
+	}
+}

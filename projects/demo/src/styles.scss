@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+@import url(https://fonts.googleapis.com/css?family=Poppins:300,400,500,700);
+
+body {
+	background-color: var(--ch-background-color, #fff);
+	color: var(--ch-text-color, #000);
+	font-family: var(--ch-font-family);
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	row-gap: 0.5em;
+}
+.form-item {
+	display: flex;
+	align-items: center;
+	gap: 0.5em;
+}

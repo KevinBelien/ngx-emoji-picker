@@ -1,0 +1,18 @@
+<ng-template cdkPortal>
+	<div
+		class="ch-dialog"
+		[ngClass]="cssClass()"
+		[style.height]="dimensions().height"
+		[style.width]="dimensions().width"
+	>
+		<div class="ch-dialog-header">
+			<ng-content select="[header]"></ng-content>
+		</div>
+		<div class="ch-dialog-content ch-scroll-viewport">
+			<ng-content select="[content]"></ng-content>
+		</div>
+		<div class="ch-dialog-footer">
+			<ng-content select="[footer]"></ng-content>
+		</div>
+	</div>
+</ng-template>

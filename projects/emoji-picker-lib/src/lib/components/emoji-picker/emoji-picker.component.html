@@ -1,0 +1,94 @@
+<div class="ch-emoji-picker">
+	<div class="ch-emoji-header-container">
+		<div class="ch-searchbar-container">
+			<div class="ch-searchbar">
+				<ch-text-box
+					mode="search"
+					variant="filled"
+					[autofocus]="true"
+					[placeholder]="'emojipicker.search' | translate"
+					valueChangeEvent="input"
+					[showClearButton]="true"
+					[value]="searchValue()"
+					(onValueChanged)="handleSearchValueChanged($event)"
+				></ch-text-box>
+			</div>
+		</div>
+
+		@if (!!isGlobalSkintoneEnabled()) {
+		<ch-skintone-swatch-picker
+			[selectedSkintone]="globalSkintone()"
+			[size]="20"
+			(onSelectionChanged)="handleGlobalSkintoneChanged($event)"
+		></ch-skintone-swatch-picker>
+		}
+	</div>
+
+	@if ({data: filteredEmojis()}; as filteredEmojis) {
+	@if(!filteredEmojis.data || (!filteredEmojis.data.filterActive ||
+	filteredEmojis.data.emojis.length > 0)){ @if(!filteredEmojis.data ||
+	!filteredEmojis.data.filterActive){
+	<div
+		class="emoji-tab-bar"
+		[ngClass]="{
+			'bar-bottom': categoryBarPosition() === 'bottom'
+		}"
+	>
+		<ch-emoji-tabs
+			[emojiCategories]="emojiCategories()"
+			[selectedTab]="selectedCategory()"
+			(onTabClicked)="handleCategoryTabClicked($event)"
+		></ch-emoji-tabs>
+	</div>
+	}
+	<div class="ch-emoji-picker-container">
+		<ch-emoji-viewport
+			[height]="height"
+			[width]="width"
+			[emojis]="emojis().defaultEmojis"
+			[suggestionEmojis]="emojis().suggestionEmojis"
+			[filteredEmojis]="emojis().filteredEmojis"
+			[showSkintoneIndicator]="isIndividualSkintoneEnabled()"
+			[emojiSize]="emojiSize()"
+			[(currentCategory)]="selectedCategory"
+			[scrollbarVisible]="scrollbarVisible()"
+			[emojiCategories]="emojiCategories()"
+			(onClick)="handleEmojiClick($event)"
+			(onScroll)="handleScroll()"
+			(onTouchHold)="handleEmojiTouchHold($event)"
+			(onEmojiSizeCalculated)="handleEmojiSizeCalculated($event)"
+		></ch-emoji-viewport>
+	</div>
+	} @else {
+	<div class="ch-no-data-container">
+		<div class="ch-no-data-emoji">{{ noDataEmoji() }}</div>
+		<div class="ch-no-data-text">No results</div>
+	</div>
+	} }
+</div>
+
+<ch-dialog
+	#skintoneDialog
+	[(visible)]="isSkintoneDialogVisible"
+	backdropClass="cdk-overlay-transparent-backdrop"
+	[target]="targetElement"
+	[positions]="[
+		{
+			originX: 'center',
+			originY: 'top',
+			overlayX: 'center',
+			overlayY: 'bottom',
+			offsetY: -5
+		}
+	]"
+	cssClass="skintone-dialog"
+>
+	<ng-container content
+		><ch-emoji-skintone-picker
+			[emoji]="selectedEmoji()"
+			[emojiSizeInPx]="emojiSizeInPx"
+			[emojiButtonSizeInPx]="emojiButtonSizeInPx"
+			(onSelectionChanged)="handleEmojiSkintoneSelected($event)"
+		></ch-emoji-skintone-picker>
+	</ng-container>
+</ch-dialog>

@@ -1,0 +1,46 @@
+.ch-static-category {
+	z-index: 10;
+	width: 100%;
+}
+
+.ch-scroll-wrapper {
+	height: 100%;
+	width: 100%;
+	padding-inline: calc(var(--ch-padding-inline) * 1px);
+}
+
+.ch-virtual-category {
+	z-index: 20;
+}
+
+.ch-emoji-group-title {
+	font-family: var(--ch-font-family, inherit);
+	background-color: var(
+		--ch-emoji-picker-background,
+		var(--ch-background-color, #fff)
+	);
+	color: var(--ch-text-color, #000);
+	font-weight: 500;
+	user-select: none;
+	height: calc(var(--ch-emoji-buttonsize) * 1px);
+
+	display: flex;
+	align-items: center;
+	width: 100%;
+	padding-left: 0.2rem;
+}
+
+.ch-sticky {
+	position: -webkit-sticky;
+	position: sticky;
+	top: calc(var(--sticky-offset, 0) * 1px - 1px);
+}
+
+.ch-row {
+	display: flex;
+	width: 100%;
+	height: calc(
+		var(--ch-emoji-size, 24px) *
+			var(--ch-emoji-btn-size-multiplier, 1.5) * 1px
+	);
+}

@@ -1,0 +1,5291 @@
+{
+	"man-bouncing-ball": ["sports", "basketball", "man bouncing ball"],
+	"notebook": ["notebook", "document", "paper"],
+	"man-surfing": ["sports", "surfing", "man surfing"],
+	"flag-of-argentina": ["flag", "argentina", "flag of argentina"],
+	"kaaba": ["kaaba", "building", "religion"],
+	"flag-of-canary-islands": [
+		"flag",
+		"canary islands",
+		"flag of canary islands"
+	],
+	"flag-of-peru": ["flag", "peru", "flag of peru"],
+	"flag-of-falkland-islands": [
+		"flag",
+		"falkland islands",
+		"flag of falkland islands"
+	],
+	"tennis": ["sports", "tennis"],
+	"detective": ["detective", "spy", "sleuth"],
+	"potted-plant": ["plant", "potted", "potted plant"],
+	"flag-of-haiti": ["flag", "haiti", "flag of haiti"],
+	"goat": ["animal", "goat", "farm"],
+	"palm-up-hand": [
+		"palm",
+		"up",
+		"hand",
+		"gesture",
+		"receive",
+		"offer",
+		"present",
+		"support",
+		"palm up hand"
+	],
+	"person-walking": ["person", "walking", "person walking"],
+	"graduation-cap": ["graduation cap", "graduation", "education"],
+	"up-right-arrow": [
+		"up-right",
+		"arrow",
+		"direction",
+		"up-right arrow"
+	],
+	"bust-in-silhouette": [
+		"bust",
+		"silhouette",
+		"person",
+		"bust in silhouette"
+	],
+	"bullet-train": [
+		"bullet train",
+		"vehicle",
+		"transportation",
+		"train"
+	],
+	"flag-of-egypt": ["flag", "egypt", "flag of egypt"],
+	"large-orange-diamond": [
+		"large",
+		"orange",
+		"diamond",
+		"large orange diamond"
+	],
+	"flag-of-libya": ["flag", "libya", "flag of libya"],
+	"eight-thirty": ["eight", "thirty", "time", "eight-thirty"],
+	"men-with-bunny-ears": [
+		"men",
+		"bunny ears",
+		"partying",
+		"men with bunny ears"
+	],
+	"man-with-white-cane": ["man", "white cane", "man with white cane"],
+	"flag-of-puerto-rico": [
+		"flag",
+		"puerto rico",
+		"flag of puerto rico"
+	],
+	"flag-of-angola": ["flag", "angola", "flag of angola"],
+	"person-zombie": [
+		"zombie",
+		"person",
+		"undead",
+		"horror",
+		"person zombie"
+	],
+	"flag-of-venezuela": ["flag", "venezuela", "flag of venezuela"],
+	"fast-reverse-button": [
+		"fast",
+		"reverse",
+		"button",
+		"fast reverse button"
+	],
+	"ten-o’clock": ["ten", "o’clock", "time", "ten o’clock"],
+	"dove": ["animal", "dove", "bird"],
+	"upside-down-face": [
+		"face",
+		"upside-down",
+		"silly",
+		"playful",
+		"sarcastic",
+		"joking",
+		"upside-down face"
+	],
+	"flag-of-india": ["flag", "india", "flag of india"],
+	"raising-hands": [
+		"raising",
+		"hands",
+		"celebration",
+		"praise",
+		"hallelujah",
+		"joy",
+		"hooray",
+		"cheering",
+		"yay",
+		"raising hands"
+	],
+	"flag-of-malawi": ["flag", "malawi", "flag of malawi"],
+	"new-button": ["new", "button", "fresh", "new button"],
+	"mammoth": ["animal", "mammoth", "prehistoric"],
+	"vibration-mode": ["vibration", "mode", "phone", "vibration mode"],
+	"flag-of-romania": ["flag", "romania", "flag of romania"],
+	"egg": ["food", "egg"],
+	"clapper-board": ["clapper board", "movie"],
+	"flag-of-american-samoa": [
+		"flag",
+		"american samoa",
+		"flag of american samoa"
+	],
+	"crossed-flags": ["crossed", "flags", "crossed flags"],
+	"eleven-thirty": ["eleven", "thirty", "time", "eleven-thirty"],
+	"breastfeeding": ["breastfeeding", "baby", "nursing"],
+	"man-tipping-hand": [
+		"tipping hand",
+		"man",
+		"sassy",
+		"man tipping hand"
+	],
+	"flag-of-denmark": ["flag", "denmark", "flag of denmark"],
+	"white-flower": ["flower", "white", "decoration", "white flower"],
+	"rightwards-hand": ["hand", "rightwards", "rightwards hand"],
+	"woman-tipping-hand": [
+		"tipping hand",
+		"woman",
+		"sassy",
+		"woman tipping hand"
+	],
+	"keycap-8": ["keycap", "8", "eight", "keycap 8"],
+	"transgender-flag": [
+		"transgender",
+		"flag",
+		"pride",
+		"transgender flag"
+	],
+	"person-with-red-hair": [
+		"person",
+		"red",
+		"hair",
+		"neutral",
+		"person with red hair"
+	],
+	"slot-machine": ["game", "slot", "slot machine"],
+	"cat-with-tears-of-joy": [
+		"cat",
+		"animal",
+		"tears",
+		"joy",
+		"laughing",
+		"feline",
+		"funny",
+		"happy",
+		"cute",
+		"tear",
+		"cat with tears of joy"
+	],
+	"ship": ["ship", "vehicle", "transportation", "boat"],
+	"ringed-planet": ["nature", "planet", "ringed", "ringed planet"],
+	"cinema": ["cinema", "movie", "film"],
+	"baby": ["baby", "child", "newborn", "smile"],
+	"oil-drum": ["oil drum", "container", "oil"],
+	"tongue": ["tongue", "mouth", "body"],
+	"inbox-tray": ["inbox tray", "letter", "mail"],
+	"party-popper": ["party popper", "celebration", "party"],
+	"empty-nest": ["animal", "nest", "empty", "empty nest"],
+	"alembic": ["alembic", "chemistry", "tool"],
+	"flag-of-são-tomé-and-príncipe": [
+		"flag",
+		"sao tome and principe",
+		"flag of são tomé and príncipe"
+	],
+	"man-elf": ["elf", "man", "fantasy", "magical", "man elf"],
+	"zany-face": [
+		"face",
+		"goofy",
+		"crazy",
+		"wild",
+		"zany",
+		"zany face"
+	],
+	"black-large-square": [
+		"black",
+		"large",
+		"square",
+		"black large square"
+	],
+	"skull-and-crossbones": [
+		"dead",
+		"danger",
+		"poison",
+		"death",
+		"warning",
+		"toxic",
+		"hazard",
+		"pirate",
+		"skull",
+		"bones",
+		"skull and crossbones"
+	],
+	"ice-cream": ["food", "ice", "cream", "ice cream"],
+	"feather": ["feather"],
+	"person-with-crown": [
+		"person",
+		"crown",
+		"royalty",
+		"person with crown"
+	],
+	"sled": ["sports", "sled"],
+	"man-facepalming": [
+		"facepalming",
+		"man",
+		"disbelief",
+		"man facepalming"
+	],
+	"orange-book": ["orange book", "document", "paper"],
+	"flag-of-ecuador": ["flag", "ecuador", "flag of ecuador"],
+	"sandal": ["sandal", "shoes", "footwear"],
+	"pushpin": ["pushpin", "tool", "office"],
+	"hotel": ["hotel", "building", "accommodation"],
+	"flag-of-malaysia": ["flag", "malaysia", "flag of malaysia"],
+	"cat-face": ["animal", "cat", "pet", "cat face"],
+	"rabbit-face": ["animal", "rabbit", "bunny", "rabbit face"],
+	"bagel": ["food", "bread", "bagel"],
+	"men-holding-hands-with-heart": [
+		"men",
+		"heart",
+		"men holding hands with heart"
+	],
+	"wolf": ["animal", "wolf", "wild"],
+	"memo": ["memo", "writing", "document"],
+	"nazar-amulet": ["nazar amulet", "protection", "evil eye"],
+	"dog-face": ["animal", "dog", "pet", "dog face"],
+	"woman-and-man-kissing": [
+		"woman",
+		"man",
+		"kiss",
+		"woman and man kissing"
+	],
+	"person-with-hearing-aid": [
+		"hearing aid",
+		"person",
+		"accessibility",
+		"person with hearing aid"
+	],
+	"optical-disk": ["optical disk", "technology", "storage"],
+	"suspension-railway": [
+		"suspension railway",
+		"transportation",
+		"vehicle"
+	],
+	"crystal-ball": ["crystal ball", "magic", "fortune"],
+	"crying-face": [
+		"face",
+		"tear",
+		"sad",
+		"depressed",
+		"upset",
+		"cry",
+		"awful",
+		"unhappy",
+		"crying face"
+	],
+	"woman-detective": [
+		"woman",
+		"detective",
+		"spy",
+		"sleuth",
+		"woman detective"
+	],
+	"admission-tickets": ["tickets", "admission", "admission tickets"],
+	"slightly-smiling-face": [
+		"face",
+		"smile",
+		"friendly",
+		"content",
+		"slight",
+		"slightly smiling face"
+	],
+	"flying-saucer": ["flying saucer", "vehicle", "space", "alien"],
+	"woman-in-motorized-wheelchair": [
+		"woman",
+		"motorized wheelchair",
+		"woman in motorized wheelchair"
+	],
+	"flag-of-croatia": ["flag", "croatia", "flag of croatia"],
+	"one-piece-swimsuit": [
+		"swimsuit",
+		"swimwear",
+		"beach",
+		"one-piece swimsuit"
+	],
+	"input-numbers": ["input", "numbers", "typing", "input numbers"],
+	"woman-health-worker": [
+		"woman",
+		"health",
+		"worker",
+		"smile",
+		"woman health worker"
+	],
+	"growing-heart": ["love", "heart", "growth", "growing heart"],
+	"house": ["house", "building", "home"],
+	"earth-globe-asia-australia": [
+		"nature",
+		"earth",
+		"asia",
+		"australia",
+		"earth globe asia-australia"
+	],
+	"ok-hand": [
+		"ok",
+		"hand",
+		"approval",
+		"good",
+		"fine",
+		"yes",
+		"gesture",
+		"perfect",
+		"agree",
+		"ok hand"
+	],
+	"hatching-chick": ["animal", "chick", "hatch", "hatching chick"],
+	"diving-mask": ["sports", "diving", "diving mask"],
+	"tractor": ["tractor", "vehicle", "farming", "agriculture"],
+	"shoe": ["shoe", "shoes", "footwear"],
+	"tokyo-tower": ["tokyo tower", "japan", "landmark"],
+	"woman-standing": ["woman", "standing", "woman standing"],
+	"woman-superhero": [
+		"superhero",
+		"woman",
+		"hero",
+		"woman superhero"
+	],
+	"safety-pin": ["safety pin", "tool", "fastener"],
+	"index-pointing-at-the-viewer": [
+		"pointing",
+		"viewer",
+		"hand",
+		"index pointing at the viewer"
+	],
+	"auto-rickshaw": ["auto rickshaw", "vehicle", "transportation"],
+	"crab": ["animal", "crab", "marine"],
+	"knot": ["knot", "rope", "tie"],
+	"flag-of-french-polynesia": [
+		"flag",
+		"french polynesia",
+		"flag of french polynesia"
+	],
+	"flamingo": ["animal", "flamingo", "bird"],
+	"man-cartwheeling": ["sports", "cartwheel", "man cartwheeling"],
+	"rice-cracker": ["food", "rice", "cracker", "rice cracker"],
+	"boot": ["boot", "shoes", "footwear"],
+	"heavy-minus-sign": [
+		"minus",
+		"sign",
+		"subtraction",
+		"heavy minus sign"
+	],
+	"cricket-game": ["sports", "cricket", "cricket game"],
+	"pilot": ["pilot", "aviator", "flight", "person"],
+	"telephone": ["telephone", "communication", "technology"],
+	"pink-heart": ["love", "heart", "affection", "pink heart"],
+	"woman-gesturing-no": [
+		"gesturing no",
+		"woman",
+		"no",
+		"stop",
+		"woman gesturing no"
+	],
+	"shark": ["animal", "shark", "marine"],
+	"mantelpiece-clock": ["mantelpiece clock", "time", "clock"],
+	"ice-skate": ["sports", "ice skate"],
+	"computer-mouse": ["computer mouse", "technology", "device"],
+	"flag-of-jamaica": ["flag", "jamaica", "flag of jamaica"],
+	"palm-down-hand": [
+		"palm",
+		"down",
+		"hand",
+		"gesture",
+		"low",
+		"push",
+		"flat",
+		"stop",
+		"palm down hand"
+	],
+	"flag-of-montenegro": ["flag", "montenegro", "flag of montenegro"],
+	"scorpion": ["animal", "scorpion", "insect"],
+	"flag-of-uganda": ["flag", "uganda", "flag of uganda"],
+	"cherries": ["food", "fruit", "cherries"],
+	"rightwards-pushing-hand": [
+		"hand",
+		"rightwards",
+		"push",
+		"gesture",
+		"right",
+		"move",
+		"stop",
+		"halt",
+		"rightwards pushing hand"
+	],
+	"seedling": ["plant", "seedling", "growth"],
+	"water-wave": ["nature", "water", "wave", "water wave"],
+	"family-woman-woman-girl-girl": [
+		"family",
+		"woman",
+		"girl",
+		"family woman woman girl girl"
+	],
+	"person-judge": [
+		"person",
+		"judge",
+		"justice",
+		"court",
+		"person judge"
+	],
+	"dagger": ["dagger", "weapon", "knife"],
+	"waxing-gibbous-moon": ["nature", "moon", "waxing gibbous moon"],
+	"man-lifting-weights": [
+		"sports",
+		"weightlifting",
+		"man lifting weights"
+	],
+	"down-right-arrow": [
+		"down-right",
+		"arrow",
+		"direction",
+		"down-right arrow"
+	],
+	"person-gesturing-ok": [
+		"gesturing ok",
+		"person",
+		"ok",
+		"yes",
+		"person gesturing ok"
+	],
+	"football": ["sports", "football"],
+	"door": ["door", "entry", "exit"],
+	"family-woman-woman-boy": [
+		"family",
+		"woman",
+		"boy",
+		"family woman woman boy"
+	],
+	"panda-face": ["animal", "panda", "bear", "panda face"],
+	"woman-with-beard": ["woman", "beard", "smile", "woman with beard"],
+	"small-blue-diamond": [
+		"small",
+		"blue",
+		"diamond",
+		"small blue diamond"
+	],
+	"camera-with-flash": [
+		"camera with flash",
+		"photography",
+		"technology"
+	],
+	"man-supervillain": [
+		"supervillain",
+		"man",
+		"villain",
+		"man supervillain"
+	],
+	"hammer-and-pick": ["hammer and pick", "tool", "mining"],
+	"pot-of-food": ["food", "pot", "pot of food"],
+	"deer": ["animal", "deer", "wild"],
+	"small-airplane": [
+		"small",
+		"airplane",
+		"small airplane",
+		"vehicle",
+		"transportation",
+		"flight"
+	],
+	"movie-camera": ["movie camera", "photography", "technology"],
+	"volcano": ["volcano", "eruption", "landscape"],
+	"flag-of-israel": ["flag", "israel", "flag of israel"],
+	"smiling-face-with-horns": [
+		"face",
+		"devil",
+		"horns",
+		"mischievous",
+		"smile",
+		"evil",
+		"imp",
+		"wicked",
+		"trickster",
+		"sly",
+		"smiling face with horns"
+	],
+	"woman-with-hearing-aid": [
+		"hearing aid",
+		"woman",
+		"accessibility",
+		"woman with hearing aid"
+	],
+	"groom-with-veil": [
+		"groom",
+		"veil",
+		"wedding",
+		"man",
+		"groom with veil"
+	],
+	"flag-of-palau": ["flag", "palau", "flag of palau"],
+	"butterfly": ["animal", "butterfly", "insect"],
+	"crutch": [
+		"crutch",
+		"help",
+		"injured",
+		"cane",
+		"disablity",
+		"stick",
+		"mobility",
+		"aid"
+	],
+	"right-arrow-curving-down": [
+		"right",
+		"arrow",
+		"curving down",
+		"right arrow curving down"
+	],
+	"flag-of-netherlands": [
+		"flag",
+		"netherlands",
+		"flag of netherlands"
+	],
+	"troll": ["troll", "fantasy", "creature"],
+	"flat-shoe": ["flat shoe", "shoes", "footwear"],
+	"flag-of-malta": ["flag", "malta", "flag of malta"],
+	"flag-of-azerbaijan": ["flag", "azerbaijan", "flag of azerbaijan"],
+	"man,-girl-and-boy": ["man", "girl", "boy", "man, girl and boy"],
+	"face-without-mouth": [
+		"face",
+		"silent",
+		"mute",
+		"quiet",
+		"speechless",
+		"expressionless",
+		"blank",
+		"wordless",
+		"hushed",
+		"voiceless",
+		"zip",
+		"no comment",
+		"face without mouth"
+	],
+	"person-facepalming": [
+		"facepalming",
+		"person",
+		"disbelief",
+		"person facepalming"
+	],
+	"man-wearing-turban": [
+		"man",
+		"turban",
+		"smile",
+		"man wearing turban"
+	],
+	"1st-place-medal": [
+		"award",
+		"gold",
+		"first place",
+		"1st place medal"
+	],
+	"man-in-manual-wheelchair": [
+		"man",
+		"manual wheelchair",
+		"man in manual wheelchair"
+	],
+	"shower": ["shower", "bathroom", "clean"],
+	"pause-button": ["pause", "button", "symbol", "pause button"],
+	"woman-genie": [
+		"genie",
+		"woman",
+		"fantasy",
+		"magical",
+		"woman genie"
+	],
+	"lizard": ["animal", "lizard", "reptile"],
+	"moon-viewing-ceremony": [
+		"moon viewing ceremony",
+		"festival",
+		"japan"
+	],
+	"green-book": ["green book", "document", "paper"],
+	"sign-of-the-horns": [
+		"sign",
+		"horns",
+		"rock",
+		"music",
+		"metal",
+		"concert",
+		"gesture",
+		"hand",
+		"sign of the horns"
+	],
+	"customs": ["customs", "control", "border"],
+	"wireless": ["wireless", "symbol", "signal"],
+	"radio": ["radio", "entertainment", "communication"],
+	"raccoon": ["animal", "raccoon", "wild"],
+	"face-holding-back-tears": [
+		"aw",
+		"aww",
+		"please",
+		"tears",
+		"face",
+		"admiration",
+		"gratitude",
+		"sadness",
+		"sad",
+		"embarressed",
+		"feelings",
+		"angry",
+		"cry",
+		"resist",
+		"emotion",
+		"tears of joy",
+		"face holding back tears"
+	],
+	"blueberries": ["food", "fruit", "blueberries"],
+	"flag-of-thailand": ["flag", "thailand", "flag of thailand"],
+	"woman-raising-hand": [
+		"raising hand",
+		"woman",
+		"hand",
+		"raise",
+		"woman raising hand"
+	],
+	"baguette-bread": ["food", "bread", "baguette", "baguette bread"],
+	"roll-of-paper": ["roll of paper", "toilet paper", "tissue"],
+	"flag-of-georgia": ["flag", "georgia", "flag of georgia"],
+	"gorilla": ["animal", "gorilla", "primate"],
+	"leg": ["leg", "foot"],
+	"man-firefighter": [
+		"man",
+		"firefighter",
+		"fire",
+		"rescue",
+		"man firefighter"
+	],
+	"puck": ["puck", "cleaning", "tool"],
+	"ribbon": ["ribbon", "decoration", "gift"],
+	"twelve-thirty": ["twelve", "thirty", "time", "twelve-thirty"],
+	"cookie": ["food", "cookie"],
+	"man-in-lotus-position": [
+		"sports",
+		"yoga",
+		"man in lotus position"
+	],
+	"weary-cat": [
+		"cat",
+		"animal",
+		"weary",
+		"tired",
+		"feline",
+		"exhausted",
+		"stressed",
+		"scared",
+		"surprised",
+		"cute",
+		"weary cat"
+	],
+	"books": ["books", "document", "paper"],
+	"weary-face": [
+		"face",
+		"tired",
+		"frustrated",
+		"upset",
+		"exhausted",
+		"weary face"
+	],
+	"sun-behind-small-cloud": [
+		"nature",
+		"sun",
+		"cloud",
+		"sun behind small cloud"
+	],
+	"horse": ["animal", "horse", "farm"],
+	"japanese-beginner-symbol": [
+		"japanese",
+		"beginner",
+		"symbol",
+		"japanese beginner symbol"
+	],
+	"flag-of-grenada": ["flag", "grenada", "flag of grenada"],
+	"flag-of-san-marino": ["flag", "san marino", "flag of san marino"],
+	"syringe": ["syringe", "medical", "injection"],
+	"japanese-vacant-button": [
+		"japanese",
+		"vacant",
+		"button",
+		"japanese vacant button"
+	],
+	"man-dancing": ["man", "dancing", "man dancing"],
+	"flag-of-slovenia": ["flag", "slovenia", "flag of slovenia"],
+	"green-square": ["green", "square", "symbol", "green square"],
+	"automobile": ["car", "automobile", "vehicle", "transportation"],
+	"blue-square": ["blue", "square", "symbol", "blue square"],
+	"bell-pepper": ["food", "vegetable", "pepper", "bell pepper"],
+	"factory-worker": ["factory", "worker", "smile", "factory worker"],
+	"ninja": ["ninja", "warrior", "stealth"],
+	"flag-of-guatemala": ["flag", "guatemala", "flag of guatemala"],
+	"polar-bear": ["animal", "polar", "bear", "polar bear"],
+	"petri-dish": ["petri dish", "science", "lab"],
+	"flag-of-cambodia": ["flag", "cambodia", "flag of cambodia"],
+	"ding-ding-bell": ["ding ding bell", "sound", "notification"],
+	"unlocked": ["unlocked", "security", "lock"],
+	"pill": ["pill", "medicine", "drug"],
+	"flag-of-guinea": ["flag", "guinea", "flag of guinea"],
+	"musical-score": ["music", "musical score"],
+	"poultry-leg": ["food", "meat", "poultry", "poultry leg"],
+	"baby-chick": ["animal", "chick", "bird", "baby chick"],
+	"ram": ["animal", "ram", "farm"],
+	"red-envelope": ["red envelope", "celebration", "gift"],
+	"aquarius": ["aquarius", "zodiac", "astrology"],
+	"watch": ["watch", "time", "accessory"],
+	"flag-of-kazakhstan": ["flag", "kazakhstan", "flag of kazakhstan"],
+	"flag-of-austria": ["flag", "austria", "flag of austria"],
+	"japanese-secret": [
+		"japanese",
+		"secret",
+		"confidential",
+		"japanese secret"
+	],
+	"woman-running": ["woman", "running", "woman running"],
+	"japanese-prohibited": [
+		"japanese",
+		"prohibited",
+		"forbidden",
+		"japanese prohibited"
+	],
+	"man-student": ["man", "student", "smile", "man student"],
+	"avocado": ["food", "fruit", "avocado"],
+	"woman-golfing": ["sports", "golf", "woman golfing"],
+	"flag-of-vanuatu": ["flag", "vanuatu", "flag of vanuatu"],
+	"floppy-disk": ["floppy disk", "technology", "storage"],
+	"keycap-0": ["keycap", "0", "zero", "keycap 0"],
+	"woman-facepalming": [
+		"facepalming",
+		"woman",
+		"disbelief",
+		"woman facepalming"
+	],
+	"necktie": ["necktie", "tie", "formal"],
+	"trident-emblem": ["trident", "emblem", "symbol", "trident emblem"],
+	"cheese-wedge": ["food", "dairy", "cheese", "cheese wedge"],
+	"sneezing-face": [
+		"face",
+		"sneeze",
+		"cold",
+		"flu",
+		"sick",
+		"allergy",
+		"illness",
+		"achoo",
+		"sneezing",
+		"sniffles",
+		"sneezes",
+		"sickly",
+		"ill",
+		"sneezing face"
+	],
+	"flag-of-cameroon": ["flag", "cameroon", "flag of cameroon"],
+	"japanese-dolls": ["japanese dolls", "celebration", "japan"],
+	"man-judge": ["man", "judge", "justice", "court", "man judge"],
+	"persevering-face": [
+		"face",
+		"sick",
+		"no",
+		"upset",
+		"oops",
+		"struggling",
+		"persevering face"
+	],
+	"first-quarter-moon-with-face": [
+		"nature",
+		"moon",
+		"face",
+		"first quarter",
+		"first quarter moon with face"
+	],
+	"owl": ["animal", "owl", "bird"],
+	"eye": ["eye", "sight", "body"],
+	"potable-water": ["potable water", "water", "drinking"],
+	"curly-loop": ["curly", "loop", "symbol", "curly loop"],
+	"studio-microphone": [
+		"studio microphone",
+		"music",
+		"entertainment"
+	],
+	"factory": ["factory", "building", "industrial"],
+	"clinking-beer-mugs": [
+		"food",
+		"beer",
+		"mugs",
+		"clinking beer mugs"
+	],
+	"delivery-truck": [
+		"delivery truck",
+		"vehicle",
+		"transportation",
+		"logistics"
+	],
+	"motorway": ["motorway", "vehicle", "transportation"],
+	"woman-and-boy": ["woman", "boy", "woman and boy"],
+	"fork-and-knife-with-plate": [
+		"food",
+		"fork",
+		"knife",
+		"plate",
+		"fork and knife with plate"
+	],
+	"no-mobile-phones": ["no", "mobile", "phones", "no mobile phones"],
+	"bowl-with-spoon": ["food", "bowl", "spoon", "bowl with spoon"],
+	"three-thirty": ["three", "thirty", "time", "three-thirty"],
+	"man-mechanic": ["man", "mechanic", "worker", "man mechanic"],
+	"one-o’clock": ["one", "o’clock", "time", "one o’clock"],
+	"thumbs-up": [
+		"thumbs",
+		"up",
+		"approval",
+		"like",
+		"yes",
+		"positive",
+		"agree",
+		"good",
+		"okay",
+		"thumbs up"
+	],
+	"carrot": ["food", "vegetable", "carrot"],
+	"roller-coaster": ["roller coaster", "amusement park", "ride"],
+	"grinning-cat-with-smiling-eyes": [
+		"cat",
+		"animal",
+		"happy",
+		"smile",
+		"grin",
+		"cute",
+		"feline",
+		"joy",
+		"cheerful",
+		"smiling eyes",
+		"grinning cat with smiling eyes"
+	],
+	"purple-heart": ["love", "heart", "affection", "purple heart"],
+	"oncoming-fist": [
+		"fist",
+		"oncoming",
+		"punch",
+		"attack",
+		"hit",
+		"strike",
+		"fight",
+		"aggression",
+		"power",
+		"oncoming fist"
+	],
+	"family-man-woman-girl-girl": [
+		"family",
+		"man",
+		"woman",
+		"girl",
+		"family man woman girl girl"
+	],
+	"sandwich": ["food", "sandwich"],
+	"telescope": ["telescope", "astronomy", "tool"],
+	"flag-of-bahamas": ["flag", "bahamas", "flag of bahamas"],
+	"flag-of-macau": ["flag", "macau", "flag of macau"],
+	"orange-circle": ["orange", "circle", "symbol", "orange circle"],
+	"flag-of-moldova": ["flag", "moldova", "flag of moldova"],
+	"custard": ["food", "custard"],
+	"ng-button": ["ng", "button", "no good", "ng button"],
+	"flower-playing-cards": [
+		"flower",
+		"playing",
+		"cards",
+		"flower playing cards"
+	],
+	"droplet": ["nature", "water", "droplet"],
+	"flag-of-cocos-(keeling)-islands": [
+		"flag",
+		"cocos islands",
+		"flag of cocos (keeling) islands"
+	],
+	"shuffle-tracks-button": [
+		"shuffle",
+		"tracks",
+		"button",
+		"shuffle tracks button"
+	],
+	"man-with-chinese-cap": [
+		"man",
+		"chinese",
+		"cap",
+		"smile",
+		"man with chinese cap"
+	],
+	"wavy-dash": ["wavy", "dash", "symbol", "wavy dash"],
+	"flag-of-barbados": ["flag", "barbados", "flag of barbados"],
+	"jellyfish": ["animal", "jellyfish", "marine"],
+	"worried-face": [
+		"face",
+		"concern",
+		"nervous",
+		"worried",
+		"anxious",
+		"uneasy",
+		"worried face"
+	],
+	"fire": ["nature", "fire"],
+	"keycap-#": ["keycap", "hash", "number", "keycap #"],
+	"peach": ["food", "fruit", "peach"],
+	"bacon": ["food", "bacon"],
+	"flag-of-north-macedonia": [
+		"flag",
+		"north macedonia",
+		"flag of north macedonia"
+	],
+	"beans": ["food", "beans"],
+	"cocktail-glass": ["food", "cocktail", "cocktail glass"],
+	"parachute": ["sports", "parachute"],
+	"school": ["school", "building", "education"],
+	"flag-of-cape-verde": ["flag", "cape verde", "flag of cape verde"],
+	"briefcase": ["briefcase", "bag", "business"],
+	"cityscape": ["cityscape", "building", "urban"],
+	"waning-crescent-moon": [
+		"nature",
+		"moon",
+		"waning",
+		"crescent",
+		"waning crescent moon"
+	],
+	"kiwi-fruit": ["food", "fruit", "kiwi", "kiwi fruit"],
+	"white-large-square": [
+		"white",
+		"large",
+		"square",
+		"white large square"
+	],
+	"woman-and-man-holding-hands-with-heart": [
+		"woman",
+		"man",
+		"heart",
+		"woman and man holding hands with heart"
+	],
+	"pisces": ["pisces", "zodiac", "astrology"],
+	"mouse": ["animal", "mouse", "rodent"],
+	"face-with-medical-mask": [
+		"face",
+		"sick",
+		"ill",
+		"disease",
+		"mask",
+		"health",
+		"virus",
+		"protection",
+		"flu",
+		"germ",
+		"infection",
+		"doctor",
+		"nurse",
+		"pandemic",
+		"illness",
+		"face with medical mask"
+	],
+	"seven-thirty": ["seven", "thirty", "time", "seven-thirty"],
+	"up!-button": ["up", "button", "rise", "up! button"],
+	"woman-bowing": ["bowing", "woman", "respect", "woman bowing"],
+	"leftwards-pushing-hand": [
+		"hand",
+		"leftwards",
+		"push",
+		"gesture",
+		"left",
+		"move",
+		"stop",
+		"halt",
+		"leftwards pushing hand"
+	],
+	"electric-plug": ["electric plug", "power", "technology"],
+	"chopsticks": ["food", "chopsticks"],
+	"flag-of-palestine": ["flag", "palestine", "flag of palestine"],
+	"curry-rice": ["food", "curry", "rice", "curry rice"],
+	"radioactive": ["radioactive", "hazard", "warning"],
+	"person-with-white-cane": [
+		"person",
+		"white cane",
+		"person with white cane"
+	],
+	"mouth": ["mouth", "lips", "smile", "talk"],
+	"flag-of-ethiopia": ["flag", "ethiopia", "flag of ethiopia"],
+	"manual-rickshaw": ["manual rickshaw", "vehicle", "transportation"],
+	"receipt": ["receipt", "document", "paper"],
+	"litter-in-bin-sign": [
+		"litter",
+		"bin",
+		"sign",
+		"litter in bin sign"
+	],
+	"straight-ruler": ["straight ruler", "tool", "measurement"],
+	"writing-hand": ["writing", "hand", "pen", "writing hand"],
+	"cooked-rice": ["food", "rice", "cooked", "cooked rice"],
+	"smiling-face-with-smiling-eyes": [
+		"face",
+		"happy",
+		"smile",
+		"blush",
+		"pleased",
+		"joy",
+		"shy",
+		"smiling face with smiling eyes"
+	],
+	"relieved-face": [
+		"face",
+		"relaxed",
+		"phew",
+		"massage",
+		"happiness",
+		"relieved",
+		"calm",
+		"relieved face"
+	],
+	"oncoming-bus": ["oncoming bus", "vehicle", "public transport"],
+	"bear-face": ["animal", "bear", "wild", "bear face"],
+	"paperclip": ["paperclip", "tool", "office"],
+	"bamboo": ["plant", "bamboo"],
+	"japanese-passing-grade": [
+		"japanese",
+		"passing",
+		"grade",
+		"japanese passing grade"
+	],
+	"blond-haired-man": [
+		"man",
+		"blond",
+		"hair",
+		"smile",
+		"blond-haired man"
+	],
+	"blond-haired-woman": [
+		"woman",
+		"blond",
+		"hair",
+		"smile",
+		"blond-haired woman"
+	],
+	"new-moon-face": ["nature", "moon", "face", "new moon face"],
+	"person-standing": ["person", "standing", "person standing"],
+	"light-blue-heart": [
+		"love",
+		"heart",
+		"affection",
+		"light blue heart"
+	],
+	"flag-of-timor-leste": [
+		"flag",
+		"timor-leste",
+		"flag of timor-leste"
+	],
+	"left-luggage": ["luggage", "left", "airport", "left luggage"],
+	"ghost": [
+		"monster",
+		"creature",
+		"ghost",
+		"spirit",
+		"spooky",
+		"halloween",
+		"scary",
+		"phantom",
+		"haunted"
+	],
+	"flag-of-bahrain": ["flag", "bahrain", "flag of bahrain"],
+	"clutch-bag": ["clutch bag", "bag", "fashion"],
+	"flag-of-eritrea": ["flag", "eritrea", "flag of eritrea"],
+	"cooking": ["food", "cooking", "egg"],
+	"croissant": ["food", "bread", "croissant"],
+	"confetti-ball": ["confetti ball", "celebration", "party"],
+	"vertical-traffic-light": [
+		"vertical traffic light",
+		"signal",
+		"stoplight"
+	],
+	"front-facing-baby-chick": [
+		"animal",
+		"chick",
+		"bird",
+		"front-facing baby chick"
+	],
+	"reverse-button": ["reverse", "button", "symbol", "reverse button"],
+	"japanese-open-for-business": [
+		"japanese",
+		"open",
+		"business",
+		"japanese open for business"
+	],
+	"white-square-button": [
+		"white",
+		"square",
+		"button",
+		"white square button"
+	],
+	"hedgehog": ["animal", "hedgehog", "wild"],
+	"palms-up-together": [
+		"palms",
+		"hands",
+		"together",
+		"begging",
+		"offering",
+		"request",
+		"plea",
+		"hopeful",
+		"prayer",
+		"palms up together"
+	],
+	"flag-of-curaçao": ["flag", "curacao", "flag of curaçao"],
+	"woman-frowning": ["frowning", "woman", "sad", "woman frowning"],
+	"closed-lock-with-key": [
+		"closed lock with key",
+		"security",
+		"lock"
+	],
+	"chart-increasing": ["chart increasing", "graph", "statistics"],
+	"flag-of-mongolia": ["flag", "mongolia", "flag of mongolia"],
+	"face-with-tears-of-joy": [
+		"crying",
+		"rofl",
+		"tear",
+		"tears",
+		"crying laughing",
+		"funny",
+		"joy",
+		"face",
+		"feels",
+		"haha",
+		"happy",
+		"hehe",
+		"laugh",
+		"laughing",
+		"laughter",
+		"hilarious",
+		"lol",
+		"lolol",
+		"lololol",
+		"lmao",
+		"lmfao",
+		"roflmao",
+		"hahaha",
+		"face with tears of joy"
+	],
+	"motorcycle": ["motorcycle", "vehicle", "transportation", "racing"],
+	"capricorn": ["capricorn", "zodiac", "astrology"],
+	"flatbread": ["food", "bread", "flatbread"],
+	"flag-of-switzerland": [
+		"flag",
+		"switzerland",
+		"flag of switzerland"
+	],
+	"arrival": ["arrival", "flight", "airplane", "landing"],
+	"couch-and-lamp": ["couch and lamp", "furniture", "living room"],
+	"disguised-face": [
+		"face",
+		"disguise",
+		"glasses",
+		"nose",
+		"mustache",
+		"hidden",
+		"disguised face"
+	],
+	"sun-behind-rain-cloud": [
+		"nature",
+		"sun",
+		"cloud",
+		"rain",
+		"sun behind rain cloud"
+	],
+	"cl-button": ["cl", "button", "clear", "cl button"],
+	"leo": ["leo", "zodiac", "astrology"],
+	"poodle": ["animal", "dog", "pet", "poodle"],
+	"zebra": ["animal", "zebra", "wild"],
+	"tiger-face": ["animal", "tiger", "wild", "tiger face"],
+	"deciduous-tree": ["plant", "tree", "deciduous tree"],
+	"flag-of-united-arab-emirates": [
+		"flag",
+		"united arab emirates",
+		"flag of united arab emirates"
+	],
+	"cloud": ["nature", "cloud"],
+	"toolbox": ["toolbox", "tools", "repair"],
+	"men-wrestling": ["sports", "wrestling", "men wrestling"],
+	"one-thirty": ["one", "thirty", "time", "one-thirty"],
+	"cancer": ["cancer", "zodiac", "astrology"],
+	"flag-of-belize": ["flag", "belize", "flag of belize"],
+	"japanese-not-free-of-charge": [
+		"japanese",
+		"free",
+		"charge",
+		"japanese not free of charge"
+	],
+	"woman-shrugging": [
+		"shrugging",
+		"woman",
+		"doubt",
+		"woman shrugging"
+	],
+	"ferry": ["ferry", "vehicle", "transportation", "boat"],
+	"musical-note": ["musical", "note", "music", "musical note"],
+	"flag-of-montserrat": ["flag", "montserrat", "flag of montserrat"],
+	"face-with-tongue": [
+		"face",
+		"prank",
+		"childish",
+		"playful",
+		"tongue",
+		"silly",
+		"face with tongue"
+	],
+	"crayon": ["crayon", "art", "tool"],
+	"magic-wand": ["magic wand", "magic", "trick"],
+	"trolleybus": [
+		"trolleybus",
+		"vehicle",
+		"transportation",
+		"electric bus"
+	],
+	"woman-factory-worker": [
+		"woman",
+		"factory",
+		"worker",
+		"smile",
+		"woman factory worker"
+	],
+	"level-slider": ["level slider", "music", "technology"],
+	"blue-flower": ["plant", "flower", "blue", "blue flower"],
+	"burrito": ["food", "burrito"],
+	"flag-of-seychelles": ["flag", "seychelles", "flag of seychelles"],
+	"otter": ["animal", "otter", "wild"],
+	"man-cook": ["man", "cook", "smile", "man cook"],
+	"tooth": ["tooth", "dentist", "teeth", "mouth"],
+	"wind-chime": ["wind chime", "decoration", "sound"],
+	"a-button-(blood-type)": [
+		"blood",
+		"type",
+		"a",
+		"a button (blood type)"
+	],
+	"princess": ["princess", "royalty", "woman"],
+	"service-dog": ["animal", "dog", "service", "service dog"],
+	"megaphone": ["megaphone", "announcement", "sound"],
+	"six-o’clock": ["six", "o’clock", "time", "six o’clock"],
+	"victory-hand": [
+		"victory",
+		"hand",
+		"peace",
+		"v-sign",
+		"win",
+		"triumph",
+		"success",
+		"freedom",
+		"celebration",
+		"victory hand"
+	],
+	"woman-with-no-hair": [
+		"woman",
+		"bald",
+		"hair",
+		"smile",
+		"woman with no hair"
+	],
+	"aries": ["aries", "zodiac", "astrology"],
+	"flag-of-spain": ["flag", "spain", "flag of spain"],
+	"folded-hands": ["folded", "hands", "pray", "folded hands"],
+	"kiss-mark": ["kiss", "mark", "lipstick", "love", "kiss mark"],
+	"man-mountain-biking": [
+		"sports",
+		"mountain biking",
+		"man mountain biking"
+	],
+	"abacus": ["abacus", "tool", "math"],
+	"sunglasses": ["sunglasses", "eyewear", "fashion"],
+	"person-taking-bath": ["person taking bath", "bathroom", "clean"],
+	"gear": ["gear", "tool", "mechanical"],
+	"dollar-banknote": ["dollar banknote", "money", "currency"],
+	"ogre": [
+		"monster",
+		"ogre",
+		"creature",
+		"japanese",
+		"mythical",
+		"demon",
+		"oni",
+		"scary",
+		"fiend"
+	],
+	"infinity": ["infinity", "symbol", "endless"],
+	"goose": ["animal", "goose", "bird"],
+	"heart-exclamation": [
+		"love",
+		"exclamation",
+		"heart",
+		"heart exclamation"
+	],
+	"fried-shrimp": ["food", "shrimp", "fried", "fried shrimp"],
+	"diamond-with-a-dot": [
+		"diamond",
+		"dot",
+		"symbol",
+		"diamond with a dot"
+	],
+	"flag-of-bhutan": ["flag", "bhutan", "flag of bhutan"],
+	"flag-of-honduras": ["flag", "honduras", "flag of honduras"],
+	"guide-dog": ["animal", "dog", "guide", "guide dog"],
+	"last-quarter-moon-with-face": [
+		"nature",
+		"moon",
+		"face",
+		"last quarter",
+		"last quarter moon with face"
+	],
+	"beaming-face-with-smiling-eyes": [
+		"face",
+		"happy",
+		"nice",
+		"smile",
+		"smiling",
+		"teeth",
+		"beaming",
+		"beaming face with smiling eyes"
+	],
+	"euro-banknote": ["euro banknote", "money", "currency"],
+	"eggplant": ["food", "vegetable", "eggplant"],
+	"unicorn-face": ["animal", "unicorn", "mythical", "unicorn face"],
+	"metro": ["metro", "vehicle", "transportation", "subway"],
+	"wing": ["wing", "fly", "flying", "heaven", "angel"],
+	"family-man-man-boy-boy": [
+		"family",
+		"man",
+		"boy",
+		"family man man boy boy"
+	],
+	"chains": ["chains", "link", "metal"],
+	"jeans": ["jeans", "pants", "denim"],
+	"women-wrestling": ["sports", "wrestling", "women wrestling"],
+	"flag-of-vatican-city": [
+		"flag",
+		"vatican city",
+		"flag of vatican city"
+	],
+	"man-swimming": ["sports", "swimming", "man swimming"],
+	"tumbler-glass": ["food", "tumbler", "glass", "tumbler glass"],
+	"elevator": ["elevator", "symbol", "building"],
+	"person-with-white-hair": [
+		"person",
+		"white",
+		"hair",
+		"neutral",
+		"person with white hair"
+	],
+	"flag-of-colombia": ["flag", "colombia", "flag of colombia"],
+	"tired-face": [
+		"face",
+		"sick",
+		"whine",
+		"upset",
+		"frustrated",
+		"exhausted",
+		"tired face"
+	],
+	"kiss": ["couple", "kiss", "love"],
+	"bubbles": ["nature", "bubbles"],
+	"soccer-ball": ["sports", "soccer", "soccer ball"],
+	"keycap-1": ["keycap", "1", "one", "keycap 1"],
+	"departure": ["departure", "flight", "airplane", "takeoff"],
+	"woman-getting-haircut": [
+		"haircut",
+		"woman",
+		"beauty",
+		"woman getting haircut"
+	],
+	"police-car": [
+		"police",
+		"car",
+		"vehicle",
+		"law enforcement",
+		"transportation"
+	],
+	"revolving-hearts": [
+		"love",
+		"hearts",
+		"affection",
+		"revolving hearts"
+	],
+	"stopwatch": ["stopwatch", "time", "clock"],
+	"woman-judge": [
+		"woman",
+		"judge",
+		"justice",
+		"court",
+		"woman judge"
+	],
+	"flag-of-bulgaria": ["flag", "bulgaria", "flag of bulgaria"],
+	"tanabata-tree": ["plant", "tanabata", "tanabata tree"],
+	"keycap-3": ["keycap", "3", "three", "keycap 3"],
+	"raised-back-of-hand": [
+		"raised",
+		"back",
+		"hand",
+		"gesture",
+		"hello",
+		"high five",
+		"stop",
+		"raised back of hand"
+	],
+	"synagogue": ["synagogue", "building", "religion"],
+	"heart-on-fire": ["love", "passion", "fire", "heart on fire"],
+	"flag-of-lesotho": ["flag", "lesotho", "flag of lesotho"],
+	"funeral-urn": ["funeral urn", "ashes", "death"],
+	"flag-of-chile": ["flag", "chile", "flag of chile"],
+	"woman-and-girl": ["woman", "girl", "woman and girl"],
+	"woman-artist": [
+		"woman",
+		"artist",
+		"painter",
+		"art",
+		"woman artist"
+	],
+	"playground-slide": ["playground", "slide", "playground slide"],
+	"flute": ["flute"],
+	"lipstick": ["lipstick", "makeup", "cosmetics"],
+	"red-triangle-pointed-down": [
+		"red",
+		"triangle",
+		"down",
+		"red triangle pointed down"
+	],
+	"open-mailbox-with-lowered-flag": [
+		"open mailbox with lowered flag",
+		"mail",
+		"post"
+	],
+	"flag-of-singapore": ["flag", "singapore", "flag of singapore"],
+	"person-climbing": ["sports", "climbing", "person climbing"],
+	"men-holding-hands": ["men", "holding hands", "men holding hands"],
+	"headphone": ["headphone"],
+	"star": ["nature", "star"],
+	"open-hands": [
+		"open",
+		"hands",
+		"hug",
+		"embrace",
+		"welcome",
+		"accepting",
+		"caring",
+		"support",
+		"open hands"
+	],
+	"page-with-curl": ["page with curl", "document", "paper"],
+	"flag-of-guam": ["flag", "guam", "flag of guam"],
+	"ping-pong": ["sports", "ping pong"],
+	"smiling-face-with-hearts": [
+		"face",
+		"love",
+		"smile",
+		"hearts",
+		"affection",
+		"adoration",
+		"smiling face with hearts"
+	],
+	"ledger": ["ledger", "document", "paper"],
+	"flag-of-djibouti": ["flag", "djibouti", "flag of djibouti"],
+	"thought-balloon": [
+		"thought",
+		"balloon",
+		"think",
+		"thought balloon"
+	],
+	"smirking-face": [
+		"face",
+		"smile",
+		"mean",
+		"prank",
+		"smug",
+		"sarcasm",
+		"sly",
+		"mischievous",
+		"smirking face"
+	],
+	"chestnut": ["food", "chestnut"],
+	"black-square-button": [
+		"black",
+		"square",
+		"button",
+		"black square button"
+	],
+	"flag-of-guinea-bissau": [
+		"flag",
+		"guinea-bissau",
+		"flag of guinea-bissau"
+	],
+	"bell-with-slash": ["bell", "slash", "mute", "bell with slash"],
+	"women-kissing": ["women", "kiss", "women kissing"],
+	"black-circle": ["black", "circle", "symbol", "black circle"],
+	"squid": ["animal", "squid", "marine"],
+	"mirror": ["mirror", "reflection", "glass"],
+	"flag-of-russia": ["flag", "russia", "flag of russia"],
+	"skull": [
+		"dead",
+		"skeleton",
+		"creature",
+		"death",
+		"bones",
+		"horror",
+		"spooky",
+		"danger",
+		"macabre",
+		"skull"
+	],
+	"backhand-index-pointing-up": [
+		"pointing",
+		"up",
+		"hand",
+		"direction",
+		"index",
+		"gesture",
+		"attention",
+		"upwards",
+		"backhand index pointing up"
+	],
+	"manual-wheelchair": [
+		"manual wheelchair",
+		"accessibility",
+		"mobility aid"
+	],
+	"copyright": ["copyright", "symbol", "intellectual property"],
+	"hamburger": ["food", "burger", "hamburger"],
+	"japanese-here-button": [
+		"japanese",
+		"here",
+		"button",
+		"japanese here button"
+	],
+	"man-health-worker": [
+		"man",
+		"health",
+		"worker",
+		"smile",
+		"man health worker"
+	],
+	"hollow-red-circle": [
+		"circle",
+		"hollow",
+		"red",
+		"hollow red circle"
+	],
+	"window": ["window", "view", "glass"],
+	"end-button": ["end", "button", "symbol", "end button"],
+	"girl": ["girl", "child", "young", "smile"],
+	"worm": ["animal", "worm", "insect"],
+	"fast-forward-button": [
+		"fast",
+		"forward",
+		"button",
+		"fast forward button"
+	],
+	"bat": ["animal", "bat", "wild"],
+	"peace-symbol": ["peace", "symbol", "harmony", "peace symbol"],
+	"ferris-wheel": ["ferris wheel", "amusement park", "ride"],
+	"ophiuchus": ["ophiuchus", "zodiac", "astrology"],
+	"flag-of-dominican-republic": [
+		"flag",
+		"dominican republic",
+		"flag of dominican republic"
+	],
+	"razor": ["razor", "shaving", "hygiene"],
+	"vs-button": ["vs", "button", "versus", "vs button"],
+	"building-construction": [
+		"building construction",
+		"building",
+		"construction"
+	],
+	"beetle": ["animal", "beetle", "insect"],
+	"no-bicycles": ["no", "bicycles", "forbidden", "no bicycles"],
+	"snake": ["animal", "snake", "reptile"],
+	"wood": ["plant", "wood", "log"],
+	"woman-with-white-cane": [
+		"woman",
+		"white cane",
+		"woman with white cane"
+	],
+	"cloud-with-lightning-and-rain": [
+		"nature",
+		"cloud",
+		"lightning",
+		"rain",
+		"cloud with lightning and rain"
+	],
+	"heart-hands": [
+		"heart",
+		"hands",
+		"love",
+		"gesture",
+		"affection",
+		"romance",
+		"compassion",
+		"care",
+		"support",
+		"heart hands"
+	],
+	"rabbit": ["animal", "rabbit", "pet"],
+	"purple-square": ["purple", "square", "symbol", "purple square"],
+	"cat": ["animal", "cat", "pet"],
+	"sauropod": ["animal", "sauropod", "dinosaur"],
+	"teddy-bear": ["teddy bear", "toy", "stuffed animal"],
+	"seven-o’clock": ["seven", "o’clock", "time", "seven o’clock"],
+	"flag-of-turkmenistan": [
+		"flag",
+		"turkmenistan",
+		"flag of turkmenistan"
+	],
+	"partying-face": [
+		"celebration",
+		"hat",
+		"horn",
+		"party",
+		"partying face",
+		"celebrate",
+		"hooray",
+		"birthday",
+		"excited",
+		"face",
+		"happy birthday",
+		"happy bday"
+	],
+	"tent": ["tent", "camping", "outdoor"],
+	"pencil": ["pencil", "writing", "tool"],
+	"coin": ["coin", "money", "currency"],
+	"trumpet": ["trumpet"],
+	"fortune-cookie": ["food", "cookie", "fortune", "fortune cookie"],
+	"monkey": ["animal", "monkey", "primate"],
+	"student": ["student", "smile"],
+	"falafel": ["food", "falafel"],
+	"blue-book": ["blue book", "document", "paper"],
+	"shortcake": ["food", "cake", "shortcake"],
+	"fleur-de-lis": ["fleur-de-lis", "symbol", "decorative"],
+	"sun-with-face": ["nature", "sun", "face", "sun with face"],
+	"joystick": ["joystick", "gaming", "technology"],
+	"trophy": ["award", "trophy"],
+	"heavy-division-sign": ["division", "sign", "heavy division sign"],
+	"performing-arts": ["performing arts"],
+	"motor-scooter": ["motor scooter", "vehicle", "transportation"],
+	"magnifying-glass-tilted-right": [
+		"magnifying glass tilted right",
+		"search",
+		"tool"
+	],
+	"bread": ["food", "bread"],
+	"see-no-evil-monkey": [
+		"monkey",
+		"see",
+		"evil",
+		"see-no-evil monkey"
+	],
+	"flag-of-antigua-and-barbuda": [
+		"flag",
+		"antigua and barbuda",
+		"flag of antigua and barbuda"
+	],
+	"up-down-arrow": ["up-down", "arrow", "direction", "up-down arrow"],
+	"keycap-*": ["keycap", "star", "asterisk", "keycap *"],
+	"nine-o’clock": ["nine", "o’clock", "time", "nine o’clock"],
+	"softball": ["sports", "softball"],
+	"lab-coat": ["lab coat", "scientist", "doctor"],
+	"railway-track": ["railway track", "vehicle", "transportation"],
+	"person-fairy": [
+		"fairy",
+		"person",
+		"fantasy",
+		"magical",
+		"person fairy"
+	],
+	"stethoscope": ["stethoscope", "medical", "doctor"],
+	"person-feeding-baby": [
+		"feeding",
+		"baby",
+		"person",
+		"bottle",
+		"person feeding baby"
+	],
+	"flying-disc": ["sports", "disc", "flying disc"],
+	"woman-juggling": ["juggling", "woman juggling"],
+	"man-climbing": ["sports", "climbing", "man climbing"],
+	"japanese-congratulations": [
+		"japanese",
+		"congratulations",
+		"celebrate",
+		"japanese congratulations"
+	],
+	"black-flag": ["black", "flag", "black flag"],
+	"oyster": ["food", "oyster"],
+	"crying-cat": [
+		"cat",
+		"animal",
+		"cry",
+		"tear",
+		"sad",
+		"feline",
+		"unhappy",
+		"sorrow",
+		"tearful",
+		"cute",
+		"crying cat"
+	],
+	"clapping-hands": [
+		"clapping",
+		"hands",
+		"applause",
+		"congratulations",
+		"bravo",
+		"well done",
+		"praise",
+		"appreciation",
+		"clapping hands"
+	],
+	"man-office-worker": [
+		"man",
+		"office",
+		"worker",
+		"business",
+		"man office worker"
+	],
+	"nesting-dolls": ["nesting dolls", "toy", "matryoshka"],
+	"flag-of-fiji": ["flag", "fiji", "flag of fiji"],
+	"counterclockwise-arrows-button": [
+		"counterclockwise",
+		"arrows",
+		"button",
+		"counterclockwise arrows button"
+	],
+	"antenna-bars": ["antenna", "bars", "signal", "antenna bars"],
+	"page-facing-up": ["page facing up", "document", "paper"],
+	"watermelon": ["food", "fruit", "watermelon"],
+	"orange-square": ["orange", "square", "symbol", "orange square"],
+	"face-with-head-bandage": [
+		"face",
+		"hurt",
+		"bandage",
+		"injured",
+		"pain",
+		"wound",
+		"health",
+		"healing",
+		"headache",
+		"recovery",
+		"hospital",
+		"injury",
+		"bruise",
+		"face with head-bandage"
+	],
+	"flag-of-brunei": ["flag", "brunei", "flag of brunei"],
+	"dango": ["food", "dango"],
+	"man-technologist": [
+		"man",
+		"technologist",
+		"computer",
+		"work",
+		"man technologist"
+	],
+	"man-frowning": ["frowning", "man", "sad", "man frowning"],
+	"mountain-railway": [
+		"mountain railway",
+		"vehicle",
+		"transportation"
+	],
+	"shopping-bags": ["shopping bags", "shopping", "bags"],
+	"stop-sign": ["stop", "sign", "warning", "stop sign"],
+	"bug": ["animal", "bug", "insect"],
+	"shinto-shrine": ["shinto shrine", "building", "religion"],
+	"cow-face": ["animal", "cow", "farm", "cow face"],
+	"sparkles": ["nature", "sparkles"],
+	"grapes": ["food", "fruit", "grapes"],
+	"mechanical-arm": [
+		"mechanical",
+		"arm",
+		"robotic",
+		"prosthetic",
+		"mechanical arm"
+	],
+	"woman-swimming": ["sports", "swimming", "woman swimming"],
+	"transgender-symbol": [
+		"transgender",
+		"symbol",
+		"gender",
+		"transgender symbol"
+	],
+	"chair": ["chair", "furniture", "seat"],
+	"open-umbrella": ["nature", "umbrella", "open umbrella"],
+	"fire-engine": [
+		"fire engine",
+		"vehicle",
+		"emergency",
+		"fire department"
+	],
+	"goblin": [
+		"monster",
+		"goblin",
+		"creature",
+		"japanese",
+		"mythical",
+		"demon",
+		"tengu",
+		"scary",
+		"fiend"
+	],
+	"face-with-thermometer": [
+		"face",
+		"sick",
+		"thermometer",
+		"ill",
+		"fever",
+		"health",
+		"temperature",
+		"unwell",
+		"sickly",
+		"ailing",
+		"checkup",
+		"cold",
+		"flu",
+		"medical",
+		"face with thermometer"
+	],
+	"old-woman": ["old", "woman", "elder", "smile", "old woman"],
+	"exploding-head": [
+		"face",
+		"shocked",
+		"mind blown",
+		"explosive",
+		"surprised",
+		"amazed",
+		"astonished",
+		"wow",
+		"blown away",
+		"mindblown",
+		"stunned",
+		"incredible",
+		"overwhelmed",
+		"exploding head"
+	],
+	"film-frames": ["film frames", "photography", "technology"],
+	"t-shirt": ["t-shirt", "shirt", "top"],
+	"technologist": ["technologist", "laptop"],
+	"paintbrush": ["paintbrush", "art", "tool"],
+	"mount-fuji": ["mount fuji", "landscape", "japan"],
+	"popcorn": ["food", "popcorn"],
+	"hand-with-fingers-splayed": [
+		"hand",
+		"fingers",
+		"splayed",
+		"gesture",
+		"spread",
+		"open",
+		"stop",
+		"hand with fingers splayed"
+	],
+	"test-tube": ["test tube", "science", "lab"],
+	"grinning-squinting-face": [
+		"face",
+		"happy",
+		"haha",
+		"laugh",
+		"lol",
+		"mouth",
+		"rofl",
+		"satisfied",
+		"joy",
+		"smile",
+		"smiling",
+		"open",
+		"hahahaha",
+		"closed",
+		"eyes",
+		"grinning squinting face"
+	],
+	"cross-mark": ["cross", "mark", "x", "cross mark"],
+	"boxing-glove": ["sports", "boxing", "boxing glove"],
+	"train": ["train", "vehicle", "transportation"],
+	"person-merperson": [
+		"merperson",
+		"person",
+		"fantasy",
+		"magical",
+		"person merperson"
+	],
+	"flag-of-zimbabwe": ["flag", "zimbabwe", "flag of zimbabwe"],
+	"pregnant-person": [
+		"pregnant",
+		"person",
+		"baby",
+		"expecting",
+		"pregnant person"
+	],
+	"moose": ["animal", "moose", "wild"],
+	"smiling-cat-with-heart-eyes": [
+		"cat",
+		"animal",
+		"love",
+		"like",
+		"affection",
+		"heart",
+		"feline",
+		"adoration",
+		"romance",
+		"cute",
+		"smiling cat with heart-eyes"
+	],
+	"lemon": ["food", "fruit", "lemon"],
+	"cupcake": ["food", "cupcake"],
+	"briefs": ["briefs", "underwear", "undergarment"],
+	"flag-of-brazil": ["flag", "brazil", "flag of brazil"],
+	"fast-down-button": ["fast", "down", "button", "fast down button"],
+	"man-in-motorized-wheelchair": [
+		"man",
+		"motorized wheelchair",
+		"man in motorized wheelchair"
+	],
+	"mahjong-red-dragon": [
+		"mahjong",
+		"red",
+		"dragon",
+		"mahjong red dragon"
+	],
+	"axe": ["axe", "tool", "cut"],
+	"top-arrow": ["top", "arrow", "symbol", "top arrow"],
+	"horse-racing": ["sports", "horse racing"],
+	"ring-buoy": ["ring buoy", "safety", "boat"],
+	"eight-spoked-asterisk": [
+		"asterisk",
+		"eight",
+		"spoked",
+		"eight-spoked asterisk"
+	],
+	"closed-umbrella": [
+		"umbrella",
+		"closed",
+		"rain",
+		"weather",
+		"closed umbrella"
+	],
+	"military-medal": ["award", "military", "military medal"],
+	"lacrosse": ["sports", "lacrosse"],
+	"flag-of-kuwait": ["flag", "kuwait", "flag of kuwait"],
+	"speaker-medium-volume": [
+		"speaker",
+		"medium",
+		"volume",
+		"speaker medium volume"
+	],
+	"peanuts": ["food", "peanuts"],
+	"office-building": ["office building", "building", "work"],
+	"money-with-wings": ["money with wings", "dollar", "money"],
+	"right-arrow-curving-left": [
+		"right",
+		"arrow",
+		"curving left",
+		"right arrow curving left"
+	],
+	"eight-o’clock": ["eight", "o’clock", "time", "eight o’clock"],
+	"hiking-boot": ["hiking boot", "boots", "footwear"],
+	"snow-capped-mountain": [
+		"snow-capped mountain",
+		"landscape",
+		"nature"
+	],
+	"full-moon": ["nature", "moon", "full", "full moon"],
+	"flag-of-indonesia": ["flag", "indonesia", "flag of indonesia"],
+	"flag-of-new-caledonia": [
+		"flag",
+		"new caledonia",
+		"flag of new caledonia"
+	],
+	"love-hotel": ["love hotel", "building", "accommodation"],
+	"woman-guard": ["woman", "guard", "smile", "woman guard"],
+	"flag-of-hong-kong": ["flag", "hong kong", "flag of hong kong"],
+	"hundred-points": ["hundred", "points", "score", "hundred points"],
+	"flag-of-south-sudan": [
+		"flag",
+		"south sudan",
+		"flag of south sudan"
+	],
+	"leaf-fluttering-in-wind": [
+		"plant",
+		"leaf",
+		"wind",
+		"leaf fluttering in wind"
+	],
+	"envelope-with-arrow": ["envelope with arrow", "letter", "mail"],
+	"family-woman-woman-boy-boy": [
+		"family",
+		"woman",
+		"boy",
+		"family woman woman boy boy"
+	],
+	"flag-of-st.-barthélemy": [
+		"flag",
+		"saint barthelemy",
+		"flag of saint barthélemy"
+	],
+	"om-symbol": ["om", "symbol", "religion", "om symbol"],
+	"cat-with-wry-smile": [
+		"cat",
+		"animal",
+		"ironic",
+		"smirk",
+		"feline",
+		"sly",
+		"mischievous",
+		"cunning",
+		"cute",
+		"cat with wry smile"
+	],
+	"menorah": ["menorah", "symbol", "judaism"],
+	"pig": ["animal", "pig", "farm"],
+	"helicopter": ["helicopter", "vehicle", "transportation", "flight"],
+	"magnet": ["magnet", "attract", "metal"],
+	"flag-of-samoa": ["flag", "samoa", "flag of samoa"],
+	"keyboard": ["keyboard", "computer", "technology"],
+	"woman-police-officer": [
+		"woman",
+		"police",
+		"officer",
+		"smile",
+		"woman police officer"
+	],
+	"restroom": ["restroom", "symbol", "toilet"],
+	"wind-face": ["nature", "wind", "wind face"],
+	"sushi": ["food", "sushi"],
+	"red-square": ["red", "square", "symbol", "red square"],
+	"ambulance": ["ambulance", "vehicle", "medical", "emergency"],
+	"battery": ["battery", "power", "technology"],
+	"firecracker": ["firecracker", "explosive", "fireworks"],
+	"guard": ["guard", "smile"],
+	"ballet-shoes": ["ballet", "ballet shoes"],
+	"soap": ["soap", "cleaning", "hygiene"],
+	"man-zombie": ["zombie", "man", "undead", "horror", "man zombie"],
+	"person-bowing": ["bowing", "person", "respect", "person bowing"],
+	"woman-gesturing-ok": [
+		"gesturing ok",
+		"woman",
+		"ok",
+		"yes",
+		"woman gesturing ok"
+	],
+	"link": ["link", "connection", "chain"],
+	"trackball": ["trackball", "technology", "device"],
+	"teacup-without-handle": ["food", "tea", "teacup without handle"],
+	"man-scientist": [
+		"man",
+		"scientist",
+		"science",
+		"lab",
+		"man scientist"
+	],
+	"water-buffalo": ["animal", "buffalo", "wild", "water buffalo"],
+	"sos-button": ["sos", "button", "help", "sos button"],
+	"credit-card": ["credit card", "money", "payment"],
+	"notebook-with-decorative-cover": [
+		"notebook with decorative cover",
+		"document",
+		"paper"
+	],
+	"woman-zombie": [
+		"zombie",
+		"woman",
+		"undead",
+		"horror",
+		"woman zombie"
+	],
+	"double-curly-loop": [
+		"double",
+		"curly",
+		"loop",
+		"double curly loop"
+	],
+	"orange-heart": ["love", "heart", "affection", "orange heart"],
+	"o-button-(blood-type)": [
+		"blood",
+		"type",
+		"o",
+		"o button (blood type)"
+	],
+	"flag-of-sierra-leone": [
+		"flag",
+		"sierra leone",
+		"flag of sierra leone"
+	],
+	"yarn": ["yarn", "knitting", "thread"],
+	"no-littering": ["no", "littering", "forbidden", "no littering"],
+	"person-in-manual-wheelchair": [
+		"person",
+		"manual wheelchair",
+		"person in manual wheelchair"
+	],
+	"woman-astronaut": [
+		"woman",
+		"astronaut",
+		"space",
+		"exploration",
+		"woman astronaut"
+	],
+	"person-mountain-biking": [
+		"sports",
+		"mountain biking",
+		"person mountain biking"
+	],
+	"orthodox-cross": [
+		"cross",
+		"orthodox",
+		"religion",
+		"orthodox cross"
+	],
+	"musical-notes": ["musical", "notes", "music", "musical notes"],
+	"fog": ["nature", "fog"],
+	"dart": ["game", "dart"],
+	"b-button-(blood-type)": [
+		"blood",
+		"type",
+		"b",
+		"b button (blood type)"
+	],
+	"postal-horn": ["postal horn", "mail", "post"],
+	"lotion-bottle": ["lotion bottle", "hygiene", "skincare"],
+	"full-moon-with-face": [
+		"nature",
+		"moon",
+		"face",
+		"full",
+		"full moon with face"
+	],
+	"person-in-lotus-position": [
+		"sports",
+		"yoga",
+		"person in lotus position"
+	],
+	"person-with-beard": [
+		"person",
+		"beard",
+		"smile",
+		"person with beard"
+	],
+	"flag-of-slovakia": ["flag", "slovakia", "flag of slovakia"],
+	"flag-of-iceland": ["flag", "iceland", "flag of iceland"],
+	"dolphin": ["animal", "dolphin", "marine"],
+	"pickup-truck": ["pickup truck", "vehicle", "transportation"],
+	"martial-arts-uniform": [
+		"sports",
+		"martial arts",
+		"martial arts uniform"
+	],
+	"derelict-house": ["derelict house", "building", "abandoned"],
+	"heavy-multiplication-x": [
+		"multiplication",
+		"x",
+		"symbol",
+		"heavy multiplication x"
+	],
+	"question-mark": ["question", "mark", "confused", "question mark"],
+	"nail-polish": ["nail care", "beauty", "nail polish"],
+	"bookmark-tabs": ["bookmark tabs", "document", "paper"],
+	"light-rail": ["light rail", "vehicle", "transportation"],
+	"check-mark": ["check", "mark", "symbol", "check mark"],
+	"flag-of-latvia": ["flag", "latvia", "flag of latvia"],
+	"waffle": ["food", "waffle"],
+	"family-man-man-girl": [
+		"family",
+		"man",
+		"girl",
+		"family man man girl"
+	],
+	"man-bowing": ["bowing", "man", "respect", "man bowing"],
+	"family-man-woman-girl": [
+		"family",
+		"man",
+		"woman",
+		"girl",
+		"family man woman girl"
+	],
+	"racing-car": ["racing car", "vehicle", "sports", "racing"],
+	"angry-face-with-horns": [
+		"face",
+		"devil",
+		"horns",
+		"angry",
+		"evil",
+		"demon",
+		"imp",
+		"malicious",
+		"fiendish",
+		"villain",
+		"angry face with horns"
+	],
+	"thermometer": ["thermometer", "temperature", "weather"],
+	"nauseated-face": [
+		"face",
+		"vomit",
+		"gross",
+		"green",
+		"sick",
+		"ill",
+		"nauseous",
+		"disgusted",
+		"queasy",
+		"retching",
+		"upset stomach",
+		"yuck",
+		"sickened",
+		"nauseated face"
+	],
+	"pear": ["food", "fruit", "pear"],
+	"woman-climbing": ["sports", "climbing", "woman climbing"],
+	"comet": ["nature", "comet"],
+	"nose": ["nose", "smell", "body"],
+	"person-rowing-boat": ["sports", "rowing", "person rowing boat"],
+	"e-mail": ["e-mail", "letter", "mail"],
+	"flag-of-european-union": [
+		"flag",
+		"european union",
+		"flag of european union"
+	],
+	"back-arrow": ["back", "arrow", "symbol", "back arrow"],
+	"glasses": ["glasses", "eyewear", "vision"],
+	"play-or-pause-button": [
+		"play",
+		"pause",
+		"button",
+		"play or pause button"
+	],
+	"bento-box": ["food", "bento", "bento box"],
+	"t-rex": ["animal", "t rex", "dinosaur", "t-rex"],
+	"scarf": ["scarf", "clothing", "winter"],
+	"flag-of-norway": ["flag", "norway", "flag of norway"],
+	"flag-of-solomon-islands": [
+		"flag",
+		"solomon islands",
+		"flag of solomon islands"
+	],
+	"raised-hand": [
+		"raised",
+		"hand",
+		"stop",
+		"high five",
+		"gesture",
+		"halt",
+		"attention",
+		"raised hand"
+	],
+	"person-elf": ["elf", "person", "fantasy", "magical", "person elf"],
+	"six-thirty": ["six", "thirty", "time", "six-thirty"],
+	"leftwards-hand": ["hand", "leftwards", "leftwards hand"],
+	"fish-cake-with-swirl": [
+		"food",
+		"fish",
+		"cake",
+		"swirl",
+		"fish cake with swirl"
+	],
+	"handshake": [
+		"handshake",
+		"hands",
+		"agreement",
+		"deal",
+		"greeting",
+		"partnership",
+		"teamwork",
+		"collaboration"
+	],
+	"oncoming-taxi": ["oncoming taxi", "vehicle", "taxi"],
+	"timer-clock": ["timer clock", "time", "clock"],
+	"cockroach": ["animal", "cockroach", "insect"],
+	"on!-arrow": ["on", "arrow", "symbol", "on! arrow"],
+	"brown-square": ["brown", "square", "symbol", "brown square"],
+	"woman-farmer": ["woman", "farmer", "smile", "woman farmer"],
+	"exclamation-mark": [
+		"exclamation",
+		"mark",
+		"warning",
+		"exclamation mark"
+	],
+	"aerial-tramway": ["aerial tramway", "transportation", "vehicle"],
+	"tram-car": ["tram car", "vehicle", "transportation"],
+	"flag-of-gibraltar": ["flag", "gibraltar", "flag of gibraltar"],
+	"bee": ["animal", "bee", "insect"],
+	"flag-of-pitcairn-islands": [
+		"flag",
+		"pitcairn islands",
+		"flag of pitcairn islands"
+	],
+	"biohazard": ["biohazard", "hazard", "warning"],
+	"blossom": ["plant", "flower", "blossom"],
+	"station": ["station", "transportation", "train station"],
+	"flag-of-cayman-islands": [
+		"flag",
+		"cayman islands",
+		"flag of cayman islands"
+	],
+	"hammer-and-wrench": ["hammer and wrench", "tool", "repair"],
+	"white-circle": ["white", "circle", "symbol", "white circle"],
+	"bed": ["bed", "furniture", "sleep"],
+	"bowling": ["game", "bowling"],
+	"man-factory-worker": [
+		"man",
+		"factory",
+		"worker",
+		"smile",
+		"man factory worker"
+	],
+	"child": ["child", "young", "smile", "neutral"],
+	"woman-wearing-turban": [
+		"woman",
+		"turban",
+		"smile",
+		"woman wearing turban"
+	],
+	"last-track-button": [
+		"last",
+		"track",
+		"button",
+		"last track button"
+	],
+	"cook": ["cook", "smile"],
+	"accordion": ["accordion"],
+	"leafy-green": ["food", "vegetable", "leafy", "leafy green"],
+	"sparkle": ["sparkle", "symbol", "shine"],
+	"flag-of-tokelau": ["flag", "tokelau", "flag of tokelau"],
+	"hole": ["hole", "gap", "empty"],
+	"man-merperson": [
+		"merman",
+		"man",
+		"fantasy",
+		"magical",
+		"man merperson"
+	],
+	"hot-face": [
+		"face",
+		"hot",
+		"feverish",
+		"sweating",
+		"heat",
+		"overheated",
+		"warm",
+		"sun",
+		"burning",
+		"scorching",
+		"sweltering",
+		"boiling",
+		"blazing",
+		"fiery",
+		"hot face"
+	],
+	"rosette": ["rosette", "award"],
+	"flag-of-dominica": ["flag", "dominica", "flag of dominica"],
+	"flag-of-south-korea": [
+		"flag",
+		"south korea",
+		"flag of south korea"
+	],
+	"takeout-box": ["food", "takeout", "takeout box"],
+	"bucket": ["bucket", "cleaning", "container"],
+	"couple-with-heart": ["couple", "heart", "couple with heart"],
+	"chart-increasing-with-yen": [
+		"chart",
+		"increasing",
+		"yen",
+		"chart increasing with yen"
+	],
+	"green-heart": ["love", "heart", "affection", "green heart"],
+	"black-heart": ["love", "heart", "affection", "black heart"],
+	"speech-balloon": ["speech", "balloon", "talk", "speech balloon"],
+	"two-thirty": ["two", "thirty", "time", "two-thirty"],
+	"blond-haired-person": [
+		"person",
+		"blond",
+		"hair",
+		"neutral",
+		"blond-haired person"
+	],
+	"skunk": ["animal", "skunk", "wild"],
+	"pizza": ["food", "pizza"],
+	"national-park": ["national park", "landscape", "nature"],
+	"no-one-under-eighteen": [
+		"no",
+		"under",
+		"eighteen",
+		"no one under eighteen"
+	],
+	"hourglass-not-done": ["hourglass not done", "time", "sand"],
+	"fork-and-knife": ["food", "fork", "knife", "fork and knife"],
+	"foggy": ["foggy", "weather", "landscape"],
+	"sweet-potato": ["food", "vegetable", "sweet potato"],
+	"leopard": ["animal", "leopard", "wild"],
+	"eyes": ["eyes", "sight", "body"],
+	"flag-of-marshall-islands": [
+		"flag",
+		"marshall islands",
+		"flag of marshall islands"
+	],
+	"lollipop": ["food", "lollipop"],
+	"play-button": ["play", "button", "symbol", "play button"],
+	"muted-speaker": ["muted", "speaker", "volume", "muted speaker"],
+	"exclamation-question-mark": [
+		"exclamation",
+		"question",
+		"mark",
+		"exclamation question mark"
+	],
+	"baby-bottle": ["food", "bottle", "baby", "baby bottle"],
+	"crossed-fingers": [
+		"crossed",
+		"fingers",
+		"luck",
+		"hope",
+		"wish",
+		"superstition",
+		"good luck",
+		"praying",
+		"crossed fingers"
+	],
+	"fountain": ["fountain", "water", "park"],
+	"flag-of-paraguay": ["flag", "paraguay", "flag of paraguay"],
+	"incoming-envelope": ["incoming envelope", "letter", "mail"],
+	"chart-with-upwards-trend": [
+		"chart with upwards trend",
+		"graph",
+		"statistics"
+	],
+	"person-office-worker": [
+		"person",
+		"office",
+		"worker",
+		"business",
+		"person office worker"
+	],
+	"flag-of-liechtenstein": [
+		"flag",
+		"liechtenstein",
+		"flag of liechtenstein"
+	],
+	"microscope": ["microscope", "science", "tool"],
+	"man-construction-worker": [
+		"man",
+		"construction",
+		"worker",
+		"smile",
+		"man construction worker"
+	],
+	"mosquito": ["animal", "mosquito", "insect"],
+	"person-kneeling": ["person", "kneeling", "person kneeling"],
+	"house-with-garden": ["house with garden", "building", "home"],
+	"recreational-vehicle": [
+		"recreational vehicle",
+		"rv",
+		"camper",
+		"vehicle"
+	],
+	"donkey": ["animal", "donkey", "farm"],
+	"kissing-face": [
+		"face",
+		"love",
+		"kiss",
+		"romantic",
+		"kissing face"
+	],
+	"scroll": ["scroll", "document", "paper"],
+	"middle-finger": ["finger", "middle", "rude", "middle finger"],
+	"kimono": ["kimono", "robe", "traditional"],
+	"flag-of-st.-vincent-&-grenadines": [
+		"flag",
+		"saint vincent and grenadines",
+		"flag of saint vincent and grenadines"
+	],
+	"corn": ["food", "vegetable", "corn"],
+	"crescent-moon": ["nature", "moon", "crescent", "crescent moon"],
+	"sun-behind-large-cloud": [
+		"nature",
+		"sun",
+		"cloud",
+		"sun behind large cloud"
+	],
+	"santa-claus": ["santa claus", "christmas", "holiday"],
+	"christmas-tree": ["plant", "tree", "christmas", "christmas tree"],
+	"crocodile": ["animal", "crocodile", "reptile"],
+	"flag-of-british-virgin-islands": [
+		"flag",
+		"british virgin islands",
+		"flag of british virgin islands"
+	],
+	"white-medium-small-square": [
+		"white",
+		"medium-small",
+		"square",
+		"white medium-small square"
+	],
+	"woman-in-manual-wheelchair": [
+		"woman",
+		"manual wheelchair",
+		"woman in manual wheelchair"
+	],
+	"women’s-room": ["women", "room", "bathroom", "women’s room"],
+	"nest-with-eggs": ["animal", "nest", "eggs", "nest with eggs"],
+	"fuel-pump": ["fuel pump", "gas station", "vehicle"],
+	"globe-with-meridians": [
+		"globe",
+		"meridians",
+		"world",
+		"globe with meridians"
+	],
+	"toilet": ["toilet", "bathroom", "restroom"],
+	"flag-of-finland": ["flag", "finland", "flag of finland"],
+	"flag-of-italy": ["flag", "italy", "flag of italy"],
+	"flashlight": ["flashlight", "light", "technology"],
+	"man": ["man", "adult", "male", "smile"],
+	"dvd": ["dvd", "technology", "storage"],
+	"flag-of-burundi": ["flag", "burundi", "flag of burundi"],
+	"ginger-root": ["food", "vegetable", "ginger", "ginger root"],
+	"non-potable-water": [
+		"non-potable",
+		"water",
+		"forbidden",
+		"non-potable water"
+	],
+	"khanda": ["khanda", "symbol", "sikhism"],
+	"bus-stop": ["bus stop", "public transport", "sign"],
+	"umbrella-with-rain-drops": [
+		"nature",
+		"umbrella",
+		"rain",
+		"umbrella with rain drops"
+	],
+	"eleven-o’clock": ["eleven", "o’clock", "time", "eleven o’clock"],
+	"sunflower": ["plant", "flower", "sunflower"],
+	"angel": ["angel", "baby", "wings", "fantasy"],
+	"flag-of-oman": ["flag", "oman", "flag of oman"],
+	"person-tipping-hand": [
+		"tipping hand",
+		"person",
+		"sassy",
+		"person tipping hand"
+	],
+	"red-circle": ["red", "circle", "symbol", "red circle"],
+	"up-arrow": ["up", "arrow", "direction", "up arrow"],
+	"person-artist": [
+		"person",
+		"artist",
+		"painter",
+		"art",
+		"person artist"
+	],
+	"woman-in-steamy-room": [
+		"steamy room",
+		"woman",
+		"sauna",
+		"woman in steamy room"
+	],
+	"flag-of-kenya": ["flag", "kenya", "flag of kenya"],
+	"parking": ["parking", "symbol", "car"],
+	"person-bouncing-ball": [
+		"sports",
+		"basketball",
+		"person bouncing ball"
+	],
+	"robot": [
+		"computer",
+		"machine",
+		"bot",
+		"robot",
+		"technology",
+		"automation",
+		"future",
+		"cyber",
+		"artificial intelligence",
+		"ai"
+	],
+	"cut-of-meat": ["food", "meat", "cut of meat"],
+	"flag-of-kyrgyzstan": ["flag", "kyrgyzstan", "flag of kyrgyzstan"],
+	"flag-of-kiribati": ["flag", "kiribati", "flag of kiribati"],
+	"triangular-ruler": ["triangular ruler", "tool", "measurement"],
+	"grey-heart": ["love", "heart", "affection", "grey heart"],
+	"violin": ["violin"],
+	"latin-cross": ["cross", "latin", "religion", "latin cross"],
+	"peacock": ["animal", "peacock", "bird"],
+	"maple-leaf": ["plant", "leaf", "maple", "maple leaf"],
+	"flag-of-mexico": ["flag", "mexico", "flag of mexico"],
+	"face-with-raised-eyebrow": [
+		"face",
+		"suspicious",
+		"skeptical",
+		"disbelief",
+		"questioning",
+		"face with raised eyebrow"
+	],
+	"repeat-button": ["repeat", "button", "symbol", "repeat button"],
+	"atm-sign": ["atm", "sign", "money", "atm sign"],
+	"tomato": ["food", "vegetable", "tomato"],
+	"woman,-girl-and-boy": [
+		"woman",
+		"girl",
+		"boy",
+		"woman, girl and boy"
+	],
+	"black-small-square": [
+		"black",
+		"small",
+		"square",
+		"black small square"
+	],
+	"beating-heart": ["love", "heart", "beat", "beating heart"],
+	"person-vampire": [
+		"vampire",
+		"person",
+		"fantasy",
+		"undead",
+		"person vampire"
+	],
+	"railway-car": ["railway car", "train", "vehicle"],
+	"cap": ["cap", "hat", "headwear"],
+	"sports-medal": ["award", "sports", "sports medal"],
+	"flag-of-iraq": ["flag", "iraq", "flag of iraq"],
+	"flag-of-christmas-island": [
+		"flag",
+		"christmas island",
+		"flag of christmas island"
+	],
+	"flag-of-u.s.-virgin-islands": [
+		"flag",
+		"u.s. virgin islands",
+		"flag of u.s. virgin islands"
+	],
+	"castle": ["castle", "building", "landmark"],
+	"selfie": ["selfie", "camera", "self"],
+	"alien": [
+		"creature",
+		"extraterrestrial",
+		"ufo",
+		"space",
+		"martian",
+		"alien",
+		"invasion",
+		"outer space",
+		"science fiction",
+		"et"
+	],
+	"flag-of-japan": ["flag", "japan", "flag of japan"],
+	"mother-christmas": [
+		"mother christmas",
+		"mrs claus",
+		"christmas",
+		"holiday"
+	],
+	"olive": ["food", "vegetable", "olive"],
+	"baby-symbol": ["baby", "symbol", "diaper", "baby symbol"],
+	"banana": ["food", "fruit", "banana"],
+	"person-pouting": ["pouting", "person", "angry", "person pouting"],
+	"hook": ["hook", "fishing", "tool"],
+	"bride": ["bride", "wedding", "woman"],
+	"puzzle-piece": ["game", "puzzle", "puzzle piece"],
+	"high-heeled-shoe": ["high-heeled shoe", "heels", "footwear"],
+	"hourglass-done": ["hourglass done", "time", "sand"],
+	"input-latin-lowercase": [
+		"input",
+		"latin",
+		"lowercase",
+		"input latin lowercase"
+	],
+	"man-pouting": ["pouting", "man", "angry", "man pouting"],
+	"pig-nose": ["animal", "pig", "nose", "pig nose"],
+	"flag-of-micronesia": ["flag", "micronesia", "flag of micronesia"],
+	"flag-of-cuba": ["flag", "cuba", "flag of cuba"],
+	"yen-banknote": ["yen banknote", "money", "currency"],
+	"drop-of-blood": ["drop of blood", "medical", "donation"],
+	"flag-of-morocco": ["flag", "morocco", "flag of morocco"],
+	"speaking-head": [
+		"speaking",
+		"head",
+		"voice",
+		"body",
+		"speaking head"
+	],
+	"coconut": ["food", "fruit", "coconut"],
+	"yin-yang": ["yin", "yang", "balance", "yin yang"],
+	"hammer": ["hammer", "tool", "repair"],
+	"french-fries": ["food", "fries", "french fries"],
+	"coral": ["animal", "coral", "marine"],
+	"salad": ["food", "salad"],
+	"flag-of-caribbean-netherlands": [
+		"flag",
+		"caribbean netherlands",
+		"flag of caribbean netherlands"
+	],
+	"woman-and-man-holding-hands": [
+		"woman",
+		"man",
+		"holding hands",
+		"woman and man holding hands"
+	],
+	"woman-mountain-biking": [
+		"sports",
+		"mountain biking",
+		"woman mountain biking"
+	],
+	"left-facing-fist": [
+		"fist",
+		"left-facing",
+		"punch",
+		"fight",
+		"attack",
+		"power",
+		"strength",
+		"blow",
+		"left-facing fist"
+	],
+	"fireworks": ["fireworks", "celebration", "festival"],
+	"flag-of-åland-islands": [
+		"flag",
+		"aland islands",
+		"flag of åland islands"
+	],
+	"teacher": ["teacher", "instructor"],
+	"speak-no-evil-monkey": [
+		"monkey",
+		"speak",
+		"evil",
+		"speak-no-evil monkey"
+	],
+	"flag-of-suriname": ["flag", "suriname", "flag of suriname"],
+	"2nd-place-medal": [
+		"award",
+		"silver",
+		"second place",
+		"2nd place medal"
+	],
+	"face-exhaling": [
+		"face",
+		"exhaling",
+		"sigh",
+		"relief",
+		"breathe",
+		"tired",
+		"calm",
+		"breath",
+		"exhausted",
+		"resigned",
+		"winded",
+		"panting",
+		"breathing",
+		"face exhaling"
+	],
+	"woman-lifting-weights": [
+		"sports",
+		"weightlifting",
+		"woman lifting weights"
+	],
+	"person-in-steamy-room": [
+		"steamy room",
+		"person",
+		"sauna",
+		"person in steamy room"
+	],
+	"chicken": ["animal", "chicken", "bird"],
+	"man-pilot": ["man", "pilot", "aviator", "flight", "man pilot"],
+	"printer": ["printer", "technology", "office"],
+	"lungs": ["lungs", "breathing", "body"],
+	"man-mage": ["mage", "man", "wizard", "warlock", "man mage"],
+	"person-scientist": [
+		"person",
+		"scientist",
+		"science",
+		"lab",
+		"person scientist"
+	],
+	"ticket": ["ticket"],
+	"large-blue-diamond": [
+		"large",
+		"blue",
+		"diamond",
+		"large blue diamond"
+	],
+	"volleyball": ["sports", "volleyball"],
+	"light-bulb": ["light bulb", "idea", "technology"],
+	"person-mage": ["mage", "person", "witch", "wizard", "person mage"],
+	"hot-beverage": [
+		"food",
+		"hot",
+		"beverage",
+		"coffee",
+		"hot beverage"
+	],
+	"green-circle": ["green", "circle", "symbol", "green circle"],
+	"flag-of-sweden": ["flag", "sweden", "flag of sweden"],
+	"family-woman-woman-girl": [
+		"family",
+		"woman",
+		"girl",
+		"family woman woman girl"
+	],
+	"penguin": ["animal", "penguin", "bird"],
+	"orangutan": ["animal", "orangutan", "primate"],
+	"id-button": ["id", "button", "identifier", "id button"],
+	"coat": ["coat", "jacket", "outerwear"],
+	"ab-button-(blood-type)": [
+		"blood",
+		"type",
+		"ab",
+		"ab button (blood type)"
+	],
+	"shushing-face": [
+		"face",
+		"quiet",
+		"shush",
+		"silence",
+		"secret",
+		"hush",
+		"whisper",
+		"confidential",
+		"secrecy",
+		"mute",
+		"hush-hush",
+		"shhh",
+		"be quiet",
+		"shushing face"
+	],
+	"melting-face": [
+		"melt",
+		"melting",
+		"haha",
+		"lol",
+		"sarcastic",
+		"sarcasm",
+		"heat",
+		"hot",
+		"embarrassed",
+		"dissapear",
+		"dissolve",
+		"liqud",
+		"melting face"
+	],
+	"church": ["church", "building", "religion"],
+	"gemini": ["gemini", "zodiac", "astrology"],
+	"rocket": ["rocket", "vehicle", "space", "transportation"],
+	"dna": ["dna", "science", "genetics"],
+	"dizzy": ["nature", "star", "dizzy", "shooting star", "shiny"],
+	"kite": ["toy", "kite"],
+	"grinning-face-with-smiling-eyes": [
+		"face",
+		"grin",
+		"happy",
+		"lol",
+		"mouth",
+		"smile",
+		"smiling",
+		"open",
+		"joy",
+		"laugh",
+		"pleased",
+		"grinning face with smiling eyes"
+	],
+	"warning": ["warning", "caution", "alert"],
+	"strawberry": ["food", "fruit", "strawberry"],
+	"pouting-cat": [
+		"cat",
+		"animal",
+		"pout",
+		"feline",
+		"annoyed",
+		"frustrated",
+		"upset",
+		"grumpy",
+		"cute",
+		"pouting cat"
+	],
+	"hand-with-index-finger-and-thumb-crossed": [
+		"hand",
+		"finger",
+		"thumb",
+		"crossed",
+		"gesture",
+		"snap",
+		"promise",
+		"luck",
+		"hand with index finger and thumb crossed"
+	],
+	"face-with-symbols-on-mouth": [
+		"face",
+		"swearing",
+		"cussing",
+		"cuss words",
+		"angry",
+		"expletive",
+		"furious",
+		"rage",
+		"profanity",
+		"offensive",
+		"mad",
+		"irate",
+		"curse",
+		"censored",
+		"face with symbols on mouth"
+	],
+	"man-rowing-boat": ["sports", "rowing", "man rowing boat"],
+	"flag-of-norfolk-island": [
+		"flag",
+		"norfolk island",
+		"flag of norfolk island"
+	],
+	"backpack": ["backpack", "bag", "school"],
+	"oncoming-police-car": [
+		"oncoming",
+		"police",
+		"car",
+		"vehicle",
+		"law enforcement"
+	],
+	"right-anger-bubble": [
+		"right",
+		"anger",
+		"bubble",
+		"right anger bubble"
+	],
+	"package": ["package", "box", "mail"],
+	"closed-mailbox-with-raised-flag": [
+		"closed mailbox with raised flag",
+		"mail",
+		"post"
+	],
+	"man-getting-haircut": [
+		"haircut",
+		"man",
+		"beauty",
+		"man getting haircut"
+	],
+	"high-voltage": ["nature", "lightning", "voltage", "high voltage"],
+	"pen": ["pen", "writing", "tool"],
+	"roller-skate": ["sports", "skate", "roller skate"],
+	"call-me-hand": [
+		"call",
+		"me",
+		"hand",
+		"gesture",
+		"phone",
+		"shaka",
+		"hang loose",
+		"hawaiian",
+		"call me hand"
+	],
+	"sari": ["sari", "robe", "traditional"],
+	"jack-o-lantern": [
+		"halloween",
+		"pumpkin",
+		"creature",
+		"spooky",
+		"holiday",
+		"autumn",
+		"carved",
+		"lantern",
+		"scary",
+		"decoration",
+		"jack-o-lantern"
+	],
+	"flag-of-senegal": ["flag", "senegal", "flag of senegal"],
+	"cup-with-straw": ["food", "cup", "straw", "cup with straw"],
+	"cold-face": [
+		"face",
+		"cold",
+		"freezing",
+		"frozen",
+		"shivering",
+		"chilly",
+		"ice",
+		"winter",
+		"frosty",
+		"numb",
+		"frostbite",
+		"frigid",
+		"cold face"
+	],
+	"banjo": ["banjo"],
+	"shorts": ["shorts", "summer", "clothing"],
+	"glowing-star": ["nature", "star", "glowing star"],
+	"video-camera": ["video camera", "photography", "technology"],
+	"camel": ["animal", "camel", "desert"],
+	"minibus": [
+		"minibus",
+		"vehicle",
+		"transportation",
+		"public transport"
+	],
+	"person-biking": ["sports", "biking", "person biking"],
+	"baseball": ["sports", "baseball"],
+	"sweat-droplets": ["nature", "water", "sweat", "sweat droplets"],
+	"maracas": ["maracas"],
+	"flag-of-kosovo": ["flag", "kosovo", "flag of kosovo"],
+	"sunrise-over-mountains": [
+		"sunrise over mountains",
+		"morning",
+		"landscape"
+	],
+	"fishing-pole": ["sports", "fishing", "fishing pole"],
+	"flag-of-serbia": ["flag", "serbia", "flag of serbia"],
+	"pie": ["food", "pie"],
+	"next-track-button": [
+		"next",
+		"track",
+		"button",
+		"next track button"
+	],
+	"wrapped-gift": ["wrapped gift", "present", "gift"],
+	"balloon": ["balloon", "celebration", "party"],
+	"passenger-ship": [
+		"passenger ship",
+		"vehicle",
+		"transportation",
+		"boat"
+	],
+	"two-o’clock": ["two", "o’clock", "time", "two o’clock"],
+	"winking-face-with-tongue": [
+		"face",
+		"prank",
+		"silly",
+		"winking",
+		"playful",
+		"winking face with tongue"
+	],
+	"boar": ["animal", "boar", "wild"],
+	"japanese-free-of-charge": [
+		"japanese",
+		"free",
+		"charge",
+		"japanese free of charge"
+	],
+	"pancakes": ["food", "pancakes"],
+	"satellite": ["satellite", "space", "communication"],
+	"piñata": ["piñata", "celebration", "party"],
+	"men’s-room": ["men", "room", "bathroom", "men’s room"],
+	"flag-of-iran": ["flag", "iran", "flag of iran"],
+	"scissors": ["scissors", "tool", "cut"],
+	"bomb": ["bomb", "weapon", "explosive"],
+	"flag-of-cook-islands": [
+		"flag",
+		"cook islands",
+		"flag of cook islands"
+	],
+	"children-crossing": [
+		"children",
+		"crossing",
+		"warning",
+		"children crossing"
+	],
+	"man-raising-hand": [
+		"raising hand",
+		"man",
+		"hand",
+		"raise",
+		"man raising hand"
+	],
+	"woman-feeding-baby": [
+		"feeding",
+		"baby",
+		"woman",
+		"bottle",
+		"woman feeding baby"
+	],
+	"pistol": ["pistol", "weapon", "gun"],
+	"family-man-woman-girl-boy": [
+		"family",
+		"man",
+		"woman",
+		"girl",
+		"boy",
+		"family man woman girl boy"
+	],
+	"clamp": ["clamp", "tool", "device"],
+	"flag-of-philippines": [
+		"flag",
+		"philippines",
+		"flag of philippines"
+	],
+	"man-golfing": ["sports", "golf", "man golfing"],
+	"skis": ["sports", "ski", "skis"],
+	"thread": ["thread", "sewing", "spool"],
+	"kissing-cat": [
+		"cat",
+		"animal",
+		"kiss",
+		"feline",
+		"affection",
+		"love",
+		"cute",
+		"peck",
+		"kissing cat"
+	],
+	"oden": ["food", "oden"],
+	"flag-of-equatorial-guinea": [
+		"flag",
+		"equatorial guinea",
+		"flag of equatorial guinea"
+	],
+	"man-biking": ["sports", "biking", "man biking"],
+	"stuffed-flatbread": [
+		"food",
+		"bread",
+		"stuffed",
+		"stuffed flatbread"
+	],
+	"face-with-monocle": [
+		"face",
+		"stuffy",
+		"wealthy",
+		"intelligent",
+		"monocle",
+		"face with monocle"
+	],
+	"umbrella-on-ground": ["umbrella on ground", "beach", "sunshade"],
+	"kitchen-knife": ["kitchen knife", "tool", "cut"],
+	"bathtub": ["bathtub", "bathroom", "clean"],
+	"microphone": ["microphone"],
+	"sloth": ["animal", "sloth", "wild"],
+	"place-of-worship": [
+		"worship",
+		"place",
+		"religion",
+		"place of worship"
+	],
+	"person-frowning": ["frowning", "person", "sad", "person frowning"],
+	"grinning-face-with-big-eyes": [
+		"awesome",
+		"face",
+		"happy",
+		"joy",
+		"grin",
+		"smiling",
+		"smile",
+		"mouth",
+		"teeth",
+		"yay",
+		"open",
+		"grinning face with big eyes"
+	],
+	"woman-student": ["woman", "student", "smile", "woman student"],
+	"ring": ["ring", "jewelry", "engagement"],
+	"outbox-tray": ["outbox tray", "letter", "mail"],
+	"brown-circle": ["brown", "circle", "symbol", "brown circle"],
+	"fax-machine": ["fax machine", "communication", "technology"],
+	"flexed-biceps": [
+		"biceps",
+		"flexed",
+		"muscle",
+		"strong",
+		"flexed biceps"
+	],
+	"up-left-arrow": ["up-left", "arrow", "direction", "up-left arrow"],
+	"kissing-face-with-smiling-eyes": [
+		"face",
+		"love",
+		"kiss",
+		"smile",
+		"affection",
+		"kissing face with smiling eyes"
+	],
+	"dragon-face": ["animal", "dragon", "mythical", "dragon face"],
+	"man-walking": ["man", "walking", "man walking"],
+	"woman-and-two-girls": ["woman", "girls", "woman and two girls"],
+	"flag-of-benin": ["flag", "benin", "flag of benin"],
+	"classical-building": [
+		"classical building",
+		"building",
+		"architecture"
+	],
+	"fallen-leaf": ["plant", "leaf", "fallen", "fallen leaf"],
+	"flag-of-jordan": ["flag", "jordan", "flag of jordan"],
+	"department-store": ["department store", "building", "shopping"],
+	"unamused-face": [
+		"face",
+		"indifference",
+		"bored",
+		"straight face",
+		"unimpressed",
+		"displeased",
+		"unamused face"
+	],
+	"mushroom": ["plant", "mushroom"],
+	"nut-and-bolt": ["nut and bolt", "tool", "repair"],
+	"bouquet": ["plant", "bouquet", "flowers"],
+	"downwards-button": [
+		"downwards",
+		"button",
+		"symbol",
+		"downwards button"
+	],
+	"flag-of-nepal": ["flag", "nepal", "flag of nepal"],
+	"flag-of-bangladesh": ["flag", "bangladesh", "flag of bangladesh"],
+	"woman-merperson": [
+		"mermaid",
+		"woman",
+		"fantasy",
+		"magical",
+		"woman merperson"
+	],
+	"tamale": ["food", "tamale"],
+	"man-teacher": ["man", "teacher", "instructor", "man teacher"],
+	"flag-of-ghana": ["flag", "ghana", "flag of ghana"],
+	"woman-teacher": [
+		"woman",
+		"teacher",
+		"instructor",
+		"woman teacher"
+	],
+	"chipmunk": ["animal", "chipmunk", "rodent"],
+	"money-mouth-face": [
+		"face",
+		"rich",
+		"money",
+		"dollar",
+		"smile",
+		"wealth",
+		"greed",
+		"cash",
+		"affluent",
+		"moneybags",
+		"profit",
+		"money-mouth face"
+	],
+	"lion-face": ["animal", "lion", "wild", "lion face"],
+	"magnifying-glass-tilted-left": [
+		"magnifying glass tilted left",
+		"search",
+		"tool"
+	],
+	"man-superhero": ["superhero", "man", "hero", "man superhero"],
+	"family-man-woman-boy-boy": [
+		"family",
+		"man",
+		"woman",
+		"boy",
+		"family man woman boy boy"
+	],
+	"star-struck": [
+		"face",
+		"star",
+		"eyes",
+		"amazed",
+		"wow",
+		"impressed",
+		"star-struck"
+	],
+	"woman-with-headscarf": [
+		"woman",
+		"headscarf",
+		"smile",
+		"woman with headscarf"
+	],
+	"star-and-crescent": [
+		"star",
+		"crescent",
+		"religion",
+		"star and crescent"
+	],
+	"right-arrow-curving-up": [
+		"right",
+		"arrow",
+		"curving up",
+		"right arrow curving up"
+	],
+	"loudspeaker": ["loudspeaker", "announcement", "sound"],
+	"houses": ["houses", "building", "neighborhood"],
+	"hot-dog": ["food", "hotdog", "hot dog"],
+	"cool-button": ["cool", "button", "awesome", "cool button"],
+	"pound-banknote": ["pound banknote", "money", "currency"],
+	"flag-of-guernsey": ["flag", "guernsey", "flag of guernsey"],
+	"flag-of-maldives": ["flag", "maldives", "flag of maldives"],
+	"onion": ["food", "vegetable", "onion"],
+	"japanese-application": [
+		"japanese",
+		"application",
+		"request",
+		"japanese application"
+	],
+	"lock-with-pen": ["lock with pen", "security", "writing"],
+	"cricket": ["animal", "cricket", "insect"],
+	"woman-construction-worker": [
+		"woman",
+		"construction",
+		"worker",
+		"smile",
+		"woman construction worker"
+	],
+	"flag-of-taiwan": ["flag", "taiwan", "flag of taiwan"],
+	"registered": ["registered", "symbol", "trademark"],
+	"flag-of-namibia": ["flag", "namibia", "flag of namibia"],
+	"people-hugging": ["people", "hugging", "body", "people hugging"],
+	"locked": ["locked", "security", "lock"],
+	"hindu-temple": ["hindu temple", "building", "religion"],
+	"spider-web": ["animal", "spider", "web", "spider web"],
+	"police-officer": ["police", "officer", "smile", "police officer"],
+	"star-of-david": ["star", "david", "religion", "star of david"],
+	"cigarette": ["cigarette", "smoking", "tobacco"],
+	"flag-of-st.-lucia": ["flag", "saint lucia", "flag of saint lucia"],
+	"keycap-9": ["keycap", "9", "nine", "keycap 9"],
+	"woman-biking": ["sports", "biking", "woman biking"],
+	"person-raising-hand": [
+		"raising hand",
+		"person",
+		"hand",
+		"raise",
+		"person raising hand"
+	],
+	"person-shrugging": [
+		"shrugging",
+		"person",
+		"doubt",
+		"person shrugging"
+	],
+	"pineapple": ["food", "fruit", "pineapple"],
+	"elephant": ["animal", "elephant", "wild"],
+	"input-symbols": ["input", "symbols", "typing", "input symbols"],
+	"six-pointed-star-with-middle-dot": [
+		"star",
+		"dot",
+		"symbol",
+		"six pointed star with middle dot"
+	],
+	"socks": ["socks", "footwear", "clothing"],
+	"four-o’clock": ["four", "o’clock", "time", "four o’clock"],
+	"flag-of-isle-of-man": [
+		"flag",
+		"isle of man",
+		"man",
+		"flag of isle of man"
+	],
+	"duck": ["animal", "duck", "bird"],
+	"flag-of-central-african-republic": [
+		"flag",
+		"central african republic",
+		"flag of central african republic"
+	],
+	"flag-of-canada": ["flag", "canada", "flag of canada"],
+	"input-latin-letters": [
+		"input",
+		"latin",
+		"letters",
+		"input latin letters"
+	],
+	"face-blowing-a-kiss": [
+		"face",
+		"love",
+		"kiss",
+		"affection",
+		"romantic",
+		"face blowing a kiss"
+	],
+	"drum": ["drum"],
+	"dumpling": ["food", "dumpling"],
+	"flag-of-sri-lanka": ["flag", "sri lanka", "flag of sri lanka"],
+	"yellow-circle": ["yellow", "circle", "symbol", "yellow circle"],
+	"flag-of-french-southern-territories": [
+		"flag",
+		"french southern territories",
+		"flag of french southern territories"
+	],
+	"record-button": ["record", "button", "symbol", "record button"],
+	"tangerine": ["food", "fruit", "tangerine"],
+	"bird": ["animal", "bird"],
+	"flag-of-portugal": ["flag", "portugal", "flag of portugal"],
+	"triangular-flag": ["triangular", "flag", "triangular flag"],
+	"swan": ["animal", "swan", "bird"],
+	"upwards-button": ["upwards", "button", "symbol", "upwards button"],
+	"yellow-square": ["yellow", "square", "symbol", "yellow square"],
+	"flag-of-mauritania": ["flag", "mauritania", "flag of mauritania"],
+	"shrimp": ["animal", "shrimp", "marine"],
+	"japanese-no-vacancy": [
+		"japanese",
+		"vacancy",
+		"no",
+		"japanese no vacancy"
+	],
+	"flag-of-st.-pierre-&-miquelon": [
+		"flag",
+		"saint pierre and miquelon",
+		"flag of saint pierre and miquelon"
+	],
+	"person-firefighter": [
+		"person",
+		"firefighter",
+		"fire",
+		"rescue",
+		"person firefighter"
+	],
+	"flag-of-botswana": ["flag", "botswana", "flag of botswana"],
+	"person-surfing": ["sports", "surfing", "person surfing"],
+	"jar": ["food", "jar"],
+	"japanese-monthly-amount": [
+		"japanese",
+		"monthly",
+		"amount",
+		"japanese monthly amount"
+	],
+	"man-artist": ["man", "artist", "painter", "art", "man artist"],
+	"woman-surfing": ["sports", "surfing", "woman surfing"],
+	"field-hockey": ["sports", "hockey", "field hockey"],
+	"moon-cake": ["food", "cake", "moon", "moon cake"],
+	"woman-bouncing-ball": [
+		"sports",
+		"basketball",
+		"woman bouncing ball"
+	],
+	"atom-symbol": ["atom", "symbol", "science", "atom symbol"],
+	"label": ["label", "tag", "identifier"],
+	"toothbrush": ["toothbrush", "dental", "hygiene"],
+	"mechanical-leg": [
+		"mechanical",
+		"leg",
+		"robotic",
+		"prosthetic",
+		"mechanical leg"
+	],
+	"top-hat": ["top hat", "hat", "headwear"],
+	"black-cat": ["animal", "cat", "black", "black cat"],
+	"bikini": ["bikini", "swimwear", "beach"],
+	"biting-lip": ["biting", "lip", "mouth", "biting lip"],
+	"red-apple": ["food", "fruit", "apple", "red apple"],
+	"white-cane": [
+		"white cane",
+		"accessibility",
+		"mobility aid",
+		"blind"
+	],
+	"canned-food": ["food", "canned", "canned food"],
+	"flag-of-chad": ["flag", "chad", "flag of chad"],
+	"woman-cook": ["woman", "cook", "smile", "woman cook"],
+	"no-pedestrians": [
+		"no",
+		"pedestrians",
+		"forbidden",
+		"no pedestrians"
+	],
+	"virgo": ["virgo", "zodiac", "astrology"],
+	"bow-and-arrow": ["sports", "archery", "bow and arrow"],
+	"man-vampire": [
+		"vampire",
+		"man",
+		"fantasy",
+		"undead",
+		"man vampire"
+	],
+	"helmet-with-white-cross": [
+		"helmet",
+		"cross",
+		"safety",
+		"helmet with white cross"
+	],
+	"rose": ["plant", "flower", "rose"],
+	"woman-firefighter": [
+		"woman",
+		"firefighter",
+		"fire",
+		"rescue",
+		"woman firefighter"
+	],
+	"woman-rowing-boat": ["sports", "rowing", "woman rowing boat"],
+	"oncoming-automobile": ["oncoming automobile", "vehicle", "car"],
+	"person-gesturing-no": [
+		"gesturing no",
+		"person",
+		"no",
+		"stop",
+		"person gesturing no"
+	],
+	"3rd-place-medal": [
+		"award",
+		"bronze",
+		"third place",
+		"3rd place medal"
+	],
+	"salt": ["food", "salt"],
+	"flag-of-northern-mariana-islands": [
+		"flag",
+		"northern mariana islands",
+		"flag of northern mariana islands"
+	],
+	"person-superhero": [
+		"superhero",
+		"person",
+		"hero",
+		"person superhero"
+	],
+	"wedding": ["wedding", "building", "ceremony"],
+	"flag-of-poland": ["flag", "poland", "flag of poland"],
+	"tiger": ["animal", "tiger", "wild"],
+	"heart-with-ribbon": [
+		"love",
+		"heart",
+		"ribbon",
+		"heart with ribbon"
+	],
+	"man-singer": ["man", "singer", "artist", "man singer"],
+	"person-genie": [
+		"genie",
+		"person",
+		"fantasy",
+		"magical",
+		"person genie"
+	],
+	"laptop": ["laptop", "computer", "technology"],
+	"flag-of-cyprus": ["flag", "cyprus", "flag of cyprus"],
+	"japanese-service-charge-button": [
+		"japanese",
+		"service",
+		"charge",
+		"japanese service charge button"
+	],
+	"hamster-face": ["animal", "hamster", "pet", "hamster face"],
+	"flag-of-wallis-&-futuna": [
+		"flag",
+		"wallis and futuna",
+		"flag of wallis and futuna"
+	],
+	"japanese-castle": ["japanese castle", "building", "landmark"],
+	"flag-of-antarctica": ["flag", "antarctica", "flag of antarctica"],
+	"airplane": ["airplane", "vehicle", "transportation", "flight"],
+	"person-playing-water-polo": [
+		"sports",
+		"water polo",
+		"person playing water polo"
+	],
+	"cloud-with-rain": ["nature", "cloud", "rain", "cloud with rain"],
+	"loudly-crying-face": [
+		"face",
+		"cry",
+		"tears",
+		"sad",
+		"upset",
+		"depressed",
+		"bawling",
+		"loudly crying face"
+	],
+	"high-speed-train": [
+		"high-speed train",
+		"vehicle",
+		"transportation",
+		"train"
+	],
+	"satellite-antenna": [
+		"satellite antenna",
+		"communication",
+		"technology"
+	],
+	"flag-of-nigeria": ["flag", "nigeria", "flag of nigeria"],
+	"prohibited": ["prohibited", "forbidden", "no"],
+	"pouring-liquid": ["food", "pouring", "liquid", "pouring liquid"],
+	"mobile-phone": ["mobile phone", "cellphone", "communication"],
+	"woman-kneeling": ["woman", "kneeling", "woman kneeling"],
+	"chart-decreasing": ["chart decreasing", "graph", "statistics"],
+	"bus": ["bus", "vehicle", "transportation", "public transport"],
+	"mobile-phone-with-arrow": [
+		"mobile phone with arrow",
+		"communication",
+		"technology"
+	],
+	"woman-and-two-boys": ["woman", "boys", "woman and two boys"],
+	"dodo": ["animal", "dodo", "bird"],
+	"candle": ["candle", "light", "flame"],
+	"sheep": ["animal", "sheep", "farm"],
+	"check-box-with-check": [
+		"check",
+		"box",
+		"symbol",
+		"check box with check"
+	],
+	"flag-in-hole": ["sports", "golf", "flag in hole"],
+	"man-playing-water-polo": [
+		"sports",
+		"water polo",
+		"man playing water polo"
+	],
+	"black-nib": ["black nib", "writing", "tool"],
+	"chocolate-bar": ["food", "chocolate", "chocolate bar"],
+	"man-playing-handball": [
+		"sports",
+		"handball",
+		"man playing handball"
+	],
+	"shamrock": ["plant", "shamrock", "luck"],
+	"flag-of-turks-&-caicos-islands": [
+		"flag",
+		"turks and caicos islands",
+		"flag of turks and caicos islands"
+	],
+	"waning-gibbous-moon": [
+		"nature",
+		"moon",
+		"waning",
+		"gibbous",
+		"waning gibbous moon"
+	],
+	"butter": ["food", "dairy", "butter"],
+	"reminder-ribbon": ["ribbon", "reminder", "reminder ribbon"],
+	"snowflake": ["nature", "snow", "snowflake"],
+	"man-with-no-hair": [
+		"man",
+		"bald",
+		"hair",
+		"smile",
+		"man with no hair"
+	],
+	"ox": ["animal", "ox", "farm"],
+	"flag-of-pakistan": ["flag", "pakistan", "flag of pakistan"],
+	"slightly-frowning-face": [
+		"face",
+		"frowning",
+		"disappointed",
+		"sad",
+		"upset",
+		"unhappy",
+		"slightly frowning face"
+	],
+	"bridge-at-night": ["bridge at night", "night", "landscape"],
+	"backhand-index-pointing-down": [
+		"pointing",
+		"down",
+		"hand",
+		"direction",
+		"index",
+		"gesture",
+		"attention",
+		"downwards",
+		"backhand index pointing down"
+	],
+	"gem-stone": ["gem stone", "jewel", "diamond"],
+	"five-thirty": ["five", "thirty", "time", "five-thirty"],
+	"placard": ["placard", "sign", "message"],
+	"man-astronaut": [
+		"man",
+		"astronaut",
+		"space",
+		"exploration",
+		"man astronaut"
+	],
+	"mending-heart": ["healing", "love", "heart", "mending heart"],
+	"camera": ["camera", "photography", "technology"],
+	"smiling-face-with-open-mouth": [
+		"face",
+		"excited",
+		"sweat",
+		"smile",
+		"relief",
+		"nervous",
+		"open",
+		"dejected",
+		"stress",
+		"stressed",
+		"smiling face with open mouth"
+	],
+	"love-letter": ["love letter", "letter", "love"],
+	"pouting-face": [
+		"face",
+		"angry",
+		"mad",
+		"upset",
+		"rage",
+		"furious",
+		"annoyed",
+		"frustrated",
+		"disapproval",
+		"frowning",
+		"red",
+		"irritated",
+		"fuming",
+		"wrath",
+		"pouting face"
+	],
+	"badger": ["animal", "badger", "wild"],
+	"construction": ["construction", "work", "roadwork"],
+	"flag-of-guyana": ["flag", "guyana", "flag of guyana"],
+	"pregnant-man": [
+		"pregnant",
+		"man",
+		"baby",
+		"expecting",
+		"pregnant man"
+	],
+	"man-with-red-hair": [
+		"man",
+		"red",
+		"hair",
+		"smile",
+		"man with red hair"
+	],
+	"hot-springs": ["hot", "springs", "steam", "hot springs"],
+	"flag-of-luxembourg": ["flag", "luxembourg", "flag of luxembourg"],
+	"last-quarter-moon": [
+		"nature",
+		"moon",
+		"last",
+		"quarter",
+		"last quarter moon"
+	],
+	"diamond-suit": ["diamond", "suit", "card", "diamond suit"],
+	"index-pointing-up": [
+		"pointing",
+		"up",
+		"index",
+		"hand",
+		"gesture",
+		"direction",
+		"upwards",
+		"attention",
+		"index pointing up"
+	],
+	"diya-lamp": ["diya lamp", "light", "festival"],
+	"flag-of-tunisia": ["flag", "tunisia", "flag of tunisia"],
+	"man-detective": [
+		"man",
+		"detective",
+		"spy",
+		"sleuth",
+		"man detective"
+	],
+	"woman-walking": ["woman", "walking", "woman walking"],
+	"flag-of-tajikistan": ["flag", "tajikistan", "flag of tajikistan"],
+	"kissing-face-with-closed-eyes": [
+		"face",
+		"love",
+		"kiss",
+		"affection",
+		"romantic",
+		"kissing face with closed eyes"
+	],
+	"snowman-without-snow": [
+		"nature",
+		"snowman",
+		"snowman without snow"
+	],
+	"face-vomiting": [
+		"face",
+		"vomit",
+		"gross",
+		"green",
+		"sick",
+		"ill",
+		"nauseous",
+		"disgusted",
+		"throwing up",
+		"retching",
+		"barf",
+		"puke",
+		"nauseated",
+		"face vomiting"
+	],
+	"cloud-with-snow": ["nature", "cloud", "snow", "cloud with snow"],
+	"keycap-7": ["keycap", "7", "seven", "keycap 7"],
+	"flag-of-madagascar": ["flag", "madagascar", "flag of madagascar"],
+	"taurus": ["taurus", "zodiac", "astrology"],
+	"heart-decoration": [
+		"love",
+		"heart",
+		"decoration",
+		"heart decoration"
+	],
+	"flag-of-french-guiana": [
+		"flag",
+		"french guiana",
+		"flag of french guiana"
+	],
+	"ice-hockey": ["sports", "hockey", "ice hockey"],
+	"cherry-blossom": ["plant", "flower", "cherry", "cherry blossom"],
+	"balance-scale": ["balance scale", "justice", "law"],
+	"plunger": ["plunger", "tool", "cleaning"],
+	"waxing-crescent-moon": [
+		"nature",
+		"moon",
+		"waxing",
+		"crescent",
+		"waxing crescent moon"
+	],
+	"flag-of-bolivia": ["flag", "bolivia", "flag of bolivia"],
+	"video-game": ["game", "video", "video game"],
+	"flag-of-new-zealand": [
+		"flag",
+		"new zealand",
+		"flag of new zealand"
+	],
+	"smiling-face": [
+		"face",
+		"smile",
+		"happy",
+		"content",
+		"pleased",
+		"joy",
+		"smiling face"
+	],
+	"fencer": ["sports", "fencing", "fencer"],
+	"man-and-two-boys": ["man", "boys", "man and two boys"],
+	"smiling-face-with-tear": [
+		"smiley",
+		"proud",
+		"touched",
+		"grateful",
+		"joy",
+		"smile",
+		"happy",
+		"glad",
+		"pain",
+		"tear",
+		"relieved",
+		"smiling",
+		"smiling face with tear"
+	],
+	"japanese-bargain": [
+		"japanese",
+		"bargain",
+		"discount",
+		"japanese bargain"
+	],
+	"japanese-discount": [
+		"japanese",
+		"discount",
+		"sale",
+		"japanese discount"
+	],
+	"flag-of-lebanon": ["flag", "lebanon", "flag of lebanon"],
+	"curling-stone": ["sports", "curling", "curling stone"],
+	"sun": ["nature", "sun"],
+	"bubble-tea": ["food", "bubble", "tea", "bubble tea"],
+	"yellow-heart": ["love", "heart", "affection", "yellow heart"],
+	"man-running": ["man", "running", "man running"],
+	"cyclone": ["cyclone", "storm", "symbol"],
+	"motorized-wheelchair": [
+		"motorized wheelchair",
+		"accessibility",
+		"mobility aid"
+	],
+	"long-drum": ["drum", "long drum"],
+	"dragon": ["animal", "dragon", "mythical"],
+	"flag-of-mozambique": ["flag", "mozambique", "flag of mozambique"],
+	"flag-of-burkina-faso": [
+		"flag",
+		"burkina faso",
+		"flag of burkina faso"
+	],
+	"red-triangle-pointed-up": [
+		"red",
+		"triangle",
+		"up",
+		"red triangle pointed up"
+	],
+	"pea-pod": ["food", "vegetable", "peas", "pea pod"],
+	"flag-of-mali": ["flag", "mali", "flag of mali"],
+	"television": ["television", "entertainment", "technology"],
+	"person-juggling": ["juggling", "person juggling"],
+	"flag-of-ukraine": ["flag", "ukraine", "flag of ukraine"],
+	"flag-of-syria": ["flag", "syria", "flag of syria"],
+	"billiards": ["sports", "billiards"],
+	"bookmark": ["bookmark", "document", "paper"],
+	"beer-mug": ["food", "beer", "mug", "beer mug"],
+	"potato": ["food", "vegetable", "potato"],
+	"japanese-reserved-button": [
+		"japanese",
+		"reserved",
+		"button",
+		"japanese reserved button"
+	],
+	"man-with-white-hair": [
+		"man",
+		"white",
+		"hair",
+		"smile",
+		"man with white hair"
+	],
+	"purse": ["purse", "bag", "fashion"],
+	"wheel-of-dharma": [
+		"dharma",
+		"wheel",
+		"religion",
+		"wheel of dharma"
+	],
+	"eye-in-speech-bubble": [
+		"eye",
+		"speech",
+		"bubble",
+		"eye in speech bubble"
+	],
+	"face-with-steam-from-nose": [
+		"face",
+		"triumph",
+		"smug",
+		"proud",
+		"angry",
+		"face with steam from nose"
+	],
+	"juice-box": ["food", "juice", "juice box"],
+	"wine-glass": ["food", "wine", "glass", "wine glass"],
+	"speedboat": ["speedboat", "vehicle", "transportation", "boat"],
+	"headstone": ["headstone", "grave", "death"],
+	"pile-of-poo": [
+		"poop",
+		"shitface",
+		"turd",
+		"crap",
+		"excrement",
+		"smelly",
+		"gross",
+		"funny",
+		"silly",
+		"smiling shit",
+		"feces",
+		"face",
+		"pile of poo"
+	],
+	"woman-fairy": [
+		"fairy",
+		"woman",
+		"fantasy",
+		"magical",
+		"woman fairy"
+	],
+	"brain": ["brain", "mind", "body"],
+	"flag-of-czechia": ["flag", "czechia", "flag of czechia"],
+	"flag-of-eswatini": ["flag", "eswatini", "flag of eswatini"],
+	"man-with-hearing-aid": [
+		"hearing aid",
+		"man",
+		"accessibility",
+		"man with hearing aid"
+	],
+	"woman-supervillain": [
+		"supervillain",
+		"woman",
+		"villain",
+		"woman supervillain"
+	],
+	"glass-of-milk": ["food", "milk", "glass of milk"],
+	"flag-of-germany": ["flag", "germany", "flag of germany"],
+	"pensive-face": [
+		"face",
+		"sad",
+		"depressed",
+		"upset",
+		"thoughtful",
+		"pensive",
+		"pensive face"
+	],
+	"sunset": ["sunset", "evening", "landscape"],
+	"spade-suit": ["spade", "suit", "card", "spade suit"],
+	"water-closet": ["restroom", "bathroom", "toilet", "water closet"],
+	"woman-pilot": ["woman", "pilot", "aviation", "fly", "woman pilot"],
+	"farmer": ["farmer", "smile"],
+	"accept-button": ["accept", "button", "ok", "accept button"],
+	"blue-heart": ["love", "heart", "affection", "blue heart"],
+	"ten-thirty": ["ten", "thirty", "time", "ten-thirty"],
+	"rhinoceros": ["animal", "rhinoceros", "wild"],
+	"yo-yo": ["toy", "yo-yo"],
+	"mountain": ["mountain", "landscape", "nature"],
+	"cactus": ["plant", "cactus", "desert"],
+	"no-entry": ["no", "entry", "forbidden", "no entry"],
+	"flag-of-zambia": ["flag", "zambia", "flag of zambia"],
+	"flag-of-aruba": ["flag", "aruba", "flag of aruba"],
+	"control-knobs": ["control knobs", "music", "technology"],
+	"keycap-4": ["keycap", "4", "four", "keycap 4"],
+	"monkey-face": ["animal", "monkey", "primate", "monkey face"],
+	"green-apple": ["food", "fruit", "apple", "green apple"],
+	"bell": ["bell", "sound", "notification"],
+	"ladder": ["ladder", "climb", "tool"],
+	"palm-tree": ["plant", "tree", "tropical", "palm tree"],
+	"taco": ["food", "taco"],
+	"man-and-two-girls": ["man", "girls", "man and two girls"],
+	"meat-on-bone": ["food", "meat", "meat on bone"],
+	"input-latin-uppercase": [
+		"input",
+		"latin",
+		"uppercase",
+		"input latin uppercase"
+	],
+	"free-button": ["free", "button", "no cost", "free button"],
+	"keycap-2": ["keycap", "2", "two", "keycap 2"],
+	"flag-of-monaco": ["flag", "monaco", "flag of monaco"],
+	"person-cartwheeling": [
+		"sports",
+		"cartwheel",
+		"person cartwheeling"
+	],
+	"grinning-cat": [
+		"cat",
+		"animal",
+		"happy",
+		"smile",
+		"grin",
+		"joy",
+		"cute",
+		"feline",
+		"cheerful",
+		"grinning cat"
+	],
+	"man-in-suit-levitating": [
+		"man",
+		"suit",
+		"levitating",
+		"man in suit levitating"
+	],
+	"doughnut": ["food", "doughnut"],
+	"running-shirt": ["sports", "running", "running shirt"],
+	"fondue": ["food", "fondue"],
+	"statue-of-liberty": ["statue of liberty", "new york", "landmark"],
+	"libra": ["libra", "zodiac", "astrology"],
+	"open-book": ["open book", "document", "paper"],
+	"lantern": ["lantern", "light", "decoration"],
+	"man-police-officer": [
+		"man",
+		"police",
+		"officer",
+		"smile",
+		"man police officer"
+	],
+	"monorail": ["monorail", "vehicle", "transportation"],
+	"linked-paperclips": ["linked paperclips", "tool", "office"],
+	"tulip": ["plant", "flower", "tulip"],
+	"heart-suit": ["heart", "suit", "card", "heart suit"],
+	"down-left-arrow": [
+		"down-left",
+		"arrow",
+		"direction",
+		"down-left arrow"
+	],
+	"flag-of-qatar": ["flag", "qatar", "flag of qatar"],
+	"keycap-5": ["keycap", "5", "five", "keycap 5"],
+	"flag-of-estonia": ["flag", "estonia", "flag of estonia"],
+	"fast-up-button": ["fast", "up", "button", "fast up button"],
+	"flag-of-yemen": ["flag", "yemen", "flag of yemen"],
+	"identification-card": ["identification card", "id", "identity"],
+	"person-swimming": ["sports", "swimming", "person swimming"],
+	"lotus": ["plant", "flower", "lotus"],
+	"earth-globe-americas": [
+		"nature",
+		"earth",
+		"americas",
+		"earth globe americas"
+	],
+	"construction-worker": [
+		"construction",
+		"worker",
+		"smile",
+		"construction worker"
+	],
+	"flag-of-hungary": ["flag", "hungary", "flag of hungary"],
+	"woman-with-curly-hair": [
+		"woman",
+		"curly",
+		"hair",
+		"smile",
+		"woman with curly hair"
+	],
+	"circus-tent": ["circus", "tent", "circus tent"],
+	"keycap-10": ["keycap", "10", "ten", "keycap 10"],
+	"smiling-face-with-heart-eyes": [
+		"face",
+		"love",
+		"crush",
+		"heart",
+		"adoration",
+		"infatuation",
+		"smiling face with heart-eyes"
+	],
+	"luggage": ["luggage", "travel", "bag"],
+	"person-in-tuxedo": [
+		"person",
+		"tuxedo",
+		"wedding",
+		"person in tuxedo"
+	],
+	"man-in-tuxedo": ["man", "tuxedo", "wedding", "man in tuxedo"],
+	"person-getting-massage": [
+		"massage",
+		"person",
+		"relax",
+		"person getting massage"
+	],
+	"left-arrow-curving-right": [
+		"left",
+		"arrow",
+		"curving right",
+		"left arrow curving right"
+	],
+	"shield": ["shield", "protection", "defense"],
+	"sparkler": ["sparkler", "celebration", "fireworks"],
+	"microbe": ["microbe", "bacteria", "virus"],
+	"carousel-horse": ["carousel horse", "amusement park", "ride"],
+	"bone": ["food", "bone"],
+	"dashing-away": ["nature", "dash", "dashing away"],
+	"eagle": ["animal", "eagle", "bird"],
+	"goal-net": ["sports", "goal", "goal net"],
+	"flag-of-sint-maarten": [
+		"flag",
+		"sint maarten",
+		"flag of sint maarten"
+	],
+	"round-pushpin": ["round pushpin", "tool", "office"],
+	"crossed-swords": ["crossed swords", "weapon", "sword"],
+	"flag-of-st.-helena": [
+		"flag",
+		"saint helena",
+		"flag of saint helena"
+	],
+	"evergreen-tree": ["plant", "tree", "evergreen tree"],
+	"foot": ["foot", "leg"],
+	"flag-of-greece": ["flag", "greece", "flag of greece"],
+	"beaver": ["animal", "beaver", "wild"],
+	"woman-vampire": [
+		"vampire",
+		"woman",
+		"fantasy",
+		"undead",
+		"woman vampire"
+	],
+	"sailboat": ["sailboat", "vehicle", "transportation", "boat"],
+	"coffin": ["coffin", "death", "funeral"],
+	"koala": ["animal", "koala", "wild"],
+	"man-kneeling": ["man", "kneeling", "man kneeling"],
+	"sagittarius": ["sagittarius", "zodiac", "astrology"],
+	"mountain-cableway": [
+		"cableway",
+		"transportation",
+		"vehicle",
+		"mountain cableway"
+	],
+	"mouse-face": ["animal", "mouse", "rodent", "mouse face"],
+	"keycap-6": ["keycap", "6", "six", "keycap 6"],
+	"bright-button": ["bright", "button", "light", "bright button"],
+	"rainbow": ["nature", "rainbow"],
+	"paella": ["food", "paella"],
+	"flag-of-united-states": [
+		"flag",
+		"united states",
+		"flag of united states"
+	],
+	"sewing-needle": ["needle", "sewing", "stitch", "sewing needle"],
+	"ok-button": ["ok", "button", "okay", "ok button"],
+	"man-gesturing-no": [
+		"gesturing no",
+		"man",
+		"no",
+		"stop",
+		"man gesturing no"
+	],
+	"flag-of-costa-rica": ["flag", "costa rica", "flag of costa rica"],
+	"flag-of-afghanistan": [
+		"flag",
+		"afghanistan",
+		"flag of afghanistan"
+	],
+	"person-getting-haircut": [
+		"haircut",
+		"person",
+		"beauty",
+		"person getting haircut"
+	],
+	"women-holding-hands-with-heart": [
+		"women",
+		"heart",
+		"women holding hands with heart"
+	],
+	"low-battery": ["low battery", "power", "technology"],
+	"man-getting-massage": [
+		"massage",
+		"man",
+		"relax",
+		"man getting massage"
+	],
+	"gloves": ["gloves", "clothing", "winter"],
+	"man-genie": ["genie", "man", "fantasy", "magical", "man genie"],
+	"wheelchair-symbol": [
+		"wheelchair",
+		"symbol",
+		"accessibility",
+		"wheelchair symbol"
+	],
+	"anger-symbol": ["anger", "symbol", "mad", "anger symbol"],
+	"backhand-index-pointing-left": [
+		"pointing",
+		"left",
+		"hand",
+		"direction",
+		"gesture",
+		"index",
+		"point",
+		"backhand index pointing left"
+	],
+	"honey-pot": ["food", "honey", "honey pot"],
+	"vulcan-salute": [
+		"vulcan",
+		"salute",
+		"hand",
+		"gesture",
+		"star trek",
+		"live long",
+		"prosper",
+		"vulcan salute"
+	],
+	"woman's-hat": ["woman's hat", "hat", "headwear"],
+	"octopus": ["animal", "octopus", "marine"],
+	"flag-of-comoros": ["flag", "comoros", "flag of comoros"],
+	"horizontal-traffic-light": [
+		"horizontal traffic light",
+		"signal",
+		"stoplight"
+	],
+	"footprints": ["footprints", "feet", "body"],
+	"cityscape-at-dusk": ["cityscape at dusk", "evening", "landscape"],
+	"kangaroo": ["animal", "kangaroo", "wild"],
+	"japan": ["japan", "map", "country"],
+	"joker": ["joker", "card", "deck"],
+	"three-o’clock": ["three", "o’clock", "time", "three o’clock"],
+	"flag-of-tanzania": ["flag", "tanzania", "flag of tanzania"],
+	"flag-of-north-korea": [
+		"flag",
+		"north korea",
+		"flag of north korea"
+	],
+	"black-bird": ["animal", "bird", "black", "black bird"],
+	"woman-pouting": ["pouting", "woman", "angry", "woman pouting"],
+	"person-with-no-hair": [
+		"person",
+		"bald",
+		"hair",
+		"neutral",
+		"person with no hair"
+	],
+	"blowfish": ["animal", "blowfish", "fish"],
+	"camping": ["camping", "tent", "outdoor"],
+	"flag-of-france": ["flag", "france", "flag of france"],
+	"cow": ["animal", "cow", "farm"],
+	"bellhop-bell": ["bellhop bell", "hotel", "service"],
+	"flag-of-congo---kinshasa": [
+		"flag",
+		"congo-kinshasa",
+		"flag of congo - kinshasa"
+	],
+	"melon": ["food", "fruit", "melon"],
+	"skateboard": ["sports", "skateboard"],
+	"flag-of-the-united-nations": [
+		"flag",
+		"un",
+		"united nations",
+		"flag of the united nations"
+	],
+	"scorpius": ["scorpio", "zodiac", "astrology", "scorpius"],
+	"hut": ["hut", "house", "building"],
+	"flag-of-laos": ["flag", "laos", "flag of laos"],
+	"goggles": ["goggles", "eyewear", "protection"],
+	"new-moon": ["nature", "moon", "new", "new moon"],
+	"tropical-fish": ["animal", "tropical", "fish", "tropical fish"],
+	"man-guard": ["man", "guard", "smile", "man guard"],
+	"fountain-pen": ["fountain pen", "writing", "tool"],
+	"man-in-steamy-room": [
+		"steamy room",
+		"man",
+		"sauna",
+		"man in steamy room"
+	],
+	"busts-in-silhouette": [
+		"busts",
+		"silhouette",
+		"people",
+		"busts in silhouette"
+	],
+	"man-with-beard": ["man", "beard", "smile", "man with beard"],
+	"flag-of-anguilla": ["flag", "anguilla", "flag of anguilla"],
+	"paw-prints": ["animal", "paw", "prints", "paw prints"],
+	"woman-scientist": [
+		"woman",
+		"scientist",
+		"science",
+		"lab",
+		"woman scientist"
+	],
+	"old-key": ["old key", "lock", "security"],
+	"two-hearts": ["love", "hearts", "affection", "two hearts"],
+	"sheaf-of-rice": ["plant", "rice", "sheaf of rice"],
+	"man-and-boy": ["man", "boy", "man and boy"],
+	"herb": ["plant", "herb"],
+	"flag-of-trinidad-&-tobago": [
+		"flag",
+		"trinidad and tobago",
+		"flag of trinidad and tobago"
+	],
+	"flag-of-congo---brazzaville": [
+		"flag",
+		"congo-brazzaville",
+		"flag of congo - brazzaville"
+	],
+	"older-person": [
+		"older",
+		"person",
+		"elder",
+		"neutral",
+		"older person"
+	],
+	"raised-fist": [
+		"fist",
+		"raised",
+		"protest",
+		"solidarity",
+		"power",
+		"strength",
+		"resistance",
+		"support",
+		"fight",
+		"raised fist"
+	],
+	"person-with-curly-hair": [
+		"person",
+		"curly",
+		"hair",
+		"neutral",
+		"person with curly hair"
+	],
+	"pregnant-woman": [
+		"pregnant",
+		"woman",
+		"baby",
+		"expecting",
+		"pregnant woman"
+	],
+	"bandage": ["bandage", "medical", "first aid"],
+	"postbox": ["postbox", "mail", "post"],
+	"fly": ["animal", "fly", "insect"],
+	"dog": ["animal", "dog", "pet"],
+	"woman-technologist": [
+		"woman",
+		"technologist",
+		"laptop",
+		"woman technologist"
+	],
+	"horse-face": ["animal", "horse", "horse face"],
+	"flag-of-guadeloupe": ["flag", "guadeloupe", "flag of guadeloupe"],
+	"carp-streamer": ["carp streamer", "celebration", "japan"],
+	"saw": ["saw", "tool", "cut"],
+	"grinning-face": [
+		"cheerful",
+		"cheery",
+		"happy",
+		"face",
+		"grin",
+		"grinning",
+		"smile",
+		"smiling",
+		"teeth",
+		"grinning face"
+	],
+	"open-mailbox-with-raised-flag": [
+		"open mailbox with raised flag",
+		"mail",
+		"post"
+	],
+	"spouting-whale": ["animal", "whale", "marine", "spouting whale"],
+	"alarm-clock": ["alarm clock", "time", "clock"],
+	"pig-face": ["animal", "pig", "farm", "pig face"],
+	"x-ray": ["x-ray", "medical", "scan"],
+	"speaker-high-volume": [
+		"speaker",
+		"high",
+		"volume",
+		"speaker high volume"
+	],
+	"man-gesturing-ok": [
+		"gesturing ok",
+		"man",
+		"ok",
+		"yes",
+		"man gesturing ok"
+	],
+	"snail": ["animal", "snail", "mollusk"],
+	"repeat-single-button": [
+		"repeat",
+		"single",
+		"button",
+		"repeat single button"
+	],
+	"skier": ["sports", "ski", "skier"],
+	"candy": ["food", "candy"],
+	"family-man-man-girl-girl": [
+		"family",
+		"man",
+		"girl",
+		"family man man girl girl"
+	],
+	"flag-of-belarus": ["flag", "belarus", "flag of belarus"],
+	"pager": ["pager", "communication", "technology"],
+	"flag-of-sudan": ["flag", "sudan", "flag of sudan"],
+	"framed-picture": ["framed picture", "art", "decoration"],
+	"frog": ["animal", "frog", "amphibian"],
+	"flag-of-rwanda": ["flag", "rwanda", "flag of rwanda"],
+	"hot-pepper": ["food", "vegetable", "pepper", "hot pepper"],
+	"family-woman-woman-girl-boy": [
+		"family",
+		"woman",
+		"girl",
+		"boy",
+		"family woman woman girl boy"
+	],
+	"shaking-face": [
+		"face",
+		"shaky",
+		"shaking",
+		"trembling",
+		"vibrating",
+		"quivering",
+		"shocked",
+		"startled",
+		"shuddering",
+		"wobbly",
+		"distressed",
+		"shaking face"
+	],
+	"smiling-face-with-halo": [
+		"face",
+		"angel",
+		"heaven",
+		"halo",
+		"innocent",
+		"good",
+		"pure",
+		"smiling face with halo"
+	],
+	"women-with-bunny-ears": [
+		"women",
+		"bunny ears",
+		"partying",
+		"women with bunny ears"
+	],
+	"boomerang": ["sports", "boomerang"],
+	"currency-exchange": [
+		"currency",
+		"exchange",
+		"money",
+		"currency exchange"
+	],
+	"broom": ["broom", "cleaning", "sweeping"],
+	"wilted-flower": ["plant", "flower", "wilted", "wilted flower"],
+	"flag-of-jersey": ["flag", "jersey", "flag of jersey"],
+	"giraffe": ["animal", "giraffe", "wild"],
+	"name-badge": ["name", "badge", "identification", "name badge"],
+	"black-medium-square": [
+		"black",
+		"medium",
+		"square",
+		"black medium square"
+	],
+	"hibiscus": ["plant", "flower", "hibiscus"],
+	"family-man-man-girl-boy": [
+		"family",
+		"man",
+		"girl",
+		"boy",
+		"family man man girl boy"
+	],
+	"flag-of-belgium": ["flag", "belgium", "flag of belgium"],
+	"broccoli": ["food", "vegetable", "broccoli"],
+	"flag-of-western-sahara": [
+		"flag",
+		"western sahara",
+		"flag of western sahara"
+	],
+	"white-medium-square": [
+		"white",
+		"medium",
+		"square",
+		"white medium square"
+	],
+	"birthday-cake": ["food", "cake", "birthday", "birthday cake"],
+	"shooting-star": ["shooting star", "night", "star"],
+	"flag-of-andorra": ["flag", "andorra", "flag of andorra"],
+	"rice-ball": ["food", "rice", "ball", "rice ball"],
+	"woman-in-lotus-position": [
+		"sports",
+		"yoga",
+		"woman in lotus position"
+	],
+	"flag-of-united-kingdom": [
+		"flag",
+		"united kingdom",
+		"flag of united kingdom"
+	],
+	"clinking-glasses": [
+		"food",
+		"clinking",
+		"glasses",
+		"clinking glasses"
+	],
+	"flag-of-togo": ["flag", "togo", "flag of togo"],
+	"flag-of-niger": ["flag", "niger", "flag of niger"],
+	"broken-heart": ["sad", "heartbreak", "love", "broken heart"],
+	"flag-of-st.-kitts-&-nevis": [
+		"flag",
+		"saint kitts and nevis",
+		"flag of saint kitts and nevis"
+	],
+	"military-helmet": [
+		"military",
+		"helmet",
+		"safety",
+		"military helmet"
+	],
+	"woman-mechanic": ["woman", "mechanic", "worker", "woman mechanic"],
+	"snowman": ["nature", "snowman"],
+	"prince": ["prince", "royalty", "man"],
+	"steam-locomotive": [
+		"steam locomotive",
+		"vehicle",
+		"transportation",
+		"train"
+	],
+	"person-in-motorized-wheelchair": [
+		"person",
+		"motorized wheelchair",
+		"person in motorized wheelchair"
+	],
+	"lobster": ["animal", "lobster", "marine"],
+	"prayer-beads": ["prayer beads", "religion", "rosary"],
+	"flag-of-bermuda": ["flag", "bermuda", "flag of bermuda"],
+	"soft-ice-cream": ["food", "ice", "cream", "soft ice cream"],
+	"lady-beetle": ["animal", "beetle", "ladybug", "lady beetle"],
+	"man-and-girl": ["man", "girl", "man and girl"],
+	"mouse-trap": ["mouse trap", "trap", "pest"],
+	"blouse": ["blouse", "shirt", "top"],
+	"man-standing": ["man", "standing", "man standing"],
+	"man-shrugging": ["shrugging", "man", "doubt", "man shrugging"],
+	"guitar": ["guitar"],
+	"computer-disk": ["computer disk", "technology", "storage"],
+	"family-man-woman-boy": [
+		"family",
+		"man",
+		"woman",
+		"boy",
+		"family man woman boy"
+	],
+	"trade-mark": ["trade", "mark", "trademark", "trade mark"],
+	"hear-no-evil-monkey": [
+		"monkey",
+		"hear",
+		"evil",
+		"hear-no-evil monkey"
+	],
+	"pinching-hand": [
+		"pinching",
+		"hand",
+		"small",
+		"tiny",
+		"gesture",
+		"size",
+		"pinch",
+		"pinching hand"
+	],
+	"closed-book": ["closed book", "document", "paper"],
+	"white-question-mark": [
+		"question",
+		"mark",
+		"white",
+		"white question mark"
+	],
+	"soon-arrow": ["soon", "arrow", "symbol", "soon arrow"],
+	"no-smoking": ["no", "smoking", "forbidden", "no smoking"],
+	"basket": ["basket", "container", "storage"],
+	"seal": ["animal", "seal", "marine"],
+	"running-shoe": ["running shoe", "sneakers", "footwear"],
+	"closed-mailbox-with-lowered-flag": [
+		"closed mailbox with lowered flag",
+		"mail",
+		"post"
+	],
+	"hippopotamus": ["animal", "hippopotamus", "wild"],
+	"mosque": ["mosque", "building", "religion"],
+	"ear-with-hearing-aid": [
+		"ear",
+		"hearing",
+		"aid",
+		"body",
+		"ear with hearing aid"
+	],
+	"sponge": ["sponge", "cleaning", "hygiene"],
+	"game-die": ["game", "game die"],
+	"flag-of-turkey": ["flag", "turkey", "flag of turkey"],
+	"flag-of-uzbekistan": ["flag", "uzbekistan", "flag of uzbekistan"],
+	"heavy-plus-sign": ["plus", "sign", "addition", "heavy plus sign"],
+	"pinched-fingers": [
+		"pinched",
+		"fingers",
+		"hand",
+		"gesture",
+		"small",
+		"pinching",
+		"italian",
+		"emphasis",
+		"pinched fingers"
+	],
+	"police-car-light": [
+		"police",
+		"car",
+		"light",
+		"emergency",
+		"alert"
+	],
+	"person-playing-handball": [
+		"sports",
+		"handball",
+		"person playing handball"
+	],
+	"pretzel": ["food", "bread", "pretzel"],
+	"musical-keyboard": ["keyboard", "musical keyboard"],
+	"videocassette": ["videocassette", "technology", "video"],
+	"badminton": ["sports", "badminton"],
+	"flag-of-china": ["flag", "china", "flag of china"],
+	"pirate-flag": ["pirate", "flag", "skull", "pirate flag"],
+	"tropical-drink": ["food", "tropical", "drink", "tropical drink"],
+	"winking-face": [
+		"face",
+		"happy",
+		"mischievous",
+		"secret",
+		"wink",
+		"flirty",
+		"playful",
+		"winking face"
+	],
+	"person-running": ["person", "running", "person running"],
+	"love-you-gesture": [
+		"love",
+		"you",
+		"hand",
+		"gesture",
+		"sign",
+		"affection",
+		"romantic",
+		"care",
+		"love-you gesture"
+	],
+	"flag-of-gabon": ["flag", "gabon", "flag of gabon"],
+	"first-quarter-moon": [
+		"nature",
+		"moon",
+		"first",
+		"quarter",
+		"first quarter moon"
+	],
+	"anchor": ["anchor", "boat", "ship", "maritime"],
+	"flag-of-papua-new-guinea": [
+		"flag",
+		"papua new guinea",
+		"flag of papua new guinea"
+	],
+	"key": ["key", "lock", "security"],
+	"stop-button": ["stop", "button", "symbol", "stop button"],
+	"white-small-square": [
+		"white",
+		"small",
+		"square",
+		"white small square"
+	],
+	"white-flag": ["white", "flag", "surrender", "white flag"],
+	"woman-elf": ["elf", "woman", "fantasy", "magical", "woman elf"],
+	"rugby-football": ["sports", "rugby", "rugby football"],
+	"information": ["information", "symbol", "info"],
+	"black-medium-small-square": [
+		"black",
+		"medium-small",
+		"square",
+		"black medium-small square"
+	],
+	"woman-in-tuxedo": [
+		"woman",
+		"tuxedo",
+		"wedding",
+		"woman in tuxedo"
+	],
+	"flag-of-martinique": ["flag", "martinique", "flag of martinique"],
+	"kiss-man-man": ["kiss", "love", "man", "kiss man-man"],
+	"man-juggling": ["juggling", "man juggling"],
+	"right-facing-fist": [
+		"fist",
+		"right-facing",
+		"punch",
+		"fight",
+		"attack",
+		"power",
+		"strength",
+		"blow",
+		"right-facing fist"
+	],
+	"person-astronaut": [
+		"person",
+		"astronaut",
+		"space",
+		"exploration",
+		"person astronaut"
+	],
+	"backhand-index-pointing-right": [
+		"pointing",
+		"right",
+		"hand",
+		"direction",
+		"gesture",
+		"index",
+		"point",
+		"backhand index pointing right"
+	],
+	"woman-dancing": ["dancer", "woman", "dancing", "woman dancing"],
+	"double-exclamation-mark": [
+		"exclamation",
+		"mark",
+		"double",
+		"double exclamation mark"
+	],
+	"flag-of-mayotte": ["flag", "mayotte", "flag of mayotte"],
+	"fire-extinguisher": ["fire extinguisher", "safety", "fire"],
+	"woman-office-worker": [
+		"woman",
+		"office",
+		"worker",
+		"business",
+		"woman office worker"
+	],
+	"dress": ["dress", "clothing", "fashion"],
+	"left-arrow": ["left", "arrow", "direction", "left arrow"],
+	"heavy-dollar-sign": [
+		"dollar",
+		"sign",
+		"money",
+		"heavy dollar sign"
+	],
+	"mate": ["food", "mate"],
+	"bicycle": ["bicycle", "vehicle", "transportation", "cycling"],
+	"flag-of-south-africa": [
+		"flag",
+		"south africa",
+		"flag of south africa"
+	],
+	"disco-ball": ["disco ball", "party", "celebration"],
+	"tram": ["tram", "vehicle", "transportation"],
+	"clockwise-vertical-arrows": [
+		"clockwise",
+		"vertical",
+		"arrows",
+		"clockwise vertical arrows"
+	],
+	"person": ["person", "adult", "gender-neutral", "smile"],
+	"barber-pole": ["barber pole", "barber", "haircut"],
+	"bride-with-veil": [
+		"bride",
+		"veil",
+		"wedding",
+		"woman",
+		"bride with veil"
+	],
+	"screwdriver": ["screwdriver", "tool", "repair"],
+	"frowning-face": [
+		"face",
+		"sad",
+		"upset",
+		"frown",
+		"unhappy",
+		"frowning face"
+	],
+	"fish": ["animal", "fish", "marine"],
+	"wrench": ["wrench", "tool", "repair"],
+	"speaker-low-volume": [
+		"speaker",
+		"low",
+		"volume",
+		"speaker low volume"
+	],
+	"rat": ["animal", "rat", "rodent"],
+	"waving-hand": [
+		"waving",
+		"hand",
+		"wave",
+		"hello",
+		"goodbye",
+		"gesture",
+		"greeting",
+		"waving hand"
+	],
+	"pick": ["pick", "tool", "mining"],
+	"flag-of-réunion": ["flag", "reunion", "flag of réunion"],
+	"snowboarder": ["sports", "snowboard", "snowboarder"],
+	"art": ["art"],
+	"nerd-face": [
+		"face",
+		"nerd",
+		"geek",
+		"dork",
+		"intelligent",
+		"glasses",
+		"nerd face"
+	],
+	"flag-of-algeria": ["flag", "algeria", "flag of algeria"],
+	"mobile-phone-off": ["mobile", "phone", "off", "mobile phone off"],
+	"recycling-symbol": [
+		"recycling",
+		"symbol",
+		"green",
+		"recycling symbol"
+	],
+	"desktop-computer": ["desktop computer", "technology", "monitor"],
+	"four-thirty": ["four", "thirty", "time", "four-thirty"],
+	"flushed-face": [
+		"face",
+		"blush",
+		"shy",
+		"flattered",
+		"embarrassed",
+		"surprised",
+		"red",
+		"awkward",
+		"bashful",
+		"nervous",
+		"timid",
+		"shocked",
+		"abashed",
+		"flushed face"
+	],
+	"milky-way": ["milky way", "space", "night"],
+	"cucumber": ["food", "vegetable", "cucumber"],
+	"purple-circle": ["purple", "circle", "symbol", "purple circle"],
+	"flag-of-tonga": ["flag", "tonga", "flag of tonga"],
+	"flag-of-somalia": ["flag", "somalia", "flag of somalia"],
+	"flag-of-liberia": ["flag", "liberia", "flag of liberia"],
+	"map": ["map", "navigation", "travel"],
+	"seat": ["seat", "flight", "airplane"],
+	"shopping-cart": ["shopping cart", "shopping", "cart"],
+	"flag-of-australia": ["flag", "australia", "flag of australia"],
+	"zzz": ["zzz", "sleep", "tired"],
+	"brown-heart": ["love", "heart", "affection", "brown heart"],
+	"flip-flops": ["flip-flops", "sandals", "shoes"],
+	"sun-behind-cloud": ["nature", "sun", "cloud", "sun behind cloud"],
+	"parrot": ["animal", "parrot", "bird"],
+	"woman-mage": ["mage", "woman", "witch", "wizard", "woman mage"],
+	"angry-face": [
+		"face",
+		"mad",
+		"upset",
+		"frustrated",
+		"angry",
+		"annoyed",
+		"angry face"
+	],
+	"flag-of-uruguay": ["flag", "uruguay", "flag of uruguay"],
+	"bank": ["bank", "building", "money"],
+	"radio-button": ["radio", "button", "symbol", "radio button"],
+	"ice": ["food", "ice"],
+	"fox-face": ["animal", "fox", "wild", "fox face"],
+	"taxi": ["taxi", "vehicle", "transportation"],
+	"man-feeding-baby": [
+		"feeding",
+		"baby",
+		"man",
+		"bottle",
+		"man feeding baby"
+	],
+	"blue-circle": ["blue", "circle", "symbol", "blue circle"],
+	"spaghetti": ["food", "pasta", "spaghetti"],
+	"woman-cartwheeling": ["sports", "cartwheel", "woman cartwheeling"],
+	"dim-button": ["dim", "button", "light", "dim button"],
+	"saxophone": ["saxophone"],
+	"flag-of-el-salvador": [
+		"flag",
+		"el salvador",
+		"flag of el salvador"
+	],
+	"flag-of-myanmar-(burma)": [
+		"flag",
+		"myanmar",
+		"burma",
+		"flag of myanmar (burma)"
+	],
+	"thumbs-down": [
+		"thumbs",
+		"down",
+		"disapproval",
+		"dislike",
+		"no",
+		"negative",
+		"disagree",
+		"bad",
+		"not okay",
+		"thumbs down"
+	],
+	"safety-vest": ["safety vest", "high visibility", "protection"],
+	"person-mechanic": [
+		"person",
+		"mechanic",
+		"worker",
+		"person mechanic"
+	],
+	"cloud-with-lightning": [
+		"nature",
+		"cloud",
+		"lightning",
+		"cloud with lightning"
+	],
+	"person-supervillain": [
+		"supervillain",
+		"person",
+		"villain",
+		"person supervillain"
+	],
+	"flag-of-niue": ["flag", "niue", "flag of niue"],
+	"woman-getting-massage": [
+		"massage",
+		"woman",
+		"relax",
+		"woman getting massage"
+	],
+	"flag-of-nicaragua": ["flag", "nicaragua", "flag of nicaragua"],
+	"check-mark-button": [
+		"check",
+		"mark",
+		"button",
+		"check mark button"
+	],
+	"earth-globe-europe-africa": [
+		"nature",
+		"earth",
+		"europe",
+		"africa",
+		"earth globe europe-africa"
+	],
+	"heavy-equals-sign": [
+		"equals",
+		"sign",
+		"symbol",
+		"heavy equals sign"
+	],
+	"flag-of-lithuania": ["flag", "lithuania", "flag of lithuania"],
+	"spoon": ["food", "spoon"],
+	"club-suit": ["club", "suit", "card", "club suit"],
+	"man-fairy": ["fairy", "man", "fantasy", "magical", "man fairy"],
+	"desert-island": ["desert island", "vacation", "beach"],
+	"boy": ["boy", "child", "young", "smile"],
+	"anatomical-heart": [
+		"heart",
+		"anatomical",
+		"body",
+		"anatomical heart"
+	],
+	"articulated-lorry": [
+		"articulated lorry",
+		"vehicle",
+		"transportation",
+		"logistics"
+	],
+	"telephone-receiver": [
+		"telephone receiver",
+		"communication",
+		"technology"
+	],
+	"flag-of-armenia": ["flag", "armenia", "flag of armenia"],
+	"flag-of-ireland": ["flag", "ireland", "flag of ireland"],
+	"baggage-claim": ["baggage", "claim", "airport", "baggage claim"],
+	"clown-face": [
+		"face",
+		"clown",
+		"circus",
+		"funny",
+		"joker",
+		"performer",
+		"comical",
+		"entertainment",
+		"costume",
+		"clown face"
+	],
+	"llama": ["animal", "llama", "farm"],
+	"flag-of-bosnia-and-herzegovina": [
+		"flag",
+		"bosnia and herzegovina",
+		"flag of bosnia and herzegovina"
+	],
+	"confounded-face": [
+		"face",
+		"confounded",
+		"sick",
+		"unwell",
+		"oops",
+		"ugh",
+		"frustrated",
+		"confounded face"
+	],
+	"flag-of-côte-d’ivoire": [
+		"flag",
+		"cote d’ivoire",
+		"flag of côte d’ivoire"
+	],
+	"eject-button": ["eject", "button", "symbol", "eject button"],
+	"steaming-bowl": ["food", "bowl", "steaming", "steaming bowl"],
+	"whale": ["animal", "whale", "marine"],
+	"flag-of-tuvalu": ["flag", "tuvalu", "flag of tuvalu"],
+	"red-heart": ["love", "heart", "affection", "red heart"],
+	"rooster": ["animal", "rooster", "bird"],
+	"twelve-o’clock": ["twelve", "o’clock", "time", "twelve o’clock"],
+	"rolling-on-the-floor-laughing": [
+		"face",
+		"floor",
+		"laugh",
+		"laughing",
+		"rolling",
+		"lmao",
+		"tears",
+		"lol",
+		"haha",
+		"happy",
+		"hehe",
+		"hilarious",
+		"laughter",
+		"lolol",
+		"lololol",
+		"lmfao",
+		"roflmao",
+		"rofl",
+		"tear",
+		"crying laughing",
+		"funny",
+		"joy",
+		"crying",
+		"hahaha",
+		"rotfl",
+		"rolling on the floor laughing"
+	],
+	"bison": ["animal", "bison", "wild"],
+	"tornado": ["nature", "tornado"],
+	"sake": ["food", "sake"],
+	"mx-claus": ["mx claus", "christmas", "holiday"],
+	"passport-control": [
+		"passport",
+		"control",
+		"customs",
+		"passport control"
+	],
+	"film-projector": ["film projector", "photography", "technology"],
+	"face-savoring-food": [
+		"face",
+		"smile",
+		"restaurant",
+		"food",
+		"delicious",
+		"yum",
+		"face savoring food"
+	],
+	"person-golfing": ["sports", "golf", "person golfing"],
+	"pleading-face": [
+		"face",
+		"pleading",
+		"puppy eyes",
+		"beseeching",
+		"begging",
+		"hopeful",
+		"pleading face"
+	],
+	"kick-scooter": [
+		"kick scooter",
+		"vehicle",
+		"transportation",
+		"recreation"
+	],
+	"beach-with-umbrella": [
+		"beach with umbrella",
+		"vacation",
+		"sunshade"
+	],
+	"woman-with-white-hair": [
+		"woman",
+		"white",
+		"hair",
+		"smile",
+		"woman with white hair"
+	],
+	"left-right-arrow": [
+		"left-right",
+		"arrow",
+		"direction",
+		"left-right arrow"
+	],
+	"man-farmer": ["man", "farmer", "smile", "man farmer"],
+	"five-o’clock": ["five", "o’clock", "time", "five o’clock"],
+	"hamsa": ["hamsa", "protection", "amulet"],
+	"teapot": ["food", "teapot"],
+	"person-in-bed": ["person in bed", "sleep", "rest"],
+	"women-holding-hands": [
+		"women",
+		"holding hands",
+		"women holding hands"
+	],
+	"envelope": ["envelope", "letter", "mail"],
+	"woman-with-red-hair": [
+		"woman",
+		"red",
+		"hair",
+		"smile",
+		"woman with red hair"
+	],
+	"chess-pawn": ["chess", "chess pawn"],
+	"four-leaf-clover": ["plant", "clover", "luck", "four leaf clover"],
+	"flag-of-saudi-arabia": [
+		"flag",
+		"saudi arabia",
+		"flag of saudi arabia"
+	],
+	"singer": ["singer", "artist"],
+	"confused-face": [
+		"face",
+		"indifference",
+		"huh",
+		"weird",
+		"hmmm",
+		"what",
+		"confused",
+		"confused face"
+	],
+	"bottle-with-popping-cork": [
+		"food",
+		"bottle",
+		"champagne",
+		"bottle with popping cork"
+	],
+	"family-man-man-boy": [
+		"family",
+		"man",
+		"boy",
+		"family man man boy"
+	],
+	"mango": ["food", "fruit", "mango"],
+	"part-alternation-mark": [
+		"part",
+		"alternation",
+		"mark",
+		"part alternation mark"
+	],
+	"smiling-face-with-sunglasses": [
+		"face",
+		"cool",
+		"smile",
+		"summer",
+		"beach",
+		"sunglasses",
+		"smiling face with sunglasses"
+	],
+	"down-arrow": ["down", "arrow", "direction", "down arrow"],
+	"hospital": ["hospital", "building", "medical"],
+	"rainbow-flag": ["rainbow", "flag", "pride", "rainbow flag"],
+	"sunrise": ["sunrise", "morning", "landscape"],
+	"shaved-ice": ["food", "ice", "shaved", "shaved ice"],
+	"post-office": ["post office", "building", "mail"],
+	"stadium": ["stadium", "building", "sports"],
+	"motor-boat": ["motor boat", "vehicle", "transportation", "boat"],
+	"flag-of-faroe-islands": [
+		"flag",
+		"faroe islands",
+		"flag of faroe islands"
+	],
+	"japanese-post-office": [
+		"japanese post office",
+		"building",
+		"mail"
+	],
+	"canoe": ["canoe", "vehicle", "transportation", "boat"],
+	"person-wearing-turban": [
+		"person",
+		"turban",
+		"smile",
+		"person wearing turban"
+	],
+	"cross-mark-button": [
+		"cross",
+		"mark",
+		"button",
+		"cross mark button"
+	],
+	"eight-pointed-star": [
+		"star",
+		"eight",
+		"pointed",
+		"eight pointed star"
+	],
+	"night-with-stars": ["night with stars", "night", "landscape"],
+	"health-worker": ["health", "worker", "smile", "health worker"],
+	"woman-singer": ["woman", "singer", "artist", "woman singer"],
+	"alien-monster": [
+		"monster",
+		"computer",
+		"game",
+		"arcade",
+		"play",
+		"alien",
+		"retro",
+		"video game",
+		"creature",
+		"invader",
+		"alien monster"
+	],
+	"spider": ["animal", "spider", "insect"],
+	"crown": ["crown", "king", "queen"],
+	"small-orange-diamond": [
+		"small",
+		"orange",
+		"diamond",
+		"small orange diamond"
+	],
+	"compass": ["compass", "navigation", "direction"],
+	"turkey": ["animal", "turkey", "bird"],
+	"shell": ["animal", "shell", "marine"],
+	"ant": ["animal", "ant", "insect"],
+	"convenience-store": ["convenience store", "building", "shopping"],
+	"flag-of-nauru": ["flag", "nauru", "flag of nauru"],
+	"sparkling-heart": ["love", "heart", "sparkle", "sparkling heart"],
+	"chequered-flag": ["chequered", "flag", "race", "chequered flag"],
+	"flag-of-panama": ["flag", "panama", "flag of panama"],
+	"cowboy-hat-face": [
+		"face",
+		"cowboy",
+		"hat",
+		"western",
+		"yee-haw",
+		"rodeo",
+		"wild west",
+		"rancher",
+		"country",
+		"sheriff",
+		"cowboy hat face"
+	],
+	"woman": ["woman", "adult", "female", "smile"],
+	"basketball": ["sports", "basketball"],
+	"flag-of-gambia": ["flag", "gambia", "flag of gambia"],
+	"right-arrow": ["right", "arrow", "direction", "right arrow"],
+	"old-man": ["old", "man", "elder", "smile", "old man"],
+	"garlic": ["food", "vegetable", "garlic"],
+	"nine-thirty": ["nine", "thirty", "time", "nine-thirty"],
+	"desert": ["desert", "sand", "landscape"],
+	"flag-of-greenland": ["flag", "greenland", "flag of greenland"],
+	"ear": ["ear", "hearing", "body"],
+	"amphora": ["amphora", "vase", "container"],
+	"flag-of-mauritius": ["flag", "mauritius", "flag of mauritius"],
+	"turtle": ["animal", "turtle", "reptile"],
+	"man-with-curly-hair": [
+		"man",
+		"curly",
+		"hair",
+		"smile",
+		"man with curly hair"
+	],
+	"rock": ["nature", "rock"],
+	"circled-m": ["m", "circled", "letter", "circled m"],
+	"two-hump-camel": ["animal", "camel", "desert", "two-hump camel"],
+	"brick": ["brick", "construction", "building"],
+	"flag-of-albania": ["flag", "albania", "flag of albania"],
+	"white-heart": ["love", "heart", "affection", "white heart"],
+	"handbag": ["handbag", "bag", "fashion"],
+	"moai": ["moai", "statue", "easter island"],
+	"white-exclamation-mark": [
+		"exclamation",
+		"mark",
+		"white",
+		"white exclamation mark"
+	],
+	"woman-playing-water-polo": [
+		"sports",
+		"water polo",
+		"woman playing water polo"
+	],
+	"heart-with-arrow": ["love", "heart", "arrow", "heart with arrow"],
+	"woman-playing-handball": [
+		"sports",
+		"handball",
+		"woman playing handball"
+	],
+	"money-bag": ["money bag", "money", "currency"],
+	"flag-of-vietnam": ["flag", "vietnam", "flag of vietnam"]
+}

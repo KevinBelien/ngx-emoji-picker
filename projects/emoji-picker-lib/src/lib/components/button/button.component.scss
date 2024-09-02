@@ -1,0 +1,392 @@
+// Mixin Definitions
+@mixin button-solid($color, $default-color) {
+	background-color: var(--#{$color}, var(--#{$default-color}));
+	border-color: var(--#{$color}, var(--#{$default-color}));
+	color: #fff;
+
+	.ch-button-icon ch-icon .ch-icon {
+		fill: #fff;
+	}
+
+	&:not(:disabled):not(.ch-hover-state-disabled):hover {
+		background-color: hsl(
+			from var(--#{$color}, var(--#{$default-color})) h s calc(l - 10)
+		);
+		border-color: hsl(
+			from var(--#{$color}, var(--#{$default-color})) h s calc(l - 10)
+		);
+	}
+
+	&:not(:disabled):not(.ch-focus-state-disabled):focus-visible {
+		outline: 2px solid var(--#{$color}, var(--#{$default-color}));
+		outline-offset: 2px;
+		box-shadow: none;
+	}
+
+	&:not(:disabled):not(.ch-active-state-disabled):active {
+		background-color: hsl(
+			from var(--#{$color}, var(--#{$default-color})) h s calc(l - 15)
+		);
+		border-color: hsl(
+			from var(--#{$color}, var(--#{$default-color})) h s calc(l - 15)
+		);
+	}
+}
+
+@mixin button-outline($color, $default-color) {
+	border-color: var(--#{$color}, var(--#{$default-color}));
+	color: var(--#{$color}, var(--#{$default-color}));
+
+	ch-icon .ch-icon {
+		fill: var(--#{$color}, var(--#{$default-color}));
+	}
+
+	&:not(:disabled):not(.ch-hover-state-disabled):hover {
+		background-color: color-mix(
+			in srgb,
+			currentColor 10%,
+			transparent
+		);
+	}
+
+	&:not(:disabled):not(.ch-focus-state-disabled):focus-visible {
+		outline: 2px solid var(--#{$color}, var(--#{$default-color}));
+		outline-offset: 2px;
+		box-shadow: none;
+	}
+
+	&:not(:disabled):not(.ch-active-state-disabled):active {
+		background-color: color-mix(
+			in srgb,
+			currentColor 20%,
+			transparent
+		);
+	}
+}
+
+@mixin button-clear($color, $default-color) {
+	border-color: transparent;
+	color: var(--#{$color}, var(--#{$default-color}));
+
+	ch-icon .ch-icon {
+		fill: var(--#{$color}, var(--#{$default-color}));
+	}
+
+	&:not(:disabled):not(.ch-hover-state-disabled):hover {
+		background-color: color-mix(
+			in srgb,
+			currentColor 10%,
+			transparent
+		);
+	}
+
+	&:not(:disabled):not(.ch-focus-state-disabled):focus-visible {
+		outline: 2px solid var(--#{$color}, var(--#{$default-color}));
+		outline-offset: 2px;
+		box-shadow: none;
+	}
+
+	&:not(:disabled):not(.ch-active-state-disabled):active {
+		background-color: color-mix(
+			in srgb,
+			currentColor 20%,
+			transparent
+		);
+	}
+}
+
+// CSS Variables
+:host {
+	box-sizing: border-box;
+	display: inline-flex;
+	--ch-color-contrast-default: #1a1a1a;
+	--ch-color-contrast-default-alter: #e9e9e9;
+
+	--ch-color-contrast-lighter: hsl(
+		from var(--ch-color-contrast, var(--ch-color-contrast-default)) h
+			s calc(l + 10)
+	);
+	--ch-color-contrast-lightest: hsl(
+		from var(--ch-color-contrast, var(--ch-color-contrast-default)) h
+			s calc(l + 15)
+	);
+
+	@media (prefers-color-scheme: dark) {
+		--ch-color-contrast-default: #e9e9e9;
+		--ch-color-contrast-default-alter: #1a1a1a;
+
+		--ch-color-contrast-lighter: hsl(
+			from var(--ch-color-contrast, var(--ch-color-contrast-default))
+				h s calc(l - 10)
+		);
+		--ch-color-contrast-lightest: hsl(
+			from var(--ch-color-contrast, var(--ch-color-contrast-default))
+				h s calc(l - 15)
+		);
+	}
+
+	--ch-default-color-primary: #107a5c;
+	--ch-default-color-success: #23a55a;
+	--ch-default-color-danger: #fb3640;
+	--ch-default-color-warning: #dea704;
+	--ch-default-color-info: #3b82f6;
+}
+
+// Button Styles
+::ng-deep .ch-button {
+	display: inline-flex;
+	font-family: inherit;
+	cursor: pointer;
+	user-select: none;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	position: relative;
+	padding: 0.5rem 1rem;
+	font-size: 1rem;
+	border-radius: 6px;
+	outline-color: transparent;
+	border: 1px solid;
+	transition: background-color 0.2s, color 0.2s, border-color 0.2s,
+		box-shadow 0.2s, outline-color 0.2s;
+
+	&.ch-button-solid {
+		&.ch-button-primary {
+			@include button-solid(
+				ch-color-primary,
+				ch-default-color-primary
+			);
+		}
+
+		&.ch-button-success {
+			@include button-solid(
+				ch-color-success,
+				ch-default-color-success
+			);
+		}
+
+		&.ch-button-danger {
+			@include button-solid(ch-color-danger, ch-default-color-danger);
+		}
+
+		&.ch-button-warning {
+			@include button-solid(
+				ch-color-warning,
+				ch-default-color-warning
+			);
+		}
+		&.ch-button-info {
+			@include button-solid(ch-color-info, ch-default-color-info);
+		}
+
+		&.ch-button-contrast {
+			background-color: var(
+				--ch-color-contrast,
+				var(--ch-color-contrast-default)
+			);
+			border-color: var(
+				--ch-color-contrast,
+				var(--ch-color-contrast-default)
+			);
+			color: var(
+				--ch-color-contrast-alter,
+				var(--ch-color-contrast-default-alter)
+			);
+
+			.ch-button-icon ch-icon .ch-icon {
+				fill: var(
+					--ch-color-contrast-alter,
+					var(--ch-color-contrast-default-alter)
+				);
+			}
+
+			&:not(:disabled):not(.ch-hover-state-disabled):hover {
+				background-color: var(--ch-color-contrast-lighter);
+				border-color: var(--ch-color-contrast-lighter);
+			}
+
+			&:not(:disabled):not(.ch-focus-state-disabled):focus-visible {
+				outline: 2px solid
+					var(--ch-color-contrast, var(--ch-color-contrast-default));
+				outline-offset: 2px;
+				box-shadow: none;
+			}
+
+			&:not(:disabled):not(.ch-active-state-disabled):active {
+				background-color: var(--ch-color-contrast-lightest);
+				border-color: var(--ch-color-contrast-lightest);
+			}
+		}
+	}
+
+	&.ch-button-outlined {
+		background-color: transparent;
+
+		&.ch-button-primary {
+			@include button-outline(
+				ch-color-primary,
+				ch-default-color-primary
+			);
+		}
+
+		&.ch-button-success {
+			@include button-outline(
+				ch-color-success,
+				ch-default-color-success
+			);
+		}
+
+		&.ch-button-danger {
+			@include button-outline(
+				ch-color-danger,
+				ch-default-color-danger
+			);
+		}
+
+		&.ch-button-warning {
+			@include button-outline(
+				ch-color-warning,
+				ch-default-color-warning
+			);
+		}
+
+		&.ch-button-info {
+			@include button-outline(ch-color-info, ch-default-color-info);
+		}
+
+		&.ch-button-contrast {
+			border-color: var(
+				--ch-color-contrast,
+				var(--ch-color-contrast-default)
+			);
+			color: var(
+				--ch-color-contrast,
+				var(--ch-color-contrast-default)
+			);
+
+			ch-icon .ch-icon {
+				fill: var(
+					--ch-color-contrast,
+					var(--ch-color-contrast-default)
+				);
+			}
+
+			&:not(:disabled):not(.ch-hover-state-disabled):hover {
+				background-color: color-mix(
+					in srgb,
+					currentColor 10%,
+					transparent
+				);
+			}
+
+			&:not(:disabled):not(.ch-focus-state-disabled):focus-visible {
+				outline: 2px solid
+					var(--ch-color-contrast, var(--ch-color-contrast-default));
+				outline-offset: 2px;
+				box-shadow: none;
+			}
+
+			&:not(:disabled):not(.ch-active-state-disabled):active {
+				background-color: color-mix(
+					in srgb,
+					currentColor 20%,
+					transparent
+				);
+			}
+		}
+	}
+
+	&.ch-button-clear {
+		background-color: transparent;
+
+		&.ch-button-primary {
+			@include button-clear(
+				ch-color-primary,
+				ch-default-color-primary
+			);
+		}
+
+		&.ch-button-success {
+			@include button-clear(
+				ch-color-success,
+				ch-default-color-success
+			);
+		}
+
+		&.ch-button-danger {
+			@include button-clear(ch-color-danger, ch-default-color-danger);
+		}
+
+		&.ch-button-warning {
+			@include button-clear(
+				ch-color-warning,
+				ch-default-color-warning
+			);
+		}
+
+		&.ch-button-info {
+			@include button-clear(ch-color-info, ch-default-color-info);
+		}
+
+		&.ch-button-contrast {
+			@include button-clear(ch-color-contrast, ch-color-contrast);
+		}
+	}
+
+	&.ch-focus-state-disabled:focus,
+	&.ch-focus-state-disabled:focus-visible {
+		outline: none;
+	}
+
+	&.ch-button-raised {
+		box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),
+			0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+	}
+
+	&.ch-button-rounded {
+		border-radius: 999px;
+	}
+
+	&.ch-button-icon-only {
+		padding: 0;
+		min-width: clamp(15px, 2.125em, 60px);
+		min-height: clamp(15px, 2.125em, 60px);
+	}
+
+	&.ch-button-vertical {
+		flex-direction: column;
+	}
+
+	.ch-button-icon {
+		display: flex;
+	}
+
+	.ch-button-label {
+		// flex: 1 1 auto;
+		// margin-block: auto;
+		font-weight: 500;
+	}
+
+	.ch-button-icon-top {
+		margin-bottom: 0.5rem;
+	}
+
+	.ch-button-icon-right {
+		order: 1;
+		margin-left: 0.5rem;
+	}
+
+	.ch-button-icon-bottom {
+		order: 2;
+		margin-top: 0.5rem;
+	}
+
+	.ch-button-icon-left {
+		margin-right: 0.5rem;
+	}
+
+	&:disabled {
+		cursor: default;
+		pointer-events: none;
+	}
+}
