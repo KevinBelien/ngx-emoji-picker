@@ -5,10 +5,10 @@ import { Emoji, EmojiCategory } from '.';
  * @group Types
  */
 export type EmojiPickerRow = { id: string } & (
-	| {
-			type: 'category';
-			value: EmojiCategory | Emoji[] | 'search';
-			translationKey: string;
-	  }
-	| { type: 'emoji'; value: Emoji[] }
+    | {
+          type: 'category';
+          value: EmojiCategory | Emoji[] | 'search';
+          translationKey: string;
+      }
+    | { type: 'emoji'; value: Emoji[] }
 );

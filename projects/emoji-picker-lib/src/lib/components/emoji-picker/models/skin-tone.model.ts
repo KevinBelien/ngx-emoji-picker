@@ -4,20 +4,20 @@
  * @group Interfaces
  */
 export interface AlternativeSkintone {
-	/**
-	 * The skintone option for the emoji.
-	 */
-	skintone: Skintone;
+    /**
+     * The skintone option for the emoji.
+     */
+    skintone: Skintone;
 
-	/**
-	 * The value representing the emoji with this skintone.
-	 */
-	value: string;
+    /**
+     * The value representing the emoji with this skintone.
+     */
+    value: string;
 
-	/**
-	 * The order in which this skintone variation appears relative to others.
-	 */
-	order: number;
+    /**
+     * The order in which this skintone variation appears relative to others.
+     */
+    order: number;
 }
 
 /**
@@ -26,14 +26,7 @@ export interface AlternativeSkintone {
  * @group Constants
  * @constant {ReadonlyArray<string>}
  */
-export const skintones = [
-	'default',
-	'light',
-	'medium-light',
-	'medium',
-	'medium-dark',
-	'dark',
-] as const;
+export const skintones = ['default', 'light', 'medium-light', 'medium', 'medium-dark', 'dark'] as const;
 
 /**
  * Represents a skintone type derived from the supported skintones.
@@ -48,15 +41,15 @@ export type Skintone = (typeof skintones)[number];
  * @group Interfaces
  */
 export interface IndividualEmojiSkintone {
-	/**
-	 * The unique identifier of the emoji.
-	 */
-	emojiId: string;
+    /**
+     * The unique identifier of the emoji.
+     */
+    emojiId: string;
 
-	/**
-	 * The value representing the emoji with the applied skintone.
-	 */
-	emojiValue: string;
+    /**
+     * The value representing the emoji with the applied skintone.
+     */
+    emojiValue: string;
 }
 
 /**
@@ -67,5 +60,4 @@ export interface IndividualEmojiSkintone {
  *
  * @group Functions
  */
-export const isValidSkintone = (value: string): value is Skintone =>
-	skintones.includes(value as Skintone);
+export const isValidSkintone = (value: string): value is Skintone => skintones.includes(value as Skintone);

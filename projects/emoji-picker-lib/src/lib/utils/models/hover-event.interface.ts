@@ -1,4 +1,4 @@
 export interface HoverEvent {
-	event: Event;
-	isHovered: boolean;
+    event: Event;
+    isHovered: boolean;
 }

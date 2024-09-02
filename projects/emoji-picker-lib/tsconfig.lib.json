@@ -1,37 +1,37 @@
 {
-	"extends": "../../tsconfig.json",
-	"compilerOptions": {
-		"outDir": "../../dist/out-tsc/lib",
-		"declaration": true,
-		"declarationMap": true,
-		"inlineSources": true,
-		"sourceMap": true,
-		"types": [],
-		"rootDir": "src",
-		"baseUrl": ".",
-		"moduleResolution": "node",
-		"target": "es2022",
-		"module": "es2022",
-		"experimentalDecorators": true,
-		"importHelpers": true,
-		"stripInternal": true,
-		"emitDecoratorMetadata": false,
-		"lib": ["es2022", "dom"],
-		"skipLibCheck": true,
-		"paths": {
-			"@chit-chat/ngx-emoji-picker/*": ["src/app/components/*"]
-		}
-	},
-	"angularCompilerOptions": {
-		"flatModuleId": "@chit-chat/ngx-emoji-picker",
-		"flatModuleOutFile": "chit-chat-ngx-emoji-picker.js",
-		"annotateForClosureCompiler": false,
-		"strictMetadataEmit": true,
-		"skipTemplateCodegen": true,
-		"enableI18nLegacyMessageIdFormat": false,
-		"strictInjectionParameters": true,
-		"strictInputAccessModifiers": true
-	},
-	"files": ["./public_api.ts"],
-	"exclude": ["**/*.spec.ts", "**/test.ts"]
+    "extends": "../../tsconfig.json",
+    "compilerOptions": {
+        "outDir": "../../dist/out-tsc/lib",
+        "declaration": true,
+        "declarationMap": true,
+        "inlineSources": true,
+        "sourceMap": true,
+        "types": [],
+        "rootDir": "src",
+        "baseUrl": ".",
+        "moduleResolution": "node",
+        "target": "es2022",
+        "module": "es2022",
+        "experimentalDecorators": true,
+        "importHelpers": true,
+        "stripInternal": true,
+        "emitDecoratorMetadata": false,
+        "lib": ["es2022", "dom"],
+        "skipLibCheck": true,
+        "paths": {
+            "@chit-chat/ngx-emoji-picker/*": ["src/app/components/*"]
+        }
+    },
+    "angularCompilerOptions": {
+        "flatModuleId": "@chit-chat/ngx-emoji-picker",
+        "flatModuleOutFile": "chit-chat-ngx-emoji-picker.js",
+        "annotateForClosureCompiler": false,
+        "strictMetadataEmit": true,
+        "skipTemplateCodegen": true,
+        "enableI18nLegacyMessageIdFormat": false,
+        "strictInjectionParameters": true,
+        "strictInputAccessModifiers": true
+    },
+    "files": ["./public_api.ts"],
+    "exclude": ["**/*.spec.ts", "**/test.ts"]
 }

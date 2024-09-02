@@ -1,71 +1,51 @@
 <cdk-virtual-scroll-viewport
-	class="ch-scroll-viewport ch-focus-disabled"
-	[ngClass]="{ 'ch-scroll-hidden': !scrollbarVisible() }"
-	[style.height]="'100%'"
-	[itemSize]="itemSize()"
-	[minBufferPx]="100"
-	[maxBufferPx]="300"
-	(wheel)="handleWheelScroll($event)"
-	(scrolledIndexChange)="handleScrolledIndexChanged($event)"
-	chClickTouchHold
-	dataAttribute="data-emoji"
-	(onClick)="handleClick($event)"
-	(onTouchHold)="handleTouchHold($event)"
+    class="ch-scroll-viewport ch-focus-disabled"
+    [ngClass]="{ 'ch-scroll-hidden': !scrollbarVisible() }"
+    [style.height]="'100%'"
+    [itemSize]="itemSize()"
+    [minBufferPx]="100"
+    [maxBufferPx]="300"
+    (wheel)="handleWheelScroll($event)"
+    (scrolledIndexChange)="handleScrolledIndexChanged($event)"
+    chClickTouchHold
+    dataAttribute="data-emoji"
+    (onClick)="handleClick($event)"
+    (onTouchHold)="handleTouchHold($event)"
 >
-	<div class="ch-scroll-wrapper">
-		<div
-			class="ch-static-category ch-sticky ch-row"
-			[style.display]="
-				scrollIndex() === 0 || emojiCategories().length === 0
-					? 'none'
-					: 'block'
-			"
-		>
-			<div class="ch-emoji-group-title">
-				{{
-					stickyHeaderCategory() === 'suggestions' &&
-					!!suggestionEmojis()
-						? ('emojipicker.category.' +
-								suggestionEmojis()!.suggestionMode
-						  | translate
-						  | titlecase)
-						: ('emojipicker.category.' + stickyHeaderCategory()
-						  | translate
-						  | titlecase)
-				}}
-			</div>
-		</div>
+    <div class="ch-scroll-wrapper">
+        <div class="ch-static-category ch-sticky ch-row" [style.display]="scrollIndex() === 0 || emojiCategories().length === 0 ? 'none' : 'block'">
+            <div class="ch-emoji-group-title">
+                {{
+                    stickyHeaderCategory() === 'suggestions' && !!suggestionEmojis() ? ('emojipicker.category.' + suggestionEmojis()!.suggestionMode | translate | titlecase) : ('emojipicker.category.' + stickyHeaderCategory() | translate | titlecase)
+                }}
+            </div>
+        </div>
 
-		<div
-			*cdkVirtualFor="
-				let row of emojiRows();
-				let index = index;
-				templateCacheSize: 20;
-				trackBy: trackEmojiRow
-			"
-			class="ch-row"
-			[ngClass]="{
-				'ch-sticky': row.type === 'category',
-				'ch-virtual-category': row.type === 'category'
-			}"
-		>
-			@if(row.type === 'category'){
-			<div class="ch-emoji-group-title">
-				{{ row.translationKey | translate | titlecase }}
-			</div>
-			} @else { @for (emoji of row.value; track emoji.value) {
-			@if({data: emojiDataMap().get(emoji.id)}; as emojiData) {
-			@if(!!emojiData.data){
-			<ch-emoji-button
-				[emoji]="emojiData.data.value"
-				[attr.data-emoji]="emojiData.data.id"
-				[showSkintoneIndicator]="
-					showSkintoneIndicator() &&
-					!!emojiData.data.skintones &&
-					emojiData.data.skintones.length > 0
-				"
-			></ch-emoji-button>
-			} } }}
-		</div>
-	</div>
+        <div
+            *cdkVirtualFor="let row of emojiRows(); let index = index; templateCacheSize: 20; trackBy: trackEmojiRow"
+            class="ch-row"
+            [ngClass]="{
+                'ch-sticky': row.type === 'category',
+                'ch-virtual-category': row.type === 'category'
+            }"
+        >
+            @if (row.type === 'category') {
+                <div class="ch-emoji-group-title">
+                    {{ row.translationKey | translate | titlecase }}
+                </div>
+            } @else {
+                @for (emoji of row.value; track emoji.value) {
+                    @if ({ data: emojiDataMap().get(emoji.id) }; as emojiData) {
+                        @if (!!emojiData.data) {
+                            <ch-emoji-button
+                                [emoji]="emojiData.data.value"
+                                [attr.data-emoji]="emojiData.data.id"
+                                [showSkintoneIndicator]="showSkintoneIndicator() && !!emojiData.data.skintones && emojiData.data.skintones.length > 0"
+                            ></ch-emoji-button>
+                        }
+                    }
+                }
+            }
+        </div>
+    </div>
 </cdk-virtual-scroll-viewport>

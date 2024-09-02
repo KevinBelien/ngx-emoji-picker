@@ -1,5 +1,5 @@
 export interface TouchHoldEvent {
-	event: PointerEvent;
-	targetElement: HTMLElement;
-	data?: any;
+    event: PointerEvent;
+    targetElement: HTMLElement;
+    data?: any;
 }

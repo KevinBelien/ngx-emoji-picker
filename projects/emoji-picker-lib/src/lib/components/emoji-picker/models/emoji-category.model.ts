@@ -3,17 +3,7 @@
  * @group Constants
  * @type {ReadonlyArray<string>}
  */
-export const emojiCategories = [
-	'suggestions',
-	'smileys-people',
-	'animals-nature',
-	'food-drink',
-	'travel-places',
-	'objects',
-	'activities',
-	'symbols',
-	'flags',
-] as const;
+export const emojiCategories = ['suggestions', 'smileys-people', 'animals-nature', 'food-drink', 'travel-places', 'objects', 'activities', 'symbols', 'flags'] as const;
 
 /**
  * Represents a single emoji category from the predefined list.

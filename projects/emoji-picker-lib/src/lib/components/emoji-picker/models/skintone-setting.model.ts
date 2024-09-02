@@ -8,8 +8,4 @@
  *
  * @group Types
  */
-export type SkintoneSetting =
-	| 'global'
-	| 'individual'
-	| 'both'
-	| 'none';
+export type SkintoneSetting = 'global' | 'individual' | 'both' | 'none';

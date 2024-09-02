@@ -3,18 +3,18 @@
  * @group Interfaces
  */
 export interface FrequentEmoji {
-	/**
-	 * The unique identifier of the emoji.
-	 */
-	id: string;
+    /**
+     * The unique identifier of the emoji.
+     */
+    id: string;
 
-	/**
-	 * The number of times this emoji has been used.
-	 */
-	count: number;
+    /**
+     * The number of times this emoji has been used.
+     */
+    count: number;
 
-	/**
-	 * The timestamp (in milliseconds) of the last time this emoji was used.
-	 */
-	dateInMs: number;
+    /**
+     * The timestamp (in milliseconds) of the last time this emoji was used.
+     */
+    dateInMs: number;
 }

@@ -2,15 +2,12 @@ import { DOCUMENT } from '@angular/common';
 import { APP_INITIALIZER, NgModule, Provider } from '@angular/core';
 import { ScreenService } from '@chit-chat/ngx-emoji-picker/src/lib/utils';
 
-function initializeDocument(
-	document: Document,
-	screenService: ScreenService
-): () => void {
-	return () => {
-		if (screenService.isMobile()) {
-			document.body.classList.add('ch-mobile');
-		}
-	};
+function initializeDocument(document: Document, screenService: ScreenService): () => void {
+    return () => {
+        if (screenService.isMobile()) {
+            document.body.classList.add('ch-mobile');
+        }
+    };
 }
 
 /**
@@ -20,14 +17,14 @@ function initializeDocument(
  * @returns {Provider[]} An array of providers required for the ChitChat module.
  */
 export function provideEmojiPicker(): Provider[] {
-	return [
-		{
-			provide: APP_INITIALIZER,
-			useFactory: initializeDocument,
-			deps: [DOCUMENT, ScreenService],
-			multi: true,
-		},
-	];
+    return [
+        {
+            provide: APP_INITIALIZER,
+            useFactory: initializeDocument,
+            deps: [DOCUMENT, ScreenService],
+            multi: true
+        }
+    ];
 }
 
 /**
@@ -37,13 +34,13 @@ export function provideEmojiPicker(): Provider[] {
  * @module EmojiPickerModule
  */
 @NgModule({
-	providers: [
-		{
-			provide: APP_INITIALIZER,
-			useFactory: initializeDocument,
-			deps: [DOCUMENT, ScreenService],
-			multi: true,
-		},
-	],
+    providers: [
+        {
+            provide: APP_INITIALIZER,
+            useFactory: initializeDocument,
+            deps: [DOCUMENT, ScreenService],
+            multi: true
+        }
+    ]
 })
 export class EmojiPickerModule {}

@@ -4,11 +4,11 @@
  * @enum {number} EmojiSize
  */
 export enum EmojiSize {
-	'xs' = 16,
-	'sm' = 20,
-	'default' = 24,
-	'lg' = 28,
-	'xl' = 32,
+    'xs' = 16,
+    'sm' = 20,
+    'default' = 24,
+    'lg' = 28,
+    'xl' = 32
 }
 
 /**

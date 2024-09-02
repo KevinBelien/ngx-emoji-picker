@@ -6,18 +6,18 @@
  * @group Interfaces
  */
 export interface ValueChangeEvent {
-	/**
-	 * The new value of the text box after the change.
-	 */
-	value: string;
+    /**
+     * The new value of the text box after the change.
+     */
+    value: string;
 
-	/**
-	 * The original event that triggered the value change.
-	 */
-	event: Event;
+    /**
+     * The original event that triggered the value change.
+     */
+    event: Event;
 
-	/**
-	 * The action associated with the value change (e.g., 'input', 'blur', 'clear').
-	 */
-	action: string;
+    /**
+     * The action associated with the value change (e.g., 'input', 'blur', 'clear').
+     */
+    action: string;
 }

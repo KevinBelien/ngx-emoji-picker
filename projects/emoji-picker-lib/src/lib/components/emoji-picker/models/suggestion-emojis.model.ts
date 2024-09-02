@@ -7,13 +7,13 @@ import { Emoji } from './emoji.model';
  * @group Interfaces
  */
 export interface SuggestionEmojis {
-	/**
-	 * The mode used to determine the suggested emojis (e.g., recent, frequent).
-	 */
-	suggestionMode: EmojiSuggestionMode;
+    /**
+     * The mode used to determine the suggested emojis (e.g., recent, frequent).
+     */
+    suggestionMode: EmojiSuggestionMode;
 
-	/**
-	 * An array of emojis that are suggested based on the suggestion mode.
-	 */
-	emojis: Emoji[];
+    /**
+     * An array of emojis that are suggested based on the suggestion mode.
+     */
+    emojis: Emoji[];
 }

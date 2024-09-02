@@ -1,9 +1,4 @@
-import {
-	ChangeDetectorRef,
-	inject,
-	Pipe,
-	PipeTransform,
-} from '@angular/core';
+import { ChangeDetectorRef, inject, Pipe, PipeTransform } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { TranslationService } from '../services';
 
@@ -16,31 +11,27 @@ import { TranslationService } from '../services';
  * @pure false
  */
 @Pipe({
-	name: 'translate',
-	standalone: true,
-	pure: false,
+    name: 'translate',
+    standalone: true,
+    pure: false
 })
 export class TranslatePipe implements PipeTransform {
-	private translationsService = inject(TranslationService);
-	private cdr = inject(ChangeDetectorRef);
+    private translationsService = inject(TranslationService);
+    private cdr = inject(ChangeDetectorRef);
 
-	constructor() {
-		this.translationsService.currentLanguage$
-			.pipe(takeUntilDestroyed())
-			.subscribe(() => {
-				this.cdr.markForCheck();
-			});
-	}
+    constructor() {
+        this.translationsService.currentLanguage$.pipe(takeUntilDestroyed()).subscribe(() => {
+            this.cdr.markForCheck();
+        });
+    }
 
-	/**
-	 * Transforms a translation key into the corresponding translated string.
-	 *
-	 * @param {string} value - The translation key to be translated.
-	 * @returns {string} The translated string if found, otherwise returns the key itself.
-	 */
-	transform(value: string): string {
-		return (
-			this.translationsService.getTranslationByKey(value) ?? value
-		);
-	}
+    /**
+     * Transforms a translation key into the corresponding translated string.
+     *
+     * @param {string} value - The translation key to be translated.
+     * @returns {string} The translated string if found, otherwise returns the key itself.
+     */
+    transform(value: string): string {
+        return this.translationsService.getTranslationByKey(value) ?? value;
+    }
 }

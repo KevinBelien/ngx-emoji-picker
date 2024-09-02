@@ -10,10 +10,4 @@
  *
  * @group Types
  */
-export type ButtonType =
-	| 'primary'
-	| 'success'
-	| 'danger'
-	| 'warning'
-	| 'info'
-	| 'contrast';
+export type ButtonType = 'primary' | 'success' | 'danger' | 'warning' | 'info' | 'contrast';
