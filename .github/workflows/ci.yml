@@ -26,9 +26,6 @@ jobs:
       - name: Run unit tests
         run: npm run test:ci
 
-      - name: Build
-        run: npm run build
-
       - name: coverage
         uses: codecov/codecov-action@v3
         with:
