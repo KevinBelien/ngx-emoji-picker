@@ -1,65 +1,57 @@
 name: CI
 
 on:
-    push:
-        branches:
-            - master
-    pull_request:
+  push:
+    branches:
+      - master
+  pull_request:
 
 jobs:
-    build:
-        runs-on: ubuntu-latest
-        steps:
-            - uses: actions/checkout@v3
-            - uses: actions/setup-node@v3
-              with:
-                  node-version: 20
-                  cache: 'npm'
-            - run: npm ci
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 22
+          cache: 'npm'
+      - run: npm ci
 
-            - name: Run ESLint
-              run: npm run lint
+      - name: Run ESLint
+        run: npm run lint
 
-            - name: Build library
-              run: npm run build
+      - name: Build library
+        run: npm run build
 
-            - name: Run unit tests
-              run: npm run test:ci
+      - name: Run unit tests
+        run: npm run test:ci
 
-            - name: Build
-              run: npm run build
+      - name: Build
+        run: npm run build
 
-            - name: coverage
-              uses: codecov/codecov-action@v3
-              with:
-                  token: ${{ secrets.CODECOV_TOKEN }}
-    publish:
-        needs: build
-        runs-on: ubuntu-latest
-        if: github.ref_name == 'master'
-        permissions:
-            contents: write # to be able to publish a GitHub release
-            issues: write # to be able to comment on released issues
-            pull-requests: write # to be able to comment on released pull requests
-            id-token: write # to enable use of OIDC for npm provenance
-        steps:
-            - uses: actions/checkout@v3
-            - uses: actions/setup-node@v3
-              with:
-                  node-version: 20
-                  cache: 'npm'
-                  registry-url: https://registry.npmjs.org/ # NPM registry
-            - run: npm ci
-            - run: npm run build-prod
-
-            - name: release
-              run: cd dist/ngx-emoji-picker && npx semantic-release
-              env:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-                  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-
-            - name: Publish to GitHub Packages
-              run: npm publish --registry=https://npm.pkg.github.com
-              env:
-                  NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
+      - name: coverage
+        uses: codecov/codecov-action@v3
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+  publish:
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.ref_name == 'master'
+    permissions:
+      contents: write # to be able to publish a GitHub release
+      issues: write # to be able to comment on released issues
+      pull-requests: write # to be able to comment on released pull requests
+      id-token: write # to enable use of OIDC for npm provenance
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          cache: 'npm'
+      - run: npm ci
+      - run: npm run build
+      - name: release
+        run: cd dist/ngx-emoji-picker && npx semantic-release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
