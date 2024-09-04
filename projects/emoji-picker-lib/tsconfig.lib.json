@@ -19,7 +19,7 @@
         "lib": ["es2022", "dom"],
         "skipLibCheck": true,
         "paths": {
-            "@chit-chat/ngx-emoji-picker/*": ["src/app/components/*"]
+            "@chit-chat/ngx-emoji-picker/*": ["src/lib/*"]
         }
     },
     "angularCompilerOptions": {
