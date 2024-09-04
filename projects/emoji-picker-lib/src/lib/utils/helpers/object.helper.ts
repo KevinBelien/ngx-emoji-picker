@@ -5,11 +5,6 @@ export class ObjectHelper {
 
     public static arrayOfObjectsEquals = (arr1: Array<Record<string, any>>, arr2: Array<Record<string, any>>) => arr1.length === arr2.length && arr1.every((item, idx) => ObjectHelper.objectEquals(item, arr2[idx]));
 
-    public static omit = <T, K extends keyof T>(obj: T, keyToRemove: K): Omit<T, K> => {
-        const { [keyToRemove]: _, ...rest } = obj;
-        return rest;
-    };
-
     public static combineArrayMap = <T>(obj1: ArrayMap<T>, obj2: ArrayMap<T>): ArrayMap<T> => {
         const combinedObj: ArrayMap<T> = { ...obj1 };
 
