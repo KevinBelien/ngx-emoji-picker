@@ -48,10 +48,25 @@ jobs:
               with:
                   node-version: 20
                   cache: 'npm'
+                  registry-url: https://registry.npmjs.org/ # NPM registry
             - run: npm ci
             - run: npm run build-prod
+
+            # Publish to npm
+            - name: Publish to npm
+              run: npm publish
+              env:
+                  NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+            # Publish to GitHub Packages
+            - name: Publish to GitHub Packages
+              run: npm publish --registry=https://npm.pkg.github.com
+              env:
+                  NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
             - name: release
               run: cd dist/ngx-emoji-picker && npx semantic-release
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                   NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
