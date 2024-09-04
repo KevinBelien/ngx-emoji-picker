@@ -53,10 +53,7 @@ export class EmojiViewportComponent implements AfterViewInit {
      * Contains filter state and the list of emojis that match the filter criteria.
      * @group Props
      */
-    filteredEmojis = input<FilteredEmojis>({
-        filterActive: false,
-        emojis: []
-    });
+    filteredEmojis = input<FilteredEmojis>();
 
     filteredEmojiStream$ = toObservable(this.filteredEmojis)
         .pipe(takeUntilDestroyed())
@@ -185,7 +182,7 @@ export class EmojiViewportComponent implements AfterViewInit {
     filteredEmojiRows = computed(() => {
         const filteredEmojis = this.filteredEmojis();
 
-        if (!filteredEmojis.filterActive) return [];
+        if (!filteredEmojis || !filteredEmojis.filterActive) return [];
 
         return this.emojiPickerService.generateEmojiRows({
             emojiSize: this.emojiSizeInPx(),
@@ -208,10 +205,7 @@ export class EmojiViewportComponent implements AfterViewInit {
         })
     );
 
-    emojiRows = computed((): EmojiPickerRow[] => {
-        const filteredEmojis = this.filteredEmojis();
-        return !filteredEmojis.filterActive ? [...this.suggestionEmojiRows(), ...this.defaultEmojiRows()] : this.filteredEmojiRows();
-    });
+    emojiRows = computed((): EmojiPickerRow[] => (!this.filteredEmojis()?.filterActive ? [...this.suggestionEmojiRows(), ...this.defaultEmojiRows()] : this.filteredEmojiRows()));
 
     emojiDataMap = this.emojiPickerService.emojiDataMap;
 
@@ -226,6 +220,8 @@ export class EmojiViewportComponent implements AfterViewInit {
 
     @HostBinding('style.--sticky-offset')
     stickyHeaderOffset: number = 0;
+
+    constructor() {}
 
     ngAfterViewInit(): void {
         this.initializeViewportObservers();
