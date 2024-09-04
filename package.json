@@ -1,6 +1,6 @@
 {
     "name": "ngx-emoji-picker",
-    "version": "0.0.0",
+    "version": "18.0.0",
     "scripts": {
         "ng": "ng",
         "start": "ng build emoji-picker-lib && ng serve --port 4229 ",
