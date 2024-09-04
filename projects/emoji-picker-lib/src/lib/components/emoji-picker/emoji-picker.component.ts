@@ -7,7 +7,7 @@ import { DialogComponent } from '@chit-chat/ngx-emoji-picker/src/lib/components/
 import { TextBoxComponent, ValueChangeEvent } from '@chit-chat/ngx-emoji-picker/src/lib/components/text-box';
 import { TranslatePipe, TranslationService } from '@chit-chat/ngx-emoji-picker/src/lib/localization';
 import { ClickActionType, ClickEvent, TouchHoldEvent } from '@chit-chat/ngx-emoji-picker/src/lib/utils';
-import { debounce, distinctUntilChanged, from, map, Observable, of, shareReplay, startWith, switchMap, timer } from 'rxjs';
+import { debounce, distinctUntilChanged, from, map, Observable, of, switchMap, timer } from 'rxjs';
 import { emojis } from './data';
 import { EmojiDataHelper } from './helpers';
 import { Emoji, emojiCategories, EmojiCategory, EmojiSizeOption, Skintone, SkintoneSetting } from './models';
@@ -140,7 +140,7 @@ export class EmojiPickerComponent implements OnInit, OnDestroy {
      */
     onEmojiSelected = output<Emoji>();
 
-    searchValue = model<string>('');
+    searchValue = signal<string>('');
 
     isSkintoneDialogVisible = model<boolean>(false);
 
@@ -193,37 +193,34 @@ export class EmojiPickerComponent implements OnInit, OnDestroy {
               };
     });
 
-    filteredEmojis$: Observable<FilteredEmojis> = toObservable(this.searchValue)
-        .pipe(
-            debounce((searchValue) => {
-                if (searchValue.trim() === '') {
-                    return of(0);
-                }
+    filteredEmojis$: Observable<FilteredEmojis> = toObservable(this.searchValue).pipe(
+        debounce((searchValue) => {
+            if (searchValue.trim() === '') {
+                return of(0);
+            }
 
-                return timer(250);
-            }),
-            distinctUntilChanged(),
-            switchMap((searchValue) => {
-                if (searchValue === '') {
-                    return of({ filterActive: false, emojis: [] });
-                }
+            return timer(250);
+        }),
+        distinctUntilChanged(),
+        switchMap((searchValue) => {
+            if (searchValue === '') {
+                return of({ filterActive: false, emojis: [] });
+            }
 
-                return from(
-                    this.emojiFilterService.filter(
-                        searchValue,
-                        this.translationService.getLanguage(),
-                        this.defaultEmojis().map((emoji) => emoji.id)
-                    )
-                ).pipe(
-                    map<string[], FilteredEmojis>((emojiIds) => ({
-                        filterActive: true,
-                        emojis: this.emojiDataService.fetchEmojisByIds(emojiIds)
-                    }))
-                );
-            })
-        )
-        .pipe(startWith({ filterActive: false, emojis: [] }))
-        .pipe(shareReplay(1));
+            return from(
+                this.emojiFilterService.filter(
+                    searchValue,
+                    this.translationService.getLanguage(),
+                    this.defaultEmojis().map((emoji) => emoji.id)
+                )
+            ).pipe(
+                map<string[], FilteredEmojis>((emojiIds) => ({
+                    filterActive: true,
+                    emojis: this.emojiDataService.fetchEmojisByIds(emojiIds)
+                }))
+            );
+        })
+    );
 
     filteredEmojis = toSignal(this.filteredEmojis$);
 
@@ -235,10 +232,7 @@ export class EmojiPickerComponent implements OnInit, OnDestroy {
         return {
             defaultEmojis,
             suggestionEmojis,
-            filteredEmojis: filteredEmojis || {
-                filterActive: false,
-                emojis: []
-            }
+            filteredEmojis: filteredEmojis
         };
     });
 
