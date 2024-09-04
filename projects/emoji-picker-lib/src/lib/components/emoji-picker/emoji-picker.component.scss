@@ -5,6 +5,7 @@
     display: flex;
     flex-direction: column;
     background-color: var(--ch-emoji-picker-background, var(--ch-background-color, #fff));
+    border-radius: 6px;
 
     .emoji-tab-bar {
         padding-inline: calc(var(--ch-padding-inline) * 1px);
@@ -61,6 +62,7 @@
     .ch-no-data-text {
         font-family: var(--ch-font-family, inherit);
         font-weight: 500;
+        color: var(--ch-text-color, #000);
     }
 }
 
