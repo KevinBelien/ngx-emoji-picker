@@ -11,5 +11,6 @@
     "emojipicker.category.symbols": "Symbolen",
     "emojipicker.category.travel-places": "Reizen & plaatsen",
     "emojipicker.category.search": "Zoekresultaten",
-    "emojipicker.search": "Zoeken"
+    "emojipicker.search": "Zoeken",
+    "emojipicker.search.no-results": "Geen resultaten"
 }

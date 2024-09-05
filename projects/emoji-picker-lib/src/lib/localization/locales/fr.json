@@ -10,5 +10,7 @@
     "emojipicker.category.suggestions": "Suggestions",
     "emojipicker.category.symbols": "Symboles",
     "emojipicker.category.travel-places": "Voyages & lieux",
-    "emojipicker.search": "Recherche"
+    "emojipicker.category.search": "Résultats de recherche",
+    "emojipicker.search": "Recherche",
+    "emojipicker.search.no-results": "Pas de résultats"
 }
