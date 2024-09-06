@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { ButtonComponent, ButtonFill, ButtonType } from '@chit-chat/ngx-emoji-picker/src/lib/components/button';
+import { ButtonComponent, ButtonFill, ButtonType } from '@chit-chat/ngx-emoji-picker/lib/components/button';
 
 @Component({
     selector: 'ch-button-demo',

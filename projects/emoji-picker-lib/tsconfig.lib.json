@@ -7,8 +7,7 @@
         "inlineSources": true,
         "sourceMap": true,
         "types": [],
-        "rootDir": "src",
-        "baseUrl": ".",
+        "baseUrl": "./",
         "moduleResolution": "node",
         "target": "es2022",
         "module": "es2022",
@@ -17,9 +16,11 @@
         "stripInternal": true,
         "emitDecoratorMetadata": false,
         "lib": ["es2022", "dom"],
-        "skipLibCheck": true,
         "paths": {
-            "@chit-chat/ngx-emoji-picker/*": ["src/lib/*"]
+            "@chit-chat/ngx-emoji-picker/lib/components/*": ["/lib/components/*"],
+            "@chit-chat/ngx-emoji-picker/lib/utils": ["/lib/utils"],
+            "@chit-chat/ngx-emoji-picker/lib/localization": ["/lib/localization"],
+            "@chit-chat/ngx-emoji-picker/lib/*": ["/lib/*"]
         }
     },
     "angularCompilerOptions": {

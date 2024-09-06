@@ -6,7 +6,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSliderModule } from '@angular/material/slider';
 
-import { CategoryBarPosition, emojiCategories, EmojiCategory, EmojiPickerComponent, EmojiSizeOption, EmojiSuggestionMode, SkintoneSetting } from '@chit-chat/ngx-emoji-picker/src/lib/components/emoji-picker';
+import { CategoryBarPosition, emojiCategories, EmojiCategory, EmojiPickerComponent, EmojiSizeOption, EmojiSuggestionMode, SkintoneSetting } from '@chit-chat/ngx-emoji-picker/lib/components/emoji-picker';
 import { BehaviorSubject, combineLatest, debounceTime, of, switchMap } from 'rxjs';
 
 @Component({

@@ -4,11 +4,16 @@
     "assets": [
         {
             "glob": "core.css",
-            "input": "src/lib/styles",
+            "input": "lib/styles",
             "output": "./styles"
+        },
+        {
+            "glob": "*.json",
+            "input": "lib/localization/locales",
+            "output": "./lib/localization/locales"
         }
     ],
     "lib": {
-        "entryFile": "src/public-api.ts"
+        "entryFile": "public-api.ts"
     }
 }
