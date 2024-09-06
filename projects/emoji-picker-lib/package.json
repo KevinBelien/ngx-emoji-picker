@@ -16,9 +16,7 @@
         ]
     },
     "exports": {
-        "./styles": {
-            "default": "./lib/styles/core.css"
-        }
+        "./styles/core.css": "./styles/core.css"
     },
     "peerDependencies": {
         "@angular/common": "^18.1.0",
