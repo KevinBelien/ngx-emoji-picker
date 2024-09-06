@@ -15,7 +15,8 @@
         "build-prod": "ng build emoji-picker-lib --configuration=production",
         "publish": "npm run build-prod && cd dist/ngx-emoji-picker && npm publish --access public",
         "lint": "ng lint",
-        "lint:fix": "ng lint --fix"
+        "lint:fix": "ng lint --fix",
+        "link": "ng build emoji-picker-lib && cd dist/ngx-emoji-picker && npm link && cd ../../projects/emoji-picker-lib && ng build --watch"
     },
     "private": false,
     "repository": {
