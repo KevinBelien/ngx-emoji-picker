@@ -3,6 +3,7 @@ import { CdkPortal } from '@angular/cdk/portal';
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, computed, effect, ElementRef, inject, input, model, OnDestroy, viewChild, ViewEncapsulation } from '@angular/core';
 import { filter } from 'rxjs';
+import { DialogScrollStrategy } from './models';
 
 /**
  * Dialog is a container to display content in an overlay window.
@@ -97,9 +98,11 @@ export class DialogComponent implements OnDestroy {
     /**
      * Specifies the scroll strategy to be used for the popup.
      * @group Props
-     * @default overlay.scrollStrategies.block()
+     * @default 'block'
      */
-    scrollStrategy = input<ScrollStrategy>(this.overlay.scrollStrategies.block());
+    scrollStrategy = input<DialogScrollStrategy>('block');
+
+    overlayScrollStrategy = computed(() => this.getOverlayScrollStrategy(this.scrollStrategy()));
 
     dimensions = computed(() => {
         const height = this.height();
@@ -185,7 +188,7 @@ export class DialogComponent implements OnDestroy {
             positionStrategy,
             hasBackdrop: hasBackdrop,
             backdropClass: backdropClass,
-            scrollStrategy: this.scrollStrategy()
+            scrollStrategy: this.overlayScrollStrategy()
         });
 
     private attachComponentToDialog = () => {
@@ -205,6 +208,19 @@ export class DialogComponent implements OnDestroy {
     private disposeDialogRef = () => {
         if (this.dialogRef) {
             this.dialogRef.dispose();
+        }
+    };
+
+    private getOverlayScrollStrategy = (strategy: DialogScrollStrategy): ScrollStrategy => {
+        switch (strategy) {
+            case 'reposition':
+                return this.overlay.scrollStrategies.reposition();
+            case 'close':
+                return this.overlay.scrollStrategies.close();
+            case 'noop':
+                return this.overlay.scrollStrategies.noop();
+            default:
+                return this.overlay.scrollStrategies.block();
         }
     };
 }
