@@ -1,14 +1,16 @@
-import { Overlay, OverlayContainer, OverlayModule } from '@angular/cdk/overlay';
+import { BlockScrollStrategy, CloseScrollStrategy, NoopScrollStrategy, Overlay, OverlayContainer, OverlayModule, RepositionScrollStrategy } from '@angular/cdk/overlay';
 import { CdkPortal, PortalModule } from '@angular/cdk/portal';
 import { Component } from '@angular/core';
 import { ComponentFixture, TestBed, fakeAsync, flush, tick } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { Subject } from 'rxjs';
 import { DialogComponent } from './dialog.component'; // Adjust the path as necessary
+import { DialogScrollStrategy } from './models';
 
 @Component({
     template: `
-        <ch-dialog [visible]="isVisible" [closeOnBackdropClick]="closeOnBackdropClick" [width]="width" [height]="height">
+        <ch-dialog [visible]="isVisible" [closeOnBackdropClick]="closeOnBackdropClick" [width]="width" [height]="height" [scrollStrategy]="scrollStrategy">
             <ng-container header>
                 <p>Dialog Header</p>
             </ng-container>
@@ -28,6 +30,7 @@ class TestHostComponent {
     closeOnBackdropClick = true;
     width: number | string = 'auto';
     height: number | string = 'auto';
+    scrollStrategy: DialogScrollStrategy = 'block';
 }
 
 describe('DialogComponent', () => {
@@ -36,8 +39,13 @@ describe('DialogComponent', () => {
     let overlay: Overlay;
     let overlayContainer: OverlayContainer;
     let overlayContainerElement: HTMLElement;
+    let screenServiceMock: { isTouchScreen: jest.Mock };
+    let backdropClickSubject: Subject<void>;
 
     beforeEach(async () => {
+        screenServiceMock = {
+            isTouchScreen: jest.fn()
+        };
         await TestBed.configureTestingModule({
             imports: [OverlayModule, PortalModule, NoopAnimationsModule, TestHostComponent]
         }).compileComponents();
@@ -203,5 +211,77 @@ describe('DialogComponent', () => {
 
         expect(dialogElement.style.height).toBe('auto');
         expect(dialogElement.style.width).toBe('auto');
+    }));
+
+    it('should return "reposition" scroll strategy', () => {
+        fixture.componentInstance.scrollStrategy = 'reposition';
+        const strategy = component['getOverlayScrollStrategy'](fixture.componentInstance.scrollStrategy);
+        expect(strategy).toBeInstanceOf(RepositionScrollStrategy);
+    });
+
+    it('should return "close" scroll strategy', () => {
+        fixture.componentInstance.scrollStrategy = 'close';
+        const strategy = component['getOverlayScrollStrategy'](fixture.componentInstance.scrollStrategy);
+        expect(strategy).toBeInstanceOf(CloseScrollStrategy);
+    });
+
+    it('should return "noop" scroll strategy', () => {
+        fixture.componentInstance.scrollStrategy = 'noop';
+        const strategy = component['getOverlayScrollStrategy'](fixture.componentInstance.scrollStrategy);
+        expect(strategy).toBeInstanceOf(NoopScrollStrategy);
+    });
+
+    it('should return "block" scroll strategy by default', () => {
+        const strategy = component['getOverlayScrollStrategy'](fixture.componentInstance.scrollStrategy);
+        expect(strategy).toBeInstanceOf(BlockScrollStrategy);
+    });
+
+    it('should ignore the first backdrop click after touchend and process subsequent clicks', fakeAsync(() => {
+        screenServiceMock.isTouchScreen.mockReturnValue(true);
+
+        fixture.componentInstance.isVisible = true;
+        fixture.detectChanges();
+        tick();
+
+        const closeSpy = jest.spyOn(component, 'close');
+
+        const targetElement = document.createElement('div'); // Mock the element
+        component['setupOnBackdropClickHandler'](targetElement);
+
+        const touchEndEvent = new TouchEvent('touchend');
+        targetElement.dispatchEvent(touchEndEvent);
+        fixture.detectChanges();
+        tick();
+
+        const backdrop = overlayContainerElement.querySelector('.cdk-overlay-backdrop') as HTMLElement;
+        expect(backdrop).toBeTruthy();
+
+        backdrop.click();
+        fixture.detectChanges();
+        tick();
+
+        expect(closeSpy).toHaveBeenCalled();
+    }));
+
+    it('should not ignore the first backdrop click when screen is not touch', fakeAsync(() => {
+        screenServiceMock.isTouchScreen.mockReturnValue(false);
+
+        fixture.componentInstance.isVisible = true;
+        fixture.detectChanges();
+        tick();
+
+        const closeSpy = jest.spyOn(component, 'close');
+
+        const targetElement = document.createElement('div');
+        component['setupOnBackdropClickHandler'](targetElement);
+
+        const backdrop = overlayContainerElement.querySelector('.cdk-overlay-backdrop') as HTMLElement;
+        expect(backdrop).toBeTruthy();
+
+        backdrop.click();
+        fixture.detectChanges();
+        tick();
+
+        expect(closeSpy).toHaveBeenCalled();
     }));
 });
