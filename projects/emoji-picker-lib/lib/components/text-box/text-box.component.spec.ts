@@ -165,4 +165,73 @@ describe('TextBox', () => {
             })
         );
     });
+
+    it('should prevent default and focus input when a non-input element is clicked', () => {
+        // Spy on the event.preventDefault method
+        const preventDefaultSpy = jest.fn();
+
+        // Simulate a custom click event
+        const clickEvent = new MouseEvent('click', {
+            bubbles: true,
+            cancelable: true
+        });
+
+        Object.defineProperty(clickEvent, 'target', { value: fixture.nativeElement });
+
+        // Add the preventDefault spy to the event
+        clickEvent.preventDefault = preventDefaultSpy;
+
+        // Spy on the input focus method
+        const inputElement = fixture.debugElement.query(By.css('input')).nativeElement;
+        const focusSpy = jest.spyOn(inputElement, 'focus');
+
+        // Call the handleElementClick method
+        (textBoxComponent as any).handleElementClick(clickEvent);
+
+        // Verify that event.preventDefault was called
+        expect(preventDefaultSpy).toHaveBeenCalled();
+
+        // Verify that the input was focused
+        expect(focusSpy).toHaveBeenCalled();
+    });
+
+    it('should register onChange callback and call it on value change', () => {
+        const onChangeFn = jest.fn(); // Mock function
+        textBoxComponent.registerOnChange(onChangeFn);
+
+        // Simulate the change event on the input element
+        const inputElement = fixture.debugElement.query(By.css('input')).nativeElement;
+        inputElement.value = 'New Value';
+        inputElement.dispatchEvent(new Event('change')); // Use 'change' event as per component logic
+
+        fixture.detectChanges();
+
+        // The onChange callback should be called with the new value
+        expect(onChangeFn).toHaveBeenCalledWith('New Value');
+    });
+
+    it('should register onTouched callback and call it on blur', () => {
+        const onTouchedFn = jest.fn(); // Mock function
+
+        // Register the onTouched callback
+        textBoxComponent.registerOnTouched(onTouchedFn);
+
+        // Simulate a blur event on the input element
+        const inputElement = fixture.debugElement.query(By.css('ch-text-box')).nativeElement;
+        inputElement.dispatchEvent(new Event('blur'));
+
+        fixture.detectChanges();
+
+        // The onTouched callback should be called when the input is blurred
+        expect(onTouchedFn).toHaveBeenCalled();
+    });
+
+    it('should write value to the component', () => {
+        // Write value to the component
+        textBoxComponent.writeValue('Test Value');
+        fixture.detectChanges();
+
+        // Verify the component's value was updated
+        expect(textBoxComponent.value()).toBe('Test Value');
+    });
 });
