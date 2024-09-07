@@ -2,6 +2,7 @@ import { ConnectedPosition, Overlay, OverlayRef, PositionStrategy, ScrollStrateg
 import { CdkPortal } from '@angular/cdk/portal';
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, computed, effect, ElementRef, inject, input, model, OnDestroy, viewChild, ViewEncapsulation } from '@angular/core';
+import { ScreenService } from '@chit-chat/ngx-emoji-picker/lib/utils';
 import { filter } from 'rxjs';
 import { DialogScrollStrategy } from './models';
 
@@ -24,6 +25,8 @@ import { DialogScrollStrategy } from './models';
 export class DialogComponent implements OnDestroy {
     private elementRef = inject(ElementRef);
     private overlay = inject(Overlay);
+    private screenService = inject(ScreenService);
+
     private portal = viewChild(CdkPortal);
 
     /**
@@ -146,16 +149,14 @@ export class DialogComponent implements OnDestroy {
     private setupOnBackdropClickHandler = (targetElement: HTMLElement | ElementRef): void => {
         const element = targetElement instanceof ElementRef ? targetElement.nativeElement : targetElement;
 
-        let shouldIgnoreNextBackdropClick = false;
+        let shouldIgnoreNextBackdropClick = this.screenService.isTouchScreen();
 
         // Mark that the next backdrop click should be ignored
         const handleDialogTrigger = () => {
             shouldIgnoreNextBackdropClick = true;
         };
 
-        // Attach event listeners to the trigger element
-        element.addEventListener('pointerup', handleDialogTrigger);
-        element.addEventListener('mouseup', handleDialogTrigger);
+        element.addEventListener('touchend', handleDialogTrigger);
 
         // Setup the backdrop click handler
         this.dialogRef
