@@ -1,6 +1,6 @@
 {
     "name": "@chit-chat/ngx-emoji-picker",
-    "version": "18.0.1",
+    "version": "18.3.0",
     "license": "MIT",
     "description": "Customizable chat application that can be integrated in angular apps",
     "main": "fesm2022/chit-chat-ngx-emoji-picker.mjs",
