@@ -9,7 +9,7 @@ module.exports = {
     //   },
     // },
     moduleNameMapper: {
-        '^@chit-chat/ngx-emoji-picker/src/lib/(.*)$': '<rootDir>/projects/emoji-picker-lib/src/lib/$1'
+        '^@chit-chat/ngx-emoji-picker/lib/(.*)$': '<rootDir>/projects/emoji-picker-lib/lib/$1'
     },
     testEnvironment: 'jsdom'
 };

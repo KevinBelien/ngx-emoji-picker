@@ -5,9 +5,9 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { RouterModule, RouterOutlet } from '@angular/router';
-import { ButtonComponent } from '@chit-chat/ngx-emoji-picker/src/lib/components/button';
-import { frTranslations, nlTranslations, TranslationService } from '@chit-chat/ngx-emoji-picker/src/lib/localization';
-import { BreakpointState, ScreenService } from '@chit-chat/ngx-emoji-picker/src/lib/utils';
+import { ButtonComponent } from '@chit-chat/ngx-emoji-picker/lib/components/button';
+import { frTranslations, nlTranslations, TranslationService } from '@chit-chat/ngx-emoji-picker/lib/localization';
+import { BreakpointState, ScreenService } from '@chit-chat/ngx-emoji-picker/lib/utils';
 import { NavigationItem, navigationItems } from './app-navigation';
 
 @Component({
