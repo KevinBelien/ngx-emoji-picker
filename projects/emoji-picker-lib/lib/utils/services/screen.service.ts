@@ -80,4 +80,11 @@ export class ScreenService {
      * @returns {boolean} True if the application is running on an iOS device, otherwise false.
      */
     isIos = (): boolean => /(iPad|iPhone|iPod)/g.test(navigator.userAgent);
+
+    /**
+     * Determines whether the application is running on a touch device.
+     * @group Method
+     * @returns {boolean} True if the application is running on a touch device, otherwise false.
+     */
+    isTouchScreen = (): boolean => 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 }
