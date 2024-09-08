@@ -2,11 +2,17 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { TranslatePipe } from '@chit-chat/ngx-emoji-picker/lib/localization';
 import { EmojiPickerComponent } from './emoji-picker.component';
-import { Emoji } from './models';
+import { Emoji, SkintoneSetting } from './models';
+import { EmojiDataService } from './services';
+
+interface ClickEvent {
+    data: string;
+}
 
 describe('EmojiPickerComponent', () => {
     let fixture: ComponentFixture<EmojiPickerComponent>;
     let component: EmojiPickerComponent;
+    let emojiDataService: EmojiDataService; // Real service instance
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
@@ -18,6 +24,8 @@ describe('EmojiPickerComponent', () => {
 
         fixture = TestBed.createComponent(EmojiPickerComponent);
         component = fixture.componentInstance;
+        emojiDataService = TestBed.inject(EmojiDataService);
+
         fixture.detectChanges();
     });
 
@@ -72,5 +80,56 @@ describe('EmojiPickerComponent', () => {
         fixture.detectChanges();
 
         expect(addEmojiToSuggestionsSpy).toHaveBeenCalledWith(testEmoji.id);
+    });
+
+    it('should open skintone dialog and set the selected emoji', () => {
+        const testEmoji: Emoji = {
+            id: '1',
+            name: 'smile',
+            value: '😊',
+            category: 'smileys-people',
+            order: 1
+        };
+
+        const mockTargetElement = document.createElement('div'); // Mock the target element
+
+        // Call the openSkintoneDialog method
+        component['openSkintoneDialog'](mockTargetElement, testEmoji);
+
+        // Verify that the selectedEmoji signal is set
+        expect(component.selectedEmoji()).toEqual(testEmoji);
+
+        // Verify that the targetElement is set
+        expect(component.targetElement).toBe(mockTargetElement);
+
+        // Verify that isSkintoneDialogVisible is set to true
+        expect(component.isSkintoneDialogVisible()).toBe(true);
+    });
+
+    it('should update emoji skintone and select emoji when skintone is changed', () => {
+        const testEmoji: Emoji = {
+            id: '2',
+            name: 'thumbs up',
+            value: '👍',
+            category: 'smileys-people',
+            order: 1
+        };
+        const newEmojiValue = '👍🏽';
+        const skintoneSetting: SkintoneSetting = 'individual';
+
+        const updateEmojiSkintoneSpy = jest.spyOn(emojiDataService, 'updateEmojiSkintone');
+
+        const selectEmojiSpy = jest.spyOn(component, 'selectEmoji');
+
+        component['handleIndividualEmojiSkintoneChanged'](skintoneSetting, testEmoji, newEmojiValue);
+
+        expect(updateEmojiSkintoneSpy).toHaveBeenCalledWith(testEmoji.id, newEmojiValue);
+
+        expect(selectEmojiSpy).toHaveBeenCalledWith(
+            expect.objectContaining({
+                id: testEmoji.id,
+                value: newEmojiValue
+            })
+        );
     });
 });
