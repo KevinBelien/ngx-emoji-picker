@@ -5,6 +5,7 @@
         "ng": "ng",
         "start": "ng build emoji-picker-lib && ng serve --port 4229 ",
         "build": "ng build emoji-picker-lib",
+        "build:demo": "ng build demo",
         "serve": "ng serve --port 4223",
         "build:watch": "ng build emoji-picker-lib --watch",
         "watch": "ng build --watch --configuration development",
