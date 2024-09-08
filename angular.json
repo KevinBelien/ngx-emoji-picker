@@ -60,7 +60,7 @@
             },
             "root": "projects/demo",
             "sourceRoot": "projects/demo/src",
-            "prefix": "app",
+            "prefix": "ch",
             "architect": {
                 "build": {
                     "builder": "@angular-devkit/build-angular:application",

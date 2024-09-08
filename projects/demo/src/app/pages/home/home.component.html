@@ -1,0 +1,7 @@
+<div class="home-container">
+    <ul class="navigation">
+        <li *ngFor="let item of navigationItems" class="navigation-item">
+            <ch-button [label]="item.text" [width]="200" (onClick)="handleNavigationItemClick(item.path)"></ch-button>
+        </li>
+    </ul>
+</div>
