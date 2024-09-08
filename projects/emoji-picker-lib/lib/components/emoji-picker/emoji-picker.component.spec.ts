@@ -1,13 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
-import { TranslatePipe } from '@chit-chat/ngx-emoji-picker/lib/localization';
 import { EmojiPickerComponent } from './emoji-picker.component';
 import { Emoji, SkintoneSetting } from './models';
 import { EmojiDataService } from './services';
-
-interface ClickEvent {
-    data: string;
-}
 
 describe('EmojiPickerComponent', () => {
     let fixture: ComponentFixture<EmojiPickerComponent>;
@@ -17,8 +12,7 @@ describe('EmojiPickerComponent', () => {
     beforeEach(async () => {
         await TestBed.configureTestingModule({
             imports: [
-                EmojiPickerComponent, // Import the standalone component
-                TranslatePipe
+                EmojiPickerComponent // Import the standalone component
             ]
         }).compileComponents();
 
