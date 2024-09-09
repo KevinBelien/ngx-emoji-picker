@@ -14,11 +14,7 @@ export class ButtonOutlineComponent {
 
     constructor() {
         window.addEventListener('message', (event) => {
-            // Make sure the message is coming from the trusted source (Docusaurus)
-            if (event.origin !== window.location.origin) {
-                return;
-            }
-
+            console.log(event.data);
             // Check if the event contains a valid theme
             const { theme } = event.data;
             if (theme && (theme === 'dark' || theme === 'light')) {
