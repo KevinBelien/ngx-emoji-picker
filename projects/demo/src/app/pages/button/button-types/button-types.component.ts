@@ -3,13 +3,13 @@ import { Component } from '@angular/core';
 import { ButtonComponent, ButtonType } from '@chit-chat/ngx-emoji-picker/lib/components/button';
 
 @Component({
-    selector: 'ch-button-outline',
+    selector: 'ch-button-types',
     standalone: true,
     imports: [CommonModule, ButtonComponent],
-    templateUrl: './button-outline.component.html',
-    styleUrl: './button-outline.component.scss'
+    templateUrl: './button-types.component.html',
+    styleUrl: './button-types.component.scss'
 })
-export class ButtonOutlineComponent {
+export class ButtonTypesComponent {
     buttonTypes: ButtonType[] = ['primary', 'success', 'danger', 'warning', 'info', 'contrast'];
 
     constructor() {}

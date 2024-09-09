@@ -41,8 +41,17 @@ body {
 .showcase-container {
     padding-block: 2em;
     background-color: var(--ch-showcase-card-background);
+    display: flex;
 }
 
 .justify-center {
     justify-content: center;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.flex-column {
+    flex-direction: column;
 }
