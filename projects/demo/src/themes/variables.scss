@@ -34,6 +34,8 @@
     --ch-skintone-picker-background: #fff;
     --ch-emoji-variant-indicator-color: #909090;
     --ch-emoji-variant-indicator-color-hover: #626262;
+
+    --ch-showcase-card-background: #fff;
 }
 
 [data-theme='dark'] {
@@ -65,4 +67,6 @@
 
     --ch-editor-outlined-color: rgba(255, 255, 255, 0.2);
     --ch-editor-outlined-color-hover: rgba(255, 255, 255, 0.4);
+
+    --ch-showcase-card-background: #272727;
 }

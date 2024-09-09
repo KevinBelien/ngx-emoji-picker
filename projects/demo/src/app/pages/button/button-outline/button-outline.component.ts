@@ -14,12 +14,19 @@ export class ButtonOutlineComponent {
 
     constructor() {
         window.addEventListener('message', (event) => {
-            const theme = event.data.theme;
-            console.log('gets to angular theme change');
-            if (theme === 'dark') {
-                document.documentElement.setAttribute('data-theme', 'dark');
-            } else {
-                document.documentElement.setAttribute('data-theme', 'light');
+            console.log(event.data);
+            // Make sure the message is coming from the trusted source (Docusaurus)
+            if (event.origin !== window.location.origin) {
+                return;
+            }
+
+            // Check if the event contains a valid theme
+            const { theme } = event.data;
+            if (theme && (theme === 'dark' || theme === 'light')) {
+                // Check if the theme is already applied to avoid redundant updates
+                if (document.documentElement.getAttribute('data-theme') !== theme) {
+                    document.documentElement.setAttribute('data-theme', theme);
+                }
             }
         });
     }
