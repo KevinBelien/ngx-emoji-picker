@@ -13,11 +13,11 @@ body {
     padding: 0;
     margin: 0;
     overflow-y: auto; /* Allows scrollbars only when needed */
+    background-color: var(--ch-showcase-card-background);
 }
 
 body {
     height: 100%;
-    background-color: var(--ch-background-color, #fff);
     color: var(--ch-text-color, #000);
     font-family: var(--ch-font-family);
 }
