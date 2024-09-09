@@ -22,11 +22,9 @@ export class ButtonOutlineComponent {
             // Check if the event contains a valid theme
             const { theme } = event.data;
             if (theme && (theme === 'dark' || theme === 'light')) {
+                console.log('gets to theme change in angular');
                 // Check if the theme is already applied to avoid redundant updates
-                if (document.documentElement.getAttribute('data-theme') !== theme) {
-                    console.log('theme changed', theme);
-                    document.documentElement.setAttribute('data-theme', theme);
-                }
+                document.documentElement.setAttribute('data-theme', theme);
             }
         });
     }
