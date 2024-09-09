@@ -20,7 +20,7 @@ export class ButtonOutlineComponent {
             }
 
             // Check if the event contains a valid theme
-            const { theme } = event.data.theme;
+            const { theme } = event.data;
             if (theme && (theme === 'dark' || theme === 'light')) {
                 // Check if the theme is already applied to avoid redundant updates
                 if (document.documentElement.getAttribute('data-theme') !== theme) {
