@@ -14,7 +14,7 @@ export interface ValueChangeEvent {
     /**
      * The original event that triggered the value change.
      */
-    event: Event;
+    event: Event | undefined;
 
     /**
      * The action associated with the value change (e.g., 'input', 'blur', 'clear').

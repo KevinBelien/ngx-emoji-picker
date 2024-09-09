@@ -141,6 +141,7 @@ describe('DialogComponent', () => {
     }));
 
     it('should close the dialog when the backdrop is clicked', fakeAsync(() => {
+        const closeSpy = jest.spyOn(component, 'close');
         fixture.componentInstance.isVisible = true;
         fixture.detectChanges();
         tick();
@@ -154,6 +155,8 @@ describe('DialogComponent', () => {
         tick();
 
         expect(dialogRef!.hasAttached()).toBe(false);
+
+        expect(closeSpy).toHaveBeenCalled();
     }));
 
     it('should not close the dialog when the backdrop is clicked and closeOnBackdropClick is set to false', fakeAsync(() => {
@@ -235,53 +238,4 @@ describe('DialogComponent', () => {
         const strategy = component['getOverlayScrollStrategy'](fixture.componentInstance.scrollStrategy);
         expect(strategy).toBeInstanceOf(BlockScrollStrategy);
     });
-
-    it('should ignore the first backdrop click after touchend and process subsequent clicks', fakeAsync(() => {
-        screenServiceMock.isTouchScreen.mockReturnValue(true);
-
-        fixture.componentInstance.isVisible = true;
-        fixture.detectChanges();
-        tick();
-
-        const closeSpy = jest.spyOn(component, 'close');
-
-        const targetElement = document.createElement('div'); // Mock the element
-        component['setupOnBackdropClickHandler'](targetElement);
-
-        const touchEndEvent = new TouchEvent('touchend');
-        targetElement.dispatchEvent(touchEndEvent);
-        fixture.detectChanges();
-        tick();
-
-        const backdrop = overlayContainerElement.querySelector('.cdk-overlay-backdrop') as HTMLElement;
-        expect(backdrop).toBeTruthy();
-
-        backdrop.click();
-        fixture.detectChanges();
-        tick();
-
-        expect(closeSpy).toHaveBeenCalled();
-    }));
-
-    it('should not ignore the first backdrop click when screen is not touch', fakeAsync(() => {
-        screenServiceMock.isTouchScreen.mockReturnValue(false);
-
-        fixture.componentInstance.isVisible = true;
-        fixture.detectChanges();
-        tick();
-
-        const closeSpy = jest.spyOn(component, 'close');
-
-        const targetElement = document.createElement('div');
-        component['setupOnBackdropClickHandler'](targetElement);
-
-        const backdrop = overlayContainerElement.querySelector('.cdk-overlay-backdrop') as HTMLElement;
-        expect(backdrop).toBeTruthy();
-
-        backdrop.click();
-        fixture.detectChanges();
-        tick();
-
-        expect(closeSpy).toHaveBeenCalled();
-    }));
 });

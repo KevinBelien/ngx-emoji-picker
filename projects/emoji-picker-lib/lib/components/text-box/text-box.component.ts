@@ -174,10 +174,10 @@ export class TextBoxComponent implements ControlValueAccessor, AfterViewInit, On
     private onEvent = (evt: Event): void => {
         const inputElement = evt.target as HTMLInputElement;
 
-        this.setValue(inputElement.value, evt, this.valueChangeEvent());
+        this.setValue(inputElement.value, this.valueChangeEvent(), evt);
     };
 
-    private setValue = (value: string, evt: Event, action: string) => {
+    private setValue = (value: string, action: string, evt?: Event) => {
         this.onChange(value);
         this.value.set(value); // Update internal value
         this.onValueChanged.emit({
@@ -189,6 +189,15 @@ export class TextBoxComponent implements ControlValueAccessor, AfterViewInit, On
 
     protected handleClearClick = (evt: MouseEvent) => {
         this.value.set('');
-        this.setValue(this.value(), evt, 'clear');
+        this.setValue(this.value(), 'clear', evt);
+    };
+
+    /**
+     * Clear the input value
+     * @group Method
+     */
+    clear = () => {
+        this.value.set('');
+        this.setValue(this.value(), 'clear');
     };
 }

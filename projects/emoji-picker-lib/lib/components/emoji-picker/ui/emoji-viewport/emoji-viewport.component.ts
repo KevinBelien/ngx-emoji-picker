@@ -76,13 +76,6 @@ export class EmojiViewportComponent implements AfterViewInit {
     emojiSize = input<EmojiSizeOption>('default');
 
     /**
-     * Height of the viewport in pixels.
-     * @group Props
-     * @default 400
-     */
-    height = input<number>(400);
-
-    /**
      * Width of the viewport in pixels.
      * @group Props
      * @default 350
@@ -365,6 +358,9 @@ export class EmojiViewportComponent implements AfterViewInit {
     }
 
     protected trackEmojiRow = (index: number, row: EmojiPickerRow): string => row.id;
+
+    private isValidCategory = (category: EmojiCategory) => this.emojiCategories().includes(category);
+
     /**
      * Navigates to the specified emoji category.
      * Scrolls the emoji picker to the first emoji in the specified category if it exists.
@@ -372,13 +368,31 @@ export class EmojiViewportComponent implements AfterViewInit {
      * @group Method
      */
     navigateToCategory = (category: EmojiCategory): void => {
+        if (!this.isValidCategory(category)) {
+            console.error(`Invalid category: ${category}.`);
+            return;
+        }
         const index = this.calculateIndexOfCategory(category);
-
         if (index !== -1) {
             this.scrollIndex.set(index);
             this.handleNavigation(index);
-        } else {
-            console.error(`Invalid category: ${category}.`);
         }
+    };
+
+    /**
+     * Scrolls the emoji picker to the first emoji.
+     * @group Method
+     */
+    navigateToStart = () => {
+        this.scrollIndex.set(0);
+        this.handleNavigation(0);
+    };
+
+    /**
+     * Update the viewport dimensions and re-render.
+     * @group Method
+     */
+    checkViewportSize = () => {
+        this.viewport()?.checkViewportSize();
     };
 }

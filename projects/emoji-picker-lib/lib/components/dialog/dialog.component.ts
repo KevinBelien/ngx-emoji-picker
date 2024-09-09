@@ -1,8 +1,8 @@
 import { ConnectedPosition, Overlay, OverlayRef, PositionStrategy, ScrollStrategy } from '@angular/cdk/overlay';
 import { CdkPortal } from '@angular/cdk/portal';
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component, computed, effect, ElementRef, inject, input, model, OnDestroy, viewChild, ViewEncapsulation } from '@angular/core';
-import { ScreenService } from '@chit-chat/ngx-emoji-picker/lib/utils';
+import { ChangeDetectionStrategy, Component, computed, ElementRef, inject, input, model, OnDestroy, output, Renderer2, signal, viewChild, ViewEncapsulation } from '@angular/core';
+import { takeUntilDestroyed, toObservable } from '@angular/core/rxjs-interop';
 import { filter } from 'rxjs';
 import { DialogScrollStrategy } from './models';
 
@@ -23,9 +23,8 @@ import { DialogScrollStrategy } from './models';
     }
 })
 export class DialogComponent implements OnDestroy {
-    private elementRef = inject(ElementRef);
     private overlay = inject(Overlay);
-    private screenService = inject(ScreenService);
+    private renderer = inject(Renderer2);
 
     private portal = viewChild(CdkPortal);
 
@@ -105,6 +104,10 @@ export class DialogComponent implements OnDestroy {
      */
     scrollStrategy = input<DialogScrollStrategy>('block');
 
+    isTouchStillInProgressAfterOpen = signal<boolean>(false);
+
+    onOpened = output<OverlayRef>();
+
     overlayScrollStrategy = computed(() => this.getOverlayScrollStrategy(this.scrollStrategy()));
 
     dimensions = computed(() => {
@@ -119,21 +122,39 @@ export class DialogComponent implements OnDestroy {
 
     private dialogRef?: OverlayRef;
 
+    touchEndListener: () => void;
+    touchStartListener: () => void;
+
     constructor() {
-        effect(() => {
-            if (this.visible()) this.open(this.target());
-            else this.disposeDialogRef();
+        toObservable(this.visible)
+            .pipe(takeUntilDestroyed())
+            .subscribe((isVisible: boolean) => {
+                if (isVisible) {
+                    this.open(this.target());
+                } else this.disposeDialogRef();
+            });
+
+        this.touchStartListener = this.renderer.listen('window', 'touchstart', (_event: TouchEvent) => {
+            if (!this.visible()) {
+                this.isTouchStillInProgressAfterOpen.set(true);
+            }
+        });
+        this.touchEndListener = this.renderer.listen('window', 'touchend', (_event: TouchEvent) => {
+            setTimeout(() => this.isTouchStillInProgressAfterOpen.set(false), 100);
         });
     }
 
     ngOnDestroy(): void {
         this.close();
+        this.touchStartListener();
+        this.touchEndListener();
     }
 
     private open = (targetElement?: HTMLElement) => {
         const positionStrategy = this.handleDialogPositionStrategy(targetElement);
 
         this.dialogRef = this.createDialog(positionStrategy, this.hasBackdrop(), this.backdropClass());
+        this.onOpened.emit(this.dialogRef);
 
         this.attachComponentToDialog();
 
@@ -143,34 +164,13 @@ export class DialogComponent implements OnDestroy {
             }
         });
 
-        if (this.closeOnBackdropClick()) this.setupOnBackdropClickHandler(targetElement || this.elementRef);
+        if (this.closeOnBackdropClick()) this.setupOnBackdropClickHandler();
     };
 
-    private setupOnBackdropClickHandler = (targetElement: HTMLElement | ElementRef): void => {
-        const element = targetElement instanceof ElementRef ? targetElement.nativeElement : targetElement;
-
-        let shouldIgnoreNextBackdropClick = this.screenService.isTouchScreen();
-
-        // Mark that the next backdrop click should be ignored
-        const handleDialogTrigger = () => {
-            shouldIgnoreNextBackdropClick = true;
-        };
-
-        element.addEventListener('touchend', handleDialogTrigger);
-
-        // Setup the backdrop click handler
+    private setupOnBackdropClickHandler = (): void => {
         this.dialogRef
             ?.backdropClick()
-            .pipe(
-                filter(() => {
-                    if (shouldIgnoreNextBackdropClick) {
-                        // Reset the flag and ignore this backdrop click
-                        shouldIgnoreNextBackdropClick = false;
-                        return false;
-                    }
-                    return true;
-                })
-            )
+            .pipe(filter(() => !this.isTouchStillInProgressAfterOpen()))
             .subscribe(() => {
                 this.close();
             });

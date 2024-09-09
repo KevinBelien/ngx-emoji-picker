@@ -48,7 +48,7 @@ export class EmojiPickerComponent implements OnInit, OnDestroy {
     private translationService = inject(TranslationService);
 
     emojiViewportComponent = viewChild<EmojiViewportComponent>(EmojiViewportComponent);
-
+    searchComponent = viewChild<TextBoxComponent>(TextBoxComponent);
     swatchPickerComponent = viewChild<SkintoneSwatchPickerComponent>(SkintoneSwatchPickerComponent);
 
     @HostBinding('style.--ch-emoji-fontsize') emojiSizeInPx?: number;
@@ -389,5 +389,40 @@ export class EmojiPickerComponent implements OnInit, OnDestroy {
             this.addEmojiToSuggestions(emoji.id);
         }
         this.onEmojiSelected.emit(emoji);
+    };
+
+    /**
+     * Navigate to a category of the emoji picker
+     * @param {EmojiCategory} category - Category
+     * @group Method
+     */
+    navigateToCategory = (category: EmojiCategory) => {
+        this.emojiViewportComponent()?.navigateToCategory(category);
+    };
+
+    /**
+     * Navigate to the first category of the emoji picker
+     * @group Method
+     */
+    navigateToStart = () => {
+        this.selectedCategory.set(this.emojiCategories()[0]);
+        this.emojiViewportComponent()?.navigateToStart();
+    };
+
+    /**
+     * Reset the emoji picker by clearing the filter and navigating to first category
+     * @group Method
+     */
+    reset = () => {
+        this.searchComponent()?.clear();
+        this.navigateToStart();
+    };
+
+    /**
+     * Update the viewport dimensions and re-render.
+     * @group Method
+     */
+    refreshViewport = () => {
+        this.emojiViewportComponent()?.checkViewportSize();
     };
 }
