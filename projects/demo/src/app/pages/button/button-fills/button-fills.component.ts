@@ -10,5 +10,5 @@ import { ButtonComponent, ButtonFill } from '@chit-chat/ngx-emoji-picker/lib/com
     styleUrl: './button-fills.component.scss'
 })
 export class ButtonFillsComponent {
-    fills: ButtonFill[] = ['clear', 'outlined', 'solid'];
+    fills: ButtonFill[] = ['solid', 'outlined', 'clear'];
 }

@@ -9,4 +9,8 @@ import { ButtonComponent } from '@chit-chat/ngx-emoji-picker/lib/components/butt
     templateUrl: './button-basic.component.html',
     styleUrl: './button-basic.component.scss'
 })
-export class ButtonBasicComponent {}
+export class ButtonBasicComponent {
+    handleClick = (_evt: MouseEvent) => {
+        alert('Button clicked');
+    };
+}
