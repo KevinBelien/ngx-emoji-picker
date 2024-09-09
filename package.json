@@ -18,7 +18,8 @@
         "publish": "npm run build-prod && cd dist/ngx-emoji-picker && npm publish --access public",
         "lint": "ng lint",
         "lint:fix": "ng lint --fix",
-        "link": "ng build emoji-picker-lib && cd dist/ngx-emoji-picker && npm link && cd ../../projects/emoji-picker-lib && ng build --watch"
+        "link": "ng build emoji-picker-lib && cd dist/ngx-emoji-picker && npm link && cd ../../projects/emoji-picker-lib && ng build --watch",
+        "publish-demo": "npm run build demo && netlify deploy --branch=master --prod"
     },
     "private": false,
     "repository": {

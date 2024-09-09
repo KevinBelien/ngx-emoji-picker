@@ -62,6 +62,13 @@ export const routes: Routes = [
         loadComponent: () => import('./pages/button/button-custom-content/button-custom-content.component').then((c) => c.ButtonCustomContentComponent),
         pathMatch: 'full'
     },
+
+    {
+        path: 'dialog-basic',
+        loadComponent: () => import('./pages/dialog/dialog-basic/dialog-basic.component').then((c) => c.DialogBasicComponent),
+        pathMatch: 'full'
+    },
+
     {
         path: 'emoji-picker',
         loadComponent: () => import('./pages/emoji-picker/emoji-picker-demo.component').then((c) => c.EmojiPickerDemoComponent),
