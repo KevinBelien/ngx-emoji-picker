@@ -39,6 +39,10 @@ body {
 }
 
 .showcase-container {
-    padding: 1em 2em;
+    padding-block: 2em;
     background-color: var(--ch-showcase-card-background);
+}
+
+.justify-center {
+    justify-content: center;
 }
