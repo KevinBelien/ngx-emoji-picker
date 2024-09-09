@@ -284,7 +284,7 @@ export const emojis: Emoji[] = [
     {
         id: 'frowning-face',
         name: 'frowning face',
-        value: '☹',
+        value: '☹️',
         category: 'smileys-people',
         order: 41
     },
@@ -543,7 +543,7 @@ export const emojis: Emoji[] = [
     {
         id: 'skull-and-crossbones',
         name: 'skull and crossbones',
-        value: '☠',
+        value: '☠️',
         category: 'smileys-people',
         order: 78
     },
@@ -10894,975 +10894,175 @@ export const emojis: Emoji[] = [
         name: 'family man woman boy',
         value: '👨‍👩‍👦',
         category: 'smileys-people',
-        order: 377,
-        skintones: [
-            {
-                skintone: 'default',
-                value: '👨‍👩‍👦',
-                order: 1
-            },
-            {
-                skintone: 'light',
-                value: '👨🏻‍👩🏻‍👦🏻',
-                order: 2
-            },
-            {
-                skintone: 'medium-light',
-                value: '👨🏼‍👩🏼‍👦🏼',
-                order: 3
-            },
-            {
-                skintone: 'medium',
-                value: '👨🏽‍👩🏽‍👦🏽',
-                order: 4
-            },
-            {
-                skintone: 'medium-dark',
-                value: '👨🏾‍👩🏾‍👦🏾',
-                order: 5
-            },
-            {
-                skintone: 'dark',
-                value: '👨🏿‍👩🏿‍👦🏿',
-                order: 6
-            }
-        ]
+        order: 377
     },
     {
         id: 'family-man-woman-girl',
         name: 'family man woman girl',
         value: '👨‍👩‍👧',
         category: 'smileys-people',
-        order: 378,
-        skintones: [
-            {
-                skintone: 'default',
-                value: '👨‍👩‍👧',
-                order: 1
-            },
-            {
-                skintone: 'light',
-                value: '👨🏻‍👩🏻‍👧🏻',
-                order: 2
-            },
-            {
-                skintone: 'medium-light',
-                value: '👨🏼‍👩🏼‍👧🏼',
-                order: 3
-            },
-            {
-                skintone: 'medium',
-                value: '👨🏽‍👩🏽‍👧🏽',
-                order: 4
-            },
-            {
-                skintone: 'medium-dark',
-                value: '👨🏾‍👩🏾‍👧🏾',
-                order: 5
-            },
-            {
-                skintone: 'dark',
-                value: '👨🏿‍👩🏿‍👧🏿',
-                order: 6
-            }
-        ]
+        order: 378
     },
     {
         id: 'family-man-woman-girl-boy',
         name: 'family man woman girl boy',
         value: '👨‍👩‍👧‍👦',
         category: 'smileys-people',
-        order: 379,
-        skintones: [
-            {
-                skintone: 'default',
-                value: '👨‍👩‍👧‍👦',
-                order: 1
-            },
-            {
-                skintone: 'light',
-                value: '👨🏻‍👩🏻‍👧🏻‍👦🏻',
-                order: 2
-            },
-            {
-                skintone: 'medium-light',
-                value: '👨🏼‍👩🏼‍👧🏼‍👦🏼',
-                order: 3
-            },
-            {
-                skintone: 'medium',
-                value: '👨🏽‍👩🏽‍👧🏽‍👦🏽',
-                order: 4
-            },
-            {
-                skintone: 'medium-dark',
-                value: '👨🏾‍👩🏾‍👧🏾‍👦🏾',
-                order: 5
-            },
-            {
-                skintone: 'dark',
-                value: '👨🏿‍👩🏿‍👧🏿‍👦🏿',
-                order: 6
-            }
-        ]
+        order: 379
     },
     {
         id: 'family-man-woman-boy-boy',
         name: 'family man woman boy boy',
         value: '👨‍👩‍👦‍👦',
         category: 'smileys-people',
-        order: 380,
-        skintones: [
-            {
-                skintone: 'default',
-                value: '👨‍👩‍👦‍👦',
-                order: 1
-            },
-            {
-                skintone: 'light',
-                value: '👨🏻‍👩🏻‍👦🏻‍👦🏻',
-                order: 2
-            },
-            {
-                skintone: 'medium-light',
-                value: '👨🏼‍👩🏼‍👦🏼‍👦🏼',
-                order: 3
-            },
-            {
-                skintone: 'medium',
-                value: '👨🏽‍👩🏽‍👦🏽‍👦🏽',
-                order: 4
-            },
-            {
-                skintone: 'medium-dark',
-                value: '👨🏾‍👩🏾‍👦🏾‍👦🏾',
-                order: 5
-            },
-            {
-                skintone: 'dark',
-                value: '👨🏿‍👩🏿‍👦🏿‍👦🏿',
-                order: 6
-            }
-        ]
+        order: 380
     },
     {
         id: 'family-man-woman-girl-girl',
         name: 'family man woman girl girl',
         value: '👨‍👩‍👧‍👧',
         category: 'smileys-people',
-        order: 381,
-        skintones: [
-            {
-                skintone: 'default',
-                value: '👨‍👩‍👧‍👧',
-                order: 1
-            },
-            {
-                skintone: 'light',
-                value: '👨🏻‍👩🏻‍👧🏻‍👧🏻',
-                order: 2
-            },
-            {
-                skintone: 'medium-light',
-                value: '👨🏼‍👩🏼‍👧🏼‍👧🏼',
-                order: 3
-            },
-            {
-                skintone: 'medium',
-                value: '👨🏽‍👩🏽‍👧🏽‍👧🏽',
-                order: 4
-            },
-            {
-                skintone: 'medium-dark',
-                value: '👨🏾‍👩🏾‍👧🏾‍👧🏾',
-                order: 5
-            },
-            {
-                skintone: 'dark',
-                value: '👨🏿‍👩🏿‍👧🏿‍👧🏿',
-                order: 6
-            }
-        ]
+        order: 381
     },
     {
         id: 'family-woman-woman-boy',
         name: 'family woman woman boy',
         value: '👩‍👩‍👦',
         category: 'smileys-people',
-        order: 382,
-        skintones: [
-            {
-                skintone: 'default',
-                value: '👩‍👩‍👦',
-                order: 1
-            },
-            {
-                skintone: 'light',
-                value: '👩🏻‍👩🏻‍👦🏻',
-                order: 2
-            },
-            {
-                skintone: 'medium-light',
-                value: '👩🏼‍👩🏼‍👦🏼',
-                order: 3
-            },
-            {
-                skintone: 'medium',
-                value: '👩🏽‍👩🏽‍👦🏽',
-                order: 4
-            },
-            {
-                skintone: 'medium-dark',
-                value: '👩🏾‍👩🏾‍👦🏾',
-                order: 5
-            },
-            {
-                skintone: 'dark',
-                value: '👩🏿‍👩🏿‍👦🏿',
-                order: 6
-            }
-        ]
+        order: 382
     },
     {
         id: 'family-woman-woman-girl',
         name: 'family woman woman girl',
         value: '👩‍👩‍👧',
         category: 'smileys-people',
-        order: 383,
-        skintones: [
-            {
-                skintone: 'default',
-                value: '👩‍👩‍👧',
-                order: 1
-            },
-            {
-                skintone: 'light',
-                value: '👩🏻‍👩🏻‍👧🏻',
-                order: 2
-            },
-            {
-                skintone: 'medium-light',
-                value: '👩🏼‍👩🏼‍👧🏼',
-                order: 3
-            },
-            {
-                skintone: 'medium',
-                value: '👩🏽‍👩🏽‍👧🏽',
-                order: 4
-            },
-            {
-                skintone: 'medium-dark',
-                value: '👩🏾‍👩🏾‍👧🏾',
-                order: 5
-            },
-            {
-                skintone: 'dark',
-                value: '👩🏿‍👩🏿‍👧🏿',
-                order: 6
-            }
-        ]
+        order: 383
     },
     {
         id: 'family-woman-woman-girl-boy',
         name: 'family woman woman girl boy',
         value: '👩‍👩‍👧‍👦',
         category: 'smileys-people',
-        order: 384,
-        skintones: [
-            {
-                skintone: 'default',
-                value: '👩‍👩‍👧‍👦',
-                order: 1
-            },
-            {
-                skintone: 'light',
-                value: '👩🏻‍👩🏻‍👧🏻‍👦🏻',
-                order: 2
-            },
-            {
-                skintone: 'medium-light',
-                value: '👩🏼‍👩🏼‍👧🏼‍👦🏼',
-                order: 3
-            },
-            {
-                skintone: 'medium',
-                value: '👩🏽‍👩🏽‍👧🏽‍👦🏽',
-                order: 4
-            },
-            {
-                skintone: 'medium-dark',
-                value: '👩🏾‍👩🏾‍👧🏾‍👦🏾',
-                order: 5
-            },
-            {
-                skintone: 'dark',
-                value: '👩🏿‍👩🏿‍👧🏿‍👦🏿',
-                order: 6
-            }
-        ]
+        order: 384
     },
     {
         id: 'family-woman-woman-boy-boy',
         name: 'family woman woman boy boy',
         value: '👩‍👩‍👦‍👦',
         category: 'smileys-people',
-        order: 385,
-        skintones: [
-            {
-                skintone: 'default',
-                value: '👩‍👩‍👦‍👦',
-                order: 1
-            },
-            {
-                skintone: 'light',
-                value: '👩🏻‍👩🏻‍👦🏻‍👦🏻',
-                order: 2
-            },
-            {
-                skintone: 'medium-light',
-                value: '👩🏼‍👩🏼‍👦🏼‍👦🏼',
-                order: 3
-            },
-            {
-                skintone: 'medium',
-                value: '👩🏽‍👩🏽‍👦🏽‍👦🏽',
-                order: 4
-            },
-            {
-                skintone: 'medium-dark',
-                value: '👩🏾‍👩🏾‍👦🏾‍👦🏾',
-                order: 5
-            },
-            {
-                skintone: 'dark',
-                value: '👩🏿‍👩🏿‍👦🏿‍👦🏿',
-                order: 6
-            }
-        ]
+        order: 385
     },
     {
         id: 'family-woman-woman-girl-girl',
         name: 'family woman woman girl girl',
         value: '👩‍👩‍👧‍👧',
         category: 'smileys-people',
-        order: 386,
-        skintones: [
-            {
-                skintone: 'default',
-                value: '👩‍👩‍👧‍👧',
-                order: 1
-            },
-            {
-                skintone: 'light',
-                value: '👩🏻‍👩🏻‍👧🏻‍👧🏻',
-                order: 2
-            },
-            {
-                skintone: 'medium-light',
-                value: '👩🏼‍👩🏼‍👧🏼‍👧🏼',
-                order: 3
-            },
-            {
-                skintone: 'medium',
-                value: '👩🏽‍👩🏽‍👧🏽‍👧🏽',
-                order: 4
-            },
-            {
-                skintone: 'medium-dark',
-                value: '👩🏾‍👩🏾‍👧🏾‍👧🏾',
-                order: 5
-            },
-            {
-                skintone: 'dark',
-                value: '👩🏿‍👩🏿‍👧🏿‍👧🏿',
-                order: 6
-            }
-        ]
+        order: 386
     },
     {
         id: 'family-man-man-boy',
         name: 'family man man boy',
         value: '👨‍👨‍👦',
         category: 'smileys-people',
-        order: 387,
-        skintones: [
-            {
-                skintone: 'default',
-                value: '👨‍👨‍👦',
-                order: 1
-            },
-            {
-                skintone: 'light',
-                value: '👨🏻‍👨🏻‍👦🏻',
-                order: 2
-            },
-            {
-                skintone: 'medium-light',
-                value: '👨🏼‍👨🏼‍👦🏼',
-                order: 3
-            },
-            {
-                skintone: 'medium',
-                value: '👨🏽‍👨🏽‍👦🏽',
-                order: 4
-            },
-            {
-                skintone: 'medium-dark',
-                value: '👨🏾‍👨🏾‍👦🏾',
-                order: 5
-            },
-            {
-                skintone: 'dark',
-                value: '👨🏿‍👨🏿‍👦🏿',
-                order: 6
-            }
-        ]
+        order: 387
     },
     {
         id: 'family-man-man-girl',
         name: 'family man man girl',
         value: '👨‍👨‍👧',
         category: 'smileys-people',
-        order: 388,
-        skintones: [
-            {
-                skintone: 'default',
-                value: '👨‍👨‍👧',
-                order: 1
-            },
-            {
-                skintone: 'light',
-                value: '👨🏻‍👨🏻‍👧🏻',
-                order: 2
-            },
-            {
-                skintone: 'medium-light',
-                value: '👨🏼‍👨🏼‍👧🏼',
-                order: 3
-            },
-            {
-                skintone: 'medium',
-                value: '👨🏽‍👨🏽‍👧🏽',
-                order: 4
-            },
-            {
-                skintone: 'medium-dark',
-                value: '👨🏾‍👨🏾‍👧🏾',
-                order: 5
-            },
-            {
-                skintone: 'dark',
-                value: '👨🏿‍👨🏿‍👧🏿',
-                order: 6
-            }
-        ]
+        order: 388
     },
     {
         id: 'family-man-man-girl-boy',
         name: 'family man man girl boy',
         value: '👨‍👨‍👧‍👦',
         category: 'smileys-people',
-        order: 389,
-        skintones: [
-            {
-                skintone: 'default',
-                value: '👨‍👨‍👧‍👦',
-                order: 1
-            },
-            {
-                skintone: 'light',
-                value: '👨🏻‍👨🏻‍👧🏻‍👦🏻',
-                order: 2
-            },
-            {
-                skintone: 'medium-light',
-                value: '👨🏼‍👨🏼‍👧🏼‍👦🏼',
-                order: 3
-            },
-            {
-                skintone: 'medium',
-                value: '👨🏽‍👨🏽‍👧🏽‍👦🏽',
-                order: 4
-            },
-            {
-                skintone: 'medium-dark',
-                value: '👨🏾‍👨🏾‍👧🏾‍👦🏾',
-                order: 5
-            },
-            {
-                skintone: 'dark',
-                value: '👨🏿‍👨🏿‍👧🏿‍👦🏿',
-                order: 6
-            }
-        ]
+        order: 389
     },
     {
         id: 'family-man-man-boy-boy',
         name: 'family man man boy boy',
         value: '👨‍👨‍👦‍👦',
         category: 'smileys-people',
-        order: 390,
-        skintones: [
-            {
-                skintone: 'default',
-                value: '👨‍👨‍👦‍👦',
-                order: 1
-            },
-            {
-                skintone: 'light',
-                value: '👨🏻‍👨🏻‍👦🏻‍👦🏻',
-                order: 2
-            },
-            {
-                skintone: 'medium-light',
-                value: '👨🏼‍👨🏼‍👦🏼‍👦🏼',
-                order: 3
-            },
-            {
-                skintone: 'medium',
-                value: '👨🏽‍👨🏽‍👦🏽‍👦🏽',
-                order: 4
-            },
-            {
-                skintone: 'medium-dark',
-                value: '👨🏾‍👨🏾‍👦🏾‍👦🏾',
-                order: 5
-            },
-            {
-                skintone: 'dark',
-                value: '👨🏿‍👨🏿‍👦🏿‍👦🏿',
-                order: 6
-            }
-        ]
+        order: 390
     },
     {
         id: 'family-man-man-girl-girl',
         name: 'family man man girl girl',
         value: '👨‍👨‍👧‍👧',
         category: 'smileys-people',
-        order: 391,
-        skintones: [
-            {
-                skintone: 'default',
-                value: '👨‍👨‍👧‍👧',
-                order: 1
-            },
-            {
-                skintone: 'light',
-                value: '👨🏻‍👨🏻‍👧🏻‍👧🏻',
-                order: 2
-            },
-            {
-                skintone: 'medium-light',
-                value: '👨🏼‍👨🏼‍👧🏼‍👧🏼',
-                order: 3
-            },
-            {
-                skintone: 'medium',
-                value: '👨🏽‍👨🏽‍👧🏽‍👧🏽',
-                order: 4
-            },
-            {
-                skintone: 'medium-dark',
-                value: '👨🏾‍👨🏾‍👧🏾‍👧🏾',
-                order: 5
-            },
-            {
-                skintone: 'dark',
-                value: '👨🏿‍👨🏿‍👧🏿‍👧🏿',
-                order: 6
-            }
-        ]
+        order: 391
     },
     {
         id: 'woman-and-boy',
         name: 'woman and boy',
         value: '👩‍👦',
         category: 'smileys-people',
-        order: 392,
-        skintones: [
-            {
-                skintone: 'default',
-                value: '👩‍👦',
-                order: 1
-            },
-            {
-                skintone: 'light',
-                value: '👩🏻‍👦',
-                order: 2
-            },
-            {
-                skintone: 'medium-light',
-                value: '👩🏼‍👦',
-                order: 3
-            },
-            {
-                skintone: 'medium',
-                value: '👩🏽‍👦',
-                order: 4
-            },
-            {
-                skintone: 'medium-dark',
-                value: '👩🏾‍👦',
-                order: 5
-            },
-            {
-                skintone: 'dark',
-                value: '👩🏿‍👦',
-                order: 6
-            }
-        ]
+        order: 392
     },
     {
         id: 'woman-and-girl',
         name: 'woman and girl',
         value: '👩‍👧',
         category: 'smileys-people',
-        order: 393,
-        skintones: [
-            {
-                skintone: 'default',
-                value: '👩‍👧',
-                order: 1
-            },
-            {
-                skintone: 'light',
-                value: '👩🏻‍👧',
-                order: 2
-            },
-            {
-                skintone: 'medium-light',
-                value: '👩🏼‍👧',
-                order: 3
-            },
-            {
-                skintone: 'medium',
-                value: '👩🏽‍👧',
-                order: 4
-            },
-            {
-                skintone: 'medium-dark',
-                value: '👩🏾‍👧',
-                order: 5
-            },
-            {
-                skintone: 'dark',
-                value: '👩🏿‍👧',
-                order: 6
-            }
-        ]
+        order: 393
     },
     {
         id: 'woman,-girl-and-boy',
         name: 'woman, girl and boy',
         value: '👩‍👧‍👦',
         category: 'smileys-people',
-        order: 394,
-        skintones: [
-            {
-                skintone: 'default',
-                value: '👩‍👧‍👦',
-                order: 1
-            },
-            {
-                skintone: 'light',
-                value: '👩🏻‍👧🏻‍👦🏻',
-                order: 2
-            },
-            {
-                skintone: 'medium-light',
-                value: '👩🏼‍👧🏼‍👦🏼',
-                order: 3
-            },
-            {
-                skintone: 'medium',
-                value: '👩🏽‍👧🏽‍👦🏽',
-                order: 4
-            },
-            {
-                skintone: 'medium-dark',
-                value: '👩🏾‍👧🏾‍👦🏾',
-                order: 5
-            },
-            {
-                skintone: 'dark',
-                value: '👩🏿‍👧🏿‍👦🏿',
-                order: 6
-            }
-        ]
+        order: 394
     },
     {
         id: 'woman-and-two-boys',
         name: 'woman and two boys',
         value: '👩‍👦‍👦',
         category: 'smileys-people',
-        order: 395,
-        skintones: [
-            {
-                skintone: 'default',
-                value: '👩‍👦‍👦',
-                order: 1
-            },
-            {
-                skintone: 'light',
-                value: '👩🏻‍👦🏻‍👦🏻',
-                order: 2
-            },
-            {
-                skintone: 'medium-light',
-                value: '👩🏼‍👦🏼‍👦🏼',
-                order: 3
-            },
-            {
-                skintone: 'medium',
-                value: '👩🏽‍👦🏽‍👦🏽',
-                order: 4
-            },
-            {
-                skintone: 'medium-dark',
-                value: '👩🏾‍👦🏾‍👦🏾',
-                order: 5
-            },
-            {
-                skintone: 'dark',
-                value: '👩🏿‍👦🏿‍👦🏿',
-                order: 6
-            }
-        ]
+        order: 395
     },
     {
         id: 'woman-and-two-girls',
         name: 'woman and two girls',
         value: '👩‍👧‍👧',
         category: 'smileys-people',
-        order: 396,
-        skintones: [
-            {
-                skintone: 'default',
-                value: '👩‍👧‍👧',
-                order: 1
-            },
-            {
-                skintone: 'light',
-                value: '👩🏻‍👧🏻‍👧🏻',
-                order: 2
-            },
-            {
-                skintone: 'medium-light',
-                value: '👩🏼‍👧🏼‍👧🏼',
-                order: 3
-            },
-            {
-                skintone: 'medium',
-                value: '👩🏽‍👧🏽‍👧🏽',
-                order: 4
-            },
-            {
-                skintone: 'medium-dark',
-                value: '👩🏾‍👧🏾‍👧🏾',
-                order: 5
-            },
-            {
-                skintone: 'dark',
-                value: '👩🏿‍👧🏿‍👧🏿',
-                order: 6
-            }
-        ]
+        order: 396
     },
     {
         id: 'man-and-boy',
         name: 'man and boy',
         value: '👨‍👦',
         category: 'smileys-people',
-        order: 397,
-        skintones: [
-            {
-                skintone: 'default',
-                value: '👨‍👦',
-                order: 1
-            },
-            {
-                skintone: 'light',
-                value: '👨🏻‍👦',
-                order: 2
-            },
-            {
-                skintone: 'medium-light',
-                value: '👨🏼‍👦',
-                order: 3
-            },
-            {
-                skintone: 'medium',
-                value: '👨🏽‍👦',
-                order: 4
-            },
-            {
-                skintone: 'medium-dark',
-                value: '👨🏾‍👦',
-                order: 5
-            },
-            {
-                skintone: 'dark',
-                value: '👨🏿‍👦',
-                order: 6
-            }
-        ]
+        order: 397
     },
     {
         id: 'man-and-girl',
         name: 'man and girl',
         value: '👨‍👧',
         category: 'smileys-people',
-        order: 398,
-        skintones: [
-            {
-                skintone: 'default',
-                value: '👨‍👧',
-                order: 1
-            },
-            {
-                skintone: 'light',
-                value: '👨🏻‍👧',
-                order: 2
-            },
-            {
-                skintone: 'medium-light',
-                value: '👨🏼‍👧',
-                order: 3
-            },
-            {
-                skintone: 'medium',
-                value: '👨🏽‍👧',
-                order: 4
-            },
-            {
-                skintone: 'medium-dark',
-                value: '👨🏾‍👧',
-                order: 5
-            },
-            {
-                skintone: 'dark',
-                value: '👨🏿‍👧',
-                order: 6
-            }
-        ]
+        order: 398
     },
     {
         id: 'man,-girl-and-boy',
         name: 'man, girl and boy',
         value: '👨‍👧‍👦',
         category: 'smileys-people',
-        order: 399,
-        skintones: [
-            {
-                skintone: 'default',
-                value: '👨‍👧‍👦',
-                order: 1
-            },
-            {
-                skintone: 'light',
-                value: '👨🏻‍👧🏻‍👦🏻',
-                order: 2
-            },
-            {
-                skintone: 'medium-light',
-                value: '👨🏼‍👧🏼‍👦🏼',
-                order: 3
-            },
-            {
-                skintone: 'medium',
-                value: '👨🏽‍👧🏽‍👦🏽',
-                order: 4
-            },
-            {
-                skintone: 'medium-dark',
-                value: '👨🏾‍👧🏾‍👦🏾',
-                order: 5
-            },
-            {
-                skintone: 'dark',
-                value: '👨🏿‍👧🏿‍👦🏿',
-                order: 6
-            }
-        ]
+        order: 399
     },
     {
         id: 'man-and-two-boys',
         name: 'man and two boys',
         value: '👨‍👦‍👦',
         category: 'smileys-people',
-        order: 400,
-        skintones: [
-            {
-                skintone: 'default',
-                value: '👨‍👦‍👦',
-                order: 1
-            },
-            {
-                skintone: 'light',
-                value: '👨🏻‍👦🏻‍👦🏻',
-                order: 2
-            },
-            {
-                skintone: 'medium-light',
-                value: '👨🏼‍👦🏼‍👦🏼',
-                order: 3
-            },
-            {
-                skintone: 'medium',
-                value: '👨🏽‍👦🏽‍👦🏽',
-                order: 4
-            },
-            {
-                skintone: 'medium-dark',
-                value: '👨🏾‍👦🏾‍👦🏾',
-                order: 5
-            },
-            {
-                skintone: 'dark',
-                value: '👨🏿‍👦🏿‍👦🏿',
-                order: 6
-            }
-        ]
+        order: 400
     },
     {
         id: 'man-and-two-girls',
         name: 'man and two girls',
         value: '👨‍👧‍👧',
         category: 'smileys-people',
-        order: 401,
-        skintones: [
-            {
-                skintone: 'default',
-                value: '👨‍👧‍👧',
-                order: 1
-            },
-            {
-                skintone: 'light',
-                value: '👨🏻‍👧🏻‍👧🏻',
-                order: 2
-            },
-            {
-                skintone: 'medium-light',
-                value: '👨🏼‍👧🏼‍👧🏼',
-                order: 3
-            },
-            {
-                skintone: 'medium',
-                value: '👨🏽‍👧🏽‍👧🏽',
-                order: 4
-            },
-            {
-                skintone: 'medium-dark',
-                value: '👨🏾‍👧🏾‍👧🏾',
-                order: 5
-            },
-            {
-                skintone: 'dark',
-                value: '👨🏿‍👧🏿‍👧🏿',
-                order: 6
-            }
-        ]
+        order: 401
     },
     {
         id: 'knot',
