@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component, computed, effect, ElementRef, HostBinding, inject, Input, input, model, OnDestroy, OnInit, output, Renderer2, signal, viewChild } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, effect, ElementRef, HostBinding, inject, Input, input, OnDestroy, OnInit, output, Renderer2, signal, viewChild } from '@angular/core';
 
 import { takeUntilDestroyed, toObservable, toSignal } from '@angular/core/rxjs-interop';
 
@@ -142,7 +142,7 @@ export class EmojiPickerComponent implements OnInit, OnDestroy {
 
     searchValue = signal<string>('');
 
-    isSkintoneDialogVisible = model<boolean>(false);
+    isSkintoneDialogVisible = signal<boolean>(false);
 
     targetElement?: HTMLElement;
 

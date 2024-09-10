@@ -1,4 +1,4 @@
-import { OverlayRef } from '@angular/cdk/overlay';
+import { ConnectedPosition, OverlayRef } from '@angular/cdk/overlay';
 import { CommonModule } from '@angular/common';
 import { Component, ElementRef, signal, viewChild } from '@angular/core';
 import { ButtonComponent } from '@chit-chat/ngx-emoji-picker/lib/components/button';
@@ -17,6 +17,16 @@ export class DialogBasicComponent {
     emojiPickerComponent = viewChild(EmojiPickerComponent);
 
     visible = signal<boolean>(false);
+
+    dialogPositions: ConnectedPosition[] = [
+        {
+            originX: 'center',
+            originY: 'top',
+            overlayX: 'center',
+            overlayY: 'bottom',
+            offsetY: -5
+        }
+    ];
 
     handleOnOpened = (_ref: OverlayRef) => {
         setTimeout(() => this.emojiPickerComponent()?.refreshViewport());
