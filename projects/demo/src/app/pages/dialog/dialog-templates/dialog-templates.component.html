@@ -1,7 +1,5 @@
 <div [style.height.px]="400" class="showcase-container row-showcase justify-center align-center">
-    <div class="align-bottom">
-        <ch-button label="Show" (onClick)="handleClick($event)"></ch-button>
-    </div>
+    <ch-button label="Show" (onClick)="handleClick($event)"></ch-button>
 </div>
 
 <ch-dialog [(visible)]="visible" [width]="350" [closeOnBackdropClick]="false">
