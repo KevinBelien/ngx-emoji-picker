@@ -25,7 +25,6 @@ import { DialogScrollStrategy } from './models';
 export class DialogComponent implements OnDestroy {
     private overlay = inject(Overlay);
     private portal = viewChild(CdkPortal);
-    private elementRef = inject(ElementRef);
 
     /**
      * Specifies if popup is visible.

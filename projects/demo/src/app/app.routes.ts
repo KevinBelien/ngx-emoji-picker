@@ -68,6 +68,11 @@ export const routes: Routes = [
         loadComponent: () => import('./pages/dialog/dialog-basic/dialog-basic.component').then((c) => c.DialogBasicComponent),
         pathMatch: 'full'
     },
+    {
+        path: 'dialog-templates',
+        loadComponent: () => import('./pages/dialog/dialog-templates/dialog-templates.component').then((c) => c.DialogTemplatesComponent),
+        pathMatch: 'full'
+    },
 
     {
         path: 'emoji-picker',
