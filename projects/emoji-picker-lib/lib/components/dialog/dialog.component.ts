@@ -1,9 +1,9 @@
 import { ConnectedPosition, Overlay, OverlayRef, PositionStrategy, ScrollStrategy } from '@angular/cdk/overlay';
 import { CdkPortal } from '@angular/cdk/portal';
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component, computed, ElementRef, inject, input, model, OnDestroy, output, Renderer2, signal, viewChild, ViewEncapsulation } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, ElementRef, inject, input, model, OnDestroy, output, signal, viewChild, ViewEncapsulation } from '@angular/core';
 import { takeUntilDestroyed, toObservable } from '@angular/core/rxjs-interop';
-import { filter } from 'rxjs';
+import { filter, fromEvent, switchMap, tap, timer } from 'rxjs';
 import { DialogScrollStrategy } from './models';
 
 /**
@@ -24,9 +24,8 @@ import { DialogScrollStrategy } from './models';
 })
 export class DialogComponent implements OnDestroy {
     private overlay = inject(Overlay);
-    private renderer = inject(Renderer2);
-
     private portal = viewChild(CdkPortal);
+    private elementRef = inject(ElementRef);
 
     /**
      * Specifies if popup is visible.
@@ -122,9 +121,6 @@ export class DialogComponent implements OnDestroy {
 
     private dialogRef?: OverlayRef;
 
-    touchEndListener: () => void;
-    touchStartListener: () => void;
-
     constructor() {
         toObservable(this.visible)
             .pipe(takeUntilDestroyed())
@@ -134,22 +130,29 @@ export class DialogComponent implements OnDestroy {
                 } else this.disposeDialogRef();
             });
 
-        this.touchStartListener = this.renderer.listen('window', 'touchstart', (_event: TouchEvent) => {
-            if (!this.visible()) {
-                this.isTouchStillInProgressAfterOpen.set(true);
-            }
-        });
-        this.touchEndListener = this.renderer.listen('window', 'touchend', (_event: TouchEvent) => {
-            setTimeout(() => this.isTouchStillInProgressAfterOpen.set(false), 100);
-        });
+        this.trackTouchInProgressDuringDialogOpen();
     }
 
     ngOnDestroy(): void {
         this.close();
-        this.touchStartListener();
-        this.touchEndListener();
     }
 
+    private trackTouchInProgressDuringDialogOpen = () => {
+        fromEvent<TouchEvent>(window, 'touchstart')
+            .pipe(
+                filter(() => !this.visible()),
+                tap(() => this.isTouchStillInProgressAfterOpen.set(true)),
+                switchMap(() =>
+                    fromEvent<TouchEvent>(window, 'touchend').pipe(
+                        switchMap(() => timer(100)),
+                        tap(() => {
+                            this.isTouchStillInProgressAfterOpen.set(false);
+                        })
+                    )
+                )
+            )
+            .subscribe();
+    };
     private open = (targetElement?: HTMLElement) => {
         const positionStrategy = this.handleDialogPositionStrategy(targetElement);
 

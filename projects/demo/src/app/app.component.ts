@@ -24,5 +24,7 @@ export class AppComponent {
                 document.documentElement.setAttribute('data-theme', theme);
             }
         });
+
+        // document.documentElement.setAttribute('data-theme', 'dark');
     }
 }

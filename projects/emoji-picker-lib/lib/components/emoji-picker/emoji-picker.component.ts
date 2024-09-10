@@ -401,7 +401,7 @@ export class EmojiPickerComponent implements OnInit, OnDestroy {
     };
 
     /**
-     * Navigate to the first category of the emoji picker
+     * Navigate to the first emoji of the first category of the emoji picker
      * @group Method
      */
     navigateToStart = () => {

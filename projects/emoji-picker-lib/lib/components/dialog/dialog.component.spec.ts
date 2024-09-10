@@ -238,4 +238,37 @@ describe('DialogComponent', () => {
         const strategy = component['getOverlayScrollStrategy'](fixture.componentInstance.scrollStrategy);
         expect(strategy).toBeInstanceOf(BlockScrollStrategy);
     });
+
+    it('should not close the dialog on backdrop click during touch hold', fakeAsync(() => {
+        const closeSpy = jest.spyOn(component, 'close');
+
+        const touchStartEvent = new TouchEvent('touchstart');
+        window.dispatchEvent(touchStartEvent);
+        fixture.detectChanges();
+
+        // Set dialog to be visible
+        fixture.componentInstance.isVisible = true;
+        fixture.detectChanges();
+        tick();
+
+        const dialogRef = component['dialogRef'];
+        expect(dialogRef!.hasAttached()).toBe(true);
+
+        expect(component.isTouchStillInProgressAfterOpen()).toBe(true);
+
+        const backdrop = overlayContainerElement.querySelector('.cdk-overlay-backdrop') as HTMLElement;
+        backdrop.click();
+        fixture.detectChanges();
+        tick();
+
+        expect(closeSpy).not.toHaveBeenCalled();
+        expect(dialogRef!.hasAttached()).toBe(true);
+
+        const touchEndEvent = new TouchEvent('touchend');
+        window.dispatchEvent(touchEndEvent);
+        tick(400);
+        fixture.detectChanges();
+
+        expect(component.isTouchStillInProgressAfterOpen()).toBe(false);
+    }));
 });
