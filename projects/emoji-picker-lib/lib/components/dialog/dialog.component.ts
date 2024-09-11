@@ -1,3 +1,4 @@
+import { CdkDrag, CdkDragHandle } from '@angular/cdk/drag-drop';
 import { ConnectedPosition, Overlay, OverlayRef, PositionStrategy, ScrollStrategy } from '@angular/cdk/overlay';
 import { CdkPortal } from '@angular/cdk/portal';
 import { CommonModule } from '@angular/common';
@@ -13,7 +14,7 @@ import { DialogScrollStrategy } from './models';
 @Component({
     selector: 'ch-dialog',
     standalone: true,
-    imports: [CommonModule, CdkPortal],
+    imports: [CommonModule, CdkPortal, CdkDrag, CdkDragHandle],
     templateUrl: './dialog.component.html',
     styleUrl: './dialog.component.scss',
     encapsulation: ViewEncapsulation.None,
@@ -101,6 +102,13 @@ export class DialogComponent implements OnDestroy {
      * @default 'block'
      */
     scrollStrategy = input<DialogScrollStrategy>('block');
+
+    /**
+     * Specifies if the dialog can be dragged around the screen.
+     * @group Props
+     * @default false
+     */
+    dragEnabled = input<boolean>(false);
 
     isTouchStillInProgressAfterOpen = signal<boolean>(false);
 

@@ -1,6 +1,6 @@
 <ng-template cdkPortal>
-    <div class="ch-dialog" [ngClass]="cssClass()" [style.height]="dimensions().height" [style.width]="dimensions().width">
-        <div class="ch-dialog-header">
+    <div cdkDrag [cdkDragDisabled]="!dragEnabled()" class="ch-dialog" [ngClass]="cssClass()" [style.height]="dimensions().height" [style.width]="dimensions().width">
+        <div class="ch-dialog-header" [ngClass]="{ 'ch-draggable': dragEnabled() }" cdkDragHandle>
             <ng-content select="[header]"></ng-content>
         </div>
         <div class="ch-dialog-content ch-scroll-viewport">

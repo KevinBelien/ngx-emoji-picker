@@ -79,6 +79,12 @@ export const routes: Routes = [
         pathMatch: 'full'
     },
     {
+        path: 'dialog-draggable',
+        loadComponent: () => import('./pages/dialog/dialog-draggable/dialog-draggable.component').then((c) => c.DialogDraggableComponent),
+        pathMatch: 'full'
+    },
+
+    {
         path: 'dialog-scroll',
         loadComponent: () => import('./pages/dialog/dialog-scroll/dialog-scroll.component').then((c) => c.DialogScrollComponent),
         pathMatch: 'full'

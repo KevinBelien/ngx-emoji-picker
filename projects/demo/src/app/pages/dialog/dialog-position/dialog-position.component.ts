@@ -1,6 +1,6 @@
 import { ConnectedPosition } from '@angular/cdk/overlay';
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { ButtonComponent } from '@chit-chat/ngx-emoji-picker/lib/components/button';
 import { DialogComponent } from '@chit-chat/ngx-emoji-picker/lib/components/dialog';
 
@@ -9,8 +9,7 @@ import { DialogComponent } from '@chit-chat/ngx-emoji-picker/lib/components/dial
     standalone: true,
     imports: [CommonModule, DialogComponent, ButtonComponent],
     templateUrl: './dialog-position.component.html',
-    styleUrls: ['./dialog-position.component.scss'],
-    changeDetection: ChangeDetectionStrategy.OnPush
+    styleUrls: ['./dialog-position.component.scss']
 })
 export class DialogPositionComponent {
     positions: string[] = ['Top Left', 'Top', 'Top Right', 'Left', 'Center', 'Right', 'Bottom Left', 'Bottom', 'Bottom Right', 'Offset'];
@@ -20,7 +19,10 @@ export class DialogPositionComponent {
 
     handleClick = (position: string, target: ButtonComponent) => {
         this.target.set(target.getNativeElement());
-        this.dialogPositions.set(this.calculateDialogPositionConfig(position));
+
+        const dialogPosition = this.calculateDialogPositionConfig(position);
+        this.dialogPositions.set(dialogPosition);
+
         this.visible.set(true);
     };
 
