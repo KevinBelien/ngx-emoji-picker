@@ -73,12 +73,18 @@ export const routes: Routes = [
         loadComponent: () => import('./pages/dialog/dialog-templates/dialog-templates.component').then((c) => c.DialogTemplatesComponent),
         pathMatch: 'full'
     },
+    {
+        path: 'dialog-positions',
+        loadComponent: () => import('./pages/dialog/dialog-position/dialog-position.component').then((c) => c.DialogPositionComponent),
+        pathMatch: 'full'
+    },
 
     {
         path: 'emoji-picker',
         loadComponent: () => import('./pages/emoji-picker/emoji-picker-demo.component').then((c) => c.EmojiPickerDemoComponent),
         pathMatch: 'full'
     },
+
     {
         path: '**',
         redirectTo: 'home'

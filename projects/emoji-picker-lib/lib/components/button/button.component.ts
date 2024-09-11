@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component, computed, input, output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, ElementRef, inject, input, output } from '@angular/core';
 import { IconComponent } from '@chit-chat/ngx-emoji-picker/lib/components/icon';
 import { AutofocusDirective, RippleDirective } from '@chit-chat/ngx-emoji-picker/lib/utils';
 import { ButtonIconProps, ButtonShape, ButtonType } from './models';
@@ -24,6 +24,8 @@ import { ButtonFill } from './models/button-fill.type';
     }
 })
 export class ButtonComponent {
+    private elementRef = inject(ElementRef);
+
     /**
      * Text of the button.
      * @group Props
@@ -176,4 +178,10 @@ export class ButtonComponent {
     protected handleClick = (evt: MouseEvent) => {
         this.onClick.emit(evt);
     };
+
+    /**
+     * Get the native element of the button component
+     * @group Method
+     */
+    getNativeElement = (): HTMLElement => this.elementRef.nativeElement;
 }
