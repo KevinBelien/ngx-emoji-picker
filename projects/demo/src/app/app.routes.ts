@@ -78,6 +78,11 @@ export const routes: Routes = [
         loadComponent: () => import('./pages/dialog/dialog-position/dialog-position.component').then((c) => c.DialogPositionComponent),
         pathMatch: 'full'
     },
+    {
+        path: 'dialog-scroll',
+        loadComponent: () => import('./pages/dialog/dialog-scroll/dialog-scroll.component').then((c) => c.DialogScrollComponent),
+        pathMatch: 'full'
+    },
 
     {
         path: 'emoji-picker',

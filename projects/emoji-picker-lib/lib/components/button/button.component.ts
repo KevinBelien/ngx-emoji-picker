@@ -181,6 +181,7 @@ export class ButtonComponent {
 
     /**
      * Get the native element of the button component
+     * @Returns {HTMLElement}
      * @group Method
      */
     getNativeElement = (): HTMLElement => this.elementRef.nativeElement;
