@@ -7,4 +7,4 @@
 
 ### Website
 
-Visit the [Chit Chat Website](https://ngx-chitchat.netlify.app/docs/getting-started/installation) to get started!
+Visit the [Chit Chat Website](https://ngx-chitchat.netlify.app) to get started!
