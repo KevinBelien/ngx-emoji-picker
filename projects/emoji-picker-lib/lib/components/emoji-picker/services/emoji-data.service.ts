@@ -82,9 +82,32 @@ export class EmojiDataService {
      * @param {string} value - The new skintone value for the emoji.
      * @returns {void}
      */
-    updateEmojiSkintone = (emojiId: string, value: string): void => {
+    updateEmojiSkintoneInStorage = (emojiId: string, value: string): void => {
+        console.log(value);
         this.emojiStorageService.updateEmojiSkintone(emojiId, value);
         this.individualSkintones.set(this.emojiStorageService.fetchIndividualEmojisSkintones());
+    };
+
+    /**
+     * Updates the skintone for multiple emojis without changing in storage.
+     * @group Method
+     * @param {string} emojiId - The ID of the emoji to update.
+     * @param {string} value - The new skintone value for the emoji.
+     * @returns {void}
+     */
+    setEmojiSkintones = (data: IndividualEmojiSkintone[]) => {
+        this.individualSkintones.set(data);
+    };
+
+    /**
+     * Updates the skintone for multiple emojis without changing in storage.
+     * @group Method
+     * @param {string} emojiId - The ID of the emoji to update.
+     * @param {string} value - The new skintone value for the emoji.
+     * @returns {void}
+     */
+    updateEmojiSkintoneLocally = (data: IndividualEmojiSkintone) => {
+        this.individualSkintones.update((emojis) => [...emojis.filter((emoji) => emoji.emojiId !== data.emojiId), data]);
     };
 
     /**
@@ -251,9 +274,9 @@ export class EmojiDataService {
      * @param {Skintone} skintone - The global skintone to set.
      * @returns {void}
      */
-    setGlobalEmojiSkintone = (skintone: Skintone): void => {
-        this.emojiStorageService.updateGlobalSkintone(skintone);
-        this.globalSkintoneSetting.update(() => skintone);
+    setGlobalEmojiSkintone = (skintone: Skintone, allowSavingInStorage: boolean = true): void => {
+        if (allowSavingInStorage) this.emojiStorageService.updateGlobalSkintone(skintone);
+        this.globalSkintoneSetting.set(skintone);
     };
 
     /*

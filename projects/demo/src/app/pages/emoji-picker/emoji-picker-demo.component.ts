@@ -6,7 +6,19 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSliderModule } from '@angular/material/slider';
 
-import { CategoryBarPosition, Emoji, emojiCategories, EmojiCategory, EmojiPickerComponent, EmojiSizeOption, EmojiSuggestionMode, SkintoneSetting } from '@chit-chat/ngx-emoji-picker/lib/components/emoji-picker';
+import {
+    CategoryBarPosition,
+    emojiCategories,
+    EmojiCategory,
+    EmojiPickerComponent,
+    EmojiSelectedEvent,
+    EmojiSelectionSource,
+    EmojiSizeOption,
+    EmojiSuggestionMode,
+    IndividualEmojiSkintone,
+    Skintone,
+    SkintoneSetting
+} from '@chit-chat/ngx-emoji-picker/lib/components/emoji-picker';
 import { BehaviorSubject, combineLatest, debounceTime, of, switchMap } from 'rxjs';
 
 @Component({
@@ -39,6 +51,12 @@ export class EmojiPickerDemoComponent implements AfterViewInit {
 
     customEmojis = signal(['women-holding-hands']);
 
+    customGlobalSkintone: Skintone = 'light';
+    customIndividualSkintones: IndividualEmojiSkintone[] = [
+        { emojiId: 'heart-hands', emojiValue: '🫶🏿' },
+        { emojiId: 'open-hands', emojiValue: '👐🏼' }
+    ];
+
     width$ = new BehaviorSubject<number>(this.form.width);
     height$ = new BehaviorSubject<number>(this.form.height);
 
@@ -69,7 +87,14 @@ export class EmojiPickerDemoComponent implements AfterViewInit {
         this.height$.next(this.form.height);
     };
 
-    handleEmojisSelected = (emoji: Emoji) => {
-        this.customEmojis.update((previous) => [...previous, emoji.id]);
+    handleEmojisSelected = (evt: EmojiSelectedEvent) => {
+        this.customEmojis.update((previous) => [...previous, evt.emoji.id]);
+
+        if (evt.source === EmojiSelectionSource.EmojiSkintonePicker) this.customIndividualSkintones = [...this.customIndividualSkintones.filter((emoji) => emoji.emojiId !== evt.emoji.id), { emojiId: evt.emoji.id, emojiValue: evt.emoji.value }];
+    };
+
+    handleGlobalSkintoneChanged = (skintone: Skintone) => {
+        console.log('gets to skintone change');
+        this.customGlobalSkintone = skintone;
     };
 }

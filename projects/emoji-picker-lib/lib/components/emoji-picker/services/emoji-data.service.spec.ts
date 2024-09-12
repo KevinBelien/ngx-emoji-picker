@@ -146,7 +146,7 @@ describe('EmojiDataService', () => {
         const id = mockEmojis[1].id;
         const skintoneValue = '👍🏽';
 
-        service.updateEmojiSkintone(id, skintoneValue);
+        service.updateEmojiSkintoneInStorage(id, skintoneValue);
 
         expect(emojiStorageService.updateEmojiSkintone).toHaveBeenCalledWith(id, skintoneValue);
         expect(service.individualSkintones()).toEqual([]);

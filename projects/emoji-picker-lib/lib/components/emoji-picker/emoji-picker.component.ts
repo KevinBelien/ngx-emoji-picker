@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, computed, effect, ElementRef, HostBinding, inject, Input, input, OnDestroy, OnInit, output, Renderer2, signal, viewChild } from '@angular/core';
+import { StorageConfig } from './../../../../../dist/ngx-emoji-picker/lib/components/emoji-picker/models/emoji-storage-options.model.d';
 
 import { takeUntilDestroyed, toObservable, toSignal } from '@angular/core/rxjs-interop';
 
@@ -10,7 +11,7 @@ import { ClickActionType, ClickEvent, TouchHoldEvent } from '@chit-chat/ngx-emoj
 import { debounce, distinctUntilChanged, from, map, Observable, of, switchMap, timer } from 'rxjs';
 import { emojis } from './data';
 import { EmojiDataHelper } from './helpers';
-import { Emoji, emojiCategories, EmojiCategory, EmojiSizeOption, EmojiSuggestionsConfig, Skintone, SkintoneSetting } from './models';
+import { DefaultStorageOptions, Emoji, emojiCategories, EmojiCategory, EmojiSelectedEvent, EmojiSelectionSource, EmojiSizeOption, EmojiSuggestionMode, Skintone, SkintoneSetting } from './models';
 import { CategoryBarPosition } from './models/category-bar-position.model';
 import { FilteredEmojis } from './models/filtered-emojis.model';
 import { EmojiDataService, EmojiPickerService } from './services';
@@ -83,14 +84,14 @@ export class EmojiPickerComponent implements OnInit, OnDestroy {
      */
     emojiSize = input<EmojiSizeOption>('default');
 
+    suggestionMode = input<EmojiSuggestionMode>('recent');
+
     // /**
-    //  * Specifies the config for emoji suggestions.
+    //  * Specifies the options for storage of suggestion emojis and skintones.
     //  * @group Props
     //  * @default {mode: 'recent'}
     //  */
-    suggestionsConfig = input<EmojiSuggestionsConfig>({
-        mode: 'recent'
-    });
+    storageOptions = input<StorageConfig>();
 
     /**
      * Specifies the location of the category bar.
@@ -125,7 +126,14 @@ export class EmojiPickerComponent implements OnInit, OnDestroy {
      * @param {Emoji} emoji - selected emoji.
      * @group Outputs
      */
-    onEmojiSelected = output<Emoji>();
+    onEmojiSelected = output<EmojiSelectedEvent>();
+
+    /**
+     * Fires whenever the global skintone has changed
+     * @param {Skintone}
+     * @group Outputs
+     */
+    onGlobalSkintoneChanged = output<Skintone>();
 
     searchValue = signal<string>('');
 
@@ -161,29 +169,31 @@ export class EmojiPickerComponent implements OnInit, OnDestroy {
     });
 
     suggestionEmojis = computed(() => {
-        const suggestionsConfig = this.suggestionsConfig();
+        const storageOptions = this.storageOptions();
+        const suggestionMode = this.suggestionMode();
 
-        if (suggestionsConfig.storage === 'custom') {
-            const customEmojis: Emoji[] = this.emojiDataService.fetchEmojisByIds([...new Set(suggestionsConfig.emojis)]);
-            return { suggestionMode: suggestionsConfig.mode, emojis: customEmojis };
+        if (!storageOptions || !storageOptions.suggestionEmojis || storageOptions.suggestionEmojis.storage === 'localstorage') {
+            const suggestionConfig = storageOptions ? (storageOptions.suggestionEmojis as DefaultStorageOptions) : undefined;
+            const suggestionLimit = suggestionConfig?.limit || 50;
+            const categories = this.emojiCategories();
+            const recentEmojis = this.emojiDataService.recentEmojis();
+            const frequentEmojis = this.emojiDataService.frequentEmojis();
+
+            if (!categories.includes('suggestions')) return null;
+
+            return suggestionMode === 'recent'
+                ? {
+                      suggestionMode: suggestionMode,
+                      emojis: recentEmojis.slice(0, suggestionLimit)
+                  }
+                : {
+                      suggestionMode: suggestionMode,
+                      emojis: frequentEmojis.slice(0, suggestionLimit)
+                  };
         }
 
-        const suggestionLimit = suggestionsConfig.limit || 50;
-        const categories = this.emojiCategories();
-        const recentEmojis = this.emojiDataService.recentEmojis();
-        const frequentEmojis = this.emojiDataService.frequentEmojis();
-
-        if (!categories.includes('suggestions')) return null;
-
-        return suggestionsConfig.mode === 'recent'
-            ? {
-                  suggestionMode: suggestionsConfig.mode,
-                  emojis: recentEmojis.slice(0, suggestionLimit)
-              }
-            : {
-                  suggestionMode: suggestionsConfig.mode,
-                  emojis: frequentEmojis.slice(0, suggestionLimit)
-              };
+        const customEmojis: Emoji[] = this.emojiDataService.fetchEmojisByIds([...new Set(storageOptions.suggestionEmojis.value)]);
+        return { suggestionMode: suggestionMode, emojis: customEmojis };
     });
 
     filteredEmojis$: Observable<FilteredEmojis> = toObservable(this.searchValue).pipe(
@@ -231,12 +241,25 @@ export class EmojiPickerComponent implements OnInit, OnDestroy {
 
     noDataEmoji = computed(() => this.emojiDataService.emojiMap()?.get('person-shrugging')?.value ?? '🤷');
 
-    globalSkintone = this.emojiDataService.globalSkintoneSetting;
+    globalSkintone = computed((): Skintone => {
+        const storageConfig = this.storageOptions();
+        if (storageConfig && storageConfig.globalSkintone && storageConfig.globalSkintone.storage === 'custom') {
+            return storageConfig.globalSkintone.value;
+        }
+        return this.emojiDataService.globalSkintoneSetting();
+    });
 
     private pointerDownListener?: () => void;
 
     constructor() {
         effect(() => (this.padding = this.emojiPickerService.padding()));
+
+        toObservable(this.storageOptions)
+            .pipe(takeUntilDestroyed())
+            .subscribe((storageOptions) => {
+                if (storageOptions?.globalSkintone?.storage === 'custom') this.emojiDataService.setGlobalEmojiSkintone(storageOptions.globalSkintone.value, false);
+                if (storageOptions?.individualSkintones?.storage === 'custom') this.emojiDataService.setEmojiSkintones(storageOptions?.individualSkintones.value);
+            });
     }
 
     ngOnInit(): void {
@@ -312,7 +335,13 @@ export class EmojiPickerComponent implements OnInit, OnDestroy {
     };
 
     protected handleGlobalSkintoneChanged = (skintone: Skintone) => {
-        this.emojiDataService.setGlobalEmojiSkintone(skintone);
+        if (this.globalSkintone() === skintone) return;
+
+        const storageConfig = this.storageOptions();
+
+        const canSaveInStorage = !storageConfig || !storageConfig.globalSkintone || (storageConfig.globalSkintone.storage === 'localstorage' && storageConfig.globalSkintone.allowAutoSave !== false);
+        this.emojiDataService.setGlobalEmojiSkintone(skintone, canSaveInStorage);
+        this.onGlobalSkintoneChanged.emit(skintone);
     };
 
     private processEmojiSelection = (evt: ClickEvent) => {
@@ -327,7 +356,7 @@ export class EmojiPickerComponent implements OnInit, OnDestroy {
             this.emojiTouchHoldEventActive = false;
             return;
         }
-        this.selectEmoji(emoji);
+        this.selectEmoji(emoji, EmojiSelectionSource.EmojiPicker);
     };
 
     private shouldOpenSkintoneDialog(emoji: Emoji): boolean {
@@ -351,9 +380,15 @@ export class EmojiPickerComponent implements OnInit, OnDestroy {
     };
 
     private handleIndividualEmojiSkintoneChanged = (skintoneSetting: SkintoneSetting, emoji: Emoji, emojiValue: string): void => {
-        if (skintoneSetting === 'individual') this.emojiDataService.updateEmojiSkintone(emoji.id, emojiValue);
+        const storageConfig = this.storageOptions();
 
-        this.selectEmoji(Object.assign({ ...emoji }, { value: emojiValue }));
+        if (skintoneSetting === 'individual') {
+            if (!storageConfig || !storageConfig.individualSkintones || (storageConfig.individualSkintones?.storage === 'localstorage' && storageConfig.individualSkintones.allowAutoSave !== false))
+                this.emojiDataService.updateEmojiSkintoneInStorage(emoji.id, emojiValue);
+            else this.emojiDataService.updateEmojiSkintoneLocally({ emojiId: emoji.id, emojiValue });
+        }
+
+        this.selectEmoji(Object.assign({ ...emoji }, { value: emojiValue }), EmojiSelectionSource.EmojiSkintonePicker);
     };
 
     private openSkintoneDialog = (targetElement: HTMLElement, emoji: Emoji) => {
@@ -367,7 +402,7 @@ export class EmojiPickerComponent implements OnInit, OnDestroy {
      * @param {string} emojiId - The id of the emoji to be updated.
      * @group Method
      */
-    addEmojiToSuggestions = (emojiId: string) => {
+    saveSuggestionEmojiInStorage = (emojiId: string) => {
         this.emojiDataService.addEmojiToRecents(emojiId);
         this.emojiDataService.increaseEmojiFrequency(emojiId);
     };
@@ -377,12 +412,12 @@ export class EmojiPickerComponent implements OnInit, OnDestroy {
      * @param {Emoji} emoji - Emoji object.
      * @group Method
      */
-    selectEmoji = (emoji: Emoji) => {
-        const suggestionsConfig = this.suggestionsConfig();
-        if (suggestionsConfig.storage !== 'custom' && suggestionsConfig.autoUpdate !== false) {
-            this.addEmojiToSuggestions(emoji.id);
+    selectEmoji = (emoji: Emoji, source: EmojiSelectionSource = EmojiSelectionSource.NONE) => {
+        const suggestionOptions = this.storageOptions()?.suggestionEmojis;
+        if (!suggestionOptions || (suggestionOptions.storage === 'localstorage' && suggestionOptions.allowAutoSave !== false)) {
+            this.saveSuggestionEmojiInStorage(emoji.id);
         }
-        this.onEmojiSelected.emit(emoji);
+        this.onEmojiSelected.emit({ emoji, source });
     };
 
     /**

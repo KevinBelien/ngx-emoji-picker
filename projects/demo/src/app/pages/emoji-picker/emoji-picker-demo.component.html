@@ -26,11 +26,12 @@
                     [emojiSize]="form.emojiSize"
                     [emojiCategories]="form.categories"
                     [categoryBarPosition]="form.categoryBarPosition"
-                    [suggestionsConfig]="{ mode: form.suggestionMode }"
+                    [suggestionMode]="form.suggestionMode"
                     [skintoneSetting]="form.skintoneSettings"
                     [width]="size.width"
                     [height]="size.height"
                     (onEmojiSelected)="handleEmojisSelected($event)"
+                    (onGlobalSkintoneChanged)="handleGlobalSkintoneChanged($event)"
                 ></ch-emoji-picker
             ></ng-container>
         </div>
