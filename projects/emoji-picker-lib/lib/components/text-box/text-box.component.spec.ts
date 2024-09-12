@@ -63,7 +63,7 @@ describe('TextBox', () => {
         fixture.componentInstance.mode = 'search';
         fixture.detectChanges();
 
-        const searchIcon = fixture.debugElement.query(By.css('.ch-search-icon'));
+        const searchIcon = fixture.debugElement.queryAll(By.css('.ch-search-icon'));
         expect(searchIcon).not.toBeNull();
     });
 
