@@ -1,19 +1,57 @@
+import { Component } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { EmojiPickerComponent } from './emoji-picker.component';
-import { Emoji, SkintoneSetting } from './models';
+import { Emoji, EmojiSuggestionsConfig, SkintoneSetting } from './models';
 import { EmojiDataService } from './services';
+
+@Component({
+    template: ` <ch-emoji-picker [suggestionsConfig]="suggestionsConfig"></ch-emoji-picker> `,
+    standalone: true,
+    imports: [EmojiPickerComponent]
+})
+class TestHostComponent {
+    suggestionsConfig: EmojiSuggestionsConfig = { mode: 'recent' };
+}
+
+describe('EmojiPickerSuggestions', () => {
+    let fixture: ComponentFixture<TestHostComponent>;
+    let component: EmojiPickerComponent;
+    let emojiDataService: EmojiDataService;
+
+    beforeEach(async () => {
+        await TestBed.configureTestingModule({
+            imports: [TestHostComponent]
+        }).compileComponents();
+
+        fixture = TestBed.createComponent(TestHostComponent);
+
+        const debugElement = fixture.debugElement.query(By.directive(EmojiPickerComponent));
+        component = debugElement.componentInstance;
+
+        emojiDataService = TestBed.inject(EmojiDataService);
+
+        fixture.detectChanges();
+    });
+
+    it('should use custom suggested emojis when configured', () => {
+        fixture.componentInstance.suggestionsConfig = { mode: 'recent', storage: 'custom', emojis: ['women-holding-hands', 'men-holding-hands'] };
+        fixture.detectChanges();
+        const suggestionEmojis = component.suggestionEmojis();
+        expect(suggestionEmojis).not.toBeNull();
+        expect(suggestionEmojis!.suggestionMode).toBe('recent');
+        expect(suggestionEmojis!.emojis.map((emoji) => emoji.id)).toStrictEqual(['women-holding-hands', 'men-holding-hands']);
+    });
+});
 
 describe('EmojiPickerComponent', () => {
     let fixture: ComponentFixture<EmojiPickerComponent>;
     let component: EmojiPickerComponent;
-    let emojiDataService: EmojiDataService; // Real service instance
+    let emojiDataService: EmojiDataService;
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [
-                EmojiPickerComponent // Import the standalone component
-            ]
+            imports: [TestHostComponent]
         }).compileComponents();
 
         fixture = TestBed.createComponent(EmojiPickerComponent);

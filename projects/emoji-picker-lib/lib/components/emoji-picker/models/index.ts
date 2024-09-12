@@ -10,4 +10,5 @@ export * from './frequent-emoji.model';
 export * from './skin-tone.model';
 export * from './skintone-color.model';
 export * from './skintone-setting.model';
+export * from './emoji-suggestions-config.model';
 export * from './suggestion-emojis.model';

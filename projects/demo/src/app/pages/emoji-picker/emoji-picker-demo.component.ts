@@ -1,12 +1,12 @@
 import { CommonModule } from '@angular/common';
-import { AfterViewInit, Component } from '@angular/core';
+import { AfterViewInit, Component, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSliderModule } from '@angular/material/slider';
 
-import { CategoryBarPosition, emojiCategories, EmojiCategory, EmojiPickerComponent, EmojiSizeOption, EmojiSuggestionMode, SkintoneSetting } from '@chit-chat/ngx-emoji-picker/lib/components/emoji-picker';
+import { CategoryBarPosition, Emoji, emojiCategories, EmojiCategory, EmojiPickerComponent, EmojiSizeOption, EmojiSuggestionMode, SkintoneSetting } from '@chit-chat/ngx-emoji-picker/lib/components/emoji-picker';
 import { BehaviorSubject, combineLatest, debounceTime, of, switchMap } from 'rxjs';
 
 @Component({
@@ -37,6 +37,8 @@ export class EmojiPickerDemoComponent implements AfterViewInit {
         skintoneSettings: 'both'
     };
 
+    customEmojis = signal(['women-holding-hands']);
+
     width$ = new BehaviorSubject<number>(this.form.width);
     height$ = new BehaviorSubject<number>(this.form.height);
 
@@ -65,5 +67,9 @@ export class EmojiPickerDemoComponent implements AfterViewInit {
 
     handleHeightChange = () => {
         this.height$.next(this.form.height);
+    };
+
+    handleEmojisSelected = (emoji: Emoji) => {
+        this.customEmojis.update((previous) => [...previous, emoji.id]);
     };
 }

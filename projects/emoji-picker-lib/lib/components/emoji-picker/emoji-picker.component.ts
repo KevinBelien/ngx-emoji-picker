@@ -10,9 +10,8 @@ import { ClickActionType, ClickEvent, TouchHoldEvent } from '@chit-chat/ngx-emoj
 import { debounce, distinctUntilChanged, from, map, Observable, of, switchMap, timer } from 'rxjs';
 import { emojis } from './data';
 import { EmojiDataHelper } from './helpers';
-import { Emoji, emojiCategories, EmojiCategory, EmojiSizeOption, Skintone, SkintoneSetting } from './models';
+import { Emoji, emojiCategories, EmojiCategory, EmojiSizeOption, EmojiSuggestionsConfig, Skintone, SkintoneSetting } from './models';
 import { CategoryBarPosition } from './models/category-bar-position.model';
-import { EmojiSuggestionMode } from './models/emoji-suggestion-mode.model';
 import { FilteredEmojis } from './models/filtered-emojis.model';
 import { EmojiDataService, EmojiPickerService } from './services';
 import { EmojiFilterService } from './services/emoji-filter.service';
@@ -84,12 +83,14 @@ export class EmojiPickerComponent implements OnInit, OnDestroy {
      */
     emojiSize = input<EmojiSizeOption>('default');
 
-    /**
-     * Specifies the mode for displaying emoji suggestions in the picker.
-     * @group Props
-     * @default 'recent'
-     */
-    suggestionMode = input<EmojiSuggestionMode>('recent');
+    // /**
+    //  * Specifies the config for emoji suggestions.
+    //  * @group Props
+    //  * @default {mode: 'recent'}
+    //  */
+    suggestionsConfig = input<EmojiSuggestionsConfig>({
+        mode: 'recent'
+    });
 
     /**
      * Specifies the location of the category bar.
@@ -111,20 +112,6 @@ export class EmojiPickerComponent implements OnInit, OnDestroy {
      * @group Props
      */
     emojiCategories = input<EmojiCategory[]>([...emojiCategories]);
-
-    /**
-     * Specifies the maximum amount of suggestion emojis that will be shown in the emoji picker.
-     * @group Props
-     * @default 50
-     */
-    suggestionLimit = input<number>(50);
-
-    /**
-     * Specifies if suggestions will automatically be updated in storage.
-     * @group Props
-     * @default true
-     */
-    autoUpdateSuggestions = input<boolean>(true);
 
     /**
      * Specifies the approach for handling skintone variations within the emoji picker.
@@ -174,21 +161,27 @@ export class EmojiPickerComponent implements OnInit, OnDestroy {
     });
 
     suggestionEmojis = computed(() => {
-        const suggestionMode = this.suggestionMode();
-        const suggestionLimit = this.suggestionLimit();
+        const suggestionsConfig = this.suggestionsConfig();
+
+        if (suggestionsConfig.storage === 'custom') {
+            const customEmojis: Emoji[] = this.emojiDataService.fetchEmojisByIds([...new Set(suggestionsConfig.emojis)]);
+            return { suggestionMode: suggestionsConfig.mode, emojis: customEmojis };
+        }
+
+        const suggestionLimit = suggestionsConfig.limit || 50;
         const categories = this.emojiCategories();
         const recentEmojis = this.emojiDataService.recentEmojis();
         const frequentEmojis = this.emojiDataService.frequentEmojis();
 
         if (!categories.includes('suggestions')) return null;
 
-        return suggestionMode === 'recent'
+        return suggestionsConfig.mode === 'recent'
             ? {
-                  suggestionMode,
+                  suggestionMode: suggestionsConfig.mode,
                   emojis: recentEmojis.slice(0, suggestionLimit)
               }
             : {
-                  suggestionMode: suggestionMode,
+                  suggestionMode: suggestionsConfig.mode,
                   emojis: frequentEmojis.slice(0, suggestionLimit)
               };
     });
@@ -385,7 +378,8 @@ export class EmojiPickerComponent implements OnInit, OnDestroy {
      * @group Method
      */
     selectEmoji = (emoji: Emoji) => {
-        if (this.autoUpdateSuggestions()) {
+        const suggestionsConfig = this.suggestionsConfig();
+        if (suggestionsConfig.storage !== 'custom' && suggestionsConfig.autoUpdate !== false) {
             this.addEmojiToSuggestions(emoji.id);
         }
         this.onEmojiSelected.emit(emoji);
