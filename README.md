@@ -1,6 +1,9 @@
-<p align="center">
-    [![Chat Chat's Emoji picker](https://ngx-chitchat.netlify.app/img/library-preview.png)](https://ngx-chitchat.netlify.app)
-</p>
+
+<div align="center">
+  <a href="https://ngx-chitchat.netlify.app">
+    <img src="https://ngx-chitchat.netlify.app/img/library-preview.png" alt="Chit Chat's Emoji picker">
+  </a>
+</div>
 
 ### Website
 
