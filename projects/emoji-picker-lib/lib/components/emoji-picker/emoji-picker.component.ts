@@ -1,6 +1,5 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, computed, effect, ElementRef, HostBinding, inject, Input, input, OnDestroy, OnInit, output, Renderer2, signal, viewChild } from '@angular/core';
-import { StorageConfig } from './../../../../../dist/ngx-emoji-picker/lib/components/emoji-picker/models/emoji-storage-options.model.d';
 
 import { takeUntilDestroyed, toObservable, toSignal } from '@angular/core/rxjs-interop';
 
@@ -11,7 +10,7 @@ import { ClickActionType, ClickEvent, TouchHoldEvent } from '@chit-chat/ngx-emoj
 import { debounce, distinctUntilChanged, from, map, Observable, of, switchMap, timer } from 'rxjs';
 import { emojis } from './data';
 import { EmojiDataHelper } from './helpers';
-import { DefaultStorageOptions, Emoji, emojiCategories, EmojiCategory, EmojiSelectedEvent, EmojiSelectionSource, EmojiSizeOption, EmojiSuggestionMode, Skintone, SkintoneSetting } from './models';
+import { DefaultStorageOptions, Emoji, emojiCategories, EmojiCategory, EmojiSelectedEvent, EmojiSelectionSource, EmojiSizeOption, EmojiSuggestionMode, Skintone, SkintoneSetting, StorageConfig } from './models';
 import { CategoryBarPosition } from './models/category-bar-position.model';
 import { FilteredEmojis } from './models/filtered-emojis.model';
 import { EmojiDataService, EmojiPickerService } from './services';
