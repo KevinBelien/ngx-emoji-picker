@@ -94,7 +94,6 @@ export class EmojiPickerDemoComponent implements AfterViewInit {
     };
 
     handleGlobalSkintoneChanged = (skintone: Skintone) => {
-        console.log('gets to skintone change');
         this.customGlobalSkintone = skintone;
     };
 }

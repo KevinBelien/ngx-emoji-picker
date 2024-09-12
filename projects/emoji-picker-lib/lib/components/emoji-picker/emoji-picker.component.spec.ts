@@ -36,34 +36,6 @@ describe('EmojiPickerSuggestions', () => {
         fixture.detectChanges();
     });
 
-    // it('should update the suggestionEmojis when storageConfig changes', fakeAsync(() => {
-    //     // Set initial storageConfig and trigger change detection
-    //     fixture.componentInstance.storageConfig = {
-    //         suggestionEmojis: {
-    //             storage: 'localstorage',
-    //             limit: 50
-    //         }
-    //     };
-    //     fixture.detectChanges();
-    //     tick(); // Simulates the passage of time
-
-    //     // Modify the storageConfig to trigger the signal update
-    //     fixture.componentInstance.storageConfig = {
-    //         suggestionEmojis: {
-    //             storage: 'custom',
-    //             value: ['women-holding-hands', 'men-holding-hands']
-    //         }
-    //     };
-
-    //     fixture.detectChanges();
-    //     tick(); // Ensures that the computed signal has updated
-
-    //     const suggestionEmojis = component.suggestionEmojis();
-    //     console.log(suggestionEmojis);
-    //     expect(suggestionEmojis).not.toBeNull();
-    //     expect(suggestionEmojis!.emojis.map((emoji) => emoji.id)).toStrictEqual(['women-holding-hands', 'men-holding-hands']);
-    // }));
-
     it('should use custom suggested emojis when configured', () => {
         // Set storageConfig to trigger change detection and recomputation of the computed signal
         fixture.componentInstance.storageConfig = {

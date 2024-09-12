@@ -83,7 +83,6 @@ export class EmojiDataService {
      * @returns {void}
      */
     updateEmojiSkintoneInStorage = (emojiId: string, value: string): void => {
-        console.log(value);
         this.emojiStorageService.updateEmojiSkintone(emojiId, value);
         this.individualSkintones.set(this.emojiStorageService.fetchIndividualEmojisSkintones());
     };
