@@ -108,7 +108,7 @@ export class DialogComponent implements OnDestroy {
      * @group Props
      * @default false
      */
-    dragEnabled = input<boolean>(false);
+    dragEnabled = input<boolean>(true);
 
     isTouchStillInProgressAfterOpen = signal<boolean>(false);
 
