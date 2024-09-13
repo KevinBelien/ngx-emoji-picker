@@ -141,7 +141,7 @@ describe('EmojiPickerComponent', () => {
         expect(component.selectedEmoji()).toEqual(testEmoji);
 
         // Verify that the targetElement is set
-        expect(component.targetElement).toBe(mockTargetElement);
+        expect(component.skintoneDialogTarget).toBe(mockTargetElement);
 
         // Verify that isSkintoneDialogVisible is set to true
         expect(component.isSkintoneDialogVisible()).toBe(true);

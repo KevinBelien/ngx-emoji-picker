@@ -18,7 +18,7 @@ export class EmojiPickerService {
     /**
      * A signal representing the map of all emojis, organized by their ID.
      *
-     * @type {Signal<Map<string, Emoji>>}
+     * @type {WritableSignal<Map<string, Emoji>>}
      */
     emojiDataMap = this.dataService.emojiMap;
 
@@ -26,14 +26,14 @@ export class EmojiPickerService {
      * A signal representing the multiplier used to calculate the size of each emoji item.
      * This multiplier affects the number of emojis displayed per row.
      *
-     * @type {Signal<number>}
+     * @type {WritableSignal<number>}
      */
     emojiItemSizeMultiplier = signal<number>(1.5);
 
     /**
      * A signal representing the padding value (in pixels) used around the emoji container.
      *
-     * @type {Signal<number>}
+     * @type {WritableSignal<number>}
      */
     padding = signal<number>(6);
 

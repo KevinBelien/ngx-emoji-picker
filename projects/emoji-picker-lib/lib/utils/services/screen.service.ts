@@ -18,7 +18,7 @@ export class ScreenService {
     /**
      * A signal that represents the current breakpoint state, including the active breakpoint and status of all breakpoints.
      *
-     * @type {Signal<BreakpointState>}
+     * @type {WritableSignal<BreakpointState>}
      * @description This signal updates automatically when the screen size changes.
      */
     breakpointState: Signal<BreakpointState>;

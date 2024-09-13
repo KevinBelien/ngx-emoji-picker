@@ -90,11 +90,11 @@ export class EmojiPickerComponent implements OnInit, OnDestroy {
      */
     suggestionMode = input<EmojiSuggestionMode>('recent');
 
-    // /**
-    //  * Specifies the options for storage of suggestion emojis and skintones.
-    //  * @group Props
-    //  * @default {mode: 'recent'}
-    //  */
+    /**
+     * Specifies the options for storage of suggestion emojis and skintones.
+     * @group Props
+     * @default undefined
+     */
     storageOptions = input<StorageConfig>();
 
     /**
@@ -143,7 +143,7 @@ export class EmojiPickerComponent implements OnInit, OnDestroy {
 
     isSkintoneDialogVisible = signal<boolean>(false);
 
-    targetElement?: HTMLElement;
+    skintoneDialogTarget?: HTMLElement;
 
     selectedEmoji = signal<Emoji | null>(null);
 
@@ -173,17 +173,16 @@ export class EmojiPickerComponent implements OnInit, OnDestroy {
     });
 
     suggestionEmojis = computed(() => {
+        const categories = this.emojiCategories();
         const storageOptions = this.storageOptions();
         const suggestionMode = this.suggestionMode();
+        if (!categories.includes('suggestions')) return null;
 
         if (!storageOptions || !storageOptions.suggestionEmojis || storageOptions.suggestionEmojis.storage === 'localstorage') {
             const suggestionConfig = storageOptions ? (storageOptions.suggestionEmojis as DefaultStorageOptions) : undefined;
             const suggestionLimit = suggestionConfig?.limit || 50;
-            const categories = this.emojiCategories();
             const recentEmojis = this.emojiDataService.recentEmojis();
             const frequentEmojis = this.emojiDataService.frequentEmojis();
-
-            if (!categories.includes('suggestions')) return null;
 
             return suggestionMode === 'recent'
                 ? {
@@ -397,7 +396,7 @@ export class EmojiPickerComponent implements OnInit, OnDestroy {
 
     private openSkintoneDialog = (targetElement: HTMLElement, emoji: Emoji) => {
         this.selectedEmoji.set(emoji);
-        this.targetElement = targetElement;
+        this.skintoneDialogTarget = targetElement;
         this.isSkintoneDialogVisible.set(true);
     };
 

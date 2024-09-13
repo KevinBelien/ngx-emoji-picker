@@ -19,49 +19,49 @@ export class EmojiDataService {
     /**
      * A signal representing the list of recent emojis.
      *
-     * @type {Signal<Emoji[]>}
+     * @type {WritableSignal<Emoji[]>}
      */
     recentEmojis = signal<Emoji[]>([]);
 
     /**
      * A signal representing the list of frequently used emojis.
      *
-     * @type {Signal<Emoji[]>}
+     * @type {WritableSignal<Emoji[]>}
      */
     frequentEmojis = signal<Emoji[]>([]);
 
     /**
      * A signal representing the global skintone setting.
      *
-     * @type {Signal<Skintone>}
+     * @type {WritableSignal<Skintone>}
      */
     globalSkintoneSetting = signal<Skintone>('default');
 
     /**
      * A signal representing individual skintone settings for specific emojis.
      *
-     * @type {Signal<IndividualEmojiSkintone[]>}
+     * @type {WritableSignal<IndividualEmojiSkintone[]>}
      */
     individualSkintones = signal<IndividualEmojiSkintone[]>([]);
 
     /**
      * A signal representing the current skintone setting strategy (e.g., 'none', 'individual', 'global').
      *
-     * @type {Signal<SkintoneSetting>}
+     * @type {WritableSignal<SkintoneSetting>}
      */
     skintoneSetting = signal<SkintoneSetting>('none');
 
     /**
      * A signal representing the list of all available emojis.
      *
-     * @type {Signal<Emoji[]>}
+     * @type {WritableSignal<Emoji[]>}
      */
     emojis = signal<Emoji[]>([...emojis]);
 
     /**
      * A computed map of emojis by their ID, taking into account skintone settings.
      *
-     * @type {Signal<Map<string, Emoji>>}
+     * @type {WritableSignal<Map<string, Emoji>>}
      */
     emojiMap = computed((): Map<string, Emoji> => this.generateEmojiMap(this.emojis(), this.skintoneSetting(), this.globalSkintoneSetting(), this.individualSkintones()));
 
@@ -100,7 +100,7 @@ export class EmojiDataService {
     };
 
     /**
-     * Updates the skintone for a single emojis without saving to storage.
+     * Updates the skintone for a single emoji without saving to storage.
      * @group Method
      * @param {string} emojiId - The ID of the emoji to update.
      * @param {string} value - The new skintone value for the emoji.
