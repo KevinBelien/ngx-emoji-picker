@@ -76,7 +76,8 @@ export class EmojiDataService {
     }
 
     /**
-     * Updates the skintone for a specific emoji and persists the change in storage.
+     * Updates the skintone for a specific emoji and saves the change in storage.
+     * This method retrieves the updated skintones from storage and updates the local list of individual emoji skintones.
      * @group Method
      * @param {string} emojiId - The ID of the emoji to update.
      * @param {string} value - The new skintone value for the emoji.
@@ -88,7 +89,7 @@ export class EmojiDataService {
     };
 
     /**
-     * Updates the skintone for multiple emojis without changing in storage.
+     * Updates the skintone for multiple emojis without saving to storage.
      * @group Method
      * @param {string} emojiId - The ID of the emoji to update.
      * @param {string} value - The new skintone value for the emoji.
@@ -99,7 +100,7 @@ export class EmojiDataService {
     };
 
     /**
-     * Updates the skintone for multiple emojis without changing in storage.
+     * Updates the skintone for a single emojis without saving to storage.
      * @group Method
      * @param {string} emojiId - The ID of the emoji to update.
      * @param {string} value - The new skintone value for the emoji.
@@ -277,36 +278,4 @@ export class EmojiDataService {
         if (allowSavingInStorage) this.emojiStorageService.updateGlobalSkintone(skintone);
         this.globalSkintoneSetting.set(skintone);
     };
-
-    /*
-
-	getAllKeywords = (): any => {
-		const result: any = {};
-
-		emojis.forEach((emoji) => {
-			result[emoji.id] = [
-				emoji.keywords.map((keyword) => keyword.replaceAll('_', ' ')),
-				emoji.name,
-			].flat();
-		});
-
-		return result;
-	};
-
-
-	loseDuplicates = (): any => {
-		const obj: any = {};
-		Object.keys(deKeywordTranslations).forEach((key: string) => {
-			obj[key] = [
-				...new Set(
-					deKeywordTranslations[key].map((k: string) =>
-						k.toLowerCase()
-					)
-				),
-			];
-		});
-
-		return obj;
-	};
-	*/
 }
