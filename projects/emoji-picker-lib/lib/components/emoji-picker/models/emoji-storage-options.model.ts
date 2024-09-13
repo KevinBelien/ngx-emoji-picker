@@ -9,7 +9,6 @@ export interface StorageConfig {
 export type StorageOptions<T> = DefaultStorageOptions | CustomStorageOptions<T>;
 
 export interface DefaultStorageOptions {
-    limit?: number;
     allowAutoSave?: boolean;
     storage: 'localstorage';
 }

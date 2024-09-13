@@ -10,8 +10,9 @@ import { ClickActionType, ClickEvent, TouchHoldEvent } from '@chit-chat/ngx-emoj
 import { debounce, distinctUntilChanged, from, map, Observable, of, switchMap, timer } from 'rxjs';
 import { emojis } from './data';
 import { EmojiDataHelper } from './helpers';
-import { DefaultStorageOptions, Emoji, emojiCategories, EmojiCategory, EmojiSelectedEvent, EmojiSelectionSource, EmojiSizeOption, EmojiSuggestionMode, Skintone, SkintoneSetting, StorageConfig } from './models';
+import { Emoji, emojiCategories, EmojiCategory, EmojiSelectedEvent, EmojiSelectionSource, EmojiSizeOption, Skintone, SkintoneSetting, StorageConfig } from './models';
 import { CategoryBarPosition } from './models/category-bar-position.model';
+import { SuggestionConfig } from './models/emoji-suggestion-config.model';
 import { FilteredEmojis } from './models/filtered-emojis.model';
 import { EmojiDataService, EmojiPickerService } from './services';
 import { EmojiFilterService } from './services/emoji-filter.service';
@@ -88,7 +89,7 @@ export class EmojiPickerComponent implements OnInit, OnDestroy {
      * @group Props
      * @default 'recent'
      */
-    suggestionMode = input<EmojiSuggestionMode>('recent');
+    suggestionOptions = input<SuggestionConfig>({ mode: 'recent', limitToShow: 50 });
 
     /**
      * Specifies the options for storage of suggestion emojis and skintones.
@@ -175,28 +176,26 @@ export class EmojiPickerComponent implements OnInit, OnDestroy {
     suggestionEmojis = computed(() => {
         const categories = this.emojiCategories();
         const storageOptions = this.storageOptions();
-        const suggestionMode = this.suggestionMode();
+        const suggestionConfig = this.suggestionOptions();
         if (!categories.includes('suggestions')) return null;
 
         if (!storageOptions || !storageOptions.suggestionEmojis || storageOptions.suggestionEmojis.storage === 'localstorage') {
-            const suggestionConfig = storageOptions ? (storageOptions.suggestionEmojis as DefaultStorageOptions) : undefined;
-            const suggestionLimit = suggestionConfig?.limit || 50;
             const recentEmojis = this.emojiDataService.recentEmojis();
             const frequentEmojis = this.emojiDataService.frequentEmojis();
 
-            return suggestionMode === 'recent'
+            return suggestionConfig.mode === 'recent'
                 ? {
-                      suggestionMode: suggestionMode,
-                      emojis: recentEmojis.slice(0, suggestionLimit)
+                      suggestionMode: suggestionConfig.mode,
+                      emojis: recentEmojis.slice(0, suggestionConfig.limitToShow || 50)
                   }
                 : {
-                      suggestionMode: suggestionMode,
-                      emojis: frequentEmojis.slice(0, suggestionLimit)
+                      suggestionMode: suggestionConfig.mode,
+                      emojis: frequentEmojis.slice(0, suggestionConfig.limitToShow || 50)
                   };
         }
 
         const customEmojis: Emoji[] = this.emojiDataService.fetchEmojisByIds([...new Set(storageOptions.suggestionEmojis.value)]);
-        return { suggestionMode: suggestionMode, emojis: customEmojis };
+        return { suggestionMode: suggestionConfig.mode, emojis: customEmojis };
     });
 
     filteredEmojis$: Observable<FilteredEmojis> = toObservable(this.searchValue).pipe(
