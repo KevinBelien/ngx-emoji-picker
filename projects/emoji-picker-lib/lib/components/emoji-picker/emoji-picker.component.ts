@@ -85,9 +85,9 @@ export class EmojiPickerComponent implements OnInit, OnDestroy {
     emojiSize = input<EmojiSizeOption>('default');
 
     /**
-     * Specifies the mode for displaying emoji suggestions in the picker.
+     * Specifies the options for the suggestion emojis.
      * @group Props
-     * @default 'recent'
+     * @default {mode: 'recent', limitToShow: 50}
      */
     suggestionOptions = input<SuggestionConfig>({ mode: 'recent', limitToShow: 50 });
 
