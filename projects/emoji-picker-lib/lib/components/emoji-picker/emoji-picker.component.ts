@@ -77,6 +77,13 @@ export class EmojiPickerComponent implements OnInit, OnDestroy {
     width = 400;
 
     /**
+     * Determines whether the search bar should automatically receive focus upon rendering.
+     * @group Props
+     * @default 'default'
+     */
+    autofocus = input<boolean>(true);
+
+    /**
      * Specifies the display size of the emoji.
      * This will be used to determine the emoji size in pixels.
      * @group Props
