@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Emoji, Skintone } from '@chit-chat/ngx-emoji-picker/lib/components/emoji-picker';
-import { IndividualEmojiSkintone } from './../../../../../../emoji-picker-lib/lib/components/emoji-picker/models/skin-tone.model';
+import { Emoji, IndividualEmojiSkintone, Skintone } from '@chit-chat/ngx-emoji-picker/lib/components/emoji-picker';
 
 export const suggestionEmojis: string[] = ['heart-hands', 'pile-of-poo', 'clown-face', 'melting-face'];
 
