@@ -85,6 +85,13 @@ export class EmojiPickerComponent implements OnInit, OnDestroy {
     emojiSize = input<EmojiSizeOption>('default');
 
     /**
+     * Specifies wether the searchbar is visible.
+     * @group Props
+     * @default true
+     */
+    searchEnabled = input<boolean>(true);
+
+    /**
      * Specifies the options for the suggestion emojis.
      * @group Props
      * @default {mode: 'recent', limitToShow: 50}
@@ -414,7 +421,7 @@ export class EmojiPickerComponent implements OnInit, OnDestroy {
      * @param {Emoji} emoji - Emoji object.
      * @group Method
      */
-    selectEmoji = (emoji: Emoji, source: EmojiSelectionSource = EmojiSelectionSource.NONE) => {
+    selectEmoji = (emoji: Emoji, source: EmojiSelectionSource = EmojiSelectionSource.None) => {
         const suggestionOptions = this.storageOptions()?.suggestionEmojis;
         if (!suggestionOptions || (suggestionOptions.storage === 'localstorage' && suggestionOptions.allowAutoSave !== false)) {
             this.saveSuggestionEmojiInStorage(emoji.id);

@@ -1,0 +1,23 @@
+<div class="showcase-container row-showcase justify-center">
+    <div class="emoji-picker-container">
+        <ch-emoji-picker
+            [width]="350"
+            [height]="350"
+            [storageOptions]="storageConfig()"
+            [skintoneSetting]="skintoneSetting()"
+            (onEmojiSelected)="handleEmojiSelected($event)"
+            (onGlobalSkintoneChanged)="handleGlobalSkintoneChanged($event)"
+        ></ch-emoji-picker>
+    </div>
+
+    <div class="form">
+        <label>
+            <input type="radio" name="settingType" [(ngModel)]="skintoneSetting" value="global" />
+            Global skintone
+        </label>
+        <label>
+            <input type="radio" name="settingType" [(ngModel)]="skintoneSetting" value="individual" />
+            Individual skintones
+        </label>
+    </div>
+</div>

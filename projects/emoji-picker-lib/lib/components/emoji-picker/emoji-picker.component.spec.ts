@@ -168,4 +168,16 @@ describe('EmojiPickerComponent', () => {
 
         expect(selectEmojiSpy).toHaveBeenCalled();
     });
+
+    it('should emit onEmojiSelected when an emoji is selected', () => {
+        jest.spyOn(component.onEmojiSelected, 'emit');
+        const emoji: Emoji = { id: 'smile', value: '😄' } as Emoji;
+
+        component.selectEmoji(emoji);
+
+        expect(component.onEmojiSelected.emit).toHaveBeenCalledWith({
+            emoji,
+            source: 'none'
+        });
+    });
 });

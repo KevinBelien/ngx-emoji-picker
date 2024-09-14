@@ -1,0 +1,10 @@
+<div class="showcase-container flex-column">
+    <div class="row-showcase justify-center">
+        <div class="emoji-picker-container">
+            <ch-emoji-picker [width]="350" [height]="350" [autofocus]="false" (onEmojiSelected)="handleEmojiSelected($event)"></ch-emoji-picker>
+        </div>
+    </div>
+    <div class="row-showcase justify-center">
+        <ch-text-box [(value)]="inputValue" [width]="350" placeholder="Pick an emoji"></ch-text-box>
+    </div>
+</div>

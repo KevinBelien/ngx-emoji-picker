@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { AfterViewInit, ChangeDetectionStrategy, Component, computed, effect, ElementRef, forwardRef, HostListener, inject, input, model, OnDestroy, output, Renderer2, untracked } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, Component, computed, effect, ElementRef, forwardRef, HostBinding, HostListener, inject, Input, input, model, OnDestroy, output, Renderer2, untracked } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { ButtonComponent } from '@chit-chat/ngx-emoji-picker/lib/components/button';
 import { IconComponent } from '@chit-chat/ngx-emoji-picker/lib/components/icon';
@@ -42,6 +42,24 @@ export class TextBoxComponent implements ControlValueAccessor, AfterViewInit, On
      * @default ''
      */
     value = model<string>('');
+
+    /**
+     * Specifies the height of the textbox
+     * @group Props
+     * @default 'auto'
+     */
+    @Input()
+    @HostBinding('style.--ch-text-box-height')
+    height: string | number = 'auto';
+
+    /**
+     * Specifies the width of the textbox
+     * @group Props
+     * @default 'auto'
+     */
+    @Input()
+    @HostBinding('style.--ch-text-box-width')
+    width: string | number = 'auto';
 
     /**
      * Specifies whether the textbox should automatically receive focus when the page loads.

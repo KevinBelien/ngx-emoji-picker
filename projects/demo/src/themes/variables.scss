@@ -21,7 +21,7 @@
     --ch-editor-outlined-color: rgba(0, 0, 0, 0.2);
     --ch-editor-outlined-color-hover: rgba(0, 0, 0, 0.4);
 
-    --ch-border-color: #d5d5d5;
+    --ch-border-color: #d5d5d5a1;
 
     --ch-color-scroll: rgba(204, 204, 215, 0.8);
     --ch-color-scroll-hover: rgb(201, 201, 210);
@@ -29,8 +29,8 @@
     --ch-color-contrast: #1a1a1a;
     --ch-color-contrast-alter: #e9e9e9;
 
-    --ch-emoji-picker-background: #fff;
-    --ch-emoji-picker-tab-bar-background: #fff;
+    --ch-emoji-picker-background: rgba(250, 250, 255, 1);
+    // --ch-emoji-picker-tab-bar-background: #fff;
     --ch-skintone-picker-background: #fff;
     --ch-emoji-variant-indicator-color: #909090;
     --ch-emoji-variant-indicator-color-hover: #626262;

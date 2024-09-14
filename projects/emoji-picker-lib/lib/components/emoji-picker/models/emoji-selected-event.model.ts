@@ -8,5 +8,5 @@ export interface EmojiSelectedEvent {
 export enum EmojiSelectionSource {
     EmojiPicker = 'emojiPicker',
     EmojiSkintonePicker = 'emojiSkintonetonePicker',
-    NONE = 'none'
+    None = 'none'
 }

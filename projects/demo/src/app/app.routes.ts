@@ -95,6 +95,56 @@ export const routes: Routes = [
         loadComponent: () => import('./pages/emoji-picker/emoji-picker-demo.component').then((c) => c.EmojiPickerDemoComponent),
         pathMatch: 'full'
     },
+    {
+        path: 'emoji-picker-basic',
+        loadComponent: () => import('./pages/emoji-picker/emoji-picker-basic/emoji-picker-basic.component').then((c) => c.EmojiPickerBasicComponent),
+        pathMatch: 'full'
+    },
+    {
+        path: 'emoji-picker-dialog',
+        loadComponent: () => import('./pages/emoji-picker/emoji-picker-dialog/emoji-picker-dialog.component').then((c) => c.EmojiPickerDialogComponent),
+        pathMatch: 'full'
+    },
+    {
+        path: 'emoji-picker-categories',
+        loadComponent: () => import('./pages/emoji-picker/emoji-picker-categories/emoji-picker-categories.component').then((c) => c.EmojiPickerCategoriesComponent),
+        pathMatch: 'full'
+    },
+    {
+        path: 'emoji-picker-bar-position',
+        loadComponent: () => import('./pages/emoji-picker/emoji-picker-category-bar-position/emoji-picker-category-bar-position.component').then((c) => c.EmojiPickerCategoryBarPositionComponent),
+        pathMatch: 'full'
+    },
+    {
+        path: 'emoji-picker-custom-storage',
+        loadComponent: () => import('./pages/emoji-picker/emoji-picker-custom-storage/emoji-picker-custom-storage.component').then((c) => c.EmojiPickerCustomStorageComponent),
+        pathMatch: 'full'
+    },
+    {
+        path: 'emoji-picker-headerless',
+        loadComponent: () => import('./pages/emoji-picker/emoji-picker-headerless/emoji-picker-headerless.component').then((c) => c.EmojiPickerHeaderlessComponent),
+        pathMatch: 'full'
+    },
+    {
+        path: 'emoji-picker-localization',
+        loadComponent: () => import('./pages/emoji-picker/emoji-picker-localization/emoji-picker-localization.component').then((c) => c.EmojiPickerLocalizationComponent),
+        pathMatch: 'full'
+    },
+    {
+        path: 'emoji-picker-sizes',
+        loadComponent: () => import('./pages/emoji-picker/emoji-picker-sizes/emoji-picker-sizes.component').then((c) => c.EmojiPickerSizesComponent),
+        pathMatch: 'full'
+    },
+    {
+        path: 'emoji-picker-suggestions',
+        loadComponent: () => import('./pages/emoji-picker/emoji-picker-suggestions/emoji-picker-suggestions.component').then((c) => c.EmojiPickerSuggestionsComponent),
+        pathMatch: 'full'
+    },
+    {
+        path: 'emoji-picker-skintone-settings',
+        loadComponent: () => import('./pages/emoji-picker/emoji-picker-skintone-settings/emoji-picker-skintone-settings.component').then((c) => c.EmojiPickerSkintoneSettingsComponent),
+        pathMatch: 'full'
+    },
 
     {
         path: '**',

@@ -5,6 +5,7 @@ export * from './emoji-row-generation-config.type';
 export * from './emoji-selected-event.model';
 export * from './emoji-size.enum';
 export * from './emoji-storage-options.model';
+export * from './emoji-suggestion-config.model';
 export * from './emoji-suggestion-mode.model';
 export * from './emoji.model';
 export * from './filtered-emojis.model';
