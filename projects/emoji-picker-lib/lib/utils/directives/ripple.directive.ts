@@ -1,6 +1,5 @@
 import { DOCUMENT } from '@angular/common';
 import { AfterViewInit, Directive, ElementRef, Inject, input, OnDestroy, Renderer2 } from '@angular/core';
-
 /**
  * A directive that adds a ripple effect to an element when it is clicked or tapped.
  * The ripple effect is a visual feedback indicating the point of interaction.
@@ -53,13 +52,16 @@ export class RippleDirective implements AfterViewInit, OnDestroy {
         this.removeInkElement();
         this.inkElement = this.renderer.createElement('span');
         this.renderer.addClass(this.inkElement, 'ch-ink');
+        this.renderer.setStyle(this.inkElement, 'pointer-events', 'none'); // Prevent inkElement from capturing events
         this.renderer.appendChild(this.hostEl, this.inkElement);
         this.renderer.setAttribute(this.inkElement, 'aria-hidden', 'true');
         this.renderer.setAttribute(this.inkElement, 'role', 'presentation');
 
+        // Remove the inkElement after animation ends
         this.renderer.listen(this.inkElement, 'animationend', () => {
             if (this.inkElement) {
-                this.renderer.removeClass(this.inkElement, 'ch-ink-animate');
+                this.renderer.removeChild(this.hostEl, this.inkElement);
+                this.inkElement = undefined;
             }
         });
     }
@@ -82,11 +84,8 @@ export class RippleDirective implements AfterViewInit, OnDestroy {
         this.renderer.setStyle(this.inkElement, 'height', `${diameter}px`);
 
         const rect = this.hostEl.getBoundingClientRect();
-        const scrollLeft = this.document.documentElement.scrollLeft || this.document.body.scrollLeft;
-        const scrollTop = this.document.documentElement.scrollTop || this.document.body.scrollTop;
-
-        const x = evt.pageX - rect.left - scrollLeft - this.inkElement.offsetWidth / 2;
-        const y = evt.pageY - rect.top - scrollTop - this.inkElement.offsetHeight / 2;
+        const x = evt.clientX - rect.left - this.inkElement.offsetWidth / 2;
+        const y = evt.clientY - rect.top - this.inkElement.offsetHeight / 2;
 
         this.renderer.setStyle(this.inkElement, 'top', `${y}px`);
         this.renderer.setStyle(this.inkElement, 'left', `${x}px`);

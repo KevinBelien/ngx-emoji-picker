@@ -131,6 +131,7 @@ describe('TextBox', () => {
     });
 
     it('should not render the clear button when input has no value and showClearButton is true', () => {
+        componentInstance.value = '';
         componentInstance.showClearButton = true;
         fixture.detectChanges();
 
@@ -140,7 +141,7 @@ describe('TextBox', () => {
 
     it('should clear the input when the clear button is clicked', () => {
         fixture.componentInstance.value = 'ChitChat';
-        componentInstance.showClearButton = true;
+        fixture.componentInstance.showClearButton = true;
         fixture.detectChanges();
 
         const setValueSpy = jest.spyOn(textBoxComponent as any, 'setValue');
