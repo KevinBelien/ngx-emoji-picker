@@ -1,0 +1,11 @@
+<div [style.height.px]="450" class="showcase-container row-showcase justify-center">
+    <div class="align-bottom">
+        <ch-button label="Click me!" (onClick)="handleClick($event)"></ch-button>
+    </div>
+</div>
+
+<ch-dialog cssClass="emoji-picker-dialog" [(visible)]="visible" backdropClass="cdk-overlay-transparent-backdrop" [target]="buttonElement()?.nativeElement" [positions]="dialogPositions" (onOpened)="handleOnOpened($event)">
+    <ng-container content>
+        <ch-emoji-picker [height]="350" [width]="350"></ch-emoji-picker>
+    </ng-container>
+</ch-dialog>

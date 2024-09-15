@@ -1,0 +1,12 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, min-content);
+    row-gap: 1em;
+    column-gap: 2em;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-container ch-button:last-child {
+    grid-column: 2;
+}

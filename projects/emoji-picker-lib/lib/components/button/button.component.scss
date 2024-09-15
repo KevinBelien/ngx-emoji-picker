@@ -9,8 +9,8 @@
     }
 
     &:not(:disabled):not(.ch-hover-state-disabled):hover {
-        background-color: hsl(from var(--#{$color}, var(--#{$default-color})) h s calc(l - 10));
-        border-color: hsl(from var(--#{$color}, var(--#{$default-color})) h s calc(l - 10));
+        background-color: color-mix(in hsl, var(--#{$color}, var(--#{$default-color})) 100%, black 15%);
+        border-color: color-mix(in hsl, var(--#{$color}, var(--#{$default-color})) 100%, black 15%);
     }
 
     &:not(:disabled):not(.ch-focus-state-disabled):focus-visible {
@@ -20,8 +20,8 @@
     }
 
     &:not(:disabled):not(.ch-active-state-disabled):active {
-        background-color: hsl(from var(--#{$color}, var(--#{$default-color})) h s calc(l - 15));
-        border-color: hsl(from var(--#{$color}, var(--#{$default-color})) h s calc(l - 15));
+        background-color: color-mix(in hsl, var(--#{$color}, var(--#{$default-color})) 100%, black 20%);
+        border-color: color-mix(in hsl, var(--#{$color}, var(--#{$default-color})) 100%, black 20%);
     }
 }
 
@@ -78,15 +78,15 @@
     --ch-color-contrast-default: #1a1a1a;
     --ch-color-contrast-default-alter: #e9e9e9;
 
-    --ch-color-contrast-lighter: hsl(from var(--ch-color-contrast, var(--ch-color-contrast-default)) h s calc(l + 10));
-    --ch-color-contrast-lightest: hsl(from var(--ch-color-contrast, var(--ch-color-contrast-default)) h s calc(l + 15));
+    --ch-color-contrast-lighter: color-mix(in hsl, var(--ch-color-contrast) 100%, white 12%);
+    --ch-color-contrast-lightest: color-mix(in hsl, var(--ch-color-contrast) 100%, white 17%);
 
-    @media (prefers-color-scheme: dark) {
+    [data-theme='dark'] & {
         --ch-color-contrast-default: #e9e9e9;
         --ch-color-contrast-default-alter: #1a1a1a;
 
-        --ch-color-contrast-lighter: hsl(from var(--ch-color-contrast, var(--ch-color-contrast-default)) h s calc(l - 10));
-        --ch-color-contrast-lightest: hsl(from var(--ch-color-contrast, var(--ch-color-contrast-default)) h s calc(l - 15));
+        --ch-color-contrast-lighter: color-mix(in hsl, var(--ch-color-contrast) 100%, black 12%);
+        --ch-color-contrast-lightest: color-mix(in hsl, var(--ch-color-contrast) 100%, black 17%);
     }
 
     --ch-default-color-primary: #107a5c;
@@ -117,6 +117,7 @@
         border-color 0.2s,
         box-shadow 0.2s,
         outline-color 0.2s;
+    -webkit-tap-highlight-color: transparent;
 
     &.ch-button-solid {
         &.ch-button-primary {
@@ -257,9 +258,9 @@
     }
 
     &.ch-button-icon-only {
-        padding: 0;
-        min-width: clamp(15px, 2.125em, 60px);
-        min-height: clamp(15px, 2.125em, 60px);
+        padding: 0.25em;
+        min-width: clamp(15px, min-content, 60px);
+        min-height: clamp(15px, min-content, 60px);
     }
 
     &.ch-button-vertical {

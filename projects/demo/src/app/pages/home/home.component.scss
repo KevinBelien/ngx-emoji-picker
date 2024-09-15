@@ -1,0 +1,40 @@
+.home-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+.navigation {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    row-gap: 1em;
+}
+
+.navigation-item {
+    display: inline-block;
+}
+
+.navigation-link {
+    display: block;
+    text-decoration: none;
+
+    padding: 0.7em 1.3em;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+    background-color: #e9ecef;
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+.navigation-link:hover {
+    background-color: var(--ch-color-primary);
+    color: white;
+    cursor: pointer;
+}

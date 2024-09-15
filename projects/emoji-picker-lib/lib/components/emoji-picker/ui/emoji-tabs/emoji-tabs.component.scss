@@ -6,12 +6,6 @@
     padding-block: 5px;
 
     ch-button.ch-element {
-        .ch-button {
-            .ch-button-icon ch-icon.ch-element .ch-icon {
-                fill: var(--ch-message-input-button-color, currentColor);
-            }
-        }
-
         &:hover .ch-button .ch-button-icon ch-icon.ch-element .ch-icon,
         .ch-button-active.ch-button .ch-button-icon ch-icon.ch-element .ch-icon {
             fill: var(--ch-color-primary, currentColor);

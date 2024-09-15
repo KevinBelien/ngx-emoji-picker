@@ -4,16 +4,7 @@ button.ch-emoji-btn {
     position: relative;
     border-radius: $emoji-btn-border-radius;
     font-size: calc(var(--ch-emoji-fontsize, 24) * 1px);
-    font-family:
-        'Apple Color Emoji',
-        'Noto Color Emoji',
-        'Twemoji Mozilla',
-        'EmojiOne',
-        'Twemoji Country Flags',
-        'Segoe UI Emoji',
-        Segoe UI Symbol,
-        Segoe UI;
-
+    font-family: var(--ch-emoji-font-family, 'Twemoji Country Flags', 'Segoe UI Emoji', Segoe UI Symbol, Segoe UI, 'Apple Color Emoji', 'SamsungOne', Twemoji Mozilla, 'Noto Color Emoji', 'Android Emoji');
     width: calc(var(--ch-emoji-buttonsize) * 1px);
     height: calc(var(--ch-emoji-buttonsize) * 1px);
     background-color: transparent;

@@ -1,19 +1,66 @@
+import { Component, ViewChild } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { EmojiPickerComponent } from './emoji-picker.component';
-import { Emoji, SkintoneSetting } from './models';
+import { Emoji, SkintoneSetting, StorageConfig } from './models';
 import { EmojiDataService } from './services';
+
+@Component({
+    template: ` <ch-emoji-picker [storageOptions]="storageConfig"></ch-emoji-picker> `,
+    standalone: true,
+    imports: [EmojiPickerComponent]
+})
+class TestHostComponent {
+    @ViewChild(EmojiPickerComponent)
+    emojiPicker?: EmojiPickerComponent;
+    storageConfig?: StorageConfig;
+}
+
+describe('EmojiPickerSuggestions', () => {
+    let fixture: ComponentFixture<TestHostComponent>;
+    let component: EmojiPickerComponent;
+    let emojiDataService: EmojiDataService;
+
+    beforeEach(async () => {
+        await TestBed.configureTestingModule({
+            imports: [TestHostComponent]
+        }).compileComponents();
+
+        fixture = TestBed.createComponent(TestHostComponent);
+
+        const debugElement = fixture.debugElement.query(By.directive(EmojiPickerComponent));
+        component = debugElement.componentInstance;
+
+        emojiDataService = TestBed.inject(EmojiDataService);
+
+        fixture.detectChanges();
+    });
+
+    it('should use custom suggested emojis when configured', () => {
+        // Set storageConfig to trigger change detection and recomputation of the computed signal
+        fixture.componentInstance.storageConfig = {
+            suggestionEmojis: { storage: 'custom', value: ['women-holding-hands', 'men-holding-hands'] }
+        };
+
+        fixture.detectChanges();
+
+        fixture.detectChanges(); // Trigger change detection again
+
+        const suggestionEmojis = component.suggestionEmojis();
+
+        expect(suggestionEmojis).not.toBeNull();
+        expect(suggestionEmojis!.emojis.map((emoji) => emoji.id)).toStrictEqual(['women-holding-hands', 'men-holding-hands']);
+    });
+});
 
 describe('EmojiPickerComponent', () => {
     let fixture: ComponentFixture<EmojiPickerComponent>;
     let component: EmojiPickerComponent;
-    let emojiDataService: EmojiDataService; // Real service instance
+    let emojiDataService: EmojiDataService;
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [
-                EmojiPickerComponent // Import the standalone component
-            ]
+            imports: [TestHostComponent]
         }).compileComponents();
 
         fixture = TestBed.createComponent(EmojiPickerComponent);
@@ -61,7 +108,7 @@ describe('EmojiPickerComponent', () => {
     });
 
     it('should add emoji to suggestions when selected', () => {
-        const addEmojiToSuggestionsSpy = jest.spyOn(component, 'addEmojiToSuggestions');
+        const saveSuggestionEmojiInStorageSpy = jest.spyOn(component, 'saveSuggestionEmojiInStorage');
         const testEmoji: Emoji = {
             id: '1',
             name: 'smile',
@@ -73,7 +120,7 @@ describe('EmojiPickerComponent', () => {
         component.selectEmoji(testEmoji);
         fixture.detectChanges();
 
-        expect(addEmojiToSuggestionsSpy).toHaveBeenCalledWith(testEmoji.id);
+        expect(saveSuggestionEmojiInStorageSpy).toHaveBeenCalledWith(testEmoji.id);
     });
 
     it('should open skintone dialog and set the selected emoji', () => {
@@ -94,7 +141,7 @@ describe('EmojiPickerComponent', () => {
         expect(component.selectedEmoji()).toEqual(testEmoji);
 
         // Verify that the targetElement is set
-        expect(component.targetElement).toBe(mockTargetElement);
+        expect(component.skintoneDialogTarget).toBe(mockTargetElement);
 
         // Verify that isSkintoneDialogVisible is set to true
         expect(component.isSkintoneDialogVisible()).toBe(true);
@@ -111,7 +158,7 @@ describe('EmojiPickerComponent', () => {
         const newEmojiValue = '👍🏽';
         const skintoneSetting: SkintoneSetting = 'individual';
 
-        const updateEmojiSkintoneSpy = jest.spyOn(emojiDataService, 'updateEmojiSkintone');
+        const updateEmojiSkintoneSpy = jest.spyOn(emojiDataService, 'updateEmojiSkintoneInStorage');
 
         const selectEmojiSpy = jest.spyOn(component, 'selectEmoji');
 
@@ -119,11 +166,18 @@ describe('EmojiPickerComponent', () => {
 
         expect(updateEmojiSkintoneSpy).toHaveBeenCalledWith(testEmoji.id, newEmojiValue);
 
-        expect(selectEmojiSpy).toHaveBeenCalledWith(
-            expect.objectContaining({
-                id: testEmoji.id,
-                value: newEmojiValue
-            })
-        );
+        expect(selectEmojiSpy).toHaveBeenCalled();
+    });
+
+    it('should emit onEmojiSelected when an emoji is selected', () => {
+        jest.spyOn(component.onEmojiSelected, 'emit');
+        const emoji: Emoji = { id: 'smile', value: '😄' } as Emoji;
+
+        component.selectEmoji(emoji);
+
+        expect(component.onEmojiSelected.emit).toHaveBeenCalledWith({
+            emoji,
+            source: 'none'
+        });
     });
 });

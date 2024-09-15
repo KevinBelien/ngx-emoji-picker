@@ -1,0 +1,28 @@
+<div [style.height.px]="400" class="showcase-container row-showcase justify-center align-center">
+    <ch-button label="Show" (onClick)="handleClick($event)"></ch-button>
+</div>
+
+<ch-dialog [(visible)]="visible" [width]="350" [closeOnBackdropClick]="false">
+    <ng-container header
+        ><div class="header flex-container">
+            <div class="header-before title">Personal information</div>
+            <div class="flex-end"><ch-button [icon]="closeIconConfig" [height]="28" [width]="28" shape="round" fill="clear" type="contrast" (onClick)="close($event)"></ch-button></div></div
+    ></ng-container>
+    <ng-container content>
+        <div class="content-container">
+            <div class="form-item">
+                <div class="label">Username:</div>
+                <ch-text-box></ch-text-box>
+            </div>
+            <div class="form-item">
+                <div class="label">Password:</div>
+                <ch-text-box mode="password"></ch-text-box>
+            </div>
+        </div>
+    </ng-container>
+    <ng-container footer
+        ><div class="footer flex-container flex-end">
+            <ch-button label="Cancel" [height]="35" (onClick)="close($event)" fill="clear"></ch-button>
+            <ch-button label="Submit" [height]="35" (onClick)="close($event)"></ch-button></div
+    ></ng-container>
+</ch-dialog>

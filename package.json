@@ -9,7 +9,7 @@
         "copy-redirects": "node scripts/copy-redirects.js",
         "serve": "ng serve --port 4223",
         "build:watch": "ng build emoji-picker-lib --watch",
-        "watch": "ng build --watch --configuration development",
+        "watch": "ng build --watch --configuration=development",
         "format": "npx prettier --write .",
         "test": "jest",
         "test:watch": "jest --watch",
@@ -18,7 +18,8 @@
         "publish": "npm run build-prod && cd dist/ngx-emoji-picker && npm publish --access public",
         "lint": "ng lint",
         "lint:fix": "ng lint --fix",
-        "link": "ng build emoji-picker-lib && cd dist/ngx-emoji-picker && npm link && cd ../../projects/emoji-picker-lib && ng build --watch"
+        "link": "ng build emoji-picker-lib && cd dist/ngx-emoji-picker && npm link && cd ../../projects/emoji-picker-lib && ng build --watch",
+        "publish-demo": "npm run build:demo && netlify deploy --branch=master --prod"
     },
     "private": false,
     "repository": {
@@ -39,6 +40,7 @@
         "@angular/common": "^18.1.0",
         "@angular/compiler": "^18.1.0",
         "@angular/core": "^18.1.0",
+        "@angular/elements": "^18.1.1",
         "@angular/forms": "^18.1.0",
         "@angular/material": "^18.1.1",
         "@angular/platform-browser": "^18.1.0",

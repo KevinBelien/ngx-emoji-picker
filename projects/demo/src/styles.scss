@@ -1,13 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
 @import url(https://fonts.googleapis.com/css?family=Poppins:300,400,500,700);
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
 body {
-    background-color: var(--ch-background-color, #fff);
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    overflow-y: auto; /* Allows scrollbars only when needed */
+    background-color: var(--ch-showcase-card-background);
+}
+
+body {
+    height: 100%;
     color: var(--ch-text-color, #000);
     font-family: var(--ch-font-family);
-    margin: 0;
-    padding: 0;
-    height: 100%;
 }
 
 .form {
@@ -19,4 +31,31 @@ body {
     display: flex;
     align-items: center;
     gap: 0.5em;
+}
+
+.row-showcase {
+    display: flex;
+    column-gap: 1em;
+}
+
+.showcase-container {
+    padding-block: 2em;
+    background-color: var(--ch-showcase-card-background);
+    display: flex;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.align-bottom {
+    margin-top: auto;
 }

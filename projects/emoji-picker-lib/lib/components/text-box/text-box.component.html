@@ -1,9 +1,9 @@
 <div class="ch-text-box-container" [ngClass]="textBoxClass()">
     <div class="ch-text-box-addon">
-        @if ({ data: mode }; as mode) {
-            @if (!!mode) {
+        @if ({ data: mode() }; as mode) {
+            @if (!!mode.data) {
                 <ng-content select="[addon-before]"></ng-content>
-                <ch-icon cssClass="ch-search-icon" [height]="19" [width]="19" [iconPath]="icons.search"></ch-icon>
+                <ch-icon *ngIf="mode.data === 'search'" cssClass="ch-search-icon" [height]="19" [width]="19" [iconPath]="icons.search"></ch-icon>
             }
         }
     </div>

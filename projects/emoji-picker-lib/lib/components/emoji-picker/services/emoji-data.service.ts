@@ -19,49 +19,49 @@ export class EmojiDataService {
     /**
      * A signal representing the list of recent emojis.
      *
-     * @type {Signal<Emoji[]>}
+     * @type {WritableSignal<Emoji[]>}
      */
     recentEmojis = signal<Emoji[]>([]);
 
     /**
      * A signal representing the list of frequently used emojis.
      *
-     * @type {Signal<Emoji[]>}
+     * @type {WritableSignal<Emoji[]>}
      */
     frequentEmojis = signal<Emoji[]>([]);
 
     /**
      * A signal representing the global skintone setting.
      *
-     * @type {Signal<Skintone>}
+     * @type {WritableSignal<Skintone>}
      */
     globalSkintoneSetting = signal<Skintone>('default');
 
     /**
      * A signal representing individual skintone settings for specific emojis.
      *
-     * @type {Signal<IndividualEmojiSkintone[]>}
+     * @type {WritableSignal<IndividualEmojiSkintone[]>}
      */
     individualSkintones = signal<IndividualEmojiSkintone[]>([]);
 
     /**
      * A signal representing the current skintone setting strategy (e.g., 'none', 'individual', 'global').
      *
-     * @type {Signal<SkintoneSetting>}
+     * @type {WritableSignal<SkintoneSetting>}
      */
     skintoneSetting = signal<SkintoneSetting>('none');
 
     /**
      * A signal representing the list of all available emojis.
      *
-     * @type {Signal<Emoji[]>}
+     * @type {WritableSignal<Emoji[]>}
      */
     emojis = signal<Emoji[]>([...emojis]);
 
     /**
      * A computed map of emojis by their ID, taking into account skintone settings.
      *
-     * @type {Signal<Map<string, Emoji>>}
+     * @type {WritableSignal<Map<string, Emoji>>}
      */
     emojiMap = computed((): Map<string, Emoji> => this.generateEmojiMap(this.emojis(), this.skintoneSetting(), this.globalSkintoneSetting(), this.individualSkintones()));
 
@@ -76,15 +76,38 @@ export class EmojiDataService {
     }
 
     /**
-     * Updates the skintone for a specific emoji and persists the change in storage.
+     * Updates the skintone for a specific emoji and saves the change in storage.
+     * This method retrieves the updated skintones from storage and updates the local list of individual emoji skintones.
      * @group Method
      * @param {string} emojiId - The ID of the emoji to update.
      * @param {string} value - The new skintone value for the emoji.
      * @returns {void}
      */
-    updateEmojiSkintone = (emojiId: string, value: string): void => {
+    updateEmojiSkintoneInStorage = (emojiId: string, value: string): void => {
         this.emojiStorageService.updateEmojiSkintone(emojiId, value);
         this.individualSkintones.set(this.emojiStorageService.fetchIndividualEmojisSkintones());
+    };
+
+    /**
+     * Updates the skintone for multiple emojis without saving to storage.
+     * @group Method
+     * @param {string} emojiId - The ID of the emoji to update.
+     * @param {string} value - The new skintone value for the emoji.
+     * @returns {void}
+     */
+    setEmojiSkintones = (data: IndividualEmojiSkintone[]) => {
+        this.individualSkintones.set(data);
+    };
+
+    /**
+     * Updates the skintone for a single emoji without saving to storage.
+     * @group Method
+     * @param {string} emojiId - The ID of the emoji to update.
+     * @param {string} value - The new skintone value for the emoji.
+     * @returns {void}
+     */
+    updateEmojiSkintoneLocally = (data: IndividualEmojiSkintone) => {
+        this.individualSkintones.update((emojis) => [...emojis.filter((emoji) => emoji.emojiId !== data.emojiId), data]);
     };
 
     /**
@@ -251,40 +274,8 @@ export class EmojiDataService {
      * @param {Skintone} skintone - The global skintone to set.
      * @returns {void}
      */
-    setGlobalEmojiSkintone = (skintone: Skintone): void => {
-        this.emojiStorageService.updateGlobalSkintone(skintone);
-        this.globalSkintoneSetting.update(() => skintone);
+    setGlobalEmojiSkintone = (skintone: Skintone, allowSavingInStorage: boolean = true): void => {
+        if (allowSavingInStorage) this.emojiStorageService.updateGlobalSkintone(skintone);
+        this.globalSkintoneSetting.set(skintone);
     };
-
-    /*
-
-	getAllKeywords = (): any => {
-		const result: any = {};
-
-		emojis.forEach((emoji) => {
-			result[emoji.id] = [
-				emoji.keywords.map((keyword) => keyword.replaceAll('_', ' ')),
-				emoji.name,
-			].flat();
-		});
-
-		return result;
-	};
-
-
-	loseDuplicates = (): any => {
-		const obj: any = {};
-		Object.keys(deKeywordTranslations).forEach((key: string) => {
-			obj[key] = [
-				...new Set(
-					deKeywordTranslations[key].map((k: string) =>
-						k.toLowerCase()
-					)
-				),
-			];
-		});
-
-		return obj;
-	};
-	*/
 }

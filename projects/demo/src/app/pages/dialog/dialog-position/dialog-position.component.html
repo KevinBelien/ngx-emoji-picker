@@ -1,0 +1,11 @@
+<div [style.height.px]="400" class="showcase-container row-showcase justify-center align-center">
+    <div class="grid-container">
+        @for (position of positions; track $index) {
+            <ch-button #button [label]="position" [width]="150" (onClick)="handleClick(position, button)"></ch-button>
+        }
+    </div>
+</div>
+
+<ch-dialog [(visible)]="visible" [target]="target()" [positions]="dialogPositions()">
+    <ng-container content><p>Lorem ipsum dolor ipsam</p> </ng-container>
+</ch-dialog>

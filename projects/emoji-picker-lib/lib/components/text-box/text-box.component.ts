@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { AfterViewInit, ChangeDetectionStrategy, Component, computed, effect, ElementRef, forwardRef, HostListener, inject, input, model, OnDestroy, output, Renderer2, untracked } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, Component, computed, effect, ElementRef, forwardRef, HostBinding, HostListener, inject, Input, input, model, OnDestroy, output, Renderer2, untracked } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { ButtonComponent } from '@chit-chat/ngx-emoji-picker/lib/components/button';
 import { IconComponent } from '@chit-chat/ngx-emoji-picker/lib/components/icon';
@@ -42,6 +42,24 @@ export class TextBoxComponent implements ControlValueAccessor, AfterViewInit, On
      * @default ''
      */
     value = model<string>('');
+
+    /**
+     * Specifies the height of the textbox
+     * @group Props
+     * @default 'auto'
+     */
+    @Input()
+    @HostBinding('style.--ch-text-box-height')
+    height: string | number = 'auto';
+
+    /**
+     * Specifies the width of the textbox
+     * @group Props
+     * @default 'auto'
+     */
+    @Input()
+    @HostBinding('style.--ch-text-box-width')
+    width: string | number = 'auto';
 
     /**
      * Specifies whether the textbox should automatically receive focus when the page loads.
@@ -142,9 +160,7 @@ export class TextBoxComponent implements ControlValueAccessor, AfterViewInit, On
     ngOnDestroy(): void {
         this.cleanupCurrentListener();
 
-        if (this.elementClickListener) {
-            this.elementClickListener();
-        }
+        if (this.elementClickListener) this.elementClickListener();
     }
 
     registerOnChange = (fn: (value: string) => void): void => {
@@ -174,12 +190,12 @@ export class TextBoxComponent implements ControlValueAccessor, AfterViewInit, On
     private onEvent = (evt: Event): void => {
         const inputElement = evt.target as HTMLInputElement;
 
-        this.setValue(inputElement.value, evt, this.valueChangeEvent());
+        this.setValue(inputElement.value, this.valueChangeEvent(), evt);
     };
 
-    private setValue = (value: string, evt: Event, action: string) => {
+    private setValue = (value: string, action: string, evt?: Event) => {
         this.onChange(value);
-        this.value.set(value); // Update internal value
+        this.value.set(value);
         this.onValueChanged.emit({
             event: evt,
             value: value,
@@ -189,6 +205,15 @@ export class TextBoxComponent implements ControlValueAccessor, AfterViewInit, On
 
     protected handleClearClick = (evt: MouseEvent) => {
         this.value.set('');
-        this.setValue(this.value(), evt, 'clear');
+        this.setValue(this.value(), 'clear', evt);
+    };
+
+    /**
+     * Clear the input value
+     * @group Method
+     */
+    clear = () => {
+        this.value.set('');
+        this.setValue(this.value(), 'clear');
     };
 }

@@ -63,7 +63,7 @@ describe('TextBox', () => {
         fixture.componentInstance.mode = 'search';
         fixture.detectChanges();
 
-        const searchIcon = fixture.debugElement.query(By.css('.ch-search-icon'));
+        const searchIcon = fixture.debugElement.queryAll(By.css('.ch-search-icon'));
         expect(searchIcon).not.toBeNull();
     });
 
@@ -102,7 +102,7 @@ describe('TextBox', () => {
         fixture.detectChanges();
 
         expect(setValueSpy).toHaveBeenCalled();
-        expect(setValueSpy).toHaveBeenCalledWith('N', expect.any(Event), 'input');
+        expect(setValueSpy).toHaveBeenCalledWith('N', 'input', expect.any(Event));
 
         expect(onValueChangedSpy).toHaveBeenCalledWith(
             expect.objectContaining({
@@ -131,6 +131,7 @@ describe('TextBox', () => {
     });
 
     it('should not render the clear button when input has no value and showClearButton is true', () => {
+        componentInstance.value = '';
         componentInstance.showClearButton = true;
         fixture.detectChanges();
 
@@ -140,7 +141,7 @@ describe('TextBox', () => {
 
     it('should clear the input when the clear button is clicked', () => {
         fixture.componentInstance.value = 'ChitChat';
-        componentInstance.showClearButton = true;
+        fixture.componentInstance.showClearButton = true;
         fixture.detectChanges();
 
         const setValueSpy = jest.spyOn(textBoxComponent as any, 'setValue');
@@ -154,7 +155,7 @@ describe('TextBox', () => {
 
         const inputElement = fixture.debugElement.query(By.css('input')).nativeElement;
 
-        expect(setValueSpy).toHaveBeenCalledWith('', expect.any(Event), 'clear');
+        expect(setValueSpy).toHaveBeenCalledWith('', 'clear', expect.any(Event));
 
         expect(inputElement.value).toBe('');
 
@@ -233,5 +234,27 @@ describe('TextBox', () => {
 
         // Verify the component's value was updated
         expect(textBoxComponent.value()).toBe('Test Value');
+    });
+
+    it('should clear the value when clear is called', () => {
+        const setValueSpy = jest.spyOn(textBoxComponent as any, 'setValue');
+        const onValueChangedSpy = jest.spyOn(textBoxComponent.onValueChanged, 'emit');
+
+        textBoxComponent.writeValue('Test Value');
+        fixture.detectChanges();
+
+        textBoxComponent.clear();
+        fixture.detectChanges();
+
+        const inputElement = fixture.debugElement.query(By.css('input')).nativeElement;
+        expect(inputElement.value).toBe('');
+
+        expect(setValueSpy).toHaveBeenCalledWith('', 'clear');
+        expect(onValueChangedSpy).toHaveBeenCalledWith(
+            expect.objectContaining({
+                value: '',
+                action: 'clear'
+            })
+        );
     });
 });

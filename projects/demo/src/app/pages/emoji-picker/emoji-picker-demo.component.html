@@ -1,0 +1,94 @@
+<div class="emoji-picker-container">
+    <div class="sliders">
+        <div class="slider-container">
+            <div class="example-label-container">
+                <label class="example-name-label">Width</label>
+                <label>{{ sliderWidth.value }}</label>
+            </div>
+            <mat-slider [max]="1200" [min]="150" [step]="10">
+                <input matSliderThumb [(ngModel)]="form.width" (ngModelChange)="handleWidthChange()" #sliderWidth />
+            </mat-slider>
+        </div>
+        <div class="slider-container">
+            <div class="example-label-container">
+                <label class="example-name-label">Height</label>
+                <label>{{ sliderHeight.value }}</label>
+            </div>
+            <mat-slider [max]="1800" [min]="300" [step]="10">
+                <input matSliderThumb [(ngModel)]="form.height" (ngModelChange)="handleHeightChange()" #sliderHeight />
+            </mat-slider>
+        </div>
+    </div>
+    <div class="side-form-container">
+        <div class="emoji-picker">
+            <ng-container *ngIf="size$ | async as size">
+                <ch-emoji-picker
+                    [emojiSize]="form.emojiSize"
+                    [emojiCategories]="form.categories"
+                    [categoryBarPosition]="form.categoryBarPosition"
+                    [suggestionOptions]="{ mode: form.suggestionMode }"
+                    [skintoneSetting]="form.skintoneSettings"
+                    [width]="size.width"
+                    [height]="size.height"
+                    (onEmojiSelected)="handleEmojisSelected($event)"
+                    (onGlobalSkintoneChanged)="handleGlobalSkintoneChanged($event)"
+                ></ch-emoji-picker
+            ></ng-container>
+        </div>
+
+        <div class="form">
+            <div class="form-field">
+                <mat-form-field>
+                    <mat-label>Emoji Size</mat-label>
+                    <mat-select [(ngModel)]="form.emojiSize">
+                        @for (size of emojiSizes; track size) {
+                            <mat-option [value]="size">
+                                {{ size | titlecase }}
+                            </mat-option>
+                        }
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="form-item">
+                <mat-form-field>
+                    <mat-label>Category</mat-label>
+                    <mat-select [(ngModel)]="form.categories" multiple>
+                        @for (category of categories; track category) {
+                            <mat-option [value]="category">{{ category | titlecase }}</mat-option>
+                        }
+                    </mat-select>
+                </mat-form-field>
+            </div>
+
+            <div class="form-item">
+                <mat-form-field>
+                    <mat-label>Category Bar Position</mat-label>
+                    <mat-select [(ngModel)]="form.categoryBarPosition">
+                        <mat-option value="top">Top</mat-option>
+                        <mat-option value="bottom">Bottom</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="form-item">
+                <mat-form-field>
+                    <mat-label>Suggestion Mode</mat-label>
+                    <mat-select [(ngModel)]="form.suggestionMode">
+                        <mat-option value="recent">Recent</mat-option>
+                        <mat-option value="frequent">Frequent</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="form-item">
+                <mat-form-field>
+                    <mat-label>Skintone settings</mat-label>
+                    <mat-select [(ngModel)]="form.skintoneSettings">
+                        <mat-option value="both">Both</mat-option>
+                        <mat-option value="global">Global</mat-option>
+                        <mat-option value="individual">Individual</mat-option>
+                        <mat-option value="none">None</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+        </div>
+    </div>
+</div>
