@@ -145,6 +145,36 @@ export const routes: Routes = [
         loadComponent: () => import('./pages/emoji-picker/emoji-picker-skintone-settings/emoji-picker-skintone-settings.component').then((c) => c.EmojiPickerSkintoneSettingsComponent),
         pathMatch: 'full'
     },
+    {
+        path: 'icon',
+        loadComponent: () => import('./pages/icon/icon.component').then((c) => c.IconBasicComponent),
+        pathMatch: 'full'
+    },
+    {
+        path: 'text-box-basic',
+        loadComponent: () => import('./pages/text-box/text-box-basic/text-box-basic.component').then((c) => c.TextBoxBasicComponent),
+        pathMatch: 'full'
+    },
+    {
+        path: 'text-box-custom-content',
+        loadComponent: () => import('./pages/text-box/text-box-custom-content/text-box-custom-content.component').then((c) => c.TextBoxCustomContentComponent),
+        pathMatch: 'full'
+    },
+    {
+        path: 'text-box-disabled',
+        loadComponent: () => import('./pages/text-box/text-box-disabled/text-box-disabled.component').then((c) => c.TextBoxDisabledComponent),
+        pathMatch: 'full'
+    },
+    {
+        path: 'text-box-modes',
+        loadComponent: () => import('./pages/text-box/text-box-modes/text-box-modes.component').then((c) => c.TextBoxModesComponent),
+        pathMatch: 'full'
+    },
+    {
+        path: 'text-box-variants',
+        loadComponent: () => import('./pages/text-box/text-box-variants/text-box-variants.component').then((c) => c.TextBoxVariantsComponent),
+        pathMatch: 'full'
+    },
 
     {
         path: '**',

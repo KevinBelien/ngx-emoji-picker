@@ -11,7 +11,7 @@
     <div class="ch-text-box-addon">
         <ng-content select="[addon-after]"></ng-content>
 
-        @if (!!showClearButton() && value().length > 0) {
+        @if (isClearButtonVisible()) {
             <ch-button
                 cssClass="ch-clear-button"
                 shape="round"

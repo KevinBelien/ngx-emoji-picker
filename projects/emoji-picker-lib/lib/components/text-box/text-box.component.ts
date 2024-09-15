@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { AfterViewInit, ChangeDetectionStrategy, Component, computed, effect, ElementRef, forwardRef, HostBinding, HostListener, inject, Input, input, model, OnDestroy, output, Renderer2, untracked } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, Component, computed, effect, ElementRef, forwardRef, HostBinding, HostListener, inject, Input, input, model, OnDestroy, output, Renderer2, signal, untracked } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { ButtonComponent } from '@chit-chat/ngx-emoji-picker/lib/components/button';
 import { IconComponent } from '@chit-chat/ngx-emoji-picker/lib/components/icon';
@@ -121,11 +121,15 @@ export class TextBoxComponent implements ControlValueAccessor, AfterViewInit, On
         'ch-editor-outlined': this.variant() === 'outlined',
         'ch-editor-filled': this.variant() === 'filled'
     }));
+    hasInputText = signal<boolean>(false);
+
+    isClearButtonVisible = computed(() => this.showClearButton() && this.hasInputText() && !this.disabled());
 
     readonly icons = { ...icons };
 
     private currentListenerFn: () => void = () => {};
     private elementClickListener: () => void = () => {};
+    private inputListener: () => void = () => {};
 
     private onChange: (value: string) => void = () => {};
     private onTouched: () => void = () => {};
@@ -143,6 +147,8 @@ export class TextBoxComponent implements ControlValueAccessor, AfterViewInit, On
     }
 
     ngAfterViewInit(): void {
+        this.hasInputText.set(this.value().length > 0);
+        this.inputListener = this.renderer.listen(this.elementRef.nativeElement.querySelector('input'), 'input', (evt: Event) => this.hasInputText.set((evt.target as HTMLInputElement).value.length > 0));
         this.elementClickListener = this.renderer.listen(this.elementRef.nativeElement, 'pointerdown', (event: Event) => {
             this.handleElementClick(event);
         });
@@ -160,9 +166,8 @@ export class TextBoxComponent implements ControlValueAccessor, AfterViewInit, On
     ngOnDestroy(): void {
         this.cleanupCurrentListener();
 
-        if (this.elementClickListener) {
-            this.elementClickListener();
-        }
+        if (this.inputListener) this.inputListener();
+        if (this.elementClickListener) this.elementClickListener();
     }
 
     registerOnChange = (fn: (value: string) => void): void => {
@@ -196,8 +201,10 @@ export class TextBoxComponent implements ControlValueAccessor, AfterViewInit, On
     };
 
     private setValue = (value: string, action: string, evt?: Event) => {
+        const inputElement = this.elementRef.nativeElement.querySelector('input');
+        if (inputElement) inputElement.value = value;
         this.onChange(value);
-        this.value.set(value); // Update internal value
+        this.value.set(value);
         this.onValueChanged.emit({
             event: evt,
             value: value,
@@ -207,6 +214,7 @@ export class TextBoxComponent implements ControlValueAccessor, AfterViewInit, On
 
     protected handleClearClick = (evt: MouseEvent) => {
         this.value.set('');
+        this.hasInputText.set(false);
         this.setValue(this.value(), 'clear', evt);
     };
 
