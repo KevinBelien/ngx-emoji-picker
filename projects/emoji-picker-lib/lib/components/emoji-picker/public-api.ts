@@ -1,5 +1,6 @@
 export * from './emoji-picker.component';
 export * from './helpers';
+export * from './locales';
 export * from './models';
 export * from './services';
 export * from './ui/emoji-button/emoji-button.component';

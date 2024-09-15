@@ -11,6 +11,11 @@
             "glob": "*.json",
             "input": "lib/localization/locales",
             "output": "./lib/localization/locales"
+        },
+        {
+            "glob": "*.json",
+            "input": "lib/components/emoji-picker/locales",
+            "output": "./lib/components/emoji-picker/locales"
         }
     ],
     "lib": {
