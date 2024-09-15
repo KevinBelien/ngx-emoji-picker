@@ -11596,13 +11596,13 @@ export const emojis: Emoji[] = [
         category: 'animals-nature',
         order: 477
     },
-    {
-        id: 'black-bird',
-        name: 'black bird',
-        value: '🐦‍⬛',
-        category: 'animals-nature',
-        order: 478
-    },
+    // {
+    //     id: 'black-bird',
+    //     name: 'black bird',
+    //     value: '🐦‍⬛',
+    //     category: 'animals-nature',
+    //     order: 478
+    // },
     {
         id: 'eagle',
         name: 'eagle',
@@ -12187,7 +12187,7 @@ export const emojis: Emoji[] = [
     {
         id: 'dove',
         name: 'dove',
-        value: '🕊',
+        value: '🕊️',
         category: 'animals-nature',
         order: 562
     },
@@ -12257,7 +12257,7 @@ export const emojis: Emoji[] = [
     {
         id: 'chipmunk',
         name: 'chipmunk',
-        value: '🐿',
+        value: '🐿️',
         category: 'animals-nature',
         order: 572
     },
@@ -12348,7 +12348,7 @@ export const emojis: Emoji[] = [
     {
         id: 'shamrock',
         name: 'shamrock',
-        value: '☘',
+        value: '☘️',
         category: 'animals-nature',
         order: 585
     },
@@ -12684,7 +12684,7 @@ export const emojis: Emoji[] = [
     {
         id: 'comet',
         name: 'comet',
-        value: '☄',
+        value: '☄️',
         category: 'animals-nature',
         order: 633
     },
@@ -12698,7 +12698,7 @@ export const emojis: Emoji[] = [
     {
         id: 'tornado',
         name: 'tornado',
-        value: '🌪',
+        value: '🌪️',
         category: 'animals-nature',
         order: 635
     },
@@ -12712,14 +12712,14 @@ export const emojis: Emoji[] = [
     {
         id: 'sun',
         name: 'sun',
-        value: '☀',
+        value: '☀️',
         category: 'animals-nature',
         order: 637
     },
     {
         id: 'sun-behind-small-cloud',
         name: 'sun behind small cloud',
-        value: '🌤',
+        value: '🌤️',
         category: 'animals-nature',
         order: 638
     },
@@ -12733,63 +12733,63 @@ export const emojis: Emoji[] = [
     {
         id: 'sun-behind-large-cloud',
         name: 'sun behind large cloud',
-        value: '🌥',
+        value: '🌥️',
         category: 'animals-nature',
         order: 640
     },
     {
         id: 'cloud',
         name: 'cloud',
-        value: '☁',
+        value: '☁️',
         category: 'animals-nature',
         order: 641
     },
     {
         id: 'sun-behind-rain-cloud',
         name: 'sun behind rain cloud',
-        value: '🌦',
+        value: '🌦️',
         category: 'animals-nature',
         order: 642
     },
     {
         id: 'cloud-with-rain',
         name: 'cloud with rain',
-        value: '🌧',
+        value: '🌧️',
         category: 'animals-nature',
         order: 643
     },
     {
         id: 'cloud-with-lightning-and-rain',
         name: 'cloud with lightning and rain',
-        value: '⛈',
+        value: '⛈️',
         category: 'animals-nature',
         order: 644
     },
     {
         id: 'cloud-with-lightning',
         name: 'cloud with lightning',
-        value: '🌩',
+        value: '🌩️',
         category: 'animals-nature',
         order: 645
     },
     {
         id: 'cloud-with-snow',
         name: 'cloud with snow',
-        value: '🌨',
+        value: '🌨️',
         category: 'animals-nature',
         order: 646
     },
     {
         id: 'snowflake',
         name: 'snowflake',
-        value: '❄',
+        value: '❄️',
         category: 'animals-nature',
         order: 647
     },
     {
         id: 'snowman',
         name: 'snowman',
-        value: '☃',
+        value: '☃️',
         category: 'animals-nature',
         order: 648
     },
@@ -12803,7 +12803,7 @@ export const emojis: Emoji[] = [
     {
         id: 'wind-face',
         name: 'wind face',
-        value: '🌬',
+        value: '🌬️',
         category: 'animals-nature',
         order: 650
     },
@@ -12845,7 +12845,7 @@ export const emojis: Emoji[] = [
     {
         id: 'open-umbrella',
         name: 'open umbrella',
-        value: '☂',
+        value: '☂️',
         category: 'animals-nature',
         order: 656
     },
@@ -12859,7 +12859,7 @@ export const emojis: Emoji[] = [
     {
         id: 'fog',
         name: 'fog',
-        value: '🌫',
+        value: '🌫️',
         category: 'animals-nature',
         order: 658
     },
@@ -19282,7 +19282,7 @@ export const emojis: Emoji[] = [
     {
         id: 'transgender-symbol',
         name: 'transgender symbol',
-        value: '⚧',
+        value: '⚧️',
         category: 'symbols',
         order: 1379
     },

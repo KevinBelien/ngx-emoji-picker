@@ -1,16 +1,6 @@
 import { TestBed } from '@angular/core/testing';
+import { Language } from '@chit-chat/ngx-emoji-picker/lib/localization';
 import { EmojiFilterService } from './emoji-filter.service';
-
-jest.mock('../locales', () => ({
-    enKeywordTranslations: {
-        'd6139ca7-a4ff-49c1-a69d-cc61a08f64b3': ['cheerful', 'happy', 'smile', 'grinning'],
-        '99e123f7-b998-46b7-a281-9d418b05e52a': ['awesome', 'happy', 'smile', 'joy']
-    },
-    nlKeywordTranslations: {
-        'd6139ca7-a4ff-49c1-a69d-cc61a08f64b3': ['blij', 'vrolijk', 'glimlach'],
-        '99e123f7-b998-46b7-a281-9d418b05e52a': ['geweldig', 'vrolijk', 'glimlach', 'vreugde']
-    }
-}));
 
 describe('EmojiFilterService', () => {
     let service: EmojiFilterService;
@@ -18,6 +8,22 @@ describe('EmojiFilterService', () => {
     beforeEach(() => {
         TestBed.configureTestingModule({});
         service = TestBed.inject(EmojiFilterService);
+
+        // Mocking getTranslations method
+        (service as any).getTranslations = jest.fn(async (language: Language) => {
+            if (language === 'en') {
+                return {
+                    test1: ['cheerful', 'happy', 'smile', 'grinning'],
+                    test2: ['awesome', 'happy', 'smile', 'joy']
+                };
+            } else if (language === 'nl') {
+                return {
+                    test1: ['blij', 'vrolijk', 'glimlach'],
+                    test2: ['geweldig', 'vrolijk', 'glimlach', 'vreugde']
+                };
+            }
+            return {};
+        });
     });
 
     it('should be created', () => {
@@ -26,22 +32,22 @@ describe('EmojiFilterService', () => {
 
     it('should filter emojis based on a search value in English', async () => {
         const result = await service.filter('happy', 'en');
-        expect(result).toEqual(['d6139ca7-a4ff-49c1-a69d-cc61a08f64b3', '99e123f7-b998-46b7-a281-9d418b05e52a']);
+        expect(result).toEqual(['test1', 'test2']);
     });
 
     it('should filter emojis based on a search value in Dutch', async () => {
         const result = await service.filter('vrolijk', 'nl');
-        expect(result).toEqual(['d6139ca7-a4ff-49c1-a69d-cc61a08f64b3', '99e123f7-b998-46b7-a281-9d418b05e52a']);
+        expect(result).toEqual(['test1', 'test2']);
     });
 
     it('should filter emojis based on a search value in English with restricted emoji list', async () => {
-        const result = await service.filter('happy', 'en', ['d6139ca7-a4ff-49c1-a69d-cc61a08f64b3']);
-        expect(result).toEqual(['d6139ca7-a4ff-49c1-a69d-cc61a08f64b3']);
+        const result = await service.filter('happy', 'en', ['test1']);
+        expect(result).toEqual(['test1']);
     });
 
     it('should prioritize exact matches with Infinity score', async () => {
         const result = await service.filter('happy', 'en');
-        expect(result[0]).toBe('d6139ca7-a4ff-49c1-a69d-cc61a08f64b3');
+        expect(result).toEqual(['test1', 'test2']);
     });
 
     it('should return an empty array when no matches are found', async () => {
@@ -50,7 +56,7 @@ describe('EmojiFilterService', () => {
     });
 
     it('should throw an error when translation module fails to load', async () => {
-        jest.spyOn(service as any, 'getTranslations').mockRejectedValue(new Error('Test Error'));
+        (service as any).getTranslations = jest.fn().mockRejectedValue(new Error('Test Error'));
 
         await expect(service.filter('happy', 'en')).rejects.toThrow('Test Error');
     });

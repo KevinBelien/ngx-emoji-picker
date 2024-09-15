@@ -75,27 +75,13 @@ export class EmojiFilterService {
 
     private getTranslations = async (language: Language): Promise<ArrayMap<string>> => {
         try {
-            const filename = this.getTranslationFilename(language);
-            const module = await import('../locales');
-            const defaultTranslations = module.enKeywordTranslations;
-            const localeTranslations = filename ? module[filename] : null;
+            const defaultTranslations = (await import(`../locales/en-emoji-keywords.json`)).default;
+
+            const localeTranslations = language !== 'en' ? (await import(`../locales/${language}-emoji-keywords.json`)).default : null;
 
             return localeTranslations ? ObjectHelper.combineArrayMap(localeTranslations, defaultTranslations) : defaultTranslations;
         } catch (error: any) {
             throw new Error(`Error loading translation module: ${error.message}`);
         }
     };
-
-    private getTranslationFilename = (language: Language): TranslationFilename | null => {
-        switch (language) {
-            case 'nl':
-                return 'nlKeywordTranslations';
-            case 'de':
-                return 'deKeywordTranslations';
-            default:
-                return null;
-        }
-    };
 }
-
-type TranslationFilename = 'nlKeywordTranslations' | 'deKeywordTranslations';
