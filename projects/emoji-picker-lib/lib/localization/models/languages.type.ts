@@ -3,7 +3,7 @@
  * @group Constants
  * @type {ReadonlyArray<string>}
  */
-export const languages = ['en', 'nl', 'fr', 'de'] as const;
+export const languages = ['ar', 'ca', 'cs', 'de', 'el', 'en', 'es', 'fa', 'fi', 'fr', 'hu', 'it', 'ja', 'lt', 'lv', 'nb', 'nl', 'pl', 'pt', 'ro', 'ru', 'sl', 'sv', 'tr', 'vi', 'zh-tw', 'zh'] as const;
 
 /**
  * A type representing a language code.

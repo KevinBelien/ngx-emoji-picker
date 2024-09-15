@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { RouterModule, RouterOutlet } from '@angular/router';
 import { ButtonComponent } from '@chit-chat/ngx-emoji-picker/lib/components/button';
+import { nlTranslations, TranslationService } from '@chit-chat/ngx-emoji-picker/lib/localization';
 
 @Component({
     selector: 'ch-root',
@@ -15,6 +16,7 @@ import { ButtonComponent } from '@chit-chat/ngx-emoji-picker/lib/components/butt
     styleUrl: './app.component.scss'
 })
 export class AppComponent {
+    private translationService = inject(TranslationService);
     constructor() {
         window.addEventListener('message', (event) => {
             // Check if the event contains a valid theme
@@ -25,6 +27,8 @@ export class AppComponent {
             }
         });
 
+        this.translationService.loadTranslations('nl', nlTranslations);
+        this.translationService.setLanguage('nl');
         // document.documentElement.setAttribute('data-theme', 'dark');
     }
 }
