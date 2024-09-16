@@ -1,81 +1,87 @@
 import { TestBed } from '@angular/core/testing';
-import { Translations } from '../models';
 import { TranslationService } from './translation.service';
-
-// Simplified translation data as Map
-const enTranslations: Translations = new Map([
-    ['greeting', 'Hello'],
-    ['farewell', 'Goodbye'],
-    ['thankYou', 'Thank you']
-]);
-
-const esTranslations: Translations = new Map([
-    ['greeting', 'Hola'],
-    ['farewell', 'Adiós'],
-    ['thankYou', 'Gracias']
-]);
 
 describe('TranslationService', () => {
     let service: TranslationService;
 
     beforeEach(() => {
-        TestBed.configureTestingModule({});
+        TestBed.configureTestingModule({
+            providers: [TranslationService]
+        });
+
         service = TestBed.inject(TranslationService);
-        // Load the enTranslations by default
-        service.loadTranslations('en', Object.fromEntries(enTranslations));
     });
 
     it('should be created', () => {
         expect(service).toBeTruthy();
     });
 
-    it('should set and get the current language', () => {
-        service.setLanguage('es');
-        expect(service.getLanguage()).toBe('es');
+    it('should initialize with default English translations and emoji keywords', () => {
+        const translations = service.getAllTranslations();
+        const emojiTranslations = service.getAllEmojiKeywordTranslations();
+
+        expect(translations.get('en')).toBeTruthy();
+        expect(translations.get('en')).toBeInstanceOf(Map);
+        expect(emojiTranslations.get('en')).toBeTruthy();
+        expect(emojiTranslations.get('en')).toBeInstanceOf(Map);
     });
 
-    it('should load translations and merge them with existing translations', () => {
-        const additionalTranslations: Translations = new Map([['welcome', 'Welcome']]);
-        service.loadTranslations('en', Object.fromEntries(additionalTranslations));
+    it('should set the current language', () => {
+        service.setLanguage('fr');
+        expect(service.getLanguage()).toBe('fr');
+    });
 
-        const translations = service.getTranslationsByLanguage('en');
-        expect(translations).toBeTruthy();
-        expect(translations!.get('greeting')).toBe('Hello');
-        expect(translations!.get('welcome')).toBe('Welcome');
+    it('should load translations for a specific language', () => {
+        const frTranslations = { hello: 'bonjour', goodbye: 'au revoir' };
+        service.loadTranslations('fr', frTranslations);
+
+        const translations = service.getTranslationsByLanguage('fr');
+        expect(translations?.get('hello')).toBe('bonjour');
+        expect(translations?.get('goodbye')).toBe('au revoir');
+    });
+
+    it('should load emoji keyword translations for a specific language', () => {
+        const frEmojiKeywords = { smile: ['sourire'], heart: ['coeur'] };
+        service.loadEmojiKeywordTranslations('fr', frEmojiKeywords);
+
+        const emojiTranslations = service.getEmojiKeywordTranslationsByLanguage('fr');
+        expect(emojiTranslations?.get('smile')).toEqual(['sourire']);
+        expect(emojiTranslations?.get('heart')).toEqual(['coeur']);
+    });
+
+    it('should retrieve a translation by key for the current language', () => {
+        const frTranslations = { welcome: 'bienvenue' };
+        service.loadTranslations('fr', frTranslations);
+        service.setLanguage('fr');
+
+        const translation = service.getTranslationByKey('welcome');
+        expect(translation).toBe('bienvenue');
+    });
+
+    it('should retrieve an emoji keyword translation by key for the current language', () => {
+        const frEmojiKeywords = { sun: ['soleil'], moon: ['lune'] };
+        service.loadEmojiKeywordTranslations('fr', frEmojiKeywords);
+        service.setLanguage('fr');
+
+        const emojiTranslation = service.getEmojiKeywordTranslationByKey('sun');
+        expect(emojiTranslation).toEqual(['soleil']);
     });
 
     it('should unload translations for a specific language', () => {
-        service.unloadTranslations('en');
-        const translations = service.getTranslationsByLanguage('en');
+        const deTranslations = { hello: 'hallo' };
+        service.loadTranslations('de', deTranslations);
+
+        service.unloadTranslations('de');
+        const translations = service.getTranslationsByLanguage('de');
         expect(translations).toBeUndefined();
     });
 
-    it('should get all loaded translations', () => {
-        const translations = service.getAllTranslations();
-        expect(translations.size).toBe(1); // Assuming only 'en' is loaded initially
-    });
+    it('should unload emoji keyword translations for a specific language', () => {
+        const deEmojiKeywords = { smile: ['lächeln'] };
+        service.loadEmojiKeywordTranslations('de', deEmojiKeywords);
 
-    it('should get translations by the current language', () => {
-        const currentTranslations = service.getTranslationsByCurrentLanguage();
-        expect(currentTranslations).toBeTruthy();
-        expect(currentTranslations!.get('greeting')).toBe('Hello');
-    });
-
-    it('should get translation by key for the current language', () => {
-        const translation = service.getTranslationByKey('thankYou');
-        expect(translation).toBe('Thank you');
-    });
-
-    it('should return undefined for a missing translation key', () => {
-        const missingTranslation = service.getTranslationByKey('nonexistent_key');
-        expect(missingTranslation).toBeUndefined();
-    });
-
-    it('should load and retrieve translations in a different language', () => {
-        service.loadTranslations('es', Object.fromEntries(esTranslations));
-        service.setLanguage('es');
-
-        const translation = service.getTranslationByKey('greeting');
-        expect(translation).toBe('Hola');
+        service.unloadEmojiKeywordTranslations('de');
+        const emojiTranslations = service.getEmojiKeywordTranslationsByLanguage('de');
+        expect(emojiTranslations).toBeUndefined();
     });
 });

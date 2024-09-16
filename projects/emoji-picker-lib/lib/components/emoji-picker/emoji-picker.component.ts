@@ -7,7 +7,7 @@ import { DialogComponent } from '@chit-chat/ngx-emoji-picker/lib/components/dial
 import { TextBoxComponent, ValueChangeEvent } from '@chit-chat/ngx-emoji-picker/lib/components/text-box';
 import { TranslatePipe, TranslationService } from '@chit-chat/ngx-emoji-picker/lib/localization';
 import { ClickActionType, ClickEvent, TouchHoldEvent } from '@chit-chat/ngx-emoji-picker/lib/utils';
-import { debounce, distinctUntilChanged, from, map, Observable, of, switchMap, timer } from 'rxjs';
+import { debounce, distinctUntilChanged, map, Observable, of, timer } from 'rxjs';
 import { emojis } from './data';
 import { EmojiDataHelper } from './helpers';
 import { Emoji, emojiCategories, EmojiCategory, EmojiSelectedEvent, EmojiSelectionSource, EmojiSizeOption, Skintone, SkintoneSetting, StorageConfig } from './models';
@@ -221,23 +221,18 @@ export class EmojiPickerComponent implements OnInit, OnDestroy {
             return timer(250);
         }),
         distinctUntilChanged(),
-        switchMap((searchValue) => {
+        map((searchValue) => {
             if (searchValue === '') {
-                return of({ filterActive: false, emojis: [] });
+                return { filterActive: false, emojis: [] };
             }
 
-            return from(
-                this.emojiFilterService.filter(
-                    searchValue,
-                    this.translationService.getLanguage(),
-                    this.defaultEmojis().map((emoji) => emoji.id)
-                )
-            ).pipe(
-                map<string[], FilteredEmojis>((emojiIds) => ({
-                    filterActive: true,
-                    emojis: this.emojiDataService.fetchEmojisByIds(emojiIds)
-                }))
+            const filteredEmojis = this.emojiFilterService.filter(
+                searchValue,
+                this.translationService.getLanguage(),
+                this.defaultEmojis().map((emoji) => emoji.id)
             );
+
+            return { filterActive: true, emojis: this.emojiDataService.fetchEmojisByIds(filteredEmojis) };
         })
     );
 

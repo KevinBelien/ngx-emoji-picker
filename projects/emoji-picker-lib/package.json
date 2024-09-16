@@ -1,6 +1,6 @@
 {
     "name": "@chit-chat/ngx-emoji-picker",
-    "version": "18.5.0",
+    "version": "18.0.0",
     "license": "MIT",
     "description": "Customizable chat application that can be integrated in angular apps",
     "main": "fesm2022/chit-chat-ngx-emoji-picker.mjs",
@@ -17,8 +17,7 @@
     },
     "exports": {
         "./styles/core.css": "./styles/core.css",
-        "./lib/localization/locales/**/*.json": "./lib/localization/locales/**/*.json",
-        "./lib/components/emoji-picker/locales/**/*.json": "./lib/components/emoji-picker/locales/**/*.json"
+        "./lib/localization/locales/**/*.json": "./lib/localization/locales/**/*.json"
     },
     "peerDependencies": {
         "@angular/common": "^18.1.0",

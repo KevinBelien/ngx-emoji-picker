@@ -1,6 +1,6 @@
-import { Injectable } from '@angular/core';
-import { Language } from '@chit-chat/ngx-emoji-picker/lib/localization';
-import { ArrayMap, ObjectHelper } from '@chit-chat/ngx-emoji-picker/lib/utils';
+import { inject, Injectable } from '@angular/core';
+import { Language, TranslationService } from '@chit-chat/ngx-emoji-picker/lib/localization';
+import { ObjectHelper } from '@chit-chat/ngx-emoji-picker/lib/utils';
 
 /**
  * A service responsible for filtering emojis based on a search value and language.
@@ -11,6 +11,7 @@ import { ArrayMap, ObjectHelper } from '@chit-chat/ngx-emoji-picker/lib/utils';
  */
 @Injectable({ providedIn: 'root' })
 export class EmojiFilterService {
+    private translationService = inject(TranslationService);
     /**
      * Filters emojis based on a search value and language.
      * Optionally restricts the search to a specified list of included emojis.
@@ -20,46 +21,58 @@ export class EmojiFilterService {
      * @param {string[]} [includedEmojis] - An optional list of emoji IDs to include in the search.
      * @returns {Promise<string[]>} A promise that resolves to a list of emoji IDs that match the search criteria.
      */
-    filter = async (searchValue: string, language: Language, includedEmojis?: Array<string>): Promise<string[]> => {
-        const translatedKeywords = await this.getTranslations(language);
+    filter = (searchValue: string, language: Language, includedEmojis?: Array<string>): string[] => {
+        const translatedKeywords = this.getTranslations(language);
 
-        const filteredTranslations = includedEmojis
-            ? Object.keys(translatedKeywords)
-                  .filter((key) => includedEmojis.includes(key))
-                  .reduce((obj: ArrayMap<string>, key: string) => {
-                      obj[key] = translatedKeywords[key];
-                      return obj;
-                  }, {})
-            : translatedKeywords;
+        const filteredTranslations = this.getFilteredTranslations(translatedKeywords, includedEmojis);
 
         const normalizedSearchValue = searchValue.trim().toLowerCase();
 
-        const scoredResults: Array<{ key: string; score: number }> = [];
+        const scoredResults = this.getScoredResults(filteredTranslations, normalizedSearchValue);
 
-        for (const key in filteredTranslations) {
-            const keywords = filteredTranslations[key];
-            let bestScore = 0;
+        return this.sortResults(scoredResults).map((result) => result.key);
+    };
 
-            for (let i = 0; i < keywords.length; i++) {
-                const score = this.getMatchScore(keywords[i], normalizedSearchValue);
+    private getFilteredTranslations = (translatedKeywords: Map<string, string[]>, includedEmojis?: Array<string>): Map<string, string[]> => {
+        if (includedEmojis) {
+            return new Map([...translatedKeywords.keys()].filter((key) => includedEmojis.includes(key)).map((key) => [key, translatedKeywords.get(key) ?? []]));
+        }
+        return translatedKeywords;
+    };
 
-                if (score === Infinity) {
-                    bestScore = score;
-                    break; // Early exit if exact match is found
-                } else if (score > bestScore) {
-                    bestScore = score;
-                }
-            }
+    private getScoredResults = (filteredTranslations: Map<string, string[]>, normalizedSearchValue: string): { key: string; score: number }[] => {
+        const scoredResults: { key: string; score: number }[] = [];
+
+        for (const [key, keywords] of filteredTranslations.entries()) {
+            if (!keywords) continue;
+
+            const bestScore = this.calculateBestScore(keywords, normalizedSearchValue);
 
             if (bestScore > 0) {
                 scoredResults.push({ key, score: bestScore });
             }
         }
 
-        scoredResults.sort((a, b) => b.score - a.score);
-
-        return scoredResults.map((result) => result.key);
+        return scoredResults;
     };
+
+    private calculateBestScore = (keywords: string[], normalizedSearchValue: string): number => {
+        let bestScore = 0;
+
+        for (let i = 0; i < keywords.length; i++) {
+            const score = this.getMatchScore(keywords[i], normalizedSearchValue);
+
+            if (score === Infinity) {
+                return score; // Early exit if exact match is found
+            } else if (score > bestScore) {
+                bestScore = score;
+            }
+        }
+
+        return bestScore;
+    };
+
+    private sortResults = (scoredResults: { key: string; score: number }[]): { key: string; score: number }[] => scoredResults.sort((a, b) => b.score - a.score);
 
     private getMatchScore(keyword: string, searchValue: string): number {
         if (keyword === searchValue) {
@@ -70,18 +83,14 @@ export class EmojiFilterService {
             return 1 / (keyword.length - searchValue.length + 1);
         }
 
-        return 0; // No match
+        return 0;
     }
 
-    private getTranslations = async (language: Language): Promise<ArrayMap<string>> => {
-        try {
-            const defaultTranslations = (await import(`../locales/en-emoji-keywords.json`)).default;
+    private getTranslations = (language: Language): Map<string, string[]> => {
+        const defaultTranslations = this.translationService.getEmojiKeywordTranslationsByLanguage('en') ?? new Map();
 
-            const localeTranslations = language !== 'en' ? (await import(`../locales/${language}-emoji-keywords.json`)).default : null;
+        const localeTranslations = this.translationService.getEmojiKeywordTranslationsByLanguage(language) ?? new Map();
 
-            return localeTranslations ? ObjectHelper.combineArrayMap(localeTranslations, defaultTranslations) : defaultTranslations;
-        } catch (error: any) {
-            throw new Error(`Error loading translation module: ${error.message}`);
-        }
+        return ObjectHelper.combineArrayMap(defaultTranslations, localeTranslations);
     };
 }
