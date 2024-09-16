@@ -6,7 +6,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { RouterModule, RouterOutlet } from '@angular/router';
 import { ButtonComponent } from '@chit-chat/ngx-emoji-picker/lib/components/button';
-import { nlEmojiKeywordTranslations, nlTranslations, TranslationService } from '@chit-chat/ngx-emoji-picker/lib/localization';
+import { TranslationService } from '@chit-chat/ngx-emoji-picker/lib/localization';
 
 @Component({
     selector: 'ch-root',
@@ -26,9 +26,6 @@ export class AppComponent {
                 document.documentElement.setAttribute('data-theme', theme);
             }
         });
-        this.translationService.loadTranslations('nl', nlTranslations);
-        this.translationService.loadEmojiKeywordTranslations('nl', nlEmojiKeywordTranslations);
-        this.translationService.setLanguage('nl');
 
         // document.documentElement.setAttribute('data-theme', 'dark');
     }

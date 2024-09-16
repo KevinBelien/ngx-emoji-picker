@@ -15,7 +15,6 @@ describe('EmojiFilterService', () => {
     let translationService: jest.Mocked<TranslationService>;
 
     beforeEach(() => {
-        // Mock TranslationService
         translationService = {
             getEmojiKeywordTranslationsByLanguage: jest.fn().mockReturnValue(mockTranslations)
         } as unknown as jest.Mocked<TranslationService>;
@@ -70,7 +69,6 @@ describe('EmojiFilterService', () => {
     });
 
     it('should combine default and locale-specific translations', () => {
-        // Set up locale-specific translations
         const localeTranslations = new Map<string, string[]>([['fire', ['burn', 'hot']]]);
         translationService.getEmojiKeywordTranslationsByLanguage.mockReturnValueOnce(localeTranslations);
 

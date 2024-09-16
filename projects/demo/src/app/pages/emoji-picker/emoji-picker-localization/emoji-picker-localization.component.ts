@@ -1,6 +1,6 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { EmojiPickerComponent } from '@chit-chat/ngx-emoji-picker/lib/components/emoji-picker';
-import { nlTranslations, TranslationService } from '@chit-chat/ngx-emoji-picker/lib/localization';
+import { nlEmojiKeywordTranslations, nlTranslations, TranslationService } from '@chit-chat/ngx-emoji-picker/lib/localization';
 
 @Component({
     selector: 'ch-emoji-picker-localization',
@@ -14,6 +14,7 @@ export class EmojiPickerLocalizationComponent implements OnInit {
 
     ngOnInit(): void {
         this.translationService.loadTranslations('nl', nlTranslations);
+        this.translationService.loadEmojiKeywordTranslations('nl', nlEmojiKeywordTranslations);
         this.translationService.setLanguage('nl');
     }
 }
