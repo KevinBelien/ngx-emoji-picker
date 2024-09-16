@@ -1,63 +1,80 @@
 import { TestBed } from '@angular/core/testing';
-import { Language } from '@chit-chat/ngx-emoji-picker/lib/localization';
+import { TranslationService } from '@chit-chat/ngx-emoji-picker/lib/localization';
+import { ObjectHelper } from '@chit-chat/ngx-emoji-picker/lib/utils';
 import { EmojiFilterService } from './emoji-filter.service';
+
+// Mock data for translations
+const mockTranslations = new Map<string, string[]>([
+    ['smile', ['happy', 'grin']],
+    ['heart', ['love', 'like']],
+    ['thumbsup', ['approve', 'good', 'ok']]
+]);
 
 describe('EmojiFilterService', () => {
     let service: EmojiFilterService;
+    let translationService: jest.Mocked<TranslationService>;
 
     beforeEach(() => {
-        TestBed.configureTestingModule({});
-        service = TestBed.inject(EmojiFilterService);
+        translationService = {
+            getEmojiKeywordTranslationsByLanguage: jest.fn().mockReturnValue(mockTranslations)
+        } as unknown as jest.Mocked<TranslationService>;
 
-        // Mocking getTranslations method
-        (service as any).getTranslations = jest.fn(async (language: Language) => {
-            if (language === 'en') {
-                return {
-                    test1: ['cheerful', 'happy', 'smile', 'grinning'],
-                    test2: ['awesome', 'happy', 'smile', 'joy']
-                };
-            } else if (language === 'nl') {
-                return {
-                    test1: ['blij', 'vrolijk', 'glimlach'],
-                    test2: ['geweldig', 'vrolijk', 'glimlach', 'vreugde']
-                };
-            }
-            return {};
+        // Mock ObjectHelper
+        jest.spyOn(ObjectHelper, 'combineArrayMap').mockImplementation((map1, map2) => {
+            const combined = new Map(map1);
+            map2.forEach((value, key) => {
+                combined.set(key, value);
+            });
+            return combined;
         });
+
+        TestBed.configureTestingModule({
+            providers: [EmojiFilterService, { provide: TranslationService, useValue: translationService }]
+        });
+
+        service = TestBed.inject(EmojiFilterService);
     });
 
     it('should be created', () => {
         expect(service).toBeTruthy();
     });
 
-    it('should filter emojis based on a search value in English', async () => {
-        const result = await service.filter('happy', 'en');
-        expect(result).toEqual(['test1', 'test2']);
+    it('should filter emojis based on search value and language', () => {
+        const searchValue = 'happy';
+        const result = service.filter(searchValue, 'en');
+
+        expect(result).toEqual(['smile']);
     });
 
-    it('should filter emojis based on a search value in Dutch', async () => {
-        const result = await service.filter('vrolijk', 'nl');
-        expect(result).toEqual(['test1', 'test2']);
-    });
+    it('should return an empty array if no matching emojis are found', () => {
+        const searchValue = 'sad';
+        const result = service.filter(searchValue, 'en');
 
-    it('should filter emojis based on a search value in English with restricted emoji list', async () => {
-        const result = await service.filter('happy', 'en', ['test1']);
-        expect(result).toEqual(['test1']);
-    });
-
-    it('should prioritize exact matches with Infinity score', async () => {
-        const result = await service.filter('happy', 'en');
-        expect(result).toEqual(['test1', 'test2']);
-    });
-
-    it('should return an empty array when no matches are found', async () => {
-        const result = await service.filter('nonexistent', 'en');
         expect(result).toEqual([]);
     });
 
-    it('should throw an error when translation module fails to load', async () => {
-        (service as any).getTranslations = jest.fn().mockRejectedValue(new Error('Test Error'));
+    it('should handle exact matches with higher priority', () => {
+        const searchValue = 'grin';
+        const result = service.filter(searchValue, 'en');
 
-        await expect(service.filter('happy', 'en')).rejects.toThrow('Test Error');
+        expect(result).toEqual(['smile']); // Exact match should come first
+    });
+
+    it('should filter within a provided set of included emojis', () => {
+        const searchValue = 'good';
+        const includedEmojis = ['heart'];
+        const result = service.filter(searchValue, 'en', includedEmojis);
+
+        expect(result).toEqual([]);
+    });
+
+    it('should combine default and locale-specific translations', () => {
+        const localeTranslations = new Map<string, string[]>([['fire', ['burn', 'hot']]]);
+        translationService.getEmojiKeywordTranslationsByLanguage.mockReturnValueOnce(localeTranslations);
+
+        const searchValue = 'hot';
+        const result = service.filter(searchValue, 'en');
+
+        expect(result).toEqual(['fire']);
     });
 });

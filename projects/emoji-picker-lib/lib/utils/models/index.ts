@@ -1,4 +1,3 @@
-export * from './array-map.type';
 export * from './breakpoint.interface';
 export * from './click-action-type.enum';
 export * from './click-event.interface';
