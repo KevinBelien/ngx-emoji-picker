@@ -1,3 +1,4 @@
+<meta name="google-site-verification" content="ju9HkWtc_ESXLhJ6MZgnbfw0a9gQbrUFljCIrrMy2_A" />
 
 <div align="center">
   <a href="https://ngx-chitchat.netlify.app">
