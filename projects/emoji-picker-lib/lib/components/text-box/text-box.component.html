@@ -4,8 +4,9 @@
 @let _value = value();
 @let _disabled = disabled();
 @let _showClearButton = showClearButton();
+@let _textBoxClass = textBoxClass();
 
-<div class="ch-text-box-container" [ngClass]="textBoxClass()">
+<div class="ch-text-box-container" [ngClass]="_textBoxClass">
     <div class="ch-text-box-addon">
         @if (!!_mode) {
             <ng-content select="[addon-before]"></ng-content>
