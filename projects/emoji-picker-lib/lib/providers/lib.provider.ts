@@ -1,5 +1,5 @@
 import { DOCUMENT } from '@angular/common';
-import { APP_INITIALIZER, NgModule, Provider } from '@angular/core';
+import { EnvironmentProviders, NgModule, inject, provideAppInitializer } from '@angular/core';
 import { ScreenService } from '@chit-chat/ngx-emoji-picker/lib/utils';
 
 function initializeDocument(document: Document, screenService: ScreenService): () => void {
@@ -16,14 +16,12 @@ function initializeDocument(document: Document, screenService: ScreenService): (
  *
  * @returns {Provider[]} An array of providers required for the ChitChat module.
  */
-export function provideEmojiPicker(): Provider[] {
+export function provideEmojiPicker(): EnvironmentProviders[] {
     return [
-        {
-            provide: APP_INITIALIZER,
-            useFactory: initializeDocument,
-            deps: [DOCUMENT, ScreenService],
-            multi: true
-        }
+        provideAppInitializer(() => {
+            const initializerFn = initializeDocument(inject(DOCUMENT), inject(ScreenService));
+            return initializerFn();
+        })
     ];
 }
 
@@ -35,12 +33,10 @@ export function provideEmojiPicker(): Provider[] {
  */
 @NgModule({
     providers: [
-        {
-            provide: APP_INITIALIZER,
-            useFactory: initializeDocument,
-            deps: [DOCUMENT, ScreenService],
-            multi: true
-        }
+        provideAppInitializer(() => {
+            const initializerFn = initializeDocument(inject(DOCUMENT), inject(ScreenService));
+            return initializerFn();
+        })
     ]
 })
 export class EmojiPickerModule {}

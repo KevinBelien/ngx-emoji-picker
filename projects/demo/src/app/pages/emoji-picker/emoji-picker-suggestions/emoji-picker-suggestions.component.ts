@@ -5,7 +5,6 @@ import { EmojiPickerComponent, EmojiSuggestionMode, SuggestionConfig } from '@ch
 
 @Component({
     selector: 'ch-emoji-picker-suggestions',
-    standalone: true,
     imports: [CommonModule, EmojiPickerComponent, FormsModule],
     templateUrl: './emoji-picker-suggestions.component.html',
     styleUrl: './emoji-picker-suggestions.component.scss'

@@ -4,7 +4,6 @@ import { ButtonComponent, ButtonType } from '@chit-chat/ngx-emoji-picker/lib/com
 
 @Component({
     selector: 'ch-button-types',
-    standalone: true,
     imports: [CommonModule, ButtonComponent],
     templateUrl: './button-types.component.html',
     styleUrl: './button-types.component.scss'

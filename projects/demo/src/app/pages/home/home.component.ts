@@ -6,7 +6,6 @@ import { navigationItems } from '../../app-navigation';
 
 @Component({
     selector: 'ch-home',
-    standalone: true,
     imports: [CommonModule, RouterModule, ButtonComponent],
     templateUrl: './home.component.html',
     styleUrl: './home.component.scss'

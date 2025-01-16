@@ -4,14 +4,12 @@ import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { RouterModule, RouterOutlet } from '@angular/router';
-import { ButtonComponent } from '@chit-chat/ngx-emoji-picker/lib/components/button';
+import { RouterOutlet } from '@angular/router';
 import { TranslationService } from '@chit-chat/ngx-emoji-picker/lib/localization';
 
 @Component({
     selector: 'ch-root',
-    standalone: true,
-    imports: [RouterOutlet, RouterModule, CommonModule, MatSidenavModule, MatListModule, ButtonComponent, MatToolbarModule, MatSlideToggleModule],
+    imports: [RouterOutlet, CommonModule, MatSidenavModule, MatListModule, MatToolbarModule, MatSlideToggleModule],
     templateUrl: './app.component.html',
     styleUrl: './app.component.scss'
 })

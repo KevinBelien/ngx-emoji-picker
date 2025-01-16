@@ -5,7 +5,6 @@ import { DialogComponent } from '@chit-chat/ngx-emoji-picker/lib/components/dial
 
 @Component({
     selector: 'ch-dialog-draggable',
-    standalone: true,
     imports: [CommonModule, DialogComponent, ButtonComponent],
     templateUrl: './dialog-draggable.component.html',
     styleUrl: './dialog-draggable.component.scss'

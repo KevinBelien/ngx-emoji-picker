@@ -8,7 +8,6 @@ import { ChangeDetectionStrategy, Component, input } from '@angular/core';
  */
 @Component({
     selector: 'ch-icon',
-    standalone: true,
     imports: [CommonModule],
     templateUrl: './icon.component.html',
     styleUrl: './icon.component.scss',

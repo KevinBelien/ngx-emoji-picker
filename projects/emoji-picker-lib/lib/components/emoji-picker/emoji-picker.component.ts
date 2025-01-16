@@ -29,7 +29,6 @@ import { SkintoneSwatchPickerComponent } from './ui/skintone-swatch-picker/skint
  */
 @Component({
     selector: 'ch-emoji-picker',
-    standalone: true,
     imports: [CommonModule, EmojiViewportComponent, EmojiTabsComponent, SkintoneSwatchPickerComponent, EmojiSkintonePickerComponent, TextBoxComponent, TranslatePipe, DialogComponent],
     changeDetection: ChangeDetectionStrategy.OnPush,
     templateUrl: './emoji-picker.component.html',

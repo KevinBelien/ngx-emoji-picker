@@ -1,7 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, inject, input, model, output, signal } from '@angular/core';
 import { ButtonComponent } from '@chit-chat/ngx-emoji-picker/lib/components/button';
-import { IconComponent } from '@chit-chat/ngx-emoji-picker/lib/components/icon';
 import { HoverDirective, HoverEvent, ScreenService } from '@chit-chat/ngx-emoji-picker/lib/utils';
 import { emojiCategories, EmojiCategory } from '../../models';
 import { emojiCategoryIcons } from '../icons';
@@ -12,8 +11,7 @@ import { emojiCategoryIcons } from '../icons';
  */
 @Component({
     selector: 'ch-emoji-tabs',
-    standalone: true,
-    imports: [CommonModule, HoverDirective, IconComponent, ButtonComponent],
+    imports: [CommonModule, HoverDirective, ButtonComponent],
     templateUrl: './emoji-tabs.component.html',
     styleUrl: './emoji-tabs.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,

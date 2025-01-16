@@ -7,7 +7,7 @@ import { EmojiButtonComponent } from '../emoji-button/emoji-button.component';
 
 import { takeUntilDestroyed, toObservable } from '@angular/core/rxjs-interop';
 import { TranslatePipe } from '@chit-chat/ngx-emoji-picker/lib/localization';
-import { ClickEvent, ClickTouchHoldDirective, NumberHelper, PreventContextMenuDirective, RippleDirective, TouchHoldEvent } from '@chit-chat/ngx-emoji-picker/lib/utils';
+import { ClickEvent, ClickTouchHoldDirective, NumberHelper, PreventContextMenuDirective, TouchHoldEvent } from '@chit-chat/ngx-emoji-picker/lib/utils';
 import { zip } from 'rxjs';
 import { EmojiPickerService } from '../../services';
 
@@ -18,8 +18,7 @@ import { EmojiPickerService } from '../../services';
  */
 @Component({
     selector: 'ch-emoji-viewport',
-    standalone: true,
-    imports: [CommonModule, ScrollingModule, ClickTouchHoldDirective, PreventContextMenuDirective, EmojiButtonComponent, RippleDirective, TranslatePipe],
+    imports: [CommonModule, ScrollingModule, ClickTouchHoldDirective, EmojiButtonComponent, TranslatePipe],
     templateUrl: './emoji-viewport.component.html',
     styleUrls: ['./emoji-viewport.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush,

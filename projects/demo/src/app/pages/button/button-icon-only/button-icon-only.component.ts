@@ -4,7 +4,6 @@ import { ButtonComponent } from '@chit-chat/ngx-emoji-picker/lib/components/butt
 
 @Component({
     selector: 'ch-button-icon-only',
-    standalone: true,
     imports: [CommonModule, ButtonComponent],
     templateUrl: './button-icon-only.component.html',
     styleUrl: './button-icon-only.component.scss'

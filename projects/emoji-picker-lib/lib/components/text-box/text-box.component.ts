@@ -15,7 +15,6 @@ import { TextBoxVariant } from './models/text-box-variant.type';
  */
 @Component({
     selector: 'ch-text-box',
-    standalone: true,
     imports: [CommonModule, IconComponent, AutofocusDirective, ButtonComponent],
     providers: [
         {

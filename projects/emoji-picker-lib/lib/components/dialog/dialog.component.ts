@@ -13,7 +13,6 @@ import { DialogScrollStrategy } from './models';
  */
 @Component({
     selector: 'ch-dialog',
-    standalone: true,
     imports: [CommonModule, CdkPortal, CdkDrag, CdkDragHandle],
     templateUrl: './dialog.component.html',
     styleUrl: './dialog.component.scss',
