@@ -7,7 +7,6 @@ import { EmojiPickerComponent } from '@chit-chat/ngx-emoji-picker/lib/components
 
 @Component({
     selector: 'ch-emoji-picker-dialog',
-    standalone: true,
     imports: [CommonModule, DialogComponent, EmojiPickerComponent, ButtonComponent],
     templateUrl: './emoji-picker-dialog.component.html',
     styleUrl: './emoji-picker-dialog.component.scss'

@@ -1,8 +1,17 @@
+@let _itemSize = itemSize();
+@let _scrollbarVisible = scrollbarVisible();
+@let _scrollIndex = scrollIndex();
+@let _emojiCategories = emojiCategories();
+@let _suggestionEmojis = suggestionEmojis();
+@let _emojiRows = emojiRows();
+@let _stickyHeaderCategory = stickyHeaderCategory();
+@let _showSkintoneIndicator = showSkintoneIndicator();
+
 <cdk-virtual-scroll-viewport
     class="ch-scroll-viewport ch-focus-disabled"
-    [ngClass]="{ 'ch-scroll-hidden': !scrollbarVisible() }"
+    [ngClass]="{ 'ch-scroll-hidden': !_scrollbarVisible }"
     [style.height]="'100%'"
-    [itemSize]="itemSize()"
+    [itemSize]="_itemSize"
     [minBufferPx]="100"
     [maxBufferPx]="600"
     (wheel)="handleWheelScroll($event)"
@@ -13,16 +22,14 @@
     (onTouchHold)="handleTouchHold($event)"
 >
     <div class="ch-scroll-wrapper">
-        <div class="ch-static-category ch-sticky ch-row" [style.display]="scrollIndex() === 0 || emojiCategories().length === 0 ? 'none' : 'block'">
+        <div class="ch-static-category ch-sticky ch-row" [style.display]="_scrollIndex === 0 || _emojiCategories.length === 0 ? 'none' : 'block'">
             <div class="ch-emoji-group-title">
-                {{
-                    stickyHeaderCategory() === 'suggestions' && !!suggestionEmojis() ? ('emojipicker.category.' + suggestionEmojis()!.suggestionMode | translate | titlecase) : ('emojipicker.category.' + stickyHeaderCategory() | translate | titlecase)
-                }}
+                {{ _stickyHeaderCategory === 'suggestions' && !!_suggestionEmojis ? ('emojipicker.category.' + _suggestionEmojis.suggestionMode | translate | titlecase) : ('emojipicker.category.' + _stickyHeaderCategory | translate | titlecase) }}
             </div>
         </div>
 
         <div
-            *cdkVirtualFor="let row of emojiRows(); let index = index; templateCacheSize: 20; trackBy: trackEmojiRow"
+            *cdkVirtualFor="let row of _emojiRows; let index = index; templateCacheSize: 20; trackBy: trackEmojiRow"
             class="ch-row"
             [ngClass]="{
                 'ch-sticky': row.type === 'category',
@@ -37,11 +44,7 @@
                 @for (emoji of row.value; track emoji.value) {
                     @if ({ data: emojiDataMap().get(emoji.id) }; as emojiData) {
                         @if (!!emojiData.data) {
-                            <ch-emoji-button
-                                [emoji]="emojiData.data.value"
-                                [attr.data-emoji]="emojiData.data.id"
-                                [showSkintoneIndicator]="showSkintoneIndicator() && !!emojiData.data.skintones && emojiData.data.skintones.length > 0"
-                            ></ch-emoji-button>
+                            <ch-emoji-button [emoji]="emojiData.data.value" [attr.data-emoji]="emojiData.data.id" [showSkintoneIndicator]="_showSkintoneIndicator && !!emojiData.data.skintones && emojiData.data.skintones.length > 0"></ch-emoji-button>
                         }
                     }
                 }

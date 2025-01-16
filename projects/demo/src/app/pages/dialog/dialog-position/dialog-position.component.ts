@@ -6,7 +6,6 @@ import { DialogComponent } from '@chit-chat/ngx-emoji-picker/lib/components/dial
 
 @Component({
     selector: 'ch-dialog-position',
-    standalone: true,
     imports: [CommonModule, DialogComponent, ButtonComponent],
     templateUrl: './dialog-position.component.html',
     styleUrls: ['./dialog-position.component.scss']

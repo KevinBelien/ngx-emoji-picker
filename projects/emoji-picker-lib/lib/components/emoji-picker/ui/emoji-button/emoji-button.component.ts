@@ -9,7 +9,6 @@ import { RippleDirective } from '@chit-chat/ngx-emoji-picker/lib/utils';
  */
 @Component({
     selector: 'ch-emoji-button',
-    standalone: true,
     imports: [CommonModule, RippleDirective],
     templateUrl: './emoji-button.component.html',
     styleUrl: './emoji-button.component.scss',

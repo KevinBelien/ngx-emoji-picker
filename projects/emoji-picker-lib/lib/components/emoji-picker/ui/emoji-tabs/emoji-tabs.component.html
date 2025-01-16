@@ -1,13 +1,17 @@
+@let _emojiCategories = emojiCategories();
+@let _selectedTab = selectedTab();
+@let _categoryHovered = categoryHovered();
+
 <div class="ch-emoji-tabs ch-scroll-viewport">
-    @for (category of emojiCategories(); track category) {
+    @for (category of _emojiCategories; track category) {
         <ch-button
             chHover
             (hoverChange)="handleHoverChange($event, category)"
             fill="clear"
             type="contrast"
-            [cssClass]="selectedTab() === category ? 'ch-button-active' : ''"
+            [cssClass]="_selectedTab === category ? 'ch-button-active' : ''"
             [ariaLabel]="category"
-            [icon]="(!isMobile && categoryHovered() === category) || selectedTab() === category ? { path: emojiCategoryIcons[category].solid } : { path: emojiCategoryIcons[category].outline }"
+            [icon]="(!isMobile && _categoryHovered === category) || _selectedTab === category ? { path: emojiCategoryIcons[category].solid } : { path: emojiCategoryIcons[category].outline }"
             (onClick)="handleCategoryButtonClick($event, category)"
         >
         </ch-button>

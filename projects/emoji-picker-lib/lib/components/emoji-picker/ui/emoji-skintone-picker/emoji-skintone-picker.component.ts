@@ -10,7 +10,6 @@ import { EmojiButtonComponent } from '../emoji-button/emoji-button.component';
  */
 @Component({
     selector: 'ch-emoji-skintone-picker',
-    standalone: true,
     imports: [CommonModule, EmojiButtonComponent, ClickTouchHoldDirective, PreventContextMenuDirective],
     templateUrl: './emoji-skintone-picker.component.html',
     styleUrl: './emoji-skintone-picker.component.scss',

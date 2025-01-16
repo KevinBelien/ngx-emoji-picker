@@ -1,6 +1,10 @@
+@let _dragEnabled = dragEnabled();
+@let _cssClass = cssClass();
+@let _dimensions = dimensions();
+
 <ng-template cdkPortal>
-    <div cdkDrag [cdkDragDisabled]="!dragEnabled()" class="ch-dialog" [ngClass]="cssClass()" [style.height]="dimensions().height" [style.width]="dimensions().width">
-        <div class="ch-dialog-header" [ngClass]="{ 'ch-draggable': dragEnabled() }" cdkDragHandle>
+    <div cdkDrag [cdkDragDisabled]="!_dragEnabled" class="ch-dialog" [ngClass]="_cssClass" [style.height]="_dimensions.height" [style.width]="_dimensions.width">
+        <div class="ch-dialog-header" [ngClass]="{ 'ch-draggable': _dragEnabled }" cdkDragHandle>
             <ng-content select="[header]"></ng-content>
         </div>
         <div class="ch-dialog-content ch-scroll-viewport">

@@ -4,7 +4,6 @@ import { EmojiPickerComponent } from '@chit-chat/ngx-emoji-picker/lib/components
 
 @Component({
     selector: 'ch-emoji-picker-category-bar-position',
-    standalone: true,
     imports: [CommonModule, EmojiPickerComponent],
     templateUrl: './emoji-picker-category-bar-position.component.html',
     styleUrl: './emoji-picker-category-bar-position.component.scss'

@@ -12,7 +12,6 @@ import { ButtonFill } from './models/button-fill.type';
  */
 @Component({
     selector: 'ch-button',
-    standalone: true,
     imports: [CommonModule, IconComponent, RippleDirective, AutofocusDirective],
     templateUrl: './button.component.html',
     styleUrls: ['./button.component.scss'],

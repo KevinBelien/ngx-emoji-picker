@@ -4,7 +4,6 @@ import { TextBoxComponent } from '@chit-chat/ngx-emoji-picker/lib/components/tex
 
 @Component({
     selector: 'ch-text-box-disabled',
-    standalone: true,
     imports: [CommonModule, TextBoxComponent],
     templateUrl: './text-box-disabled.component.html',
     styleUrl: './text-box-disabled.component.scss'
