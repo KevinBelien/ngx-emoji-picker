@@ -5,7 +5,6 @@ import { EmojiPickerComponent, EmojiSizeOption } from '@chit-chat/ngx-emoji-pick
 
 @Component({
     selector: 'ch-emoji-picker-sizes',
-    standalone: true,
     imports: [CommonModule, EmojiPickerComponent, FormsModule],
     templateUrl: './emoji-picker-sizes.component.html',
     styleUrl: './emoji-picker-sizes.component.scss'

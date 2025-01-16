@@ -6,7 +6,6 @@ import { TextBoxComponent } from '@chit-chat/ngx-emoji-picker/lib/components/tex
 
 @Component({
     selector: 'ch-dialog-templates',
-    standalone: true,
     imports: [CommonModule, DialogComponent, ButtonComponent, TextBoxComponent],
     templateUrl: './dialog-templates.component.html',
     styleUrl: './dialog-templates.component.scss'

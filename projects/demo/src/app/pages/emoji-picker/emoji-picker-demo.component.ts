@@ -23,7 +23,6 @@ import { BehaviorSubject, combineLatest, debounceTime, of, switchMap } from 'rxj
 
 @Component({
     selector: 'ch-emoji-picker-demo',
-    standalone: true,
     imports: [CommonModule, EmojiPickerComponent, FormsModule, MatFormFieldModule, MatSelectModule, MatInputModule, MatSliderModule],
     templateUrl: './emoji-picker-demo.component.html',
     styleUrl: './emoji-picker-demo.component.scss'

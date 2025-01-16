@@ -4,7 +4,6 @@ import { nlEmojiKeywordTranslations, nlTranslations, TranslationService } from '
 
 @Component({
     selector: 'ch-emoji-picker-localization',
-    standalone: true,
     imports: [EmojiPickerComponent],
     templateUrl: './emoji-picker-localization.component.html',
     styleUrl: './emoji-picker-localization.component.scss'

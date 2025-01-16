@@ -6,7 +6,6 @@ import { CustomStorageService } from './custom-storage.service';
 
 @Component({
     selector: 'ch-emoji-picker-custom-storage',
-    standalone: true,
     imports: [CommonModule, EmojiPickerComponent, FormsModule],
     providers: [CustomStorageService],
     templateUrl: './emoji-picker-custom-storage.component.html',

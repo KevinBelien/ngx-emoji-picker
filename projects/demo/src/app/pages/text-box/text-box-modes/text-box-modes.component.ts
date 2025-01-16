@@ -4,7 +4,6 @@ import { TextBoxComponent } from '@chit-chat/ngx-emoji-picker/lib/components/tex
 
 @Component({
     selector: 'ch-text-box-modes',
-    standalone: true,
     imports: [CommonModule, TextBoxComponent],
     templateUrl: './text-box-modes.component.html',
     styleUrl: './text-box-modes.component.scss'

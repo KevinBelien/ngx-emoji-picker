@@ -5,7 +5,6 @@ import { ButtonComponent, ButtonFill, ButtonType } from '@chit-chat/ngx-emoji-pi
 
 @Component({
     selector: 'ch-button-demo',
-    standalone: true,
     imports: [CommonModule, FormsModule, ButtonComponent],
     templateUrl: './button-demo.component.html',
     styleUrl: './button-demo.component.scss'

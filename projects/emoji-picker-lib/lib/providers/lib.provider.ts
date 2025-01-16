@@ -1,12 +1,9 @@
 import { DOCUMENT } from '@angular/common';
-import { APP_INITIALIZER, NgModule, Provider } from '@angular/core';
-import { ScreenService } from '@chit-chat/ngx-emoji-picker/lib/utils';
+import { EnvironmentProviders, NgModule, inject, provideAppInitializer } from '@angular/core';
 
-function initializeDocument(document: Document, screenService: ScreenService): () => void {
+function initializeDocument(document: Document): () => void {
     return () => {
-        if (screenService.isMobile()) {
-            document.body.classList.add('ch-mobile');
-        }
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || (navigator.userAgent.includes('Mac') && 'ontouchend' in document)) document.body.classList.add('ch-mobile');
     };
 }
 
@@ -16,14 +13,12 @@ function initializeDocument(document: Document, screenService: ScreenService): (
  *
  * @returns {Provider[]} An array of providers required for the ChitChat module.
  */
-export function provideEmojiPicker(): Provider[] {
+export function provideEmojiPicker(): EnvironmentProviders[] {
     return [
-        {
-            provide: APP_INITIALIZER,
-            useFactory: initializeDocument,
-            deps: [DOCUMENT, ScreenService],
-            multi: true
-        }
+        provideAppInitializer(() => {
+            const initializerFn = initializeDocument(inject(DOCUMENT));
+            return initializerFn();
+        })
     ];
 }
 
@@ -35,12 +30,10 @@ export function provideEmojiPicker(): Provider[] {
  */
 @NgModule({
     providers: [
-        {
-            provide: APP_INITIALIZER,
-            useFactory: initializeDocument,
-            deps: [DOCUMENT, ScreenService],
-            multi: true
-        }
+        provideAppInitializer(() => {
+            const initializerFn = initializeDocument(inject(DOCUMENT));
+            return initializerFn();
+        })
     ]
 })
 export class EmojiPickerModule {}

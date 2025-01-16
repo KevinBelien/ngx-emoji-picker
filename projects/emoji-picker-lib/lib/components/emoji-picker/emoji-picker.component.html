@@ -1,64 +1,78 @@
+@let _searchEnabled = searchEnabled();
+@let _isGlobalSkintoneEnabled = isGlobalSkintoneEnabled();
+@let _autofocus = autofocus();
+@let _searchValue = searchValue();
+@let _globalSkintone = globalSkintone();
+@let _filteredEmojis = filteredEmojis();
+@let _categoryBarPosition = categoryBarPosition();
+@let _emojiCategories = emojiCategories();
+@let _selectedCategory = selectedCategory();
+@let _emojis = emojis();
+@let _isIndividualSkintoneEnabled = isIndividualSkintoneEnabled();
+@let _emojiSize = emojiSize();
+@let _scrollbarVisible = scrollbarVisible();
+@let _noDataEmoji = noDataEmoji();
+@let _selectedEmoji = selectedEmoji();
+
 <div class="ch-emoji-picker">
-    @if (searchEnabled() || isGlobalSkintoneEnabled()) {
+    @if (_searchEnabled || _isGlobalSkintoneEnabled) {
         <div class="ch-emoji-header-container">
-            @if (searchEnabled()) {
+            @if (_searchEnabled) {
                 <div class="ch-searchbar-container">
                     <div class="ch-searchbar">
                         <ch-text-box
                             mode="search"
                             variant="filled"
-                            [autofocus]="autofocus()"
+                            [autofocus]="_autofocus"
                             [placeholder]="'emojipicker.search' | translate"
                             valueChangeEvent="input"
                             [showClearButton]="true"
-                            [value]="searchValue()"
+                            [value]="_searchValue"
                             (onValueChanged)="handleSearchValueChanged($event)"
                         ></ch-text-box>
                     </div>
                 </div>
             }
 
-            @if (isGlobalSkintoneEnabled()) {
-                <ch-skintone-swatch-picker [selectedSkintone]="globalSkintone()" [size]="20" (onSelectionChanged)="handleGlobalSkintoneChanged($event)"></ch-skintone-swatch-picker>
+            @if (_isGlobalSkintoneEnabled) {
+                <ch-skintone-swatch-picker [selectedSkintone]="_globalSkintone" [size]="20" (onSelectionChanged)="handleGlobalSkintoneChanged($event)"></ch-skintone-swatch-picker>
             }
         </div>
     }
 
-    @if ({ data: filteredEmojis() }; as filteredEmojis) {
-        @if (!filteredEmojis.data || !filteredEmojis.data.filterActive || filteredEmojis.data.emojis.length > 0) {
-            @if (!filteredEmojis.data || !filteredEmojis.data.filterActive) {
-                <div
-                    class="ch-emoji-tab-bar"
-                    [ngClass]="{
-                        'bar-bottom': categoryBarPosition() === 'bottom'
-                    }"
-                >
-                    <ch-emoji-tabs [emojiCategories]="emojiCategories()" [selectedTab]="selectedCategory()" (onTabClicked)="handleCategoryTabClicked($event)"></ch-emoji-tabs>
-                </div>
-            }
-            <div class="ch-emoji-picker-container">
-                <ch-emoji-viewport
-                    [width]="width"
-                    [emojis]="emojis().defaultEmojis"
-                    [suggestionEmojis]="emojis().suggestionEmojis"
-                    [filteredEmojis]="emojis().filteredEmojis"
-                    [showSkintoneIndicator]="isIndividualSkintoneEnabled()"
-                    [emojiSize]="emojiSize()"
-                    [(currentCategory)]="selectedCategory"
-                    [scrollbarVisible]="scrollbarVisible()"
-                    [emojiCategories]="emojiCategories()"
-                    (onClick)="handleEmojiClick($event)"
-                    (onScroll)="handleScroll()"
-                    (onTouchHold)="handleEmojiTouchHold($event)"
-                    (onEmojiSizeCalculated)="handleEmojiSizeCalculated($event)"
-                ></ch-emoji-viewport>
-            </div>
-        } @else {
-            <div class="ch-no-data-container">
-                <div class="ch-no-data-emoji">{{ noDataEmoji() }}</div>
-                <div class="ch-no-data-text">{{ 'emojipicker.search.no-results' | translate }}</div>
+    @if (!_filteredEmojis || !_filteredEmojis.filterActive || _filteredEmojis.emojis.length > 0) {
+        @if (!_filteredEmojis || !_filteredEmojis.filterActive) {
+            <div
+                class="ch-emoji-tab-bar"
+                [ngClass]="{
+                    'bar-bottom': _categoryBarPosition === 'bottom'
+                }"
+            >
+                <ch-emoji-tabs [emojiCategories]="_emojiCategories" [selectedTab]="_selectedCategory" (onTabClicked)="handleCategoryTabClicked($event)"></ch-emoji-tabs>
             </div>
         }
+        <div class="ch-emoji-picker-container">
+            <ch-emoji-viewport
+                [width]="width"
+                [emojis]="_emojis.defaultEmojis"
+                [suggestionEmojis]="_emojis.suggestionEmojis"
+                [filteredEmojis]="_emojis.filteredEmojis"
+                [showSkintoneIndicator]="_isIndividualSkintoneEnabled"
+                [emojiSize]="_emojiSize"
+                [(currentCategory)]="selectedCategory"
+                [scrollbarVisible]="_scrollbarVisible"
+                [emojiCategories]="_emojiCategories"
+                (onClick)="handleEmojiClick($event)"
+                (onScroll)="handleScroll()"
+                (onTouchHold)="handleEmojiTouchHold($event)"
+                (onEmojiSizeCalculated)="handleEmojiSizeCalculated($event)"
+            ></ch-emoji-viewport>
+        </div>
+    } @else {
+        <div class="ch-no-data-container">
+            <div class="ch-no-data-emoji">{{ _noDataEmoji }}</div>
+            <div class="ch-no-data-text">{{ 'emojipicker.search.no-results' | translate }}</div>
+        </div>
     }
 </div>
 
@@ -79,6 +93,6 @@
     cssClass="skintone-dialog"
 >
     <ng-container content
-        ><ch-emoji-skintone-picker [emoji]="selectedEmoji()" [emojiSizeInPx]="emojiSizeInPx" [emojiButtonSizeInPx]="emojiButtonSizeInPx" (onSelectionChanged)="handleEmojiSkintoneSelected($event)"></ch-emoji-skintone-picker>
+        ><ch-emoji-skintone-picker [emoji]="_selectedEmoji" [emojiSizeInPx]="emojiSizeInPx" [emojiButtonSizeInPx]="emojiButtonSizeInPx" (onSelectionChanged)="handleEmojiSkintoneSelected($event)"></ch-emoji-skintone-picker>
     </ng-container>
 </ch-dialog>

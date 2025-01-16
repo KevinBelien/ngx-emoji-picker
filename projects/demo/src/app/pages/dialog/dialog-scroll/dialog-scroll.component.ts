@@ -5,7 +5,6 @@ import { DialogComponent } from '@chit-chat/ngx-emoji-picker/lib/components/dial
 
 @Component({
     selector: 'ch-dialog-scroll',
-    standalone: true,
     imports: [CommonModule, DialogComponent, ButtonComponent],
     templateUrl: './dialog-scroll.component.html',
     styleUrl: './dialog-scroll.component.scss'

@@ -5,7 +5,6 @@ import { EmojiPickerComponent, SkintoneSetting } from '@chit-chat/ngx-emoji-pick
 
 @Component({
     selector: 'ch-emoji-picker-skintone-settings',
-    standalone: true,
     imports: [CommonModule, EmojiPickerComponent, FormsModule],
     templateUrl: './emoji-picker-skintone-settings.component.html',
     styleUrl: './emoji-picker-skintone-settings.component.scss'

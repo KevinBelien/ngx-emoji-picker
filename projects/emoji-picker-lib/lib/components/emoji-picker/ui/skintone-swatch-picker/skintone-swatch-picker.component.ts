@@ -8,7 +8,6 @@ import { Skintone, SkintoneColor, skintoneColors } from '../../models';
  */
 @Component({
     selector: 'ch-skintone-swatch-picker',
-    standalone: true,
     changeDetection: ChangeDetectionStrategy.OnPush,
     imports: [CommonModule],
     templateUrl: './skintone-swatch-picker.component.html',
