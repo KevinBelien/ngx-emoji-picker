@@ -1,6 +1,6 @@
 {
     "name": "@chit-chat/ngx-emoji-picker",
-    "version": "18.0.0",
+    "version": "18.8.0",
     "license": "MIT",
     "description": "An open-source emoji picker UI toolkit for Angular, designed to integrate effortlessly into any project, with full support for mobile and web.",
     "main": "fesm2022/chit-chat-ngx-emoji-picker.mjs",
