@@ -1,17 +1,22 @@
+@let _mode = mode();
+@let _autofocus = autofocus();
+@let _placeholder = placeholder();
+@let _value = value();
+@let _disabled = disabled();
+@let _showClearButton = showClearButton();
+
 <div class="ch-text-box-container" [ngClass]="textBoxClass()">
     <div class="ch-text-box-addon">
-        @if ({ data: mode() }; as mode) {
-            @if (!!mode.data) {
-                <ng-content select="[addon-before]"></ng-content>
-                <ch-icon *ngIf="mode.data === 'search'" cssClass="ch-search-icon" [height]="19" [width]="19" [iconPath]="icons.search"></ch-icon>
-            }
+        @if (!!_mode) {
+            <ng-content select="[addon-before]"></ng-content>
+            <ch-icon *ngIf="_mode === 'search'" cssClass="ch-search-icon" [height]="19" [width]="19" [iconPath]="icons.search"></ch-icon>
         }
     </div>
-    <input chAutofocus [autofocus]="autofocus()" class="ch-text-input" [type]="mode() === 'search' ? 'text' : mode()" [placeholder]="placeholder()" [value]="value()" [disabled]="disabled()" />
+    <input chAutofocus [autofocus]="_autofocus" class="ch-text-input" [type]="_mode === 'search' ? 'text' : _mode" [placeholder]="_placeholder" [value]="_value" [disabled]="_disabled" />
     <div class="ch-text-box-addon">
         <ng-content select="[addon-after]"></ng-content>
 
-        @if (!!showClearButton() && value().length > 0) {
+        @if (!!_showClearButton && _value.length > 0) {
             <ch-button
                 cssClass="ch-clear-button"
                 shape="round"

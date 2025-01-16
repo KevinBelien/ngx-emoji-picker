@@ -1,3 +1,9 @@
-<svg [ngClass]="cssClass()" class="ch-icon" xmlns="http://www.w3.org/2000/svg" [attr.height]="height()" [attr.width]="width()" [attr.viewBox]="viewBox()">
-    <path [attr.d]="iconPath()"></path>
+@let _cssClass = cssClass();
+@let _height = height();
+@let _width = width();
+@let _viewBox = viewBox();
+@let _iconPath = iconPath();
+
+<svg [ngClass]="_cssClass" class="ch-icon" xmlns="http://www.w3.org/2000/svg" [attr.height]="_height" [attr.width]="_width" [attr.viewBox]="_viewBox">
+    <path [attr.d]="_iconPath"></path>
 </svg>

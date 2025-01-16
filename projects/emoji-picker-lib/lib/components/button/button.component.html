@@ -1,28 +1,38 @@
+@let _width = width();
+@let _height = height();
+@let _icon = icon();
+@let _label = label();
+@let _activeStateEnabled = activeStateEnabled();
+@let _autoFocus = autofocus();
+@let _ariaLabel = ariaLabel();
+@let _disabled = disabled();
+@let _tabIndex = tabIndex();
+@let _buttonClass = buttonClass();
+@let _iconClass = iconClass();
+
 <button
     chRipple
-    [rippleEnabled]="activeStateEnabled()"
+    [rippleEnabled]="_activeStateEnabled"
     chAutofocus
-    [autofocus]="autofocus()"
-    [attr.aria-label]="ariaLabel()"
+    [autofocus]="_autoFocus"
+    [attr.aria-label]="_ariaLabel"
     [ngStyle]="{
-        width: width() ? width() + 'px' : 'auto',
-        height: height() ? height() + 'px' : 'auto'
+        width: _width ? _width + 'px' : 'auto',
+        height: _height ? _height + 'px' : 'auto'
     }"
-    [ngClass]="buttonClass()"
-    [disabled]="disabled()"
-    [tabIndex]="tabIndex()"
+    [ngClass]="_buttonClass"
+    [disabled]="_disabled"
+    [tabIndex]="_tabIndex"
     (click)="handleClick($event)"
 >
     <ng-content></ng-content>
 
     <!-- <ng-container *ngIf="icon() as ico"> -->
-    @if ({ data: icon() }; as icon) {
-        @if (!!icon.data) {
-            <div [ngClass]="iconClass()">
-                <ch-icon [cssClass]="icon.data.cssClass ?? ''" [iconPath]="icon.data.path ?? ''" [height]="icon.data.height ?? 24" [width]="icon.data.width ?? 24" [viewBox]="icon.data.viewBox ?? '0 -960 960 960'"></ch-icon>
-            </div>
-        }
+    @if (!!_icon) {
+        <div [ngClass]="_iconClass">
+            <ch-icon [cssClass]="_icon.cssClass ?? ''" [iconPath]="_icon.path ?? ''" [height]="_icon.height ?? 24" [width]="_icon.width ?? 24" [viewBox]="_icon.viewBox ?? '0 -960 960 960'"></ch-icon>
+        </div>
     }
     <!-- </ng-container> -->
-    <span class="ch-button-label" [attr.aria-hidden]="icon() && !label()">{{ label() }}</span>
+    <span class="ch-button-label" [attr.aria-hidden]="_icon && !_label">{{ _label }}</span>
 </button>

@@ -1,12 +1,9 @@
 import { DOCUMENT } from '@angular/common';
 import { EnvironmentProviders, NgModule, inject, provideAppInitializer } from '@angular/core';
-import { ScreenService } from '@chit-chat/ngx-emoji-picker/lib/utils';
 
-function initializeDocument(document: Document, screenService: ScreenService): () => void {
+function initializeDocument(document: Document): () => void {
     return () => {
-        if (screenService.isMobile()) {
-            document.body.classList.add('ch-mobile');
-        }
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || (navigator.userAgent.includes('Mac') && 'ontouchend' in document)) document.body.classList.add('ch-mobile');
     };
 }
 
@@ -19,7 +16,7 @@ function initializeDocument(document: Document, screenService: ScreenService): (
 export function provideEmojiPicker(): EnvironmentProviders[] {
     return [
         provideAppInitializer(() => {
-            const initializerFn = initializeDocument(inject(DOCUMENT), inject(ScreenService));
+            const initializerFn = initializeDocument(inject(DOCUMENT));
             return initializerFn();
         })
     ];
@@ -34,7 +31,7 @@ export function provideEmojiPicker(): EnvironmentProviders[] {
 @NgModule({
     providers: [
         provideAppInitializer(() => {
-            const initializerFn = initializeDocument(inject(DOCUMENT), inject(ScreenService));
+            const initializerFn = initializeDocument(inject(DOCUMENT));
             return initializerFn();
         })
     ]
