@@ -1,51 +1,17 @@
-import { Component } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 import { emojis } from '../data';
 import { EmojiRowGenerator } from '../helpers';
 import { EmojiRowGenerationConfig } from '../models';
 import { EmojiPickerService } from './emoji-picker.service';
 
-@Component({
-    selector: 'app-emoji-picker-mock',
-    template: `<div></div>`
-})
-class EmojiPickerMockComponent {
-    emojis = [...emojis];
-    constructor(public emojiPickerService: EmojiPickerService) {}
-
-    setMultiplier(value: number) {
-        this.emojiPickerService.setEmojiContainerSizeMultiplier(value);
-    }
-
-    setPadding(value: number) {
-        this.emojiPickerService.setPadding(value);
-    }
-
-    generateRows(config: EmojiRowGenerationConfig) {
-        return this.emojiPickerService.generateEmojiRows(config);
-    }
-
-    calculateEmojiSize(viewportSize: number, emojiSize: number, itemSizeMultiplier: number) {
-        return this.emojiPickerService.calculateEmojiSize(viewportSize, emojiSize, itemSizeMultiplier);
-    }
-
-    calculateEmojisPerRow(emojiSize: number, viewportSize: number, itemSizeMultiplier: number) {
-        return this.emojiPickerService.calculateEmojisPerRow(emojiSize, viewportSize, itemSizeMultiplier);
-    }
-}
-
 describe('EmojiPickerService', () => {
-    let component: EmojiPickerMockComponent;
     let service: EmojiPickerService;
 
     beforeEach(() => {
         TestBed.configureTestingModule({
-            declarations: [EmojiPickerMockComponent],
             providers: [EmojiPickerService]
-        }).compileComponents();
+        });
 
-        const fixture = TestBed.createComponent(EmojiPickerMockComponent);
-        component = fixture.componentInstance;
         service = TestBed.inject(EmojiPickerService);
     });
 
@@ -54,7 +20,7 @@ describe('EmojiPickerService', () => {
         const emojiSize = 24;
         const itemSizeMultiplier = 1.5;
 
-        const calculatedSize = component.calculateEmojiSize(viewportSize, emojiSize, itemSizeMultiplier);
+        const calculatedSize = service.calculateEmojiSize(viewportSize, emojiSize, itemSizeMultiplier);
 
         expect(calculatedSize).toBeCloseTo(24);
     });
@@ -64,19 +30,19 @@ describe('EmojiPickerService', () => {
         const viewportSize1 = 400;
         const itemSizeMultiplier1 = 1.5;
 
-        const emojisPerRow1 = component.calculateEmojisPerRow(emojiSize1, viewportSize1, itemSizeMultiplier1);
+        const emojisPerRow1 = service.calculateEmojisPerRow(emojiSize1, viewportSize1, itemSizeMultiplier1);
 
         const emojiSize2 = 16;
         const viewportSize2 = 300;
         const itemSizeMultiplier2 = 2;
 
-        const emojisPerRow2 = component.calculateEmojisPerRow(emojiSize2, viewportSize2, itemSizeMultiplier2);
+        const emojisPerRow2 = service.calculateEmojisPerRow(emojiSize2, viewportSize2, itemSizeMultiplier2);
 
         const emojiSize3 = 34;
         const viewportSize3 = 800;
         const itemSizeMultiplier3 = 1.5;
 
-        const emojisPerRow3 = component.calculateEmojisPerRow(emojiSize3, viewportSize3, itemSizeMultiplier3);
+        const emojisPerRow3 = service.calculateEmojisPerRow(emojiSize3, viewportSize3, itemSizeMultiplier3);
 
         expect(emojisPerRow1).toEqual(11);
         expect(emojisPerRow2).toEqual(9);
@@ -90,12 +56,12 @@ describe('EmojiPickerService', () => {
             itemSizeMultiplier: 1.5,
             generateCategoryRows: true,
             type: 'filter',
-            emojis: emojis.splice(0, 50)
+            emojis: emojis.slice(0, 50) // Use slice instead of splice to avoid modifying the original array
         };
 
         const generatorSpy = jest.spyOn(EmojiRowGenerator.prototype, 'generateEmojiRowsPerCategory');
 
-        const rows = component.generateRows(config);
+        const rows = service.generateEmojiRows(config);
 
         expect(generatorSpy).toHaveBeenCalled();
 

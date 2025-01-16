@@ -1,25 +1,15 @@
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { Component, inject } from '@angular/core';
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
 import { of } from 'rxjs';
-import { Breakpoint, BreakpointStatus } from '../models'; // Adjust the path to where your types are defined
+import { Breakpoint, BreakpointStatus } from '../models'; // Adjust the path as necessary
 import { ScreenService } from './screen.service';
 
-@Component({
-    template: ''
-})
-class TestComponent {
-    screenService = inject(ScreenService);
-}
-
 describe('ScreenService', () => {
-    let fixture: ComponentFixture<TestComponent>;
     let screenService: ScreenService;
     let breakpointObserver: BreakpointObserver;
 
     beforeEach(() => {
         TestBed.configureTestingModule({
-            declarations: [TestComponent],
             providers: [
                 ScreenService,
                 {
@@ -30,10 +20,9 @@ describe('ScreenService', () => {
                     }
                 }
             ]
-        }).compileComponents();
+        });
 
-        fixture = TestBed.createComponent(TestComponent);
-        screenService = fixture.componentInstance.screenService;
+        screenService = TestBed.inject(ScreenService);
         breakpointObserver = TestBed.inject(BreakpointObserver);
     });
 
